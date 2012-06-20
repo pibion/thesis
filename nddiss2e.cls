@@ -670,6 +670,7 @@
   \chapter*{\bibname}%
   \addcontentsline{toc}{chapter}{\bibname}%
 }%
+\providecommand{\bibfont}{\singlespacing}
 \renewcommand{\bibfont}{\singlespacing}
 \ifnum@refs
   \renewcommand{\@biblabel}[1]{\hfill#1.\hfill}
