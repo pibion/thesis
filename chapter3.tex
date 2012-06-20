@@ -1,0 +1,84 @@
+%
+% Modified by Sameer Vijay
+% Last Change: Wed Jul 27 2005 13:00 CEST
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Sample Notre Dame Thesis/Dissertation
+% Using Donald Peterson's ndthesis classfile
+%
+% Written by Jeff Squyres and Don Peterson
+%
+% Provided by the Information Technology Committee of
+%   the Graduate Student Union
+%   http://www.gsu.nd.edu/
+%
+% Nothing in this document is serious except the format.  :-)
+%
+% If you have any suggestions, comments, questions, please send e-mail
+% to: ndthesis@gsu.nd.edu
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Chapter 3
+%
+
+\chapter{TWO PROTON TRANSFER AT NOTRE DAME}
+\label{chap:2pExpt}
+
+Give an overview of the requirements for two-proton transfer and say that ND has a buncher and a Tandem accelerator that goes up to 10 MV so we can get beam energies up to 20 MeV for 3He and we have a beamline with a long flight path SO we can do this experiment.
+
+Will discuss the elements that contribute to crucial aspects of the experiment
+
+When studying two-proton transfer with 3He beam, the neutron flying off is the easiest object to study as the heavy nucleus (now with two additional protons!) has little hope of making its way out of the target.  While charged particles are often simple to detect, neutrons are not, and the way we detect them forces design constraints on our experiment.
+
+Imagine for a moment the options that are available to the neutron that wishes to interact with any detector.  It has no charge, so disturbing electrons via the electromagnetic force is not possible.  The neutron can interact with the electrons weakly, but this probability is impractically small.  A neutron may also interact with a proton, strongly.  This mechanism happens frequently enough to be of use to us.  A neutron that transfers some of its energy to a proton can rely on the proton, in all its charged glory, to register a signal in the detector.  What experimenters must do is provide plenty of protons for neutrons to collide with - large quantities of water or plastics, with their long hydrocarbon chains, are popular choices.
+
+Consider this signal.  If the neutron deposits all its energy in the detector, the energy spectrum would show peaks that would be identifiable as neutrons.  But a neutron interacting with a proton rarely transfers all its energy to that proton.  In this transfer experiment, it is necessary to identify signals coming from neutrons - worse, specific neutrons!  The neutrons of interest are those coming from the ground state of the daughter nucleus, not neutrons from its many excited states.  Because the neutron's deposited energy gives little information about that neutron's full energy, the experiment must be sensitive to some quantity that gives unambiguous information about the neutron's energy.
+
+One possibility is time - the time it takes for the neutron to travel from the target to the detector depends on its energy.  Incorporating time into our detector requires four things.  The beam must be bunched, and a signal correlated with the beam arrival at the target must be available.  The flight path between the target and detector must be long enough to distinguish ground state neutrons from other neutrons; this flight path is determined by the intrinsic resolution of the detector and also the width of the beam bunch in time.  Lastly, a module that takes logic signals and gives the time between them is necessary.  These Time to Analog Converters (TAC) or Time to Digital Converters (TDC) are widely available.
+
+\section{Buncher}
+Discuss the operation of the buncher, pulse selector, and sweeper.  Discuss beam loss, which actually isn't too bad since we're radiation-limited in the target room.
+Time resolution ~ 1ns which again isn't too bad since our detector has similar resolution.
+Discuss modifications made to buncher platform?
+
+Buncher
+The beam buncher at Notre Dame works by slowing down particles that would arrive too early at the target and speeding up particles that would be arriving too late.  Two grids placed perpendicular to the beam coupled to a power supply create an electric field that varies in time acheive this.  Ideally, the electric field would vary like a triangle wave in time, but this is difficult to achieve in practice because the power supplies are already expensive.  An electric field that very nice power supplies can provide is one that varies sinusoidally in time.  At some beam facilities [Argonne], up to three frequncies are added to approximate a triangle wave.  At Notre Dame, one frequency only - 11 MHz is used.  The best bunching occurs when the wave is at its steepest; when the electric field is changing very slowly, little bunching occurs.  The effect of the bunching, then, is that the beam is continuous, with large bunches every 101 ns.  The beam in between these bunches would render our time signal useless, and must somehow be removed.
+
+Sweeper
+At Notre Dame, a large electric field that ramps up and down very quickly removes the unwanted beam between the bunches.  What makes this conceptually simple idea difficult is the time scale required.  The field must turn "on" on a timescale much smaller than the beam bunch, or else become the limiting factor in the time-width of the bunch.  The power supply used provides ?? charge in ?? ns.
+
+Pulse Selector
+
+Final Beam Shape
+
+\section{Acclerator}
+Discuss Tandem.  Discuss energy resolution (selection magnet) and compare to energy spread introduced by the target.
+
+\section{Beam Focusing}
+Discuss beamline: steering magnets and focusing quadrupoles.
+Explain focusing of solenoids.
+Beam spot size much smaller than target - what are the dimensions?
+
+\section{Detection}
+Discuss neutron wall briefly.  Can reference NIMA paper.  
+Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
+
+Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
+Beam monitor
+Dead time
+Include a sample calculation?  Like: this is what we see in the detector.  To get an absolute cross-section, here is the calculation:
+counts * time * particle current * target thickness
+So we get the counts this way and the time with the signal from the DAQ and the target thickness from Hope
+
+\subsection{Testing with 26Mg}
+Show results from first run and look at timing - hey it's all right!
+Look at background - will need to improve
+
+% % uncomment the following lines,
+% if using chapter-wise bibliography
+%
+% \bibliographystyle{ndnatbib}
+% \bibliography{example}
