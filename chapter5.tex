@@ -26,19 +26,21 @@
 
 \chapter{DATA ANALYSIS}
 \label{chap:dataAnalysis}
-Show 74,76Ge data obtained
-Show extracted cross section for 0+ ground state (show other states?)
+We care about two things:
+1. The absolute cross-section of the ground state transition
+2. Setting a limit on excited 0+ state cross-sections
 
 error calculations: its own section?
 
-\section{Extracting Absolute Cross Sections}
-detector efficiency (this will take an entire section/subsection)
-beam current
-target thickness, RBS measurements, alpha measurements
-dead time
-SOLID ANGLE!
+\section{Detector Efficiency}
 
+deuterium, Mg, cuts
+
+\section{Experimental Parameters Related to the Cross Section}
+current, tgt thickness (RBS), solid angle, dead time
 go ahead and discuss errors while you discuss these quantities
+
+\section{Background Subtraction}
 
 two data sets
 - pulse selection
@@ -56,7 +58,19 @@ extracting counts
 
 The data sets for this analysis were gathered in two seperate runs; the pulse selector was not working for part of the first run.  Analysis of the datasets taken with pulse selection is straigtforward and will be discussed first.  Without pulse selection, the neutron peak sits on top of background from previous neutron bunches.  The background fit is different and the total counts have a larger systematic uncertainty; extracting these will be discussed second.
 
-\subsection{Error Analysis - Counts}
+\subsection{Pulse-Selected Data}
+Consider the signals that build the TOF spectrum.  Random background radiation can occur at any time with respect to the beam bunch.  In fact, it should have no knowledge of the beam bunch and is equally likely to occur at every time after a beam bunch.  In other words, the TOF spectrum of background radiation should be flat.  Taking a TOF spectrum with no beam confirms this.
+
+%figure of beam-off TOF spectrum
+
+The neutrons coming from the ground state of \As78 are monoenergetic and should come at a fixed time relative to the beam bunch; counts from these neutrons should form a peak that is approximately as narrow in time as the beam bunch.  Looking a a beam-on TOF spectrum, it is clear that the neutron peak and the flat background are not the only features.
+
+% figure of beam-on TOF spectrum
+
+The other prominant features of this spectrum are peaks from gammas produced when the beam hits the target and also neutrons from excited states as well as a broad neutron evaporation spectrum from multiple-channel interactions.
+
+In the case of the pulse-selected data, the background that overlaps with the neutron peak of interest is well-determined.  The gamma peaks are far away from the neutron peak and have no effect.  Wonderfully, the broad, flat region ennables a very precise estimate of the random background level.  The neutron evaporation peak is the least-well understood contributor to the background of the ground state neutron peak and will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to randoms.
+
 In the TOF spectrum, the neutron peak sits on top of random background and also beam-induced background.  If the background is well-known, extracting the counts due to the neutrons is simple:
 
 Sum(peak region) - Background(peak region)
