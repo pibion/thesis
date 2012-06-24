@@ -63,7 +63,7 @@ Consider the signals that build the TOF spectrum.  Random background radiation c
 
 %figure of beam-off TOF spectrum
 
-The neutrons coming from the ground state of \As78 are monoenergetic and should come at a fixed time relative to the beam bunch; counts from these neutrons should form a peak that is approximately as narrow in time as the beam bunch.  Looking a a beam-on TOF spectrum, it is clear that the neutron peak and the flat background are not the only features.
+The neutrons coming from the ground state of \As{78} are monoenergetic and should come at a fixed time relative to the beam bunch; counts from these neutrons should form a peak that is approximately as narrow in time as the beam bunch.  Looking a a beam-on TOF spectrum, it is clear that the neutron peak and the flat background are not the only features.
 
 % figure of beam-on TOF spectrum
 
@@ -71,13 +71,21 @@ The other prominant features of this spectrum are peaks from gammas produced whe
 
 In the case of the pulse-selected data, the background that overlaps with the neutron peak of interest is well-determined.  The gamma peaks are far away from the neutron peak and have no effect.  Wonderfully, the broad, flat region ennables a very precise estimate of the random background level.  The neutron evaporation peak is the least-well understood contributor to the background of the ground state neutron peak and will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to randoms.
 
-In the TOF spectrum, the neutron peak sits on top of random background and also beam-induced background.  If the background is well-known, extracting the counts due to the neutrons is simple:
+In general, extracting the counts due to the neutrons is simple:
 
-Sum(peak region) - Background(peak region)
+\begin{equation}
+\text{Sum(peak region) - Background(peak region)}
+\label{eq:counts}
+\end{equation}
 
-The error associated with this quantity is [ref?]
+With an associated error
 
-$sqrt(\sigma_Sum^2 + \sigma_background^2)$
+\begin{equation}
+\sqrt{\sigma_{Sum}^2 + \sigma_{background}^2}
+\label{eq:errDef}
+\end{equation}
+
+What extraction method minimizes this error?  The two most straightforward options available to a physicist bent on extracting counts due to a signal are sideband subtraction and fitting.  Fitting when the background is not understood can lead to systematic errors, while sideband subtraction's accuracy depends on a background that does not change rapidly near the signal region.  With these data sets, the number of signal counts is very small, and fitting improves the fractional error by almost a factor of $\sqrt{2}$.
 
 The number of counts in the peak region are a sum of the number of counts in the random background and counts from the neutrons.  The width of a sample at a uniform rate is simply sqrt(N), as seen in figure ??.  This is an appropriate description of the random background.  The neutron peak is roughly gaussian-shaped, and running trials where counts are drawn from a gaussian distribution shows that the width is ??.
 
