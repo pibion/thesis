@@ -85,31 +85,33 @@ With an associated error
 \label{eq:errDef}
 \end{equation}
 
-What extraction method minimizes this error?  The two most straightforward options available to a physicist bent on extracting counts due to a signal are sideband subtraction and fitting.  Fitting when the background is not understood can lead to systematic errors, while sideband subtraction's accuracy depends on a background that does not change rapidly near the signal region.  With these data sets, the number of signal counts is very small, and fitting improves the fractional error by almost a factor of $\sqrt{2}$.
+The sum of counts in a fixed region can be understood as a random variable; as such, its error is $sqrt(N_{peakregion})$.  This is quite large - is there an extraction method that will reduce this error?  The two most straightforward options available to a physicist bent on extracting counts due to a signal are sideband subtraction and fitting.  Fitting when the background is not understood can lead to systematic errors, while sideband subtraction's accuracy depends on a background that does not change rapidly near the signal region.  With these data sets, the number of signal counts is very small compared to the background.  Using sideband subtraction introduces another random variable and increases the width of the distribution of extracted counts for a given bar.  In the case of the pulse-selected data, there is no need to introduce this additional statistical error because the flat background is determined to within ??\%, so that using the fitted value is much more like introducing a constant into the equation for the extracted counts, improving the fractional error by almost a factor of $\sqrt{2}$.  See \fig \ref{fig:statDist} to see the effect of using the fitted value on the width of the extracted count distribution.
 
-The number of counts in the peak region are a sum of the number of counts in the random background and counts from the neutrons.  The width of a sample at a uniform rate is simply sqrt(N), as seen in figure ??.  This is an appropriate description of the random background.  The neutron peak is roughly gaussian-shaped, and running trials where counts are drawn from a gaussian distribution shows that the width is ??.
-
-Thus $\sigma_{Sum}$ is approximately $sqrt(N_{peakregion})$.
+\begin{equation}
+Counts = Sum(peak region) - Fitted Constant * number of Bins
+\sigma^2 = Sum + fit error
+\label{eq:fitErr}
+\end{equation}
 
 \begin{figure}[ht]
 \centering
   \subfloat[Distribution of Background Counts][Distribution of Background Counts]{
-  \includegraphics[width=0.9\textwidth]{figures/bkgDist}
+  \includegraphics[width=0.3\textheight]{figures/bkgDist}
   \label{fig:bkgDist}}
   
   \subfloat[Distribution of Signal Counts][Distribution of Signal Counts]{
-  \includegraphics[width=0.9\textwidth]{figures/sigDist}
+  \includegraphics[width=0.3\textheight]{figures/sigDist}
   \label{fig:sigDist}}
   
   \subfloat[Distribution of Extracted Counts][Distribution of Extracted Counts]{
-  \includegraphics[width=0.9\textwidth]{figures/extractDist}
+  \includegraphics[width=0.3\textheight]{figures/extractDist}
   \label{fig:extractDist}}
 
-  \caption{This is a figure containing several subfigures.}
+  \caption{The number of counts in the peak region are a sum of the number of counts in the random background and counts from the neutrons.  The width of a sample at a uniform rate is simply sqrt(N), as seen in figure ??.  This is an appropriate description of the random background.  The neutron peak is roughly gaussian-shaped, and running trials where counts are drawn from a gaussian distribution shows that the width is ??.}
   \label{fig:statDist}
 \end{figure}
 
-The error associated with the background depends on how the background is determined.  In most cases, the background is fit.  When the background is fit, the error associated with the number of counts is the error associated with the fit parameters when propagated through the appropriate integral.  For the pulse-selected data, the fit is to a constant and contributes less than a tenth of a percent to the total error.  The non-pulse-selected data does not enjoy such an ambiguous fit and contributes approximately ??\% to the total error.
+The error introduced to the extracted counts depends on how the background is determined.  In the case of the pulse-selected data, it is clearly better to fit the background.  The constant component of the background is well-determined and contributes a tiny ??\% to the total error.  The evaporation spectrum is not as well constrained and introduces ??\% to the total error.  Even with the uncertainty in the evaporation spectrum fit, the improvement in the error compared to sideband subtraction is a factor of ??.
 
 \subsection{Pulse-Selected Data}
 With pulse selection, the region behind the neutron peak has only random signal and can be fit with a constant to within ??\%.  Assuming that the neutron peak itself does not overlap with other background, the total number of counts is estimated as the direct sum of the bin contents minus the average bin content of the background region.  In this case, the error should be the statistical error associated with the random background in the peak region and the statistical error associated with the counts in the neutron peak, added in quadrature.  Such an error neglets the error associated with the constant that is fit, appropriate in this case because it influences the error by at most 0.1\%.
