@@ -71,16 +71,26 @@ To give all the neutrons resulting from one beam bunch time to reach the detecto
 The downside to the bunching system is beam loss.  However, the radiation limits on the room with the detector are so low that even with pulse selection, the beam is at its maximum allowed current.
 
 \section{Acclerator}
-Discuss Tandem.  Discuss energy resolution (selection magnet) and compare to energy spread introduced by the target.
+The accelerator at Notre Dame is a Van deGraff accelerator made by High Voltage Engineering.  Its maximum potential is 10 MV and is a tandem Van deGraff - a thin Carbon target in the center of the machine strips electrons, providing additional accelartion to the beam.  The ion source must provide negatively charged ions to the Tandem's first acceleration stage.
+
+A dipole magnet at the end of the Tandem selects beam of the desired energy.  This magnet is tuned using the NMR frequency of Hydrogen (?) and has an error of less than ?? (units?).  Comparing this energy spread to the energy spread introduced by the target gives a sense of how small the error associated with the beam energy is; the target spreads the energy by 0.5 MeV.
+
 
 \section{Beam Focusing}
 Discuss beamline: steering magnets and focusing quadrupoles.
 Explain focusing of solenoids.
 Beam spot size much smaller than target - what are the dimensions?
 
+After energy selection, the beam travels through two target rooms before reaching our detector.  A variety of focusing and steering elements keep the beam colimated and in position.  Quadrupole triplet and doublet magnets are the most common beam focusers.  There are two Einzel Lenses that provide electrostatic focusing early in the beam line as well.  Steering plates before and after the accelerator help correct the beam trajectory, although additional steerers in the East Target Room are needed as well.  The large solenoid magnets are the final focusing element before the target and focus the beam to a spot approximately 2 mm in diameter.
+
+% figure: beamline
+
 \section{Detection}
 Discuss neutron wall briefly.  Can reference NIMA paper.  
 Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
+
+The neutron detectors are large strips of high density polyethylene (HDPE) plastic doped with scintillator (what kind of scintillator??).  They sit roughly in a large circle around the target.  The information that these detectors are sensitive to is energy deposition and time.  Energy deposition is important because high levels of background gammas from the walls can be discriminated against by requiring a signal above the Thorium threshold.  Timing information is critical because it distinguishes particle energies.  The detectors are equipped with photomultiplier tubes (PMT's) at the top and bottom that have excellent timing response - their risetime is approximately 5 ns.  Constant Fraction Discriminators (CFD's) give timing information with jitter that's less than 1 ns.
+
 
 Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
 Beam monitor
