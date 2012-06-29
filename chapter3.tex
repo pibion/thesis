@@ -54,7 +54,7 @@ Discuss the operation of the buncher, pulse selector, and sweeper.  Discuss beam
 Time resolution ~ 1ns which again isn't too bad since our detector has similar resolution.
 Discuss modifications made to buncher platform?
 
-The beam buncher at Notre Dame works by slowing down particles that would arrive too early at the target and speeding up particles that would be arriving too late.  To acheive this, two grids perpendicular to the beam connect to a power supply create an electric field that varies in time.  Bunching all the beam requires that the electric field be a triangle wave in time, but commercially available power supplies providing adequate current and rapid enough signal generally vary sinusoidally in time.  At some beam facilities \citep{LynchBunching}, multiple power supplies provide additional frequncies, better approximating a triangle wave.  At Notre Dame, one frequency only - 11 MHz is used.  The best bunching occurs when the wave is at its steepest; when the electric field is changing very slowly, little bunching occurs.  The effect of the bunching, then, is that the beam is continuous, with large bunches every 101 ns.  The beam in between these bunches would render our time signal useless, and must somehow be removed.
+The beam buncher at Notre Dame works by slowing down particles that would arrive too early at the target and speeding up particles that would be arriving too late.  To acheive this, two grids perpendicular to the beam connect to a power supply create an electric field that varies in time.  Bunching all the beam requires that the electric field be a triangle wave in time, but commercially available power supplies providing adequate current and rapid enough signal generally vary sinusoidally in time.  At some beam facilities \cite{LynchBunching}, multiple power supplies provide additional frequncies, better approximating a triangle wave.  At Notre Dame, one frequency only - 11 MHz is used.  The best bunching occurs when the wave is at its steepest; when the electric field is changing very slowly, little bunching occurs.  The effect of the bunching, then, is that the beam is continuous, with large bunches every 101 ns.  The beam in between these bunches would render our time signal useless, and must somehow be removed.
 
 The ``sweeper'' provides a large electric field that ramps up and down very quickly to remove the unwanted beam between the bunches.  While conceptually simple, the time scale required for the charging of the plates makes it difficult to find a commercially available power supply.  The field must turn "on" on a timescale much smaller than the beam bunch, or else become the limiting factor in the time-width of the bunch.  The power supply used provides ?? charge in ?? ns.
 
@@ -85,11 +85,15 @@ After energy selection, the beam travels through two target rooms before reachin
 
 % figure: beamline
 
-\section{Detection}
-Discuss neutron wall briefly.  Can reference NIMA paper.  
+\section{The Detector}
+Discuss neutron wall briefly.  Can reference NIMA paper. Explain why it's important that it's wide-angle. 
 Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
 
-The neutron detectors are large strips of high density polyethylene (HDPE) plastic doped with scintillator (what kind of scintillator??).  They sit roughly in a large circle around the target.  The information that these detectors are sensitive to is energy deposition and time.  Energy deposition is important because high levels of background gammas from the walls can be discriminated against by requiring a signal above the Thorium threshold.  Timing information is critical because it distinguishes particle energies.  The detectors are equipped with photomultiplier tubes (PMT's) at the top and bottom that have excellent timing response - their risetime is approximately 5 ns.  Constant Fraction Discriminators (CFD's) give timing information with jitter that's less than 1 ns.
+The neutron detectors are large strips of high density polyethylene (HDPE) plastic doped with scintillator (what kind of scintillator??).  Sixteen independent detectors sit in a rough circle around the target, with the forwardmost angle being 5$\circ$ and the largest angle being $21\circ$.  The angle step size between each detector is approximately 0.7$\circ$.  The detectors sit 15.6 m away from the target to ensure a resolution of at least 0.5 MeV at 22 MeV.  This distance comes at a steep price; the solid angle is only (approx. 10 cm/15 m x 2.5 m/15 m = 0.11) sr, or 0.88\% of the unit circle.
+
+% figure - picture of detector
+
+The information that these detectors are sensitive to is energy deposition and time.  Energy deposition is important because high levels of background gammas from the walls can be discriminated against by requiring a signal above the Thorium threshold.  Timing information is critical because it distinguishes particle energies.  The detectors are equipped with photomultiplier tubes (PMT's) at the top and bottom that have excellent timing response - their risetime is approximately 5 ns.  Constant Fraction Discriminators (CFD's) give timing information with jitter that's less than 1 ns.
 
 
 Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
