@@ -93,7 +93,9 @@ The neutron detectors are large strips of high density polyethylene (HDPE) plast
 
 % figure - picture of detector
 
-The information that these detectors are sensitive to is energy deposition and time.  Energy deposition is important because high levels of background gammas from the walls can be discriminated against by requiring a signal above the Thorium threshold.  Timing information is critical because it distinguishes particle energies.  The detectors are equipped with photomultiplier tubes (PMT's) at the top and bottom that have excellent timing response - their risetime is approximately 5 ns.  Constant Fraction Discriminators (CFD's) give timing information with jitter that's less than 1 ns.
+The plastic scintillator, equipped with fast timing PMT's, are sensitive to energy deposition and time.  Energy deposited is not useful for neutron identification; time is the information that allows us to ID them.  In principle, the timing information is all the DAQ needs to record.  This would be true if only there were no background radiation!  The low-energy gamma radiation from the concrete leaves signal in the detector at a high rate - much higher than the rate of beam! Measuring the Energy deposition is crucial because it allows us to throw out low-energy background from the room.  
+
+What is clear is that while energy information is necessary, the energy information does not need to be terribly precise.  The timing information, however, must be as precise as possible.  The goal with the electronics is to not add spread to the timing that is noticable above the timing spread already inherent in the beam bunching.  The detectors are equipped with photomultiplier tubes (PMT's) at the top and bottom that have excellent timing response - their risetime is approximately 5 ns.  Constant Fraction Discriminators (CFD's) give timing information with jitter that's less than 1 ns.
 
 
 Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
