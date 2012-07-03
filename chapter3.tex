@@ -85,7 +85,7 @@ After energy selection, the beam travels through two target rooms before reachin
 
 % figure: beamline
 
-\section{The Detector}
+\section{The Neutron Detector}
 Discuss neutron wall briefly.  Can reference NIMA paper. Explain why it's important that it's wide-angle. 
 Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
 
@@ -93,17 +93,28 @@ The neutron detectors are large strips of high density polyethylene (HDPE) plast
 
 % figure - picture of detector
 
-The plastic scintillator, equipped with fast timing PMT's, are sensitive to energy deposition and time.  Energy deposited is not useful for neutron identification; time is the information that allows us to ID them.  In principle, the timing information is all the DAQ needs to record.  This would be true if only there were no background radiation!  The low-energy gamma radiation from the concrete leaves signal in the detector at a high rate - much higher than the rate of beam! Measuring the Energy deposition is crucial because it allows us to throw out low-energy background from the room.  
+The plastic scintillator, equipped with fast timing PMT's, are sensitive to energy deposition and time.  Energy deposited is not useful for neutron identification; it is timing information that ID's neutrons.  In principle, the timing information is all the DAQ needs to record.  This would be true if only there were no background radiation!  The low-energy gamma radiation from the concrete leaves signal in the detector at a high rate - much higher than the rate of beam! Measuring the Energy deposition is crucial because it allows us to throw out low-energy background from the room.  
 
 What is clear is that while energy information is necessary, the energy information does not need to be terribly precise.  The timing information, however, must be as precise as possible.  The goal with the electronics is to not add spread to the timing that is noticable above the timing spread already inherent in the beam bunching.  The detectors are equipped with photomultiplier tubes (PMT's) at the top and bottom that have excellent timing response - their risetime is approximately 5 ns.  Constant Fraction Discriminators (CFD's) give timing information with jitter that's less than 1 ns.
 
+\subsection{Electronics}
+The basic idea behind the neutron wall's electronics is: if something occurs that could be an event, use the top and bottom PMT signals from each bar to record a time and an energy.  Each PMT signal feeds into a x10 amplifier that has two identical outputs.  One output feeds a CFD whose output is the 'START' of a TDC.  The other output is sent to a QDC.  A diagram of this simple arrangement is shown in \fig ??.
 
+% figure: simple electronics
+
+What looks like an event?  For a real event in one of the neutron detectors, we expect both the top and the bottom PMT to fire.  One way to define an event trigger would be an 'OR' between all top-bottom coincidences.  But we're using NIM logic units, and constructing this trigger isn't feasible - testing for top-bottom coincidences alone would require 16 separate logic gates.  What we use is the built-in 'OR' of the CFD.  Each CFD is an eight-fold unit and provides an 'OR' output.  We route the signals so that each CFD sees only top or bottom signals.  Then a logic unit can test for the presence of some top signal AND some bottom signal.  Such an event signal is a looser condition than the one first suggested - it does not require that the same bar have a signal in both its top and bottom PMT's, only that there be a signal in a top PMT and a bottom PMT in the same eight-bar group.  With a dead time of less than 30\%, this event condition does not hinder data collection, and we simply drop spurious events when analyzing data.
+
+% figure: event trigger
+
+\section{Setup}
 Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
 Beam monitor
 Dead time
 Include a sample calculation?  Like: this is what we see in the detector.  To get an absolute cross-section, here is the calculation:
 counts * time * particle current * target thickness
 So we get the counts this way and the time with the signal from the DAQ and the target thickness from Hope
+
+
 
 \subsection{Testing with 26Mg}
 Show results from first run and look at timing - hey it's all right!
