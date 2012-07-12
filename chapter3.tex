@@ -101,10 +101,24 @@ What is clear is that while energy information is necessary, the energy informat
 The basic idea behind the neutron wall's electronics is: if something occurs that could be an event, use the top and bottom PMT signals from each bar to record a time and an energy.  Each PMT signal feeds into a x10 amplifier that has two identical outputs.  One output feeds a CFD whose output is the 'START' of a TDC.  The other output is sent to a QDC.  A diagram of this simple arrangement is shown in \fig ??.
 
 % figure: simple electronics
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/basic_electronics.eps}
+\label{fig:simpleElectronics}
+\caption{A simplified diagram of the neutron detector electronics showing the acquisition of timing and energy information from the detectors.}
+\end{figure}
+
 
 What looks like an event?  For a real event in one of the neutron detectors, we expect both the top and the bottom PMT to fire.  One way to define an event trigger would be an 'OR' between all top-bottom coincidences.  But we're using NIM logic units, and constructing this trigger isn't feasible - testing for top-bottom coincidences alone would require 16 separate logic gates.  What we use is the built-in 'OR' of the CFD.  Each CFD is an eight-fold unit and provides an 'OR' output.  We route the signals so that each CFD sees only top or bottom signals.  Then a logic unit can test for the presence of some top signal AND some bottom signal.  Such an event signal is a looser condition than the one first suggested - it does not require that the same bar have a signal in both its top and bottom PMT's, only that there be a signal in a top PMT and a bottom PMT in the same eight-bar group.  With a dead time of less than 30\%, this event condition does not hinder data collection, and we simply drop spurious events when analyzing data.
 
 % figure: event trigger
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/event_trigger.eps}
+\label{fig:eventTrig}
+\caption{The event trigger for the DAQ requires a coincidence between a top PMT and a bottom PMT from the same group of eight detectors.}
+\end{figure}
+
 
 \section{Setup}
 Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
