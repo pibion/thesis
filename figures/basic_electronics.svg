@@ -14,7 +14,7 @@
    height="744.09448"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.2 r9819"
    sodipodi:docname="basic_electronics.svg">
   <sodipodi:namedview
      id="base"
@@ -23,16 +23,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3384016"
-     inkscape:cx="461.4255"
-     inkscape:cy="443.02297"
+     inkscape:zoom="1.1440879"
+     inkscape:cx="454.88061"
+     inkscape:cy="452.90582"
      inkscape:document-units="px"
-     inkscape:current-layer="g3919"
+     inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1600"
-     inkscape:window-height="876"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-width="1436"
+     inkscape:window-height="856"
+     inkscape:window-x="4"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-global="true"
      inkscape:object-nodes="true"
@@ -50,6 +50,19 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <marker
+       inkscape:stockid="DotM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DotM"
+       style="overflow:visible">
+      <path
+         id="path4394"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;marker-end:none"
+         transform="scale(0.4) translate(7.4, 1)" />
+    </marker>
     <marker
        inkscape:stockid="DotS"
        orient="auto"
@@ -99,9 +112,10 @@
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="text3074"
-       sodipodi:linespacing="125%"><textPath
-         xlink:href="#path3049"
-         id="textPath3051"><tspan
+       sodipodi:linespacing="125%"
+       transform="translate(14.769531,-4.9921877)"><textPath
+         xlink:href="#path4956"
+         id="textPath4959"><tspan
    style="font-size:24px"
    id="tspan3078">buncher signal</tspan></textPath></text>
     <text
@@ -211,7 +225,7 @@
                sodipodi:role="line">start</tspan></text>
           <path
              transform="translate(168.55936,135.98132)"
-             d="m 402.15805,536.38086 a 10.71741,10.71741 0 1 1 -21.43482,0 10.71741,10.71741 0 1 1 21.43482,0 z"
+             d="m 402.15805,536.38086 c 0,5.91906 -4.79834,10.71741 -10.71741,10.71741 -5.91906,0 -10.71741,-4.79835 -10.71741,-10.71741 0,-5.91906 4.79835,-10.71741 10.71741,-10.71741 5.91907,0 10.71741,4.79835 10.71741,10.71741 z"
              sodipodi:ry="10.71741"
              sodipodi:rx="10.71741"
              sodipodi:cy="536.38086"
@@ -240,7 +254,7 @@
              sodipodi:type="arc"
              transform="translate(168.55936,-24.018677)" />
           <path
-             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#DotS);stroke-miterlimit:4;stroke-dasharray:none"
              d="m 240,484.09448 320,0 0,-120"
              id="path3049"
              inkscape:connector-curvature="0"
@@ -390,5 +404,10 @@
            sodipodi:nodetypes="csac" />
       </g>
     </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 250,792.36218 220,0"
+       id="path4956"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
