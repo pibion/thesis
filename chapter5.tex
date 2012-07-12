@@ -119,7 +119,55 @@ With pulse selection, the region behind the neutron peak has only random signal 
 When considering the error, it should be considered that the neutron peak itself may be sitting on top of signal from processes that result in lower-energy neutrons.  A neutron continuum is clearly visible in all targets, and while in 26Mg the continuum is separated by ?? MeV, it is difficult to determine where the continuum for the 76Se and 78Se stops.  What is safe to assume is that neutrons populating the continuum cannot have an energy greater than the 0+ neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution.  Functional models that fit the shape of the continuum well are the Beta Distribution and also the Gamma Distribution.  Both these functions give similar estimates of the background under the neutron peak; the effect is not greater than ??\% even in the largest peaks.
 
 \subsection{Data with No Pulse Selection}
-With no pulse selection, the neutron peak sits on top of background from the previous bunch.  Not surprisingly, the sensitivity to the fit to the continuum is larger - as much as ??\% in some cases.
+With no pulse selection, the neutron peak sits on top of background from the previous bunch.  Every portion of this spectrum sees beam; without a section that only consists of background, fitting is much more difficult. (quantify this!)
+
+Fitting this spectrum by itself suffers from significant uncertainty in the height of the evaporation spectrum because the flat background is not well-constrained by any portion of the spectrum.
+
+% figure of fit to solo hist?
+
+But wait!  The pulse-selected histogram should have the same shape to its evaporation spectrum as the non-pulse-selected data from the same bar.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the uncertainty.  The model for the pulse-selected data is
+
+% equation for pulse-selected spectrum
+\begin{equation}
+Beta(A,B,\alpha,\beta) + Gaus() + Gaus() + Gaus() + DoubleGaus() + Const
+\end{equation}
+
+% equation for non-pulse-selected spectrum
+\begin{equation}
+Beta(A,B,\alpha,\beta) + Gaus() + Gaus() + Gaus() + DoubleGaus() + Const
+\end{equation}
+
+Where certainly the parameters of the Beta Distribution must be the same for each histogram.  But these two histograms constrain each other in more ways than just the shape of the neutron evaporation spectrum.  A detector sitting at the same angle should see the same ratio between neutrons from the evaporation peak, neutrons from the Carbon peak, and neutrons from the 0+ peak.  The full neutron spectra - peaks and evaporation region - from each of these histograms should have the same shape.  So now the model for the non-pulse-seleted spectrum can be a neutron spectrum that's a scaled copy of the pulse-selected spectrum's neutron spectrum.
+
+% equation for pulse-selected spectrum
+\begin{equation}
+Neut_{PS} + DoubleGaus() + Const
+\end{equation}
+
+% equation for non-pulse-selected spectrum
+\begin{equation}
+R*Neut_{PS} + DoubleGaus() + Const
+\end{equation}
+
+Restricting the fixed scaling to the neutrons alone, however, is incorrect.  The detector, sitting at its designated angle, sees the same mix of neutrons as well as the same mix of neutrons and gammas.  There are really two spectra the detector sees - a beam-related spectrum and the non-beam-related background spectra.  Two different runs will provide these in different ratios; for example, a short run with high beam current would proved more beam-related spectrum and little background spectrum, while a long run with low beam current wouuld provide provide moderate beam-related spectrum and much background spectrum.  The appropriate model for fitting the two datasets simultaneously, then, is
+
+% equation for pulse-selected spectrum
+\begin{equation}
+Neut_{PS} + Gamma_{PS} + Const_{PS}
+\end{equation}
+
+% equation for non-pulse-selected spectrum
+\begin{equation}
+R(Neut_{PS} + Gamma_{PS}) + Const_{NPS}
+\end{equation}
+
+That the gamma peaks scale by the same ratio as the neutron peaks is a significant constraint on this fit because they are such pronounced features.  Quantitative results?  Such a fit does indeed converge well for a large majority of the detectors.  A dedicated fitter may begin to wonder if there are as-yet-unused constraints that could provide an even more robust fit that would ensure a convergant fit for all angles.
+
+One additional constraint concerns the ratio between the two datasets.  This ratio scales the amount of beam seen by one bar during the two data runs.  But each bar should see the same ratio!  Fitting all the bars simultaneously will provide a much-improved ratio.
+
+% figure of two-hist fit?
+
+
 
 \section{Placing a limit on excited 0+ state cross-sections}
 introduce 0+ peak and see when it becomes statistically significant
