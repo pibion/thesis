@@ -29,11 +29,19 @@
 Explain some cosmic ray basics - only the stuff relevant to our detector (1 muon per square foot per second and MIP -> landau energy distribution).
 Discuss materials available for veto and basic design decision of WLS
 
+Sea-level radiation due to cosmic rays consists primarily of muons created in the upper atmosphere.  The energy distribution of muons incident on the neutron detector peaks at 100 GeV/C [cite PDG]: most of the muons travelling through the detector are Minimum Ionizing Particles (MIP's).  When particles that are minimum ionizing travel through material, their energy loss is proportional to their path length in that material.  Muons at these energies deposit 1 MeV/cm2/g [PDG].  The detector consists of plastic with a density of ??, so the muons can deposit less than 0.5 MeV to 80 MeV depending on their path through the plastic.  It is possible to discard events that are more energetic than the highest-energy neutron, but most events deposit less energy and, if they arrive in the time window of interest, are indistinguishable from a neutron event.  The rate of such muons is low; one muon per square foot per second.  Of these, only a fraction arrives in the time window of interest, 20/400.  With a high flux of event neutrons, this background would pose little problem.  But the 76Ge(3He,n) cross section is predicted to be on order of ?? mb/sr.  Without vetoing the cosmic rays, the signal will be outnumbered ?? to 1, greatly increasing the uncertainty.  Because the absolute cross-section is of interest, this is unacceptable. 
+
 \section{Light Collection with WLS}
 Describe light collection with WLS
 Explain why we loop the WLS and collect light from both ends
 Discuss the light limitations of light guides (Liouville) and ways to increase light collection with WLS (more!)
 Describe fragility of WLS, how some efforts make custom plastic clamps to make it robust, how this doesn't work for you so you made a break and attached a cable.  Discuss signal loss.
+
+WLS collects light by absorbing broad-spectrum radiation and re-emitting that light in the green.  It is possible to coat the fiber with material with an index of refraction that guarantees total internal reflection for green light, and so the light bounces in the fiber until it reaches a detector.  Because light can travel in two directions in the fiber, looping the fiber so that both ends terminate in a detector collects the most light.  Sometimes this is not possible and the ends of the WLS are silvered, but this is an expensive process and does not recover all the light. 
+
+WLS can be a very effective tool for light collection.  Because traditional light guides are glued to the ends of a detector, significant position sensitivity often results when detectors are large.  This can be advantageous!  But often it is necessary to use two PMT's to avoid poor efficiency where light must travel the furthest to reach a detector.  WLS largely eliminates position sensitivity because it can be arranged on the detector so that no part is distant from the collecting fiber [cite??]; laying the fiber in a loop on the detector often means that only one PMT is required.
+
+The disadvantage to WLS is light intensity [cite??] and fragility.  Sufficient light intensity to boost the signal above the noise is a serious concern, and is often overcome by using many WLS strands to collect light [cite NASA thing, show picture?].  The fragility of the WLS is more difficult to design around.  Maximum light collection dictates taking the fiber on the detector directly to the PMT, which should be as close to the plastic as possible to minimize the length of this fiber run.  Because two bars needed to share a PMT, some plastic was 2 m away from its PMT.  At this length, enclosing the end of the detector, the WLS fiber, and the PMT in an immovable cast was not practical.  And with free-floating ends, the fiber quickly degraded and snapped, even with careful handling.  Dismayed at the possibility of making detectors and mounting them to the neutron detector only to have the fragile fibers carrying their signal snap, leaving us with no way to access their signals, the design was dramatically altered.  The WLS was cleanly severed at the end of the plastic and a robust cable was made to attach to the WLS.  Certainly severing the WLS causes significant light loss, but with the benefit of durablility.  
 
 \section{Paddle Design}
 Schematics
@@ -41,6 +49,8 @@ Tolerances
 Making sure the transmit cable lines up wih the paddle WLS fibers!  Dowels.  Tolerance doesn't actually need to be that good
 connecting cable with PMT
 cable design - hosing for protection
+
+There are three constraints for the paddle-cable interface.  The diameter of the cable must be larger than the diameter of the WLS so that small misalignments do not greatly impact light collection.  The center of the cable must be aligned to the center of the WLS.  Lastly, the cable must be robust.
 
 \begin{figure}[ht]
 \centering
