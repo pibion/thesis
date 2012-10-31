@@ -164,7 +164,38 @@ Include a sample calculation?  Like: this is what we see in the detector.  To ge
 counts * time * particle current * target thickness
 So we get the counts this way and the time with the signal from the DAQ and the target thickness from Hope
 
+The time resolution of the TOF spectrum is limited by the time spread of the beam bunch and is approximately 1.5 ns.  An 18 MeV 3He can populate many excited states in 76,74Ge; the energy difference between the ground and first excited state, together with the time resolution, determines the minimum flight path.
 
+% figure: 76Ge, 74Ge level scheme
+
+ conservation of momentum yields
+
+t(E)
+
+Requiring a separation between the ground state and first excited state of 76Ge that is greater than or equal to the time resolution,
+
+d = = 15 m
+
+The room is too small for this flight path; the largest it can accomodate is 14.6 m, so cleanly separating the ground state from the first excited state will not be possible in 76,74Ge.
+
+The absolute cross section is the number of times a reaction occurred normalized by the total number of particles incident on the target and the number density of nuclei in the target:
+
+\begin{equation}
+cross section = times reaction occurred / (particles incident on target * number density of target nuclei)
+
+cross section = \frac{times reaction occurred}{particle current * time * target thickness}
+\label{eq:cross_section}
+\end{equation}
+
+How many reactions occured and the target thickness do not affect the setup of the detector.  Calculating the number of reactions requires the efficiency of the detector.  Chapter ?? examines this carefully.  The efficiency is approximately 3\% for all bars.  The target thickness is well-known from RBS measurements; the results are summarized in Chapter ?? and a description of the analysis is in Appendix ??.  Maintaining good energy resolution does dictate a target choice, however.  Because the 76Ge targets are too thin to be self-supporting, they are backed by a gold foil.  The target is positioned so that the first material the beam encounters is Ge.  Resulting neutrons can pass through the gold without the energy straggling that would afflict the 3He were it to pass through the gold.
+
+The need for accurate time and particle current both affect the experimental setup.  The DAQ provides a 100 Hz NIM logic pulse, providing a measure of time.  But the DAQ cannot collect new events while it is processing an event.  A measure of the time experienced by the DAQ is the appropriate time to use when calculating the cross section.  In addition to a 100 Hz signal, the DAQ also provides a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal gives the live time needed for the cross section calculation.  The schematic is shown in figure ??.
+
+There are several ways to record information about the particle current.  The most reliable is to measure RBS from the gold backing with a Silicon detector.  Because the 26Mg target is self-supporting, it is necessary to record other measures, such as the charge collected on the beamstop and the gamma reaction to a small NaI2 crystal, both of which show a linear relationship with the beam current within statistical error.
+
+% figure: Si, Q.live, NaI accumulation
+
+% figure: full electronics
 
 \subsection{Testing with 26Mg}
 Show results from first run and look at timing - hey it's all right!
