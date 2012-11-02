@@ -79,7 +79,7 @@ The accelerated beam must travel from the accelerator to a target ?? m through f
 Quadrupole triplet and doublet magnets focus the beam as it travels through the target rooms, and another set of electrostatic steerers allows correction of the beam angle.  The final focusing element before the target are two large-bore, variable-strength solenoid magnets that focus the beam to a spot approximately 2 mm in diameter.
 
 % figure: beamline
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/NSL_beamline.eps}
 \label{fig:beamline}
@@ -99,6 +99,17 @@ The ``sweeper'' provides a large electric field that ramps up and down very quic
 The beam buncher and sweeper are all that is needed to provide bunched beam.  At Notre Dame, the beam bunches are 101.52 ns apart and are typically 1 ns to 2 ns wide.  This bunch spacing presents a problem for the experiment because the neutron TOF is in excess of 200 ns.  With bunches arriving at the target every 100 ns, it will be impossible to tell if a neutron is very slow and associated with bunch A or very fast and associated with bunch B.  The spectrum will be considerably complicated.
 
 % figure: the considerably complicated spectrum
+\begin{figure}[htp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.4\textwidth]{figures/PS_BarA_Sep.eps}	
+}
+\subfloat[][]{
+	\includegraphics[width=0.4\textwidth]{figures/NPS_BarA.eps}
+}
+\label{fig:PSvsNPS_TOF}
+\caption{Figure A shows timing spectrum from a pulse-selected beam.  The timing spectrum in figure B is from beam with no pulse selection.  Both timing spectra are from a 3He beam on a 76Ge target.}
+\end{figure}
 
 To give all the neutrons resulting from one beam bunch time to reach the detector before the next bunch strikes, a ``pulse selector'' knocks out three of every four bunches, resulting in 300 ns between each bunch.  Even with such generous time between bunches, very slow neutrons from previous bunches overlap with gammas from the current bunch.  These vanish with a low energy cut.
 
@@ -125,7 +136,7 @@ When a real event occurs in some bar of the neutron detector, the DAQ must recor
 The lone signal provided by the PMT base is not adequate for this processing because two signals, one for the QDC and one for the TDC, are necessary.  The signal from the PMT base is also too small to trigger the CFD's.  The ?? x10 amplifier makes the signal large enough to trigger the CFD's and provides two copies of the input signal, one which can be analyzed for timing information while the other is analyzed for energy information.  A diagram of the data acquisition concept is shown in fig ??.
 
 % figure: simple electronics
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/basic_electronics.eps}
 \label{fig:simpleElectronics}
@@ -137,7 +148,7 @@ What is a good trigger to construct for the neutron wall?  For just one neutron 
 The solution is to use the built-in 'OR' of the CFD.  Instead of requiring a top and bottom signal in the same bar, the condition is loosened to requiring a signal in a top PMT and a bottom PMT in the same eight-bar group.  Each CFD is an eight-fold unit and provides an 'OR' output.  Each CFD receives only top or bottom signals.  The presence of some top signal AND some bottom signal triggers the event signal.  Such an event only knows that both a top and bottom signal coincided but is blind to whether or not these signals belonged to the same bar.  Such an event trigger includes all events where the top and bottom signal belong to one bar but also includes spurious events where no bar has signal in both its top and bottom PMT.  With a dead time of less than 30\%, this event condition does not hinder data collection, and simple software cuts eliminate spurious events.
 
 % figure: event trigger
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/event_trigger.eps}
 \label{fig:eventTrig}
