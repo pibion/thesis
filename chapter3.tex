@@ -122,7 +122,7 @@ Beam bunching dramatically reduces available beam - swept beam current is ?? les
 Discuss neutron wall briefly.  Can reference NIMA paper. Explain why it's important that it's wide-angle. 
 Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
 
-The neutron detectors are large strips of high density polyethylene (HDPE) plastic doped with scintillator (what kind of scintillator??).  Sixteen independent detectors sit in a rough circle around the target, with the forwardmost angle being 5$\circ$ and the largest angle being $21\circ$.  The angle step size between each detector is approximately 0.7$\circ$.  The detectors sit 15.6 m away from the target to ensure a resolution of at least 0.5 MeV at 22 MeV.  This distance comes at a steep price; the solid angle is only (approx. 10 cm/15 m x 2.5 m/15 m = 0.11) sr, or 0.88\% of the unit circle.
+The neutron detectors are large strips of high density polyethylene (HDPE) plastic doped with scintillator (what kind of scintillator??).  Sixteen independent detectors sit in a rough circle around the target, with the forwardmost angle being 5$^{\circ}$ and the largest angle being $21^{\circ}$.  The angle step size between each detector is approximately 0.7$^{\circ}$.  The detectors sit 15.6 m away from the target to ensure a resolution of at least 0.5 MeV at 22 MeV.  This distance comes at a steep price; the solid angle is only (approx. 10 cm/15 m x 2.5 m/15 m = 0.11) sr, or 0.88\% of the unit circle.
 
 % figure - picture of detector
 
@@ -170,11 +170,18 @@ The time resolution of the TOF spectrum is limited by the time spread of the bea
 
 Conservation of energy and momentum determines the time it takes for a neutron of energy En to travel the distance d between the target and the detector.
 
+\begin{equation}
 t(E) = 
+\label{eq:TOF2}
+\end{equation}
+
 
 Requiring a separation between the ground state and first excited state of 76Ge that is greater than or equal to the time resolution,
 
+\begin{equation}
 d = = 15 m
+\label{eq:requiredDist}
+\end{equation}
 
 The room is too small for this flight path; the largest it can accomodate is 14.6 m, so cleanly separating the ground state from the first excited state will not be possible in 76,74Ge.
 
@@ -200,6 +207,18 @@ There are several ways to record information about the particle current.  The mo
 \subsection{Testing with 26Mg}
 Show results from first run and look at timing - hey it's all right!
 Look at background - will need to improve
+
+76,74Ge cross-sections are predicted to be 300 mb, much lower than previous cross-sections measured with the neutron wall.  26Mg has a cross-section of ?? mb and its differential cross-section (right word?) has been well measured by ?? [CITE!].  Since its level structure is similar to 76,74Ge in that is has a low-lying 0+ first excited state, 26Mg(3He,n) serves as an excellent system to test the neutron wall.
+
+% figure: 26Mg level scheme (along with Ge level scheme?)
+
+The TOF spectrum at the forwardmost angle is shown in Figure ??.  The neutron peak has a width of 1.? ns and is clearly visible against the background.  Figure ?? shows the agreement of the extracted cross-section to previously measured data.
+
+% figure: Bar A TOF spectrum
+
+% figure: 26Mg cross-section compared to old data
+
+The concerning thing about this data is that the neutron peaks at angles with low cross-sections do not stand significantly above the random background.  This has serious implications for the 76,74Ge experiment, where the cross-section is suspected to be even lower.  Current data on two-proton transfer typically has errors no worse than 20\%; to achieve such errors it is necessary to either reduce the background or increase the beam current.  Increasing the beam current substantially was not feasable because of ion source limitations.  The background comes primarily from low-energy gamma radiation from the cement in the room and from muons produced by cosmic rays.  The next chapter discusses the construction of a cosmic-ray veto.
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
