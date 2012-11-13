@@ -31,11 +31,17 @@
 Give an overview of the requirements for two-proton transfer and say that ND has a buncher and a Tandem accelerator that goes up to 10 MV so we can get beam energies up to 30 MeV for \He{3} and we have a beamline with a long flight path SO we can do this experiment.
 \end{comment}
 
-The previous chapter demonstrated the interest in studying the (\He{3},n) transfer reaction onto \GeTargets ; this chapter will discuss the beam and detector properties that are necessary for measuring the angular distribution of this reaction.
+The previous chapter demonstrated the interest in studying the (\He{3},n) transfer reaction onto \GeTargets ; this chapter will discuss the beam production and experimental setup that are necessary for measuring the angular distribution of this reaction.
 
-One obvious requirement is \He{3} beam.  The Helium Ion Source (HIS) at Notre Dame can produce 1-2 microamps ($\mu$A) of negatively charged (1-) Helium beam.  To make \He{3} beam, \He{3} gas must be provided to the ion source.  While in principle this is not difficult, in practice \He{3} gas is very expensive and requires government approval for its purchase.  
+\He{3} beam is an excellent candidate for studying two-proton transfer.  The Helium Ion Source (HIS) at Notre Dame can produce 1-2 microamps ($\mu$A) of negatively charged (1-) Helium beam.  To make \He{3} beam, \He{3} gas must be provided to the ion source.  
 
-Another consideration is the beam energy.  Because the reaction of interest is a nuclear reaction, the energy must be above the Coulomb barrier.  To maximize the cross section, the beam energy must be near 18 MeV.
+As discussed in the previous chapter, the purpose of this experiment is to understand the strength of the 0+ ground state.  Maximizing the 0+ cross section requires a beam energy near 18 MeV.  High beam energies come at a cost - the resolution of the neutron detector decreases with increasing neutron energy.  However, the 0+ cross section drops drastically before and after its maximum.  Choosing a lower energy, while increasing resolution, would threaten the ability of the neutron detectors to see any signal at all above noise.
+
+The resulting products of a two-proton transfer onto \Ge{76} are a neutron and a \Se{78} nucleus.  While the heavy, charged \Se{78} nucleus is unlikely to escape the target, the escaping neutron provides a way to study this reaction.
+
+Searching for states based on angular momentum can be effectively done with detectors that are segmented in angle, providing a differential cross-section.  Because the states of interest are 0+ states, the angular range most important to cover is 0 to 22 degrees, the maximum and the minimum of the differential cross section.  The neutron detector consists of 16 independent plastic bars, each spanning approximately 1 degree, from 7 degrees to 22 degrees as shown in figure ??.
+
+% figure: detector setup
 
 The Tandem Van deGraaff accelerator at Notre Dame has a maximum terminal voltage of 10 mega volts (MV).  Beam extracted from the HIS is singly, negatively ionized by Lithium vapor.  The beam stays in this ionization state until it encounters a carbon foil in the center of the accelerator terminal and is stripped of all its electrons, leaving it \He{3}$^{2+}$.  In the case of \He{3} beam, then, the energy of the accelerated beam with a terminal voltage of $V_T$ is 
 
@@ -61,7 +67,7 @@ The neutron energy uniquely determines the time it takes for the neutron to trav
 
 Measuring the time of flight (TOF) of the neutron to sufficient accuracy requires both beam bunching and a long neutron flight path.  In a continuous beam, there is no way to know which \He{3} was associated with a neutron event in the detector, and therefore no way to determine TOF.  Bunching the beam so that clumps of \He{3} arrive at the same time and providing a signal correlated to their arrival at the target allows a TOF measurement with a precision determined by the time-width of the bunch.  This limit on time resolution constrains the distance between the target and detector.  The flight path must be long enough to distinguish ground state neutrons from neutrons associated excited states of the residual nucleus.  In the case of \Ge{76},  the energies of the ground and first excited state neutrons differ by only 0.5 MeV out of $\sim$25 MeV.  With a flight path of 1 m between the target and detector, the difference in time between these two neutrons is ?? ns - far less than the resolution determined by the beam bunch.  In all experiments discussed, the flight path is approximately 15 m, the largest allowed by the room, to maximize energy resolution.  
 
-\section{Bunched Beam Production at Notre Dame}
+\section{Beam Production at Notre Dame}
 The beam delivered to the target is 16 MeV bunched \He{3}.  In this section, we will follow the beam through its production and accelaration.
 
 The accelerator at Notre Dame is a Van deGraaff accelerator made by High Voltage Engineering Corporation.  Its maximum terminal potential is 10 MV.  Beam enters the accelerator negatively charged and accelerates toward the positive terminal, located in the center of the machine. A thin carbon foil ($\sim$ 3 $\mu$g/cm$^2$) in the center of the machine strips the electrons from the beam.  The now-positive beam accelerates again, away from the positive terminal.  
@@ -70,7 +76,7 @@ The Helium Ion Source (HIS) provides negative \He{3} ions to the accelerator.  A
 
 The accelerated beam again encounters a large dipole magnet that selects beam of the desired energy.  The magnetic field strength is adjusted using the nuclear magenetic resonance (NMR) of hydrogen and leaves the beam with an energy spread of approximately 10 keV.  Comparing this energy spread to the energy spread introduced by the target gives a sense of how small the error associated with the beam energy is; the target spreads the energy by 0.5 MeV.
 
-\subsection{Beam Focusing}
+\subsection{Beam Focusing and Selection}
 
 The accelerated beam must travel in vacuum from the accelerator to a target.  Many focusing and steering elements along the way are necessary to obtain a reasonable transmission rate.  Two Einzel lenses [need cite] focus the beam before it enters the accelerator, and a set of electrostatic steerers before and after the accelerator are enough to position the beam before it enters the energy-selecting dipole magnet.
 
@@ -122,6 +128,14 @@ To give all the neutrons resulting from one beam bunch time to reach the detecto
 % figure: slow neutrons and their dissappearance
 
 Beam bunching and pulse selection dramatically reduces available beam - the swept beam current is only 40\% $\times$ $\frac{1}{4} = 10$\% of the non-bunched current.  But without bunched beam it would not be possible to distinguish the neutrons of interest in the (\He{3},n) transfer reaction.  As it happens, however, the Notre Dame facility cannot improve the statistics of this experiment by very much because the radiation limits on the room with the detector are so low that even with pulse selection, the beam is near its maximum allowed current.
+
+\section{The Target Chamber}
+\begin{comment}
+target
+thin stainless stell wall
+Si detector
+BaF2 detector
+\end{comment}
 
 
 \section{The Neutron Detector}

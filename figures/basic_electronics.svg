@@ -24,10 +24,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1440879"
-     inkscape:cx="454.88061"
-     inkscape:cy="453.90582"
+     inkscape:cx="524.80531"
+     inkscape:cy="244.13173"
      inkscape:document-units="px"
-     inkscape:current-layer="g3919"
+     inkscape:current-layer="g5869"
      showgrid="true"
      inkscape:window-width="1436"
      inkscape:window-height="856"
@@ -50,6 +50,13 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 372.04724 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1052.3622 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18109 : 248.03149 : 1"
+       id="perspective3155" />
     <marker
        inkscape:stockid="DotM"
        orient="auto"
@@ -141,7 +148,7 @@
        transform="translate(72,18)">
       <path
          transform="translate(-2,330.2677)"
-         d="m 110,444.09448 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
+         d="m 110,444.09448 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
          sodipodi:ry="10"
          sodipodi:rx="10"
          sodipodi:cy="444.09448"
@@ -338,7 +345,7 @@
                y="443.63953"
                x="677.90039"
                id="tspan3048"
-               sodipodi:role="line">ADC</tspan></text>
+               sodipodi:role="line">QDC</tspan></text>
           <path
              d="m 402.15805,536.38086 c 0,5.91906 -4.79834,10.71741 -10.71741,10.71741 -5.91906,0 -10.71741,-4.79835 -10.71741,-10.71741 0,-5.91906 4.79835,-10.71741 10.71741,-10.71741 5.91907,0 10.71741,4.79835 10.71741,10.71741 z"
              sodipodi:ry="10.71741"
@@ -359,6 +366,39 @@
              style="fill:none;stroke:#000000;stroke-opacity:1"
              sodipodi:type="arc"
              transform="translate(328.55936,-14.018677)" />
+          <text
+             xml:space="preserve"
+             style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             x="327.77203"
+             y="122.63874"
+             id="text3151"
+             sodipodi:linespacing="125%"
+             transform="translate(-80,288.2677)"><tspan
+               sodipodi:role="line"
+               id="tspan3153"
+               x="327.77203"
+               y="122.63874" /></text>
+          <use
+             x="0"
+             y="0"
+             xlink:href="#path3895-05-9"
+             id="use3163"
+             transform="translate(-0.7174134,130)"
+             width="1052.3622"
+             height="744.09448" />
+          <text
+             xml:space="preserve"
+             style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+             x="771.79382"
+             y="326.29443"
+             id="text3165"
+             sodipodi:linespacing="125%"
+             transform="translate(-80,288.2677)"><tspan
+               sodipodi:role="line"
+               id="tspan3167"
+               x="771.79382"
+               y="326.29443"
+               style="font-size:24px">gate</tspan></text>
         </g>
         <g
            id="g5757"
@@ -406,6 +446,79 @@
            inkscape:label="Triangle"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cccc" />
+        <text
+           xml:space="preserve"
+           style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="321.72852"
+           y="439.64246"
+           id="text3157"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3159"
+             x="321.72852"
+             y="439.64246">x10</tspan></text>
+        <use
+           x="0"
+           y="0"
+           xlink:href="#text3157"
+           id="use3161"
+           transform="translate(0,100)"
+           width="1052.3622"
+           height="744.09448" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.86666667;stroke-dasharray:none;stroke-dashoffset:0"
+           id="rect3169"
+           width="140"
+           height="80"
+           x="490"
+           y="594.09448"
+           transform="translate(0,308.2677)" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 430,234.09448 0,380 90,0"
+           id="path3171"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 400,134.09448 0,510 120,0 0,0 10,0"
+           id="path3173"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 600,634.09448 210,0 0,-270"
+           id="path3175"
+           inkscape:connector-curvature="0"
+           transform="translate(0,308.2677)" />
+        <text
+           xml:space="preserve"
+           style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="528.80554"
+           y="613.85974"
+           id="text3177"
+           sodipodi:linespacing="125%"
+           transform="translate(0,308.2677)"><tspan
+             sodipodi:role="line"
+             id="tspan3179"
+             x="528.80554"
+             y="613.85974">Event</tspan><tspan
+             sodipodi:role="line"
+             x="528.80554"
+             y="638.85974"
+             id="tspan3181">Logic</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="686.13611"
+           y="619.97815"
+           id="text3183"
+           sodipodi:linespacing="125%"
+           transform="translate(0,308.2677)"><tspan
+             sodipodi:role="line"
+             id="tspan3185"
+             x="686.13611"
+             y="619.97815">event signal</tspan></text>
       </g>
     </g>
     <path
