@@ -39,44 +39,30 @@ As discussed in the previous chapter, the purpose of this experiment is to under
 
 The resulting products of a two-proton transfer onto \Ge{76} are a neutron and a \Se{78} nucleus.  While the heavy, charged \Se{78} nucleus is unlikely to escape the target, the escaping neutron provides a way to study this reaction.
 
-Searching for states based on angular momentum can be effectively done with detectors that are segmented in angle, providing a differential cross-section.  Because the states of interest are 0+ states, the angular range most important to cover is 0 to 22 degrees, the maximum and the minimum of the differential cross section.  The neutron detector consists of 16 independent plastic bars, each spanning approximately 1 degree, from 7 degrees to 22 degrees as shown in figure ??.
+An effective search for angular momentum states can be done with detectors that are segmented in angle, providing a differential cross-section.  Because the states of interest are 0+ states, the angular range most important to cover is 0 to 22 degrees, the maximum and the minimum of the differential cross section.  The neutron detector consists of 16 independent plastic bars, each spanning approximately 1 degree, from 7 degrees to 22 degrees as shown in figure ??.
 
 % figure: detector setup
 
-The Tandem Van deGraaff accelerator at Notre Dame has a maximum terminal voltage of 10 mega volts (MV).  Beam extracted from the HIS is singly, negatively ionized by Lithium vapor.  The beam stays in this ionization state until it encounters a carbon foil in the center of the accelerator terminal and is stripped of all its electrons, leaving it \He{3}$^{2+}$.  In the case of \He{3} beam, then, the energy of the accelerated beam with a terminal voltage of $V_T$ is 
+The neutron detectors are instrumented to provide both an energy signal and a time signal.  But the neutron detectors are not the whole story.  As discussed in the previous chapter, the absolute differential cross section helps determine the occupancies in the target nucleus.  The amount of beam on target must be well-known, and so detectors are placed near the target to provide a way to monitor the beam current.
+
+
+\section{Beam Production at Notre Dame}
+The beam delivered to the target is 16 MeV bunched \He{3}.  In this section, we will follow the beam through its production and accelaration.
+
+The Helium Ion Source (HIS) provides negative \He{3} ions to the accelerator.  A duoplasmatron ion source filled with \He{3} gas uses a discharge across high voltage to convert some of the gas into plasma.  Electrostatic elements extract the plasma into a canal filled with lithium vapor.  Lithium is crucial to creating negatively charged beam because it donates electrons generously, and some \He{3} becomes ionized after passing through the canal.  A dipole magnet after the ion source removes the carbon, oxygen, and other impurities that contaminate the \He{3} beam.  Movable, thick tungsten slits block much of the beam, allowing only beam within a small range of magnetic rigidity to pass through to the accelerator.
+
+The accelerator at Notre Dame is a Van deGraaff accelerator made by High Voltage Engineering Corporation.  Its maximum terminal potential is 10 MV.  Beam enters the accelerator negatively charged and accelerates toward the positive terminal, located in the center of the machine. A thin carbon foil ($\sim$ 3 $\mu$g/cm$^2$) in the center of the machine strips all the electrons from the beam.  The now-positive beam accelerates again, away from the positive terminal. In the case of \He{3} beam, then, the energy of the accelerated beam with a terminal voltage of $V_T$ is 
 
 \begin{equation}
 E = 3V_T
 \end{equation}
 
-For 16 MeV \He{3} beam, the terminal voltage required is 5.33 MV, easily provided by the accelerator, but neutron detection imposes an additional constraint on the beam.  The resulting products of a two-proton transfer onto \Ge{76} are a neutron and a \Se{78} nucleus.  Our detector has a relatively small neutron detection efficiency, but the heavy, charged \Se{78} nucleus is unlikely to escape the target, forcing us to rely on neutron detection to study this reaction.  
+For 16 MeV \He{3} beam, the terminal voltage required is 5.33 MV, easily provided by the accelerator.  An ion source and an accelerator alone can produce a particular beam, some of which is at the desired energy.  But the energy spread of the beam leaving the accelerator is ?? MeV and would greatly decrease the resolution of the experiment.  Additionally, the beam is diffuse.  It must arrive focused on the target, which is ?? m away.  To produce a focused, near-monoenergetic beam at the target, beam selection using dipoles and slits and also focusing elements are necessary.  These will be discussed in the next section.
 
-Imagine for a moment the options that are available to the neutron that wishes to interact with any detector.  It has no charge, so disturbing electrons via the electromagnetic force is not possible.  The neutron can interact with the electrons weakly, but this probability is impractically small.  A neutron may also interact with a proton, strongly.  This strong interaction is predominantly responsible for neutron detection.  A neutron that transfers some of its energy to a proton can rely on the charged proton to interact with the solid's electrons and register a signal in the detector.  What experimenters must do is provide plenty of protons for neutrons to collide with - large quantities of water or plastics, with their long hydrocarbon chains, are popular choices.
-
-What does a neutron signal look like in such a detector?  If the neutron always deposited its full energy in the detector, the energy spectrum would show sharp peaks corresponding to each neutron energy.  However, a neutron interacting with a proton only transfers all its energy to that proton in a head-on collision.  Monoenergetic neutrons will deposit a range of energy in the detector, from no energy at all to their full energy.  This makes it impossible to determine the energy of the neutron from its deposited energy.  In this transfer experiment, it is necessary to distinguish neutrons with different energies.  Because the neutron's deposited energy does not determine that neutron's full energy, the experiment must be sensitive to some quantity that gives unambiguous information about the neutron's energy.
-
-% figure of charged-particle energy spectrum
-% figure of neutron energy spectrum
-
-The neutron energy uniquely determines the time it takes for the neutron to travel from the target to the detector in \eq \ref{eq:TOF}.  
-
-\begin{equation}
-\frac{v}{c} = \sqrt{\frac{E^2 - m^2c^4}{E^2}}
-\label{eq:TOF}
-\end{equation}
-
-Measuring the time of flight (TOF) of the neutron to sufficient accuracy requires both beam bunching and a long neutron flight path.  In a continuous beam, there is no way to know which \He{3} was associated with a neutron event in the detector, and therefore no way to determine TOF.  Bunching the beam so that clumps of \He{3} arrive at the same time and providing a signal correlated to their arrival at the target allows a TOF measurement with a precision determined by the time-width of the bunch.  This limit on time resolution constrains the distance between the target and detector.  The flight path must be long enough to distinguish ground state neutrons from neutrons associated excited states of the residual nucleus.  In the case of \Ge{76},  the energies of the ground and first excited state neutrons differ by only 0.5 MeV out of $\sim$25 MeV.  With a flight path of 1 m between the target and detector, the difference in time between these two neutrons is ?? ns - far less than the resolution determined by the beam bunch.  In all experiments discussed, the flight path is approximately 15 m, the largest allowed by the room, to maximize energy resolution.  
-
-\section{Beam Production at Notre Dame}
-The beam delivered to the target is 16 MeV bunched \He{3}.  In this section, we will follow the beam through its production and accelaration.
-
-The accelerator at Notre Dame is a Van deGraaff accelerator made by High Voltage Engineering Corporation.  Its maximum terminal potential is 10 MV.  Beam enters the accelerator negatively charged and accelerates toward the positive terminal, located in the center of the machine. A thin carbon foil ($\sim$ 3 $\mu$g/cm$^2$) in the center of the machine strips the electrons from the beam.  The now-positive beam accelerates again, away from the positive terminal.  
-
-The Helium Ion Source (HIS) provides negative \He{3} ions to the accelerator.  A duoplasmatron ion source filled with \He{3} gas uses a discharge across high voltage to convert some of the gas into plasma.  Electrostatic elements extract the plasma into a canal filled with lithium vapor.  Lithium is crucial to creating negatively charged beam because it donates electrons generously, and some \He{3} becomes ionized after passing through the canal.  A dipole magnet after the ion source removes the carbon, oxygen, and other impurities that contaminate the \He{3} beam.  Movable, thick tungsten slits block much of the beam, allowing only beam within a small range of magnetic rigidity to pass through to the accelerator.
-
-The accelerated beam again encounters a large dipole magnet that selects beam of the desired energy.  The magnetic field strength is adjusted using the nuclear magenetic resonance (NMR) of hydrogen and leaves the beam with an energy spread of approximately 10 keV.  Comparing this energy spread to the energy spread introduced by the target gives a sense of how small the error associated with the beam energy is; the target spreads the energy by 0.5 MeV.
 
 \subsection{Beam Focusing and Selection}
+
+Beam exiting the accelerator has a large energy spread.  Dipole magnets can select beam based on rigidity; since the mass and charge of the desired beam are fixed, a dipole acts as a momentum filter.  A large dipole magnet with beam-stopping slits at its exit leaves the beam with an energy spread of only 10 keV.  The magnetic field strength is calibrated against the nuclear magenetic resonance (NMR) of hydrogen.  Comparing this energy spread to the energy spread introduced by the target gives a sense of how small the error associated with the beam energy is; the target spreads the energy by 0.5 MeV.
 
 The accelerated beam must travel in vacuum from the accelerator to a target.  Many focusing and steering elements along the way are necessary to obtain a reasonable transmission rate.  Two Einzel lenses [need cite] focus the beam before it enters the accelerator, and a set of electrostatic steerers before and after the accelerator are enough to position the beam before it enters the energy-selecting dipole magnet.
 
@@ -137,12 +123,43 @@ Si detector
 BaF2 detector
 \end{comment}
 
+The absolute cross section is the number of times a reaction occurred normalized by the total number of particles incident on the target and the number density of nuclei in the target:
+
+\begin{equation}
+\text{cross section} = \frac{\text{times reaction occurred}}{\text{particles incident on target} \times \text{number density of target nuclei}}
+
+\text{cross section} = \frac{\text{times reaction occurred}}{\text{particle current} \times \text{time} \times \text{target thickness}}
+\label{eq:cross_section}
+\end{equation}
+
+How many reactions occured and the target thickness do not affect the setup of the detector.  Calculating the number of reactions requires the efficiency of the detector.  Chapter ?? discusses this in detail.  The efficiency is approximately 3\% for all bars.  The target thickness is well-known from RBS measurements; the results are summarized in Chapter ?? and a description of the analysis is in Appendix ??.  Maintaining good energy resolution does dictate a target choice, however.  Because the \Ge{76} targets are too thin to be self-supporting, they are backed by a gold foil.  The target is positioned so that the first material the beam encounters is Ge.  Resulting neutrons can pass through the gold without the energy straggling that would afflict the \He{3} were it to pass through the gold.
+
+The need for accurate time and particle current both affect the experimental setup.  The DAQ provides a 100 Hz NIM logic pulse, providing a measure of time.  But the DAQ cannot collect new events while it is processing an event.  A measure of the time experienced by the DAQ is the appropriate time to use when calculating the cross section.  In addition to a 100 Hz signal, the DAQ also provides a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal gives the live time needed for the cross section calculation.  The schematic is shown in figure ??.
+
+There are several ways to record information about the particle current.  The most reliable is to measure RBS from the gold backing with a Silicon detector.  Because the \Mg{26} target is self-supporting, it is necessary to record other measures, such as the charge collected on the beamstop and the gamma reaction to a small NaI2 crystal, both of which show a linear relationship with the beam current within statistical error.
+
 
 \section{The Neutron Detector}
 \begin{comment}
 Discuss neutron wall briefly.  Can reference NIMA paper. Explain why it's important that it's wide-angle. 
 Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
 \end{comment}
+
+but neutron detection imposes an additional constraint on the beam.  The resulting products of a two-proton transfer onto \Ge{76} are a neutron and a \Se{78} nucleus.  Our detector has a relatively small neutron detection efficiency, but the heavy, charged \Se{78} nucleus is unlikely to escape the target, forcing us to rely on neutron detection to study this reaction. 
+
+What does a neutron signal look like in such a detector?  If the neutron always deposited its full energy in the detector, the energy spectrum would show sharp peaks corresponding to each neutron energy.  However, a neutron interacting with a proton only transfers all its energy to that proton in a head-on collision.  Monoenergetic neutrons will deposit a range of energy in the detector, from no energy at all to their full energy.  This makes it impossible to determine the energy of the neutron from its deposited energy.  In this transfer experiment, it is necessary to distinguish neutrons with different energies.  Because the neutron's deposited energy does not determine that neutron's full energy, the experiment must be sensitive to some quantity that gives unambiguous information about the neutron's energy.
+
+% figure of charged-particle energy spectrum
+% figure of neutron energy spectrum
+
+The neutron energy uniquely determines the time it takes for the neutron to travel from the target to the detector in \eq \ref{eq:TOF}.  
+
+\begin{equation}
+\frac{v}{c} = \sqrt{\frac{E^2 - m^2c^4}{E^2}}
+\label{eq:TOF}
+\end{equation}
+
+Measuring the time of flight (TOF) of the neutron to sufficient accuracy requires both beam bunching and a long neutron flight path.  In a continuous beam, there is no way to know which \He{3} was associated with a neutron event in the detector, and therefore no way to determine TOF.  Bunching the beam so that clumps of \He{3} arrive at the same time and providing a signal correlated to their arrival at the target allows a TOF measurement with a precision determined by the time-width of the bunch.  This limit on time resolution constrains the distance between the target and detector.  The flight path must be long enough to distinguish ground state neutrons from neutrons associated excited states of the residual nucleus.  In the case of \Ge{76},  the energies of the ground and first excited state neutrons differ by only 0.5 MeV out of $\sim$25 MeV.  With a flight path of 1 m between the target and detector, the difference in time between these two neutrons is ?? ns - far less than the resolution determined by the beam bunch.  In all experiments discussed, the flight path is approximately 15 m, the largest allowed by the room, to maximize energy resolution.  
 
 The neutron detector consists of 16 large (1.5 m $\times$ 0.15 m $\times$ 0.05 m) bars of commercially available scintillator [reference BC408?].  The detectors sit in a rough circle with a radius of $\sim$15 m centered around the target.  The forwardmost angle relative to the beam is 5$^{\circ}$ and the largest angle is $21^{\circ}$.  The angle step size between each detector is approximately 0.7$^{\circ}$.  The detectors sit 14.6 m away from the target to ensure a resolution of at least 0.5 MeV at 22 MeV.  At this distance comes the solid angle of each detector is only 10 cm/15 m $\times$ 2.5 m/15 m = 0.11 sr.
 
@@ -153,6 +170,27 @@ The plastic scintillator bars are each equipped with two photomultiplier tubes (
 While energy information is necessary, it does not need to be terribly precise.  The timing information, however, is the only information useful for neutron identification and must be as precise as possible.  The goal for the electronics is to not add spread to the timing that is noticable above the timing spread already inherent in the beam bunching.  This is why the detectors are equipped with PMT's that have excellent timing response.  The 5 ns PMT signal risetime, together with Constant Fraction Discriminators (CFD's), give timing information with jitter that is about 1 ns.
 
 % figure: CFD operation
+
+The time resolution of the TOF spectrum is limited by the time spread of the beam bunch and is approximately 1.5 ns.  A 16 MeV \He{3} can populate many excited states in \GeTargets; the energy difference between the ground and first excited state, together with the time resolution, determines the minimum flight path.
+
+% figure: \Ge{76}, 74Ge level scheme
+
+Conservation of energy and momentum determines the time $t$ it takes for a neutron with relativistic momentum $p$ to travel the distance $d$ between the target and the detector.
+
+\begin{equation}
+t(p) = \frac{d}{v} = d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}}
+\label{eq:TOF2}
+\end{equation}
+
+
+Requiring a separation between the ground state and first excited state of \Ge{76} that is greater than or equal to the time resolution,
+
+\begin{equation}
+d = \Delta t/v = 1.5 ns / v \sim 15 m
+\label{eq:requiredDist}
+\end{equation}
+
+The room is too small for this flight path; the largest it can accomodate is 14.6 m, so cleanly separating the ground state from the first excited state will be difficult in \GeTargets.
 
 \subsection{Electronics}
 When a real event occurs in some bar of the neutron detector, the DAQ must record the energy and time of both the top and bottom PMT of that bar.  A charge to digital converter (QDC) can integrate the PMT signal and a time to digital converter (TDC) can measure the time between a logic pulse created by the PMT signal and the logic pulse from the beam buncher.  Because time resolution is crucial, constant fraction discriminators (CFD's) and not leading edge discriminators create the logic pulse sent to the TDC.  
@@ -180,73 +218,9 @@ The solution is to use the built-in OR of the CFD.  Instead of requiring a top a
 \end{figure}
 
 
-\section{Setup}
-\begin{comment}
-Flight path and time resolution as a function of neutron energy - apply this to Ge ground and first excited state!
-Beam monitor
-Dead time
-Include a sample calculation?  Like: this is what we see in the detector.  To get an absolute cross-section, here is the calculation:
-counts * time * particle current * target thickness
-So we get the counts this way and the time with the signal from the DAQ and the target thickness from Hope
-\end{comment}
-
-The time resolution of the TOF spectrum is limited by the time spread of the beam bunch and is approximately 1.5 ns.  A 16 MeV \He{3} can populate many excited states in \GeTargets; the energy difference between the ground and first excited state, together with the time resolution, determines the minimum flight path.
-
-% figure: \Ge{76}, 74Ge level scheme
-
-Conservation of energy and momentum determines the time $t$ it takes for a neutron with relativistic momentum $p$ to travel the distance $d$ between the target and the detector.
-
-\begin{equation}
-t(p) = \frac{d}{v} = d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}}
-\label{eq:TOF2}
-\end{equation}
-
-
-Requiring a separation between the ground state and first excited state of \Ge{76} that is greater than or equal to the time resolution,
-
-\begin{equation}
-d = \Delta t/v = 1.5 ns / v \sim 15 m
-\label{eq:requiredDist}
-\end{equation}
-
-The room is too small for this flight path; the largest it can accomodate is 14.6 m, so cleanly separating the ground state from the first excited state will be difficult in \GeTargets.
-
-The absolute cross section is the number of times a reaction occurred normalized by the total number of particles incident on the target and the number density of nuclei in the target:
-
-\begin{equation}
-\text{cross section} = \frac{\text{times reaction occurred}}{\text{particles incident on target} \times \text{number density of target nuclei}}
-
-\text{cross section} = \frac{\text{times reaction occurred}}{\text{particle current} \times \text{time} \times \text{target thickness}}
-\label{eq:cross_section}
-\end{equation}
-
-How many reactions occured and the target thickness do not affect the setup of the detector.  Calculating the number of reactions requires the efficiency of the detector.  Chapter ?? discusses this in detail.  The efficiency is approximately 3\% for all bars.  The target thickness is well-known from RBS measurements; the results are summarized in Chapter ?? and a description of the analysis is in Appendix ??.  Maintaining good energy resolution does dictate a target choice, however.  Because the \Ge{76} targets are too thin to be self-supporting, they are backed by a gold foil.  The target is positioned so that the first material the beam encounters is Ge.  Resulting neutrons can pass through the gold without the energy straggling that would afflict the \He{3} were it to pass through the gold.
-
-The need for accurate time and particle current both affect the experimental setup.  The DAQ provides a 100 Hz NIM logic pulse, providing a measure of time.  But the DAQ cannot collect new events while it is processing an event.  A measure of the time experienced by the DAQ is the appropriate time to use when calculating the cross section.  In addition to a 100 Hz signal, the DAQ also provides a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal gives the live time needed for the cross section calculation.  The schematic is shown in figure ??.
-
-There are several ways to record information about the particle current.  The most reliable is to measure RBS from the gold backing with a Silicon detector.  Because the \Mg{26} target is self-supporting, it is necessary to record other measures, such as the charge collected on the beamstop and the gamma reaction to a small NaI2 crystal, both of which show a linear relationship with the beam current within statistical error.
-
 % figure: Si, Q.live, NaI accumulation
 
 % figure: full electronics
-
-\subsection{Testing with 26Mg}
-\begin{comment}
-Show results from first run and look at timing - hey it's all right!
-Look at background - will need to improve
-\end{comment}
-
-\GeTargets cross-sections are predicted to be 300 mb, much lower than previous cross-sections measured with the neutron wall.  \Mg{26} has a cross-section of ?? mb and its differential cross-section (right word?) has been well measured by ?? [CITE!].  Since its level structure is similar to \GeTargets in that is has a low-lying 0+ first excited state, \Mg{26}(\He{3},n) serves as an excellent system to test the neutron wall.
-
-% figure: 26Mg level scheme (along with Ge level scheme?)
-
-The TOF spectrum at the forwardmost angle is shown in Figure ??.  The neutron peak has a width of 1.2 ns and is clearly visible against the background.  Figure ?? shows the agreement of the extracted cross-section to previously measured data.
-
-% figure: Bar A TOF spectrum
-
-% figure: 26Mg cross-section compared to old data
-
-The concerning thing about this data is that the neutron peaks at angles with low cross-sections do not stand significantly above the random background.  This has serious implications for the \GeTargets experiment, where the cross-section is suspected to be even lower.  Current data on two-proton transfer typically has errors no worse than 20\%; to achieve such errors it is necessary to either reduce the background or increase the beam current.  Increasing the beam current substantially was not feasable because of ion source limitations.  The background comes primarily from low-energy $\gammaa$ radiation from the cement in the room and from muons produced by cosmic rays.  The next chapter discusses the construction of a cosmic-ray veto.
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
