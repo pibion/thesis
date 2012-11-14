@@ -80,6 +80,8 @@ Quadrupole doublet magnets focus the beam as it travels through the target rooms
 
 Continuous beam would make it impossibile for our detectors to determine the neutron TOF.  It is possible to bunch the beam so that ``bunches'' of \He{3} arrive at the target, each bunch having a time spread of approximately one ns.  
 
+There are three components to the bunching system at Notre Dame.  The first is the buncher itself, which slows down particles that would arrive too early at the target and speeds up particles that would arrive too late.  The buncher is not able to group all of the incoming beam into bunches; about 40\% of the beam is pushed into a discrete bunch, while the remaining 60\% is a continuous background.  Any beam background not associated with a bunch would, again, make determing neutron TOF impossible.  The sweeper removes this continuous background.  Together, the buncher and sweeper provide one ns bunches of beam separated by 100 ns, with no beam in between.  Because some of the slow neutrons coming from the reaction have TOF in excess of 300 ns, a pulse-selector is used to eliminate three out of every four bunches.  The buncher, sweeper, and pulse-selector together provide clean bunches of beam separated by 400 ns.  The rest of this section describes how each of these components works.
+
 The beam buncher at Notre Dame works by slowing down particles that would arrive too early at the target and speeding up particles that would be arriving too late.  To acheive this, two grids perpendicular to the beam connect to a radiofrequency (RF) power supply to create an intense electric field that varies in time.  If the electric field were a sawtooth wave in time, the beam bunches would contain all the beam.  Commercially available RF power supplies providing adequate current and rapid enough signal, however, generally vary sinusoidally in time.  At some beam facilities \cite{LynchBunching}, multiple RF amplifiers provide additional frequncies, better approximating a sawtooth wave.  A ``triple-harmonic buncher'' \cite{LynchBunching} generates the correct amplitude, frequency, and phases of the first three Fourier components of a sawtooth wave, which results in adequate bunching of $\sim$80\% of the incident unbunched beam.  However, this requires several expensive RF amplifiers and complicated control electronics.  At Notre Dame, a single frequency buncher that operates at 9.85 MHz is used.  The best bunching occurs while the RF signal is increasing approximately linearly with time; when the electric field is decreasing, de-bunching occurs.  At the target, nanosecond (ns) wide bunches contain $\sim$40\% of the beam and arrive at the target every 101 ns on top of the remaining continuous beam.  This continuous beam would render our time signal useless and must somehow be removed.
 
 % figure: how a beam buncher works
@@ -90,11 +92,11 @@ The beam buncher at Notre Dame works by slowing down particles that would arrive
 \caption{Beam bunching using a varying electric field.}
 \end{figure}
 
-The ``sweeper'' provides a large electric field that ramps up and down very quickly to remove the unwanted beam between the bunches.  While conceptually simple, the time scale required for the charging of the plates makes it difficult to find a commercially available power supply.  The field must turn ``on'' on a timescale much smaller than the beam bunch, or else become the limiting factor in the time-width of the bunch.  The power supply used provides ?? charge in ?? ns.
+The ``sweeper'' provides a sinusoidal electric field that is timed to deflect the continuous beam between the bunches.  A set of vertical slits immediately after the sweeper stops the deflected beam.  The timing between the buncher and the sweeper must be adjusted carefully.  Even a few-nanosecond change in the timing can affect which portion of the beam is swept away. 
 
 %figure of beam profile and sweeper
 
-At Notre Dame, the beam bunches are 101.5 ns apart and are typically 1 ns to 2 ns wide.  This bunch spacing presents a problem for the experiment because the spread in TOF of the neutron spectrum is in excess of 200 ns.  With bunches arriving at the target every 100 ns, it will be impossible to tell if a neutron is very fast and associated with the current bunch or very slow and associated with the previous bunch.  The spectrum will be considerably complicated by this ambiguity, as shown in Figure \ref{fig:PSvsNPS_TOF}.
+It is possible to take data without pulse selection, but because the spread in TOF of the neutron spectrum is in excess of 200 ns, it complicates the TOF spectrum considerably.  With bunches arriving at the target every 100 ns, it will be impossible to tell if a neutron is very fast and associated with the current bunch or very slow and associated with the previous bunch.  The resulting spectrum is shown in Figure \ref{fig:PSvsNPS_TOF}.
 
 % figure: the considerably complicated spectrum
 \begin{figure}[htp]
@@ -109,11 +111,11 @@ At Notre Dame, the beam bunches are 101.5 ns apart and are typically 1 ns to 2 n
 \caption{Figure A shows timing spectrum from a pulse-selected beam.  The timing spectrum in figure B is from beam with no pulse selection.  Both timing spectra are from a \He{3} beam on a \Ge{76} target.}
 \end{figure}
 
-To give all the neutrons resulting from one beam bunch time to reach the detector before the next bunch strikes, a ``pulse selector'' eliminates three of every four bunches, resulting in 400 ns between each bunch at the cost of beam intensity.  Even with 400 ns between bunches, very slow neutrons from previous bunches overlap with $\gamma$ rays from the current bunch, but these are eliminated by placing an energy cut that selects against very low energy neutrons.
+To give all the neutrons resulting from one beam bunch time to reach the detector before the next bunch strikes, a ``pulse selector'' eliminates three of every four bunches, resulting in 400 ns between each bunch at the cost of beam intensity.  The pulse selector is located before the accelerator and consists of two parallel plates, one held at ground and the other at +400 V.  A fast switch (SCR) connects the high-voltage plate to ground, letting the selected bunch through without deflection.  While the beam width is only one ns at the target, at the sweeper the bunch is approximately 80 ns wide, so the SCR must hold the plate at ground for 80 ns to let the entire bunch through.
 
 % figure: slow neutrons and their dissappearance
 
-Beam bunching and pulse selection dramatically reduces available beam - the swept beam current is only 40\% $\times$ $\frac{1}{4} = 10$\% of the non-bunched current.  But without bunched beam it would not be possible to distinguish the neutrons of interest in the (\He{3},n) transfer reaction.  As it happens, however, the Notre Dame facility cannot improve the statistics of this experiment by very much because the radiation limits on the room with the detector are so low that even with pulse selection, the beam is near its maximum allowed current.
+Beam bunching and pulse selection reduces available beam - the swept beam current is only 40\% $\times$ $\frac{1}{4} = 10$\% of the non-bunched current.  But without bunched beam it would not be possible to distinguish the neutrons of interest in the (\He{3},n) transfer reaction.  As it happens, however, the Notre Dame facility cannot improve the statistics of this experiment by very much because the radiation limits on the room with the detector are so low that even with pulse selection, the beam is near its maximum allowed current.
 
 \section{The Target Chamber}
 \begin{comment}
@@ -123,20 +125,11 @@ Si detector
 BaF2 detector
 \end{comment}
 
-The absolute cross section is the number of times a reaction occurred normalized by the total number of particles incident on the target and the number density of nuclei in the target:
+The 16 MeV \He{3} beam has been bunched, swept, pulse-selected, and steered and focused onto the target.  The bunches that were 80 ns wide have converged into 1 ns wide bunches.  To maintain the energy resolution of the beam, the gold-backed Ge targets are positioned so that the first material the beam encounters is Ge.  Resulting neutrons can pass through the gold without the energy straggling that would afflict the \He{3} were it to pass through the gold.  
 
-\begin{equation}
-\text{cross section} = \frac{\text{times reaction occurred}}{\text{particles incident on target} \times \text{number density of target nuclei}}
+To measure the absolute scale of the cross-section, it is necessary to know the number of particles incident on the target.  This is done in several ways.  The most precise measure of the number of incident particles is a Si detector placed in the target chamber, positioned to measure \He{3} scattered off the gold backing of the Ge targets.  Because the \Mg{26} target is self-supporting, it is necessary to record other measures of the beam.  One indicator of the beam current is the charge measured from an electrically isolated beamstop downstream of the target.  Another measure of the beam current is a NaI2 detector located just outside the chamber, which is sensitive to $\gamma$ radiation produced by beam interactions in the target.  
 
-\text{cross section} = \frac{\text{times reaction occurred}}{\text{particle current} \times \text{time} \times \text{target thickness}}
-\label{eq:cross_section}
-\end{equation}
-
-How many reactions occured and the target thickness do not affect the setup of the detector.  Calculating the number of reactions requires the efficiency of the detector.  Chapter ?? discusses this in detail.  The efficiency is approximately 3\% for all bars.  The target thickness is well-known from RBS measurements; the results are summarized in Chapter ?? and a description of the analysis is in Appendix ??.  Maintaining good energy resolution does dictate a target choice, however.  Because the \Ge{76} targets are too thin to be self-supporting, they are backed by a gold foil.  The target is positioned so that the first material the beam encounters is Ge.  Resulting neutrons can pass through the gold without the energy straggling that would afflict the \He{3} were it to pass through the gold.
-
-The need for accurate time and particle current both affect the experimental setup.  The DAQ provides a 100 Hz NIM logic pulse, providing a measure of time.  But the DAQ cannot collect new events while it is processing an event.  A measure of the time experienced by the DAQ is the appropriate time to use when calculating the cross section.  In addition to a 100 Hz signal, the DAQ also provides a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal gives the live time needed for the cross section calculation.  The schematic is shown in figure ??.
-
-There are several ways to record information about the particle current.  The most reliable is to measure RBS from the gold backing with a Silicon detector.  Because the \Mg{26} target is self-supporting, it is necessary to record other measures, such as the charge collected on the beamstop and the gamma reaction to a small NaI2 crystal, both of which show a linear relationship with the beam current within statistical error.
+In addition to knowing the number of incident particles, it is also necessary to know the particle density of the target.  The target thickness is well-known from RBS measurements; the results are summarized in Chapter ?? and a description of the analysis is in Appendix ??.  
 
 
 \section{The Neutron Detector}
@@ -217,6 +210,7 @@ The solution is to use the built-in OR of the CFD.  Instead of requiring a top a
 \caption{The event trigger for the DAQ requires a coincidence between a top PMT and a bottom PMT from the same group of eight detectors.}
 \end{figure}
 
+The need for accurate time and particle current both affect the experimental setup.  The DAQ provides a 100 Hz NIM logic pulse, providing a measure of time.  But the DAQ cannot collect new events while it is processing an event.  A measure of the time experienced by the DAQ is the appropriate time to use when calculating the cross section.  In addition to a 100 Hz signal, the DAQ also provides a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal gives the live time needed for the cross section calculation.  The schematic is shown in figure ??.
 
 % figure: Si, Q.live, NaI accumulation
 
