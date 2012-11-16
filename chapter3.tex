@@ -140,7 +140,7 @@ Discuss neutron wall briefly.  Can reference NIMA paper. Explain why it's import
 
 The resulting products of a two-proton transfer onto \Ge{76} are a neutron and a \Se{78} nucleus.  Charged particle detection is highly efficient, but the heavy, charged \Se{78} nucleus is unlikely to escape the target, forcing us to rely on neutron detection to study this reaction. To study the neutrons, the detector must provide many hydrogens - protons for the neutrons to interact with.  The detector must also be far away from the target, to allow a TOF that gives sufficient neutron energy resolution.  And the detector must be positioned to be sensitive to the 0+ states of interest.  Because the 0+ states peak at 0 degrees and drop to a minimum at 20 degrees, the detector must span these angles.
 
-The neutron detector consists of 16 large (1.5 m $\times$ 0.15 m $\times$ 0.05 m) bars of commercially available scintillator [reference BC408?].  The detectors sit in a rough circle with a radius of 14.6 m centered around the target.  The forwardmost angle relative to the beam is 5$^{\circ}$ and the largest angle is $21^{\circ}$.  Ideally, the detectors would extend to 0$^{\circ}$, but a concrete support beam makes this impossible.  At this distance, the solid angle subtended by each detector is only 10 cm/15 m $\times$ 2.5 m/15 m = 0.11 sr.
+The neutron detector consists of 16 large (1.5 m $\times$ 0.15 m $\times$ 0.05 m) bars of commercially available scintillator [reference BC408?].  The detectors sit in a circle of radius 14.6 m centered around the target.  The forwardmost angle relative to the beam is 5$^{\circ}$ and the largest angle is $21^{\circ}$.  Ideally, the detectors would extend to 0$^{\circ}$, but a concrete support beam makes this impossible.  At this distance, the solid angle subtended by each detector is only 10 cm/15 m $\times$ 2.5 m/15 m = 0.11 sr.
 
 % figure - picture of detector
 
@@ -148,27 +148,18 @@ Each plastic scintillator bar is equipped with two photomultiplier tubes (PMT's)
 
 % figure of charged-particle energy spectrum
 % figure of neutron energy spectrum
-We have said that timing information is the useful information given by our neutron detectors, and that the flight path between the target and detectors must be long to ensure reasonable resolution.  What resolution is reasonable for this experiment?  And how long a flight path is needed for such a resolution?  A 16 MeV \He{3} can populate many excited states in \GeTargets; the energy difference between the ground and first excited state, together with the time resolution, determines the minimum flight path.  Conservation of energy and momentum determines the time $t$ it takes for a neutron with relativistic momentum $p$ to travel the distance $d$ between the target and the detector.
 
-\begin{equation}
-t(p) = \frac{d}{v} = d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}}
-\label{eq:TOF}
-\end{equation}
-
-The flight path must be long enough to distinguish ground state neutrons from neutrons associated excited states of the residual nucleus.  In the case of \Ge{76},  the energies of the ground and first excited state neutrons differ by only 0.5 MeV out of $\sim$25 MeV.  With a flight path of 1 m between the target and detector, the difference in time between these two neutrons is ?? ns - far less than the resolution determined by the beam bunch.  In all experiments discussed, the flight path is approximately 15 m, the largest allowed by the room, to maximize energy resolution.  
-
-\begin{equation}
-d = \Delta t/v = 1.5 ns / v \sim 15 m
-\label{eq:requiredDist}
-\end{equation}
-
-The detectors sit 14.6 m away from the target to ensure a resolution of at least 0.5 MeV at 22 MeV.
-
-The room is too small for this flight path; the largest it can accomodate is 14.6 m, so cleanly separating the ground state from the first excited state will be difficult in \GeTargets.  The time resolution of the TOF spectrum is limited by the time spread of the beam bunch and is approximately 1.5 ns.  
+We have said that timing information is the useful information given by our neutron detectors, and that the flight path between the target and detectors must be long to ensure reasonable resolution.  What resolution is reasonable for this experiment?  And how long a flight path is needed for such a resolution?  A 16 MeV \He{3} can populate many excited states in \GeTargets; an excellent resolution would allow separation between the ground and first excited state.  Since the beam bunch itself has a width of 1 ns, the flight path would need to be long enough that the TOF of the ground and excited state neutrons differs by at least 1 ns. Conservation of energy and momentum determines the time $t$ it takes for a neutron with relativistic momentum $p$ to travel the distance $d$ between the target and the detector.
 
 % figure: \Ge{76}, 74Ge level scheme
 
+\begin{equation}
+t(p) = \frac{d}{v} = d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}}
+t(p_1) - t(p_2) = 1 ns = d\times(\sqrt{\frac{m^2+p^2/c^2}{p^2}}-\sqrt{\frac{m^2+p^2/c^2}{p^2}})
+\label{eq:TOF}
+\end{equation}
 
+In the case of \Ge{76},  the energies of the ground and first excited state neutrons differ by only 0.5 MeV out of $\sim$22 MeV.  At this energy, a flight path of 14.6 m gives a time difference between these two neutrons of ?? ns, very close to the intrinsic width of the bunch.  While a longer flight path would improve resolution, this resolution is typical of TOF experiments [CITE] and certainly allows separation of the ground state from the higher excited states.  
 
 \subsection{Electronics}
 \begin{comment}
@@ -183,7 +174,7 @@ While energy information is necessary, it does not need to be terribly precise. 
 
 When a real event occurs in some bar of the neutron detector, the DAQ must record the energy and time of both the top and bottom PMT of that bar.  A charge to digital converter (QDC) can integrate the PMT signal and a time to digital converter (TDC) can measure the time between a logic pulse created by the PMT signal and the logic pulse from the beam buncher.  Because time resolution is crucial, constant fraction discriminators (CFD's) and not leading edge discriminators create the logic pulse sent to the TDC.  
 
-The lone signal provided by the PMT base is not adequate for this processing because two signals, one for the QDC and one for the TDC, are necessary.  The signal from the PMT base is also too small to trigger the CFD's.  The $\times$10 amplifier makes the signal large enough to trigger the CFD's and provides two copies of the input signal, one which can be analyzed for timing information while the other is analyzed for energy information.  A simplified diagram of the data acquisition is shown in fig \ref{fig:simpleElectronics}.
+The lone signal provided by the PMT base is not adequate for this processing because the QDC and TDC are destructive measurements and therefore require separate signals.  The signal from the PMT base is also too small to trigger the CFD's.  A $\times$10 amplifier makes the signal large enough to trigger the CFD's and provides two copies of the input signal, one which can be analyzed for timing information while the other is analyzed for energy information.  A simplified diagram of the data acquisition is shown in fig \ref{fig:simpleElectronics}.
 
 % figure: simple electronics
 \begin{figure}[htp]
@@ -193,9 +184,9 @@ The lone signal provided by the PMT base is not adequate for this processing bec
 \caption{A simplified diagram of the neutron detector electronics showing the acquisition of timing and energy information from the detectors.}
 \end{figure}
 
-What is a good trigger to construct for the neutron wall?  For just one neutron detector, triggering any time the top or bottom PMT fired would waste the DAQ with recording many noise events.  A real event should create signals in both the top and bottom PMT's, and requiring a coincidence between the two results in a reasonable trigger.  One way to define an event trigger for the entire neutron wall, then, would be to trigger any time a coincidence between associated top and bottom PMT's occurs.  But constructing this trigger with NIM logic units requires 16 separate logic gates and would require purchasing additional, expensive logic modules.  
+The fundamental components of the DAQ are the TDC, the QDC, and the event trigger that causes the DAQ to read each module.  For just one neutron detector, triggering any time the top or bottom PMT fired would waste the DAQ with recording many noise events.  A real event should create signals in both the top and bottom PMT's, and requiring a coincidence between the two results in a reasonable trigger.  One way to define an event trigger for the entire neutron wall, then, would be to trigger any time a coincidence between associated top and bottom PMT's occurs.  But constructing this trigger with NIM logic units requires many separate logic gates and is unnecessarily complicated.  
 
-The solution is to use the built-in OR of the CFD.  Instead of requiring a top and bottom signal in the same bar, the condition is loosened to requiring a signal in a top PMT and a bottom PMT in the same eight-bar group.  Each CFD is an eight-fold unit that receives only top or bottom signals and provides an OR output.  The presence of some top signal AND some bottom signal triggers the event signal.  Such an event only requires that both a top and a bottom signal coincided but does not require that these signals belonged to the same bar.  Such an event trigger includes all events of interest, where the top and bottom signal belong to one bar, but also includes spurious events where no bar has signal in both its top and bottom PMT.  With a dead time of less than 30\%, this event condition does not hinder data collection, and simple software cuts eliminate spurious events.
+One solution is to use the built-in OR of the CFD.  Instead of requiring a top and bottom signal in the same bar, the condition is loosened to requiring a signal in a top PMT and a bottom PMT in the same eight-bar group.  Each CFD is an eight-fold unit that receives only top or bottom signals and provides an OR output.  The presence of some top signal AND some bottom signal triggers the event signal.  Such an event only requires that both a top and a bottom signal coincided but does not require that these signals belonged to the same bar.  Such an event trigger includes all events of interest, where the top and bottom signal belong to one bar, but also includes spurious events where no bar has signal in both its top and bottom PMT.  With a dead time of less than 30\%, this event condition does not hinder data collection, and simple software cuts eliminate spurious events.
 
 % figure: event trigger
 \begin{figure}[htp]
@@ -205,7 +196,11 @@ The solution is to use the built-in OR of the CFD.  Instead of requiring a top a
 \caption{The event trigger for the DAQ requires a coincidence between a top PMT and a bottom PMT from the same group of eight detectors.}
 \end{figure}
 
-The need for accurate time and particle current both affect the experimental setup.  The DAQ provides a 100 Hz NIM logic pulse, providing a measure of time.  But the DAQ cannot collect new events while it is processing an event.  A measure of the time experienced by the DAQ is the appropriate time to use when calculating the cross section.  In addition to a 100 Hz signal, the DAQ also provides a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal gives the live time needed for the cross section calculation.  The schematic is shown in figure ??.
+% discuss energy, time info from near-target detectors
+% and then scalers?
+The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the DAQ.  There are other quantities, however, the DAQ must record.  One of these is the dead time; the DAQ cannot collect new events while it is processing an event, and the live time is the appropriate time to use in cross-section calculation.  The DAQ itself provides two signals that allow us to measure the live time: a 100 Hz signal and a NIM logic pulse that is low when the DAQ is busy.  Vetoing the timing signal with this busy signal and recording both the un-vetoed 100 Hz signal and the busy-vetoed signal gives the ratio of live time to dead time.  The schematic is shown in figure ??.
+
+The DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are deflected \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify \He{3} and should be recorded.  The NaI2 detector sits outside the target chamber and will only see escaping neutron and $\gamma$ radiation; timing, not energy, information is the useful quantity.  Finally, because these detectors sit so close to the target, their event rate is much higher than that of the neutron detectors.  While these 'witness' detectors are essential to determining the absolute particle flux through the target, the dead time they cause the DAQ should not prohibit events from the neutron detector itself from being recorded.  Running the signals from the Si and NaI2 through a pre-scaler before adding it to the event trigger limits the dead time contribution of these detectors to less than 20\%.
 
 % figure: Si, Q.live, NaI accumulation
 
