@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1440879"
-     inkscape:cx="524.80531"
-     inkscape:cy="244.13173"
+     inkscape:zoom="2.2881758"
+     inkscape:cx="369.22286"
+     inkscape:cy="372.82182"
      inkscape:document-units="px"
-     inkscape:current-layer="g5869"
+     inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1436"
      inkscape:window-height="856"
@@ -43,7 +43,8 @@
      inkscape:snap-bbox="true"
      inkscape:snap-intersection-paths="true"
      inkscape:snap-center="true"
-     inkscape:snap-bbox-midpoints="true">
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-bbox-edge-midpoints="true">
     <inkscape:grid
        type="xygrid"
        id="grid3931" />
@@ -120,7 +121,7 @@
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="text3074"
        sodipodi:linespacing="125%"
-       transform="translate(14.769531,-4.9921877)"><textPath
+       transform="translate(-3.230469,-4.9921877)"><textPath
          xlink:href="#path4956"
          id="textPath4959"><tspan
    style="font-size:24px"
@@ -319,7 +320,7 @@
              sodipodi:type="arc"
              transform="translate(168.55936,-24.018677)" />
           <path
-             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#DotS);stroke-miterlimit:4;stroke-dasharray:none"
+             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#DotS)"
              d="m 240,484.09448 320,0 0,-120"
              id="path3049"
              inkscape:connector-curvature="0"
@@ -465,60 +466,60 @@
            transform="translate(0,100)"
            width="1052.3622"
            height="744.09448" />
-        <rect
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.86666667;stroke-dasharray:none;stroke-dashoffset:0"
-           id="rect3169"
-           width="140"
-           height="80"
-           x="490"
-           y="594.09448"
-           transform="translate(0,308.2677)" />
         <path
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 430,234.09448 0,380 90,0"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotS)"
+           d="m 430,234.09448 0,245.16021 c 0,0 5,-0.16021 5,4.83979 0,5 -5,5 -5,5 l 0,165 90,0"
            id="path3171"
            inkscape:connector-curvature="0"
-           transform="translate(0,308.2677)" />
+           transform="translate(0,308.2677)"
+           sodipodi:nodetypes="cczccc" />
         <path
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 400,134.09448 0,510 120,0 0,0 10,0"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#DotS)"
+           d="m 460,204.09448 0,25 c 0,0 5,0 5,5 0,5 -5,5 -5,5 l 0,240 c 0,0 5,0 5,5 0,5 -5,5 -5,5 l 0,135 40,0 20,0 10,0"
            id="path3173"
            inkscape:connector-curvature="0"
-           transform="translate(0,308.2677)" />
+           transform="translate(0,308.2677)"
+           sodipodi:nodetypes="cczcczccccc" />
         <path
-           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 600,634.09448 210,0 0,-270"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#DotS)"
+           d="m 559.99914,947.36304 239.50172,0 0,-274.68687"
            id="path3175"
            inkscape:connector-curvature="0"
-           transform="translate(0,308.2677)" />
+           sodipodi:nodetypes="ccc" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.12132025;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.86666667;stroke-dasharray:none;stroke-dashoffset:0"
+           id="rect3169"
+           width="140"
+           height="90"
+           x="490"
+           y="902.36218" />
         <text
            xml:space="preserve"
            style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-           x="528.80554"
-           y="613.85974"
-           id="text3177"
-           sodipodi:linespacing="125%"
-           transform="translate(0,308.2677)"><tspan
-             sodipodi:role="line"
-             id="tspan3179"
-             x="528.80554"
-             y="613.85974">Event</tspan><tspan
-             sodipodi:role="line"
-             x="528.80554"
-             y="638.85974"
-             id="tspan3181">Logic</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-           x="686.13611"
-           y="619.97815"
+           x="638.13611"
+           y="942.24585"
            id="text3183"
-           sodipodi:linespacing="125%"
-           transform="translate(0,308.2677)"><tspan
+           sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
              id="tspan3185"
-             x="686.13611"
-             y="619.97815">event signal</tspan></text>
+             x="638.13611"
+             y="942.24585"
+             style="font-size:24px">event signal</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="530.59082"
+           y="940.07214"
+           id="text3177"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3179"
+             x="530.59082"
+             y="940.07214">Event</tspan><tspan
+             sodipodi:role="line"
+             x="530.59082"
+             y="965.07214"
+             id="tspan3181">Logic</tspan></text>
       </g>
     </g>
     <path
