@@ -65,16 +65,17 @@ While the charged muon will almost certainly leave a detectable signal in both s
 
 
 \section{Light Collection with WLS}
+\begin{comment}
 Describe light collection with WLS
 Explain why we loop the WLS and collect light from both ends
 Discuss the light limitations of light guides (Liouville) and ways to increase light collection with WLS (more!)
 Describe fragility of WLS, how some efforts make custom plastic clamps to make it robust, how this doesn't work for you so you made a break and attached a cable.  Discuss signal loss.
+\end{comment}
+The scintillator bars of the neutron detector are outfitted with two PMT's, each coupled to its end via a non-scintillating light guide.  Having two PMT's is essential both for good timing information and also to lessen the position sensitivity of the signal that is inevitable with such a large detector.  Instrumenting the veto scintillator in this way was not feasible.  Fitting a top and bottom PMT to each veto bar would require 32 PMT's and lightguides, along with independent power supplies for each.  Instead, Wavelength-shifting fiber (WLS) was chosen to collect the light.
 
-WLS collects light by absorbing broad-spectrum radiation and re-emitting that light in the green.  It is possible to coat the fiber with material with an index of refraction that guarantees total internal reflection for green light, and so the light bounces in the fiber until it reaches a detector.  Because light can travel in two directions in the fiber, looping the fiber so that both ends terminate in a detector collects the most light.  Sometimes this is not possible and the ends of the WLS are silvered, but this is an expensive process and does not recover all the light. 
+WLS collects light by absorbing broad-spectrum radiation and re-emitting that light in the green.  It is possible to coat the fiber with material with an index of refraction that guarantees total internal reflection for green light, and so the light bounces in the fiber until it reaches a detector.  Because light can travel in two directions in the fiber, looping the fiber so that both ends terminate in a detector collects the most light.  Sometimes this is not possible and the ends of the WLS are silvered, but this is an expensive process and does not recover all the light.  WLS largely eliminates position sensitivity because it can be arranged on the detector so that no part is distant from the collecting fiber [cite??]; laying the fiber in a loop on the detector often means that only one PMT is required.
 
-WLS can be a very effective tool for light collection.  Because traditional light guides are glued to the ends of a detector, significant position sensitivity often results when detectors are large.  This can be advantageous!  But often it is necessary to use two PMT's to avoid poor efficiency where light must travel the furthest to reach a detector.  WLS largely eliminates position sensitivity because it can be arranged on the detector so that no part is distant from the collecting fiber [cite??]; laying the fiber in a loop on the detector often means that only one PMT is required.
-
-The disadvantage to WLS is light intensity [cite??] and fragility.  Sufficient light intensity to boost the signal above the noise is a serious concern, and is often overcome by using many WLS strands to collect light [cite NASA thing, show picture?].  The fragility of the WLS is more difficult to design around.  Maximum light collection dictates taking the fiber on the detector directly to the PMT, which should be as close to the plastic as possible to minimize the length of this fiber run.  Because two bars needed to share a PMT, some plastic was 2 m away from its PMT.  At this length, enclosing the end of the detector, the WLS fiber, and the PMT in an immovable cast was not practical.  And with free-floating ends, the fiber quickly degraded and snapped, even with careful handling.  Dismayed at the possibility of making detectors and mounting them to the neutron detector only to have the fragile fibers carrying their signal snap, leaving us with no way to access their signals, the design was dramatically altered.  The WLS was cleanly severed at the end of the plastic and a robust cable was made to attach to the WLS.  Certainly severing the WLS causes significant light loss, but with the benefit of durability.  
+The disadvantage to WLS is light intensity [cite??] and fragility.  Sufficient light intensity to boost the signal above the noise is a serious concern, and is often overcome by using many WLS strands to collect light [cite NASA thing, show picture?].  The fragility of the WLS is more difficult to remedy.  Maximum light collection dictates taking the fiber on the detector directly to the PMT, which should be as close to the plastic as possible to minimize the length of this fiber run.  Because two bars needed to share a PMT, some plastic was 2 m away from its PMT.  At this length, enclosing the end of the detector, the WLS fiber, and the PMT in an immovable cast was not practical.  And with free-floating ends, the fiber quickly degraded and snapped, even with careful handling.  Dismayed at the possibility of making detectors and mounting them to the neutron detector only to have the fragile fibers carrying their signal snap, leaving us with no way to access their signals, the design was dramatically altered.  The WLS was cleanly severed at the end of the plastic and a robust cable was made to attach to the WLS.  Certainly severing the WLS causes significant light loss, but with the benefit of durability.  
 
 \section{Paddle Design}
 \begin{comment}
@@ -94,12 +95,19 @@ There are three constraints for the paddle-cable interface.  The diameter of the
 \caption{The endcap will be glued to the scintillator once it is slid into place.}
 \end{figure}
 
+% talk about the diameter of the WLS and the alignment
+
+% talk about the cable housing
+
+
+
 \section{Paddle Performance}
 \subsection{tests on intrinsic efficiency}
+\begin{comment}
 Show signal from detector
 Talk about first tests?  Can talk about sensitivity to geometric alignment of trigger paddles ...
 Maybe mention this and then be like, ``this is why we decided to look at the efficiency this other way that was less sensitive''
-
+\end{comment}
 In principle, testing the intrinsic efficiency of the paddles is simple.  Requiring a coincidence with several paddles whose arrangement forces the path of the muons to intersect the volume of the veto paddle is successful at 
 
 1. restricting the counts to muons and
@@ -112,10 +120,11 @@ Using our cosmic ray simulation program, we determined an arrangement that maxim
 For this reason, testing efficiency of the bars was done in a different way.  [Oh was it now?].
 
 \subsection{On-Detector Efficiency}
+\begin{comment}
 Initial efficiency - would be nice to show this data
 Describe different cosmics that hit the neutron bar but miss the veto - argh!
 Discuss changes made to mounting to improve coverage - show new data (cosmics)
-
+\end{comment}
 The veto paddles were initially mounted 2 cm from the neutron detectors, not because of calculated optimization but because we wanted to mount the veto without removing (and potentially damaging) the heavy neutron detectors.
 
 Running a test with 26Mg(3He,n) showed good cosmic rejection in the two innermost bars of each four-bar unit and worse rejection in the outer two bars by about 20\%, corresponding to double the cosmic background.  This is sensible, as the outer bars act as additional veto for the inner bars, while the outer bars enjoy no such additional information.  Wishing to improve the background rejection for the outer bars, we wrote code that simulated the cosmic background to understand best placement for the veto material.
@@ -130,33 +139,37 @@ Simulations agreed well with experiment [this is like very expandable, dear].  M
 \end{figure}
 
 \section{Electronics}
+\begin{comment}
 Originally wanted to use timing information but there weren't enough channels
 Bit Register - give example
 discuss random rate and estimate how often you'll fire during a real event and also how often one bar will fire with something real, vetoing a real event
 LeCroy 4532 - MALU - majority logic unit ``The status of up to 32 inputs can be monitored and recorded by issuing a strobe.  Since the inputs are edge-triggered, the strobe may be a gate of arbitrary duration.  Then any inputs which are on during any portion of the gate are recorded and stored in a pattern register.'' (from the manual).
-
+\end{comment}
 As mentioned above in section ??, testing efficiency was done using a timing spectrum.  With 24 bars, however, we did not have sufficient TDC channels to record timing information for the full veto.  One readily available module was a Bit Register.  A bit register has a certain number of inputs, typically 16.  The bit register also has a gate.  Each input corresponds to a bit in an integer with 16 bits.  When the gate is high, the bit register records the number built by the voltages on its inputs.  This number, then, shows which detectors fired when the gate was high - exactly the information we need!
 
 Recording the integer generated by the bit register instead of the time of the signal relative to the beam bunch is a loss of information.  The gate provided to the bit register is a copy of the event trigger and is 200 ns wide.  The signals sent to the bit register inputs that overlap the gate signal will increment the bit pattern and are 20 ns wide.  The LeCroy 4532 applies an edge-trigger to the inputs, so the maximum time difference between an event in the neutron detector and an event in the veto that will still be recorded in the bit pattern is the width of the gate signal, 200 ns.  This compares unfavorably to the timing spectrum, where even with a leading edge discriminator, the timing peak has a width of less than 5 ns.
 
-The concern, of course, is accidental vetoing.  We work hard to get our neutron events and do not wish to throw them away because a background gamma left a signal in the veto within 10 ns of a real neutron signal in the neutron detector.  Accidental coincidences come from non-beam-related background radiation, both cosmic (not too frequent) and gamma (quite frequent at low energies).  Fortunately, the rate of this 'noise' is not so high that using the bit register instead of a TDC increases the accidental veto rate by any significant amount.  The trigger rate of a typical veto paddle is 1000 Hz.  Certainly some of these events are true cosmic muons, but to obtain an upper bound we treat this as the noise rate.  The probability that a noise event will occur within the window allowed by the bit register is 
+The concern, of course, is accidental vetoing.  We work hard to get our neutron events and do not wish to throw them away because a background gamma left a signal in the veto within 10 ns of a real neutron signal in the neutron detector.  Accidental coincidences come from non-beam-related background radiation, both cosmic (not too frequent) and gamma (quite frequent at low energies).  Fortunately, the rate of this ``noise'' is not so high that using the bit register instead of a TDC increases the accidental veto rate by any significant amount.  The trigger rate of a typical veto paddle is 1000 Hz.  Certainly some of these events are true cosmic muons, but to obtain an upper bound we treat this as the noise rate.  The probability that a noise event will occur within the window allowed by the bit register is 
 
 \begin{equation}
-\frac{Rate}{Time Window} = \frac{1000 Hz}{200 ns} = 5\times10^{-8}
+\frac{Rate}{Time Window} = \frac{1000 Hz}{200 ns} = 5\times10^{-8}.
 \end{equation}
-
 With a number of triggers of approximately 10??, the expected number of rejections based on unrelated background is a scant 20?? counts.
 
 \section{Beam Tests}
+\begin{comment}
 What data should I show?  Old Mg vs. New Mg?  Or New Mg with no veto vs.  New Mg with veto?
 show the vetoed spectrum - put a limit on how much real signal is rejected?
+\end{comment}
 
 \subsection{Rejected Signal}
+\begin{comment}
 Two causes for rejected signal
 1. the bars are ganged together; could get a signal in one veto bar that does not mean there was a cosmic in its adjacent neutron detector
 2. randoms
 
 can place a limit on randoms, reals, and therefore good rejected signal
+\end{comment}
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
