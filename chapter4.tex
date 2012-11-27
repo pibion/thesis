@@ -26,10 +26,10 @@
 
 \chapter{MUON VETO DEVELOPMENT}
 \label{chap:muVeto}
+\begin{comment}
 Explain some cosmic ray basics - only the stuff relevant to our detector (1 muon per square foot per second and MIP -> landau energy distribution).
 Discuss materials available for veto and basic design decision of WLS
-
-Sea-level radiation due to cosmic rays consists primarily of muons created in the upper atmosphere.  The energy distribution of muons incident on the neutron detector peaks at 100 GeV/C [cite PDG]: most of the muons travelling through the detector are Minimum Ionizing Particles (MIP's).  When particles that are minimum ionizing travel through material, their energy loss is proportional to their path length in that material.  Muons at these energies deposit 1 MeV/cm2/g [PDG].  The detector consists of plastic with a density of ??, so the muons can deposit less than 0.5 MeV to 80 MeV depending on their path through the plastic.  It is possible to discard events that are more energetic than the highest-energy neutron, but most events deposit less energy and, if they arrive in the time window of interest, are indistinguishable from a neutron event.  The rate of such muons is low; one muon per square foot per second.  Of these, only a fraction arrives in the time window of interest, 20/400.  With a high flux of event neutrons, this background would pose little problem.  But the 76Ge(3He,n) cross section is predicted to be on order of ?? mb/sr.  Without vetoing the cosmic rays, the signal will be outnumbered ?? to 1, greatly increasing the uncertainty.  Because the absolute cross-section is of interest, this is unacceptable. 
+\end{comment}
 
 \subsection{Testing with 26Mg}
 \begin{comment}
@@ -47,7 +47,22 @@ The TOF spectrum at the forwardmost angle is shown in Figure ??.  The neutron pe
 
 % figure: 26Mg cross-section compared to old data
 
-The concerning thing about this data is that the neutron peaks at angles with low cross-sections do not stand significantly above the random background.  This has serious implications for the \GeTargets experiment, where the cross-section is suspected to be even lower.  Current data on two-proton transfer typically has errors no worse than 20\%; to achieve such errors it is necessary to either reduce the background or increase the beam current.  Increasing the beam current substantially was not feasable because of ion source limitations.  The background comes primarily from low-energy $\gammaa$ radiation from the cement in the room and from muons produced by cosmic rays.  The next chapter discusses the construction of a cosmic-ray veto.
+The concerning thing about this data is that the neutron peaks at angles with low cross-sections do not stand significantly above the random background.  This has serious implications for the \GeTargets experiment, where the cross-section is suspected to be even lower.  Current data on two-proton transfer typically has errors no worse than 20\%; to achieve such errors it is necessary to either reduce the background or increase the beam current.  Increasing the beam current substantially was not feasible because of ion source limitations.  The background comes primarily from low-energy $\gammaa$ radiation from the cement in the room and from muons produced by cosmic rays.  The next chapter discusses the construction of a cosmic-ray veto.
+
+% introduction to cosmic rays
+Sea-level radiation due to cosmic rays consists primarily of muons created in the upper atmosphere.  The energy distribution of muons incident on the neutron detector peaks at 100 GeV/C \cite{PDG}, so that most of the muons traveling through the detector are Minimum Ionizing Particles (MIP's).  This means that their energy loss is proportional to their path length in that material.  Muons at these energies deposit 1 MeV/cm2/g \cite{PDG}.  The detector consists of plastic with a density of ??, so the muons can deposit less than 0.5 MeV to 80 MeV depending on their path through the plastic.  It is possible to discard events that are more energetic than the highest-energy neutron, but most events deposit less energy and, if they arrive in the time window of interest, are indistinguishable from a neutron event.  The rate of such muons is low; one muon per square foot per second.  Of these, only a fraction arrives in the time window of interest, 20/400.  With a high flux of event neutrons, this background would pose little problem.  But the 76Ge(3He,n) cross section is predicted to be on order of ?? mb/sr.  Without vetoing the cosmic rays, the signal will be outnumbered ?? to 1, greatly increasing the uncertainty in the absolute cross-section. 
+
+Impractical solutions to muon background abound.  One may wish to go deep underground, giving the muons more time to decay and thus reducing their flux.  This is not feasible because the ion source and accelerator infrastructure necessary to do this experiment do not currently exist in any underground laboratory.  Another solution would be to remake the neutron detector, using a material that can distinguish between neutron and muon interactions.  Such scintillators exist [CITE!], but are typically toxic, flammable, liquids.  A large-angle detector made of such scintillator would be doubly helpful because these scintillators can distinguish between neutron and $\gamma$ radiation, as well, which would reduce another significant source of background signal.  Working with such difficult material, however, was beyond the scope of this project; the goal was to make a manageable change to the existing detector to reduce muon background. 
+
+A practical solution to the muon background is to make a veto shield that registers the likely presence of a muon.  The now-identified muon event can then be discarded.  Distinguishing between muons and non-charged particle interactions using additional scintillator material is possible because of the difference in likelihood of interaction.  
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/simpleVeto.eps}
+\label{fig:simpleVeto}
+\caption{The charged muon has a nearly 100\% chance of leaving a detectable signal in both scintillators, while the neutron, lacking charge, is much less likely to interact in even one of the scintillators.  The likelihood of detecting a neutron interaction depends on both the thickness of the scintillator and the threshold of the detector; for a 5 cm thick scintillator with a threshold at approximately the Th edge, the likelihood of detecting a 20 MeV neutron is about 10\%.}
+\end{figure}
+While the charged muon will almost certainly leave a detectable signal in both scintillators, the neutron is highly unlikely to do the same.  The bars of the neutron detector are 5 cm thick; the chance of detecting a 20 MeV neutron when the detection threshold is at approximately the Th edge is 10\%.  The chance of one neutron interacting in two bars, then, is only 1\%.  If the muon veto is made of a thinner bar of scintillator, the probability of a detectable neutron interaction in both drops further.  By placing a thin ($\sim$1 cm) scintillator over the neutron detector bar, it is possible to identify muons to an accuracy of at least 0.99\%.  Note that such a veto does not identify $\gamma$ radiation because it has an efficiency similar to neutrons.
+
 
 \section{Light Collection with WLS}
 Describe light collection with WLS
@@ -59,14 +74,16 @@ WLS collects light by absorbing broad-spectrum radiation and re-emitting that li
 
 WLS can be a very effective tool for light collection.  Because traditional light guides are glued to the ends of a detector, significant position sensitivity often results when detectors are large.  This can be advantageous!  But often it is necessary to use two PMT's to avoid poor efficiency where light must travel the furthest to reach a detector.  WLS largely eliminates position sensitivity because it can be arranged on the detector so that no part is distant from the collecting fiber [cite??]; laying the fiber in a loop on the detector often means that only one PMT is required.
 
-The disadvantage to WLS is light intensity [cite??] and fragility.  Sufficient light intensity to boost the signal above the noise is a serious concern, and is often overcome by using many WLS strands to collect light [cite NASA thing, show picture?].  The fragility of the WLS is more difficult to design around.  Maximum light collection dictates taking the fiber on the detector directly to the PMT, which should be as close to the plastic as possible to minimize the length of this fiber run.  Because two bars needed to share a PMT, some plastic was 2 m away from its PMT.  At this length, enclosing the end of the detector, the WLS fiber, and the PMT in an immovable cast was not practical.  And with free-floating ends, the fiber quickly degraded and snapped, even with careful handling.  Dismayed at the possibility of making detectors and mounting them to the neutron detector only to have the fragile fibers carrying their signal snap, leaving us with no way to access their signals, the design was dramatically altered.  The WLS was cleanly severed at the end of the plastic and a robust cable was made to attach to the WLS.  Certainly severing the WLS causes significant light loss, but with the benefit of durablility.  
+The disadvantage to WLS is light intensity [cite??] and fragility.  Sufficient light intensity to boost the signal above the noise is a serious concern, and is often overcome by using many WLS strands to collect light [cite NASA thing, show picture?].  The fragility of the WLS is more difficult to design around.  Maximum light collection dictates taking the fiber on the detector directly to the PMT, which should be as close to the plastic as possible to minimize the length of this fiber run.  Because two bars needed to share a PMT, some plastic was 2 m away from its PMT.  At this length, enclosing the end of the detector, the WLS fiber, and the PMT in an immovable cast was not practical.  And with free-floating ends, the fiber quickly degraded and snapped, even with careful handling.  Dismayed at the possibility of making detectors and mounting them to the neutron detector only to have the fragile fibers carrying their signal snap, leaving us with no way to access their signals, the design was dramatically altered.  The WLS was cleanly severed at the end of the plastic and a robust cable was made to attach to the WLS.  Certainly severing the WLS causes significant light loss, but with the benefit of durability.  
 
 \section{Paddle Design}
+\begin{comment}
 Schematics
 Tolerances
-Making sure the transmit cable lines up wih the paddle WLS fibers!  Dowels.  Tolerance doesn't actually need to be that good
+Making sure the transmit cable lines up with the paddle WLS fibers!  Dowels.  Tolerance doesn't actually need to be that good
 connecting cable with PMT
 cable design - hosing for protection
+\end{comment}
 
 There are three constraints for the paddle-cable interface.  The diameter of the cable must be larger than the diameter of the WLS so that small misalignments do not greatly impact light collection.  The center of the cable must be aligned to the center of the WLS.  Lastly, the cable must be robust.
 
@@ -81,7 +98,7 @@ There are three constraints for the paddle-cable interface.  The diameter of the
 \subsection{tests on intrinsic efficiency}
 Show signal from detector
 Talk about first tests?  Can talk about sensitivity to geometric alignment of trigger paddles ...
-Maybe mention this and then be like, "this is why we decided to look at the efficiency this other way that was less sensitive"
+Maybe mention this and then be like, ``this is why we decided to look at the efficiency this other way that was less sensitive''
 
 In principle, testing the intrinsic efficiency of the paddles is simple.  Requiring a coincidence with several paddles whose arrangement forces the path of the muons to intersect the volume of the veto paddle is successful at 
 
@@ -103,7 +120,7 @@ The veto paddles were initially mounted 2 cm from the neutron detectors, not bec
 
 Running a test with 26Mg(3He,n) showed good cosmic rejection in the two innermost bars of each four-bar unit and worse rejection in the outer two bars by about 20\%, corresponding to double the cosmic background.  This is sensible, as the outer bars act as additional veto for the inner bars, while the outer bars enjoy no such additional information.  Wishing to improve the background rejection for the outer bars, we wrote code that simulated the cosmic background to understand best placement for the veto material.
 
-Simulations agreed well with experiment [this is like very expandable, dear].  Material needed to be added to the sides of the outermost neutron detectors, and significant gains in veto efficiency could be had by moving the veto material as close as possible to their neutron detector.  Additionally, efficiency improves when the neutrond detectors (and the veto material in front of them) are moved as close together as possible.  All these changes resulted in improved, nearly uniform veto efficiency across the detector.
+Simulations agreed well with experiment [this is like very expandable, dear].  Material needed to be added to the sides of the outermost neutron detectors, and significant gains in veto efficiency could be had by moving the veto material as close as possible to their neutron detector.  Additionally, efficiency improves when the neutron detectors (and the veto material in front of them) are moved as close together as possible.  All these changes resulted in improved, nearly uniform veto efficiency across the detector.
 
 \begin{figure}[ht]
 \centering
@@ -115,8 +132,8 @@ Simulations agreed well with experiment [this is like very expandable, dear].  M
 \section{Electronics}
 Originally wanted to use timing information but there weren't enough channels
 Bit Register - give example
-discuss random rate and estimate how often you'll fire druing a reall event and also how often one bar will fire with something real, vetoing a real event
-LeCroy 4532 - MALU - majority logic unit "The status of up to 32 inputs can be monitored and recorded by issuing a strobe.  Since the inputs are edge-triggered, the strobe may be a gate of arbitrary duration.  Then any inputs which are on during any portion of the gate are recorded and stored in a pattern register." (from the manual).
+discuss random rate and estimate how often you'll fire during a real event and also how often one bar will fire with something real, vetoing a real event
+LeCroy 4532 - MALU - majority logic unit ``The status of up to 32 inputs can be monitored and recorded by issuing a strobe.  Since the inputs are edge-triggered, the strobe may be a gate of arbitrary duration.  Then any inputs which are on during any portion of the gate are recorded and stored in a pattern register.'' (from the manual).
 
 As mentioned above in section ??, testing efficiency was done using a timing spectrum.  With 24 bars, however, we did not have sufficient TDC channels to record timing information for the full veto.  One readily available module was a Bit Register.  A bit register has a certain number of inputs, typically 16.  The bit register also has a gate.  Each input corresponds to a bit in an integer with 16 bits.  When the gate is high, the bit register records the number built by the voltages on its inputs.  This number, then, shows which detectors fired when the gate was high - exactly the information we need!
 
