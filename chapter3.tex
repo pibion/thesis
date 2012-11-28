@@ -103,10 +103,10 @@ It is possible to take data without pulse selection.  However, the spread in TOF
 \begin{figure}[htp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.4\textwidth]{figures/PS_BarA_Sep.eps}	
+   \includegraphics[width=0.45\textwidth]{figures/PS_BarA_Sep.eps}	
 }
 \subfloat[][]{
-	\includegraphics[width=0.4\textwidth]{figures/NPS_BarA.eps}
+	\includegraphics[width=0.45\textwidth]{figures/NPS_BarA.eps}
 }
 \label{fig:PSvsNPS_TOF}
 \caption{(a) shows timing spectrum from a pulse-selected beam.  The timing spectrum in (b) is from beam with no pulse selection.  Both timing spectra are from a \He{3} beam on a \Ge{76} target.  A constant background is present in both images but is particularly noticeable in (a) is due to random background radiation, not the beam.}
@@ -175,7 +175,7 @@ The detectors are positioned on an arc of radius 14.6 m centered around the targ
 \begin{figure}[htp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/oneNeutronDetector.eps}
+   \includegraphics[width=1.0\textwidth]{figures/detectorLayout.eps}
 }\\
 \subfloat[][]{
    \includegraphics[width=1.0\textwidth]{figures/oneNeutronDetector.eps}
@@ -185,12 +185,14 @@ The detectors are positioned on an arc of radius 14.6 m centered around the targ
 \end{figure}
 
 The 14.6 m flight path was not arbitrarily chosen; the distance between the target and detectors must be long to ensure reasonable resolution.  Conservation of energy and momentum determines the relativistic momentum $p = \gamma m v$ of the outgoing neutron, where $\gamma=$ and $m$ and $v$ are the rest mass and velocity of the neutron, respectively.  The time $t$ it takes for this neutron to travel the distance $d$ between the target and the detector is fixed for a given $d$ and $v$:
-\begin{equation}
-t(p) = \frac{d}{v} = d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}}.
-\end{equation}
+\begin{eqnarray}
+t(p) = \frac{d}{v} &=&  d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}} \\ 
+                   &\sim& 14.6 m\times\sqrt{\frac{(940 MeV/c^2)^2+(20 MeV/c)^2/c^2}{(20 MeV/c)^2}} \nonumber \\
+                   &!!!=& 14.6 m\times\frac{1}{0.2 c} = 243 ns \nonumber 
+\end{eqnarray}
 This equation can be used to calculate the difference in TOF between two neutrons with different momenta,
 \begin{equation}
-t(p_1) - t(p_2) = 1 ns = d\times(\sqrt{\frac{m^2+p_1^2/c^2}{p_1^2}}-\sqrt{\frac{m^2+p_2^2/c^2}{p_2^2}})
+t(p_1) - t(p_2) = d\times(\sqrt{\frac{m^2+p_1^2/c^2}{p_1^2}}-\sqrt{\frac{m^2+p_2^2/c^2}{p_2^2}}) = 1 ns
 \label{eq:TOF}
 \end{equation}
 Equation \ref{eq:TOF} shows that a 14.6 m flight path creates a separation of nearly 1 ns between a 22 MeV and a 22.5 MeV neutron.  Since the beam bunch itself has a width of 1 ns, this flight path provides nearly enough resolution to separate the ground and first excited state of \GeTargets. While a longer flight path would improve resolution, it would also reduce the solid angle of the detector.  Since the resolution obtained with a 14.6 m flight path allows extraction of the ground state cross-section as discussed in detail in Chapter ??, attempts to increase it were not necessary.
