@@ -174,9 +174,14 @@ The detectors are positioned on an arc of radius 14.6 m centered around the targ
 % figure - diagram of detector
 \begin{figure}[htp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures_other/beam.eps}
+\subfloat[][]{
+   \includegraphics[width=1.0\textwidth]{figures/oneNeutronDetector.eps}
+}\\
+\subfloat[][]{
+   \includegraphics[width=1.0\textwidth]{figures/oneNeutronDetector.eps}
+}
 \label{fig:detectorGeometry}
-\caption{The neutron detectors.  Each bar of scintillator has a PMT fastened to its top and bottom surface.  This gives better timing information because an average time can be constructed from the two signals.}
+\caption{The neutron detectors.  Each bar of scintillator has a PMT fastened to its top and bottom surface as shown in (b).  This gives better timing information because an average time can be constructed from the two signals.}
 \end{figure}
 
 The 14.6 m flight path was not arbitrarily chosen; the distance between the target and detectors must be long to ensure reasonable resolution.  Conservation of energy and momentum determines the relativistic momentum $p = \gamma m v$ of the outgoing neutron, where $\gamma=$ and $m$ and $v$ are the rest mass and velocity of the neutron, respectively.  The time $t$ it takes for this neutron to travel the distance $d$ between the target and the detector is fixed for a given $d$ and $v$:
