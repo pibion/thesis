@@ -178,25 +178,30 @@ The detectors are positioned on an arc of radius 14.6 m centered around the targ
 \centering
 \subfloat[][]{
    \includegraphics[width=1.0\textwidth]{figures/detectorLayout.eps}
-}\\
+}
+\qquad
+\subfloat[][]{   
+   \includegraphics[width=0.4\textwidth]{figures/neutDetector_groupOfFour_crop.eps}
+}
+\qquad
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/oneNeutronDetector.eps}
+	\includegraphics[width=0.4\textwidth]{figures/oneNeutronDetector_person_crop.eps}
 }
 \label{fig:detectorGeometry}
 \caption{A schematic of the neutron detector is shown in (a).  The figure is not to scale.  The detector is comprised of 16 independent scintillating bars, grouped in fours on seperate support structures.  One of the supports is shown in (b).  Each individual bar of scintillator has a PMT fastened to its top and bottom surface as shown in (c).  This gives better timing information because an average time can be constructed from the two signals.}
 \end{figure}
 
-The 14.6~m flight path was not arbitrarily chosen; the distance between the target and detectors must be as long as possible to ensure reasonable resolution.  The longest available path in the room was $\sim$15~m.  Together with the neutron energy, this distance determines the resolution of the detector.  Conservation of energy and momentum determines the relativistic momentum $p = \gamma m v$ of the outgoing neutron, where $\gamma=(1-v^2/c^2)^{\frac{1}{2}}$ and $m$ and $v$ are the rest mass and velocity of the neutron, respectively.  The time $t$ it takes for this neutron to travel the distance $d$ between the target and the detector is fixed for a given $d$ and $v$:
+The 14.6~m flight path was not arbitrarily chosen; the distance between the target and detectors must be as long as possible to ensure reasonable resolution.  The longest available path in the room was $\sim$15~m.  Together with the neutron energy, this distance determines the resolution of the detector.  Conservation of energy and momentum determines the relativistic energy $E = \gamma m c^2$ of the outgoing neutron, where $\gamma=(1-v^2/c^2)^{-\frac{1}{2}}$ and $m$ and $v$ are the rest mass and velocity of the neutron, respectively.  The time $t$ it takes for this neutron to travel the distance $d$ between the target and the detector is fixed for a given $d$ and $v$:
 \begin{equation}
-t(p) = \frac{d}{v} =  d\times\sqrt{\frac{m^2+p^2/c^2}{p^2}}. 
+t(E) = \frac{d}{v} =  dc\times\sqrt{\frac{(E/mc^2)^2}{(E/mc^2)^2-1}} 
 \label{eq:TOF}
 \end{equation}
-Assuming the nuclei from \reaction remain in their ground state, the neutrons have a kinetic energy of $\sim$26~MeV and therefore a momentum of $\sqrt{(m^2c^4+T_K)^2-m^2c^4}\sim222$~MeV.  Using \eqn \ref{eq:TOF}, this gives a TOF of
+since the relativistic energy is related to the velocity via $E=\gamma mc^2$.  Neutrons from $^{76}$Ge($^3$He,n)$^{78}$Se have a relativistic energy of $\sim$966~MeV if the product nucleus, $^{78}$Se, remains in its ground state.  Using \eqn \ref{eq:TOF}, this gives a TOF of
 \begin{eqnarray}
-t(222 MeV/c) &=& 14.6 m\times\sqrt{\frac{(940 MeV/c^2)^2+(20 MeV/c)^2/c^2}{(20 MeV/c)^2}} \nonumber \\
-           &=& 14.6 m\times\frac{1}{0.23 c} = 243 ns \nonumber.
+t(966 MeV) &=& (14.6 m)(0.3 m/ns)\times\sqrt{\frac{(966/940)^2-1}{(966/940)^2}} \nonumber \\
+           &=& (14.6 m)(0.3 m/ns)\times\frac{1}{0.23} = 212 ns \nonumber.
 \end{eqnarray}
-This same procedure can be used to calculate the difference in TOF between neutrons from the ground and first excited state of \Ge{76}.  The energy difference between these states is only 0.5~MeV, giving a difference in their TOF of 0.9?~ns.  Since the beam bunch itself has a width of 1~ns, this flight path provides not quite enough resolution to separate the ground and first excited state of \GeTargets. However, the differing angular distributions of the two states allowed for a determination of their respective intensities.  This is discussed carefully in \ref{chap:analysis}.
+Neutrons from a reaction that populates the first excited state of \Se{78}, which is only 0.6~MeV above the ground state, trail the ground-state neutrons by 1.9~ns.  Since the beam bunch itself has a width of 1~ns, this flight path provides not quite enough resolution to separate the ground and first excited state of \GeTargets. However, the differing angular distributions of the two states allowed for a determination of their respective intensities.  This is discussed carefully in \ref{chap:dataAnalysis}.
 % figure: \Ge{76}, 74Ge level scheme?
 
 
@@ -235,13 +240,17 @@ One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold un
 
 % discuss energy, time info from near-target detectors
 % and then scalers?
-The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the DAQ that records the neutron detector information.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify scattered \He{3} and should be recorded.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of ?? and ?? before adding it to the event trigger limits the dead time contribution of these detectors to less than 20\%.
+The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the neutron detector DAQ.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify scattered \He{3} and should be recorded.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of ?? and ?? before adding it to the event trigger limits the dead time contribution of these detectors to less than 20\%.
 
-Some quantities must be recorded that are independent of the event trigger, such as the elapsed time and the charge on the Faraday cup.  The DAQ records these as scalers.  \fig ?? shows all the scalers that are recorded; many of these, such as the detector rates, are used only for monitoring during the run.  The live time and the charge are both used in the analysis.  The live time is important to record because the DAQ cannot collect new events while it is processing an event, and the appropriate integrated beam current for cross-section calculations is the live integrated beam current.  Measuring the live version of any scaler is possible using a busy signal the DAQ itself provides.  The busy signal is a NIM logic pulse that is low when the DAQ is busy.  Vetoing any scaler signal with this busy signal gives the live scaler, which is recorded in addition to the un-vetoed scaler.  The schematic is shown in \fig ??.  The other important scaler is the charge, which is needed to measure the number of particles incident on the target.  To turn the charge collected on the Faraday cup into a NIM signal that is compatible with the DAQ scaler, the Faraday cup is connected to a module that outputs a NIM logic pulse at a frequency that is proportional to the input charge.  This signal, like the time, is recorded in both its raw and vetoed form.
-
+The DAQ must also record some quantities that are independent of the event trigger, such as the charge on the Faraday cup, which is needed to normalize the number of paraticles incident on the target between runs.  The DAQ records these as scalers.  \fig~\ref{fig:fullElectronics} shows all the scalers that are recorded; many of these, such as the detector rates, are used only for monitoring during the run.  However, the live time and the charge are both used in the analysis.  The live scalers are important to record because the DAQ cannot collect new events while it is processing an event, and it is the live integrated beam current that is appropriate for cross-section calculations.  Measuring the live version of any scaler is possible using the busy signal the DAQ itself provides.  The busy signal is a NIM logic pulse that is low when the DAQ is busy.  Vetoing any scaler signal with this busy signal gives the live scaler, which is recorded in addition to the un-vetoed scaler.  The schematic is shown in \fig~\ref{fig:fullElectronics}.  To turn the charge collected on the Faraday cup into a NIM signal that is compatible with the DAQ scaler, the Faraday cup is connected to a module that outputs a NIM logic pulse at a frequency that is proportional to the input charge.  This signal, like all the others, is recorded in both its raw and vetoed form.
 % figure: Si, Q.live, NaI accumulation
 % figure: full electronics
-
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/basic_electronics.eps}
+\label{fig:fullElectronics}
+\caption{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
+\end{figure}
 A test of this electronics setup using a \Mg{26} target verified the expected DAQ operation.  This test is discussed in the next chapter. 
 
 % % uncomment the following lines,
