@@ -202,6 +202,16 @@ where A is a noise event recording in the bit register and B is a beam-related e
 What data should I show?  Old Mg vs. New Mg?  Or New Mg with no veto vs.  New Mg with veto?
 show the vetoed spectrum - put a limit on how much real signal is rejected?
 \end{comment}
+The background rejection of the assembled veto system is approximately 90\% as can be seen in {\fig}~\ref{fig:veto_26Mg}.  The rejection is strongly dependent on energy cuts placed on data; with lower energy cuts, gamma radiation contributes significantly to the background, and the veto is not effective.  90\% rejection is typical of cuts that are above the thorium edge.  Although such a high bound on the energy discards many neutron events, it also rejects more of the background $\gamma$ radiation and maximizes the signal/background ratio.See figure ?? for a description of the rejection as a function of the energy cut. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=5in]{figures/veto_26Mg.eps}
+\caption{\label{fig:vetoData}The effect of the veto on the $^{26}$Mg($^3$He,n) data.}
+\label{fig:veto_26Mg}
+\end{figure}
+
+The reduced background significantly improves the data we were able to obtain on \MgReaction.  Errors on the ground state transition were reduced from ?? to ??.  Most importantly, the signal strength that we now have 2$\sigma$ sensitivity to when running at a beam current of ?? for one week is ??, down from ??.  This is crucial for investigating the distribution of the \zp state in \GeTargets.
 
 \subsection{Rejected Signal}
 \begin{comment}
@@ -211,6 +221,16 @@ Two causes for rejected signal
 
 can place a limit on randoms, reals, and therefore good rejected signal
 \end{comment}
+While the achieved background rejection is excellent, it is important to consider how often the veto rejects real neutron events.  Such a rejection could occur when a neutron interacts in both the veto and the neutron detector, when the neutron detector sees a real signal and the veto triggers from an uncorrelated event such as a background gamma, or when a neutron interacting in the detector kicks out a proton that triggers the veto.  This last case should occur very rarely; this is the primary reason we chose to mount the veto on the front of the detector.  It is also possible for the veto to absorb a neutron that could otherwise interact in the detector.  In all cases, the vetoing of real events will result in timing peaks that sit on top of the flat, random background of the rejected events.  {\fig}~\ref{fig:rejectionTOF} shows the rejected events for all current \Mg{26} data; no peak is visible.  Given the background, this places a limit on the total rejection of real neutron events at ?? at a 90\% confidence level.  
+\begin{figure}[htp]
+\centering
+\includegraphics[width=5in]{figures/26Mg_rejection.eps}
+\caption{\label{fig:rejection}A plot of the rejected events.  Peaks in the rejected spectrum are from real, vetoed events.  No neutron peak is visible; there is a small peak from rejected gamma events.}
+\label{fig:rejectionTOF}
+\end{figure}
+
+Testing with \MgReaction demonstrates that the muon veto reduces background by $\sim$90\% and does not veto a significant number of beam-related events.  In addition to verifying the proper functioning of the veto system, this reaction also measures the efficiency of the neutron detector because the cross-section is well known.  These efficiency calculations, as well as the data from the \GeTargets experiments, will be discussed in the next chapter.
+
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
