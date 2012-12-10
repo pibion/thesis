@@ -97,7 +97,7 @@ The cable that transmits the light from the WLS to the PMT has three seperate pa
 
 The primary concern for the portion of the cable that attaches to the endcap is that each transmission fiber completely overlap its WLS fiber.  The diameter of the transmission fiber is ??~mm, larger than the ??~mm-diameter WLS fiber, which allows misalignment of ??~mm without greatly impacting light collection.  Tight-fitting dowels help align the region of the cables containing the fiber cluster.  This is particularly important because the connectors are machined from plastic and are not perfectly square - some connectors bow as much as 20 mils from normal.  The only regions that must be carefully aligned, however, are the fiber clusters, and the dowels constrain these regions to less than ?? mils, ensuring an alignment of ?? mm.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/veto_assembly.eps}
 \caption{The endcap will be glued to the scintillator after it is slid into place.}
@@ -116,7 +116,7 @@ except you weren't able to do further tests so you'll just have to say the limit
 The intrinsic efficiency of the paddles can be tested by requiring a coincidence with several paddles.  The several-detector coincidence identifies signals as muons.  If the coincidence paddles are arranged so that the path of any muon intersecting all the veto paddles must also intersect the volume of the veto paddle, the efficiency measured is the veto's intrinsic efficiency, separated from its geometric coverage of whatever detector it is vetoing.
 
 In practice, arranging the available scintillator to force muons through the test volume was difficult because the available scintillator was instrumented with bulky lightguides and could not be laid directly on the test volume.  A simple cosmic ray simulation program helped determine an arrangement that maximized geometrical efficiency.  This arrangement, however, was extremely sensitive to placement; measured efficiency of the same bar could change from 98\% to 75\% with a displacement of a few centimeters.
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/efficiency_test.eps}
 \caption{This arrangement of coincidence material ensures that muons triggering all coincidence detectors must also travel through the veto paddle.}
@@ -140,7 +140,7 @@ The efficiency was measured by counting how often the veto paddle had a detectab
 Testing the efficiency of the veto paddle with this setup was not ideal because the geometrical efficiency was very sensitive to the placement of the coincidence detectors; measured efficiency of the same bar could change from 98\% to 75\% when one of the coincidence detectors was shifted by as little as a few centimeters.  However, this setup was useful in testing the effect of the cable polishing, cable out-of-true-ness, and the condition of the plastic scintillator.  In general, all efficiency measurements fell between 94\% and 98\%: even the veto paddles made of the most badly damaged plastic were as efficient as the veto paddles made from the plastic in excellent condition.  No statistically significant differences were seen between cables with the most and the least amount of bowing.  Polishing the cables with the bull-nose single-crystal diamond increases detection efficiency by $\sim2$\%, although it should be noted that the change may have been due to correlated noise in the system rather than to improved light transmission.  The discriminator threshold, set to its lowest value, gave an efficiency of 98\% compared to 94\% when set to its highest value.
 
 Testing the position dependence of the efficiency using the setup described above was not practical due to its sensitivity on positioning.  Instead, the response of the veto paddles to a loosely collimated $\gamma$ source was tested.  Counting detected $\gamma$ radiation showed a deviation of less than 8.5\% over the veto paddle.  While this is not a measurement of the position dependence of the muon efficiency, it does limit the efficiency change over the paddle since muons typically deposit at least double the energy of the $\gamma$ radiation from the $^{60}$Co source.  See {\fig}~\ref{fig:positionDependence} for the variation of the efficiencies.
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/vetoTest_positionDependence.eps}
 \caption{The dependence of the number of detected events on the position of a loosely-collimated $^{60}$Co source.  The spread is approximately 8.5\%.}
@@ -154,17 +154,27 @@ Initial efficiency - would be nice to show this data
 Describe different cosmics that hit the neutron bar but miss the veto - argh!
 Discuss changes made to mounting to improve coverage - show new data (cosmics)
 \end{comment}
-The veto paddles were initially mounted 2 cm from the neutron detectors, not because of calculated optimization but because we wanted to mount the veto without removing (and potentially damaging) the heavy neutron detectors.
-
-Running a test with 26Mg(3He,n) showed good cosmic rejection in the two innermost bars of each four-bar unit and worse rejection in the outer two bars by about 20\%, corresponding to double the cosmic background.  This is sensible, as the outer bars act as additional veto for the inner bars, while the outer bars enjoy no such additional information.  Wishing to improve the background rejection for the outer bars, we wrote code that simulated the cosmic background to understand best placement for the veto material.
-
-Simulations agreed well with experiment [this is like very expandable, dear].  Material needed to be added to the sides of the outermost neutron detectors, and significant gains in veto efficiency could be had by moving the veto material as close as possible to their neutron detector.  Additionally, efficiency improves when the neutron detectors (and the veto material in front of them) are moved as close together as possible.  All these changes resulted in improved, nearly uniform veto efficiency across the detector.
-
-\begin{figure}[ht]
+Sixteen veto paddles were initially mounted on top of the neutron detector support structure to avoid removing (and potentially damaging) the heavy neutron detectors.  Each veto paddle was $\sim$2~cm offset from a bar in the neutron detector.  Running a test with 26Mg(3He,n) showed good cosmic rejection in the two innermost bars of each four-bar unit and worse rejection in the outer two bars by about 20\%, corresponding to double the cosmic background.  The outer bars act as additional veto for the inner bars, while the outer bars enjoy no such additional vetoing.  
+\begin{figure}[htp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/veto_assembly.eps}
-\label{fig:compareEfficiency}
-\caption{Efficiency before side veto material and compression and after.}
+\includegraphics[width=1.0\textwidth]{figures/initialBackground.eps}
+\caption{Room background after rejection with the initial placement of the veto paddles.  Note that the high-background bars are those on the ends of each group of four.}
+\label{fig:initialBackground}
+\end{figure}
+
+A simulation of the cosmic background indicated that the geometrical efficiency was very sensitive to the distance between the veto paddle and neutron detector bar as well as the distance between the bars of the neutron detector.   The bars in the neutron detector were moved as close as the mounting screws would allow, within 1~cm.  Instead of attaching the veto paddles on top of the retaining bars on the neutron detector, they were taped to the bars and both bar and veto paddle were supported together by the same retaining bar.  The separation between the bars of the neutron detector and their veto paddle is $\sim$0.5~cm due to stiff foam placed between the two to protect the WLS channels in the veto paddles.  Material was also added to the sides of the outermost neutron detectors.  The final setup is shown in {\fig}~\ref{fig:vetoSetup}.  These changes improved both the average and uniformity of the background rejection, as can be seen in {\fig}~\ref{fig:finalBackground}.
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/vetoSetup.eps}
+\caption{The final arrangement of the veto paddles on the neutron detector.  The distance between the veto paddles and the bars of the neutron detector have been minimized.  Note also the addition of veto material on the sides of the neutron detector sub-units.}
+\label{fig:vetoSetup}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/finalBackground.eps}
+\caption{Room background after rejection by the veto.  Note that the average and the spread are both reduced from that of the initial setup.}
+\label{fig:finalBackground}
 \end{figure}
 
 \section{Electronics}
