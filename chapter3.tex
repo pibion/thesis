@@ -241,15 +241,22 @@ One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold un
 % discuss energy, time info from near-target detectors
 % and then scalers?
 The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the neutron detector DAQ.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify scattered \He{3} and should be recorded.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of 100 and 50, respectively, before adding it to the event trigger limits the dead time contribution of these detectors to less than 20\%.
+% figure: full electronics
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/electronics.eps}
+\caption{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
+\label{fig:fullElectronics}
+\end{figure}
 
-The DAQ must also record some quantities that are independent of the event trigger, such as the charge on the Faraday cup, which is needed to normalize the number of particles incident on the target between runs.  The DAQ records these as scalers.  {\fig}~\ref{fig:fullElectronics} shows all the scalers that are recorded; many of these, such as the detector rates, are used only for monitoring during the run.  However, the live time and the charge are both used in the analysis.  The live scalers are important to record because the DAQ cannot collect new events while it is processing an event, and it is the live integrated beam current that is appropriate for cross-section calculations.  Measuring the live version of any scaler is possible using the busy signal the DAQ itself provides.  The busy signal is a NIM logic pulse that is low when the DAQ is busy.  Vetoing any scaler signal with this busy signal gives the live scaler, which is recorded in addition to the un-vetoed scaler.  The schematic is shown in {\fig}~\ref{fig:fullElectronics}.  To turn the charge collected on the Faraday cup into a NIM signal that is compatible with the DAQ scaler, the Faraday cup is connected to a module that outputs a NIM logic pulse at a frequency that is proportional to the input charge.  This signal, like all the others, is recorded in both its raw and vetoed form.
+The DAQ must also record some quantities that are independent of the event trigger, such as the charge on the Faraday cup, which is needed to normalize the number of particles incident on the target between runs.  The DAQ records these as scalers.  {\fig}~\ref{fig:scalerElectronics} shows all the scalers that are recorded; many of these, such as the detector rates, are used only for monitoring during the run.  However, the live time and the charge are both used in the analysis.  The live scalers are important to record because the DAQ cannot collect new events while it is processing an event, and it is the live integrated beam current that is appropriate for cross-section calculations.  Measuring the live version of any scaler is possible using the busy signal the DAQ itself provides.  The busy signal is a NIM logic pulse that is low when the DAQ is busy.  Vetoing any scaler signal with this busy signal gives the live scaler, which is recorded in addition to the un-vetoed scaler.  The schematic is shown in {\fig}~\ref{fig:scalerElectronics}.  To turn the charge collected on the Faraday cup into a NIM signal that is compatible with the DAQ scaler, the Faraday cup is connected to a module that outputs a NIM logic pulse at a frequency that is proportional to the input charge.  This signal, like all the others, is recorded in both its raw and vetoed form.
 % figure: Si, Q.live, NaI accumulation
 % figure: full electronics
 \begin{figure}[htp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/basic_electronics.eps}
-\caption{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
-\label{fig:fullElectronics}
+\includegraphics[width=1.0\textwidth]{figures/electronics_scalers.eps}
+\caption{A diagram of the neutron detector scalers.  The modules on the right are read by the DAQ independent of the event signal.}
+\label{fig:scalerElectronics}
 \end{figure}
 A test of this electronics setup using a \Mg{26} target verified the expected DAQ operation.  This test is discussed in the next chapter. 
 

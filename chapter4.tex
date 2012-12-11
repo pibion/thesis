@@ -213,9 +213,8 @@ Several sources contribute to non-beam-related background radiation, resulting i
 \end{equation}
 where A is a noise event recording in the bit register and B is a beam-related event that has triggered the DAQ.  The probability of a veto scales with the noise rate $\text{R}_{\text{n}}$ and beam-related event rate $\text{R}_{\text{beam}}$ as well as the time window of the bit register $\tau_{\text{bit reg.}}$ and DAQ event $\tau_{\text{beam}}$.  With a noise rate of 1000 Hz, a bit register window of 200 ns, and an event window of 1000 ns, the probability of the a vetoed beam-related event is $2\times10^{-10}\text{R}_{\text{beam}}$.  This fraction of vetoed events is less than 1\% and will not have any statistical significance, even with the timing resolution lost by moving to a bit register.  A schematic of the veto electronics is shown in {\fig}~\ref{fig:vetoElectronics}.  Note that no changes to the DAQ other than the addition of the bit register are required.
 \begin{figure}[htp]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/vetoElectronics.eps}
-\vspace{3in}
+\centering
+\includegraphics[width=1.0\textwidth]{figures/electronics_veto.eps}
 \caption{The integration of the veto electronics with the existing DAQ.  The bit register is used in the data analysis.  Scalers are also added for run-time monitoring.}
 \label{fig:vetoElectronics}
 \end{figure}
