@@ -133,10 +133,9 @@ The intrinsic efficiency of the paddles can be tested by requiring a coincidence
 
 In practice, arranging the available scintillator to force muons through the test volume was difficult because the available scintillator was instrumented with bulky lightguides and could not be laid directly on the test volume.  A simple cosmic ray simulation program helped determine an arrangement that maximized geometrical efficiency.  This arrangement, however, was extremely sensitive to placement; measured efficiency of the same bar could change from 98\% to 75\% with a displacement of a few centimeters.
 \begin{figure}[htp]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/efficiency_test.eps}
-\vspace{3in}
-\caption{This arrangement of coincidence material ensures that muons triggering all coincidence detectors must also travel through the veto paddle.}
+\centering
+\includegraphics[width=1.0\textwidth]{figures/veto_test_layout.eps}
+\caption{This arrangement of coincidence material ensures that muons triggering all coincidence detectors must also travel through the veto paddle.  The coincidence material is drawn in red while the veto paddle is in blue.}
 \label{fig:efficiencyTest}
 \end{figure}
 
@@ -213,9 +212,8 @@ Several sources contribute to non-beam-related background radiation, resulting i
 \end{equation}
 where A is a noise event recording in the bit register and B is a beam-related event that has triggered the DAQ.  The probability of a veto scales with the noise rate $\text{R}_{\text{n}}$ and beam-related event rate $\text{R}_{\text{beam}}$ as well as the time window of the bit register $\tau_{\text{bit reg.}}$ and DAQ event $\tau_{\text{beam}}$.  With a noise rate of 1000 Hz, a bit register window of 200 ns, and an event window of 1000 ns, the probability of the a vetoed beam-related event is $2\times10^{-10}\text{R}_{\text{beam}}$.  This fraction of vetoed events is less than 1\% and will not have any statistical significance, even with the timing resolution lost by moving to a bit register.  A schematic of the veto electronics is shown in {\fig}~\ref{fig:vetoElectronics}.  Note that no changes to the DAQ other than the addition of the bit register are required.
 \begin{figure}[htp]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/vetoElectronics.eps}
-\vspace{3in}
+\centering
+\includegraphics[width=1.0\textwidth]{figures/electronics_veto.eps}
 \caption{The integration of the veto electronics with the existing DAQ.  The bit register is used in the data analysis.  Scalers are also added for run-time monitoring.}
 \label{fig:vetoElectronics}
 \end{figure}
