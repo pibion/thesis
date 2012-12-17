@@ -54,9 +54,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.79075645"
-     inkscape:cx="70.084898"
-     inkscape:cy="41.675668"
+     inkscape:zoom="2.0927965"
+     inkscape:cx="433.63031"
+     inkscape:cy="167.36066"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -342,5 +342,85 @@
          style="font-size:18px;text-align:end;text-anchor:end">due to <tspan
    style="font-size:65.00091553%;baseline-shift:super"
    id="tspan4322">60</tspan>Co source</tspan></text>
+    <g
+       id="g3919"
+       transform="matrix(1,0,0,2.0212793,-3.552024,-67.051362)"
+       style="stroke-width:2.11012459;stroke-miterlimit:4;stroke-dasharray:none">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3133"
+         d="m 267.55202,160.34786 0,34.91244"
+         style="fill:none;stroke:#000000;stroke-width:2.11012459;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3135"
+         d="m 260.38458,195.28191 14.33488,0"
+         style="fill:none;stroke:#000000;stroke-width:2.11012459;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <use
+         height="334.72131"
+         width="692.375"
+         transform="translate(0,-34.685318)"
+         id="use3917"
+         xlink:href="#path3135"
+         y="0"
+         x="0"
+         style="stroke-width:2.11012459;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3924"
+       transform="translate(150,-1.0000017)"
+       width="692.375"
+       height="334.72131" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3926"
+       transform="translate(190,-3.0000017)"
+       width="692.375"
+       height="334.72131" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3928"
+       transform="translate(190,-73.000002)"
+       width="692.375"
+       height="334.72131" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3930"
+       transform="translate(230,-20.000002)"
+       width="692.375"
+       height="334.72131" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3932"
+       transform="translate(270,18.999998)"
+       width="692.375"
+       height="334.72131" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3934"
+       transform="translate(270,79.999998)"
+       width="692.375"
+       height="334.72131" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g3919"
+       id="use3936"
+       transform="translate(420,27.999998)"
+       width="692.375"
+       height="334.72131" />
   </g>
 </svg>

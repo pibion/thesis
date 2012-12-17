@@ -131,12 +131,12 @@ The intrinsic efficiency of the paddles can be tested by requiring a coincidence
 In practice, arranging the available scintillator to force muons through the test volume was difficult because the available scintillator was instrumented with bulky lightguides and could not be laid directly on the test volume.  A simple cosmic ray simulation program helped determine an arrangement that maximized geometrical efficiency.  This arrangement, however, was extremely sensitive to placement; measured efficiency of the same bar could change from 98\% to 75\% with a displacement of a few centimeters.
 \begin{figure}[htp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/veto_test_layout.eps}
+\includegraphics[width=0.4\textheigt]{figures/veto_test_layout.eps}
 \caption{This arrangement of coincidence material ensures that muons triggering all coincidence detectors must also travel through the veto paddle.  The coincidence material is drawn in red while the veto paddle is in blue.}
 \label{fig:efficiencyTest}
 \end{figure}
 
-The efficiency was measured by counting how often the veto paddle had a detectable signal when all the coincidence material registered a coincidence.  Assuming the muon was constrained to travel through the veto paddle volume, the ratio gives the efficiency.  The DAQ Event signal was a logic pulse resulting from the coincidence of the coincidence paddles.  This logic pulse also acted as a Start for a TAC.  The TAC stop signal was a delayed, discriminated veto paddle signal.  The outgoing TAC signal was sent to an analog to digital converter (ADC) for integration.  Signals from the veto paddle coincident with the other scintillators show up in the timing spectrum as a peak at the time of the delay.  The integral of this timing peak divided by the number of event triggers gives the efficiency.
+The efficiency was measured by counting how often the veto paddle had a detectable signal when all the coincidence material registered a coincidence.  Assuming the muon was constrained to travel through the veto paddle volume, the ratio gives the efficiency.  The DAQ Event signal was a logic pulse resulting from the coincidence of the coincidence paddles.  This logic pulse also acted as a start for a TAC.  The TAC stop signal was a delayed, discriminated veto paddle signal.  The outgoing TAC signal was sent to an analog to digital converter (ADC) for integration.  Signals from the veto paddle coincident with the other scintillators show up in the timing spectrum as a peak at the time of the delay.  The integral of this timing peak divided by the number of event triggers gives the efficiency.
 % figure: the considerably complicated spectrum
 \begin{figure}[htp]
 \centering
