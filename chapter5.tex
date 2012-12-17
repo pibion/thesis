@@ -26,30 +26,39 @@
 
 \chapter{DATA ANALYSIS}
 \label{chap:dataAnalysis}
+\begin{comment}
 We care about two things:
 1. The absolute cross-section of the ground state transition
 2. Setting a limit on excited 0+ state cross-sections
-
-error calculations: its own section?
+\end{comment}
+The aim of the data analysis of the \reaction data sets is to extract the absolute cross-section of the reaction populating the ground state of \GeTargets and also to set a limit on excited \zp state cross-sections.  Each of these analyses is discussed in its own section, but because the absolute cross-section is of interest, the detector efficiency and several properties of the experiment must be accurately determined.  The detector efficiency is discussed first.
 
 \section{Detector Efficiency}
-
+\begin{comment}
 deuterium, Mg, cuts
+\end{comment}
+The meausurement made by the neutron detector is counts - counts of neutrons of differing energies.  The number of counts due to neutrons made by the neutron detector scales linearly with the absolute cross-section of \reaction but is not identical to it because not all the neutrons produced leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of a detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross-sections.
+
+A particularly robust method of determining detector efficiency is to measure a well-known cross-section.  Comparing the measured cross-section with the accepted value gives the efficiency of the detector.  In the case of the neutron detector, the efficiency is expected to change with the energy of the neutron, making it important to measure a cross-section that is well-known with neutron energies near 26~MeV, the expected neutron energy of \reaction.  Two promising reactions are \DuReaction and \MgReaction, which have not been measured at the needed energy but have been measured at surrounding energies.  The existing measurements are shown in {\tab}~\ref{tab:efficiencyCalib}. DWBA calculations can reliably interpolate expected cross-sections at appropriate beam energies for 26~MeV neutrons, providing two independent checks on the detector efficiency for \reaction.
+
+
 
 \section{Experimental Parameters Related to the Cross Section}
+\begin{comment}
 current, tgt thickness (RBS), solid angle, dead time
 go ahead and discuss errors while you discuss these quantities
+\end{comment}
 
 The absolute cross section is the number of times a reaction occurred normalized by the total number of particles incident on the target and the number density of nuclei in the target:
 
-\begin{equation}
-\text{cross section} = \frac{\text{times reaction occurred}}{\text{particles incident on target} \times \text{number density of target nuclei}}
-\text{cross section} = \frac{\text{times reaction occurred}}{\text{particle current} \times \text{time} \times \text{target thickness}}
+\begin{align}
+\text{cross section} &= \frac{\text{times reaction occurred}}{\text{particles incident on target} \times \text{number density of target nuclei}} \\
+                     &= \frac{\text{times reaction occurred}}{\text{particle current} \times \text{time} \times \text{target thickness}}
 \label{eq:cross_section}
-\end{equation}
+\end{align}
 
 \section{Background Subtraction}
-
+\begin{comment}
 two data sets
 - pulse selection
 - no pulse selection
@@ -63,6 +72,7 @@ background
 extracting counts 
 - pulse selection
 - no pulse selection
+\end{comment}
 
 The data sets for this analysis were gathered in two seperate runs; the pulse selector was not working for part of the first run.  Analysis of the datasets taken with pulse selection is straigtforward and will be discussed first.  Without pulse selection, the neutron peak sits on top of background from previous neutron bunches.  The background fit is different and the total counts have a larger systematic uncertainty; extracting these will be discussed second.
 
@@ -178,16 +188,22 @@ One additional constraint concerns the ratio between the two datasets.  This rat
 
 
 \section{Placing a limit on excited 0+ state cross-sections}
+\begin{comment}
 introduce 0+ peak and see when it becomes statistically significant
 there will be different limits for different energies!  because of the evaporation background
+\end{comment}
 
 \section{Fitting 0+ ground state}
+\begin{comment}
 DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
+\end{comment}
 
 \section{Implications for \zvbb NME}
+\begin{comment}
 Okay I'm not really sure how to figure this out
+\end{comment}
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
