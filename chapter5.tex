@@ -37,11 +37,11 @@ The aim of the data analysis of the \reaction data sets is to extract the absolu
 \begin{comment}
 deuterium, Mg, cuts
 \end{comment}
-The measurement made by the neutron detector is counts - counts of neutrons of differing energies.  The number of counts due to neutrons made by the neutron detector scales linearly with the absolute cross-section of \reaction but is not identical to it because not all the neutrons produced leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of a detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross-sections.
+The number of counts due to neutrons measured by the neutron detector scales linearly with the absolute cross-section of \reaction but is not identical to it because not all the neutrons produced leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of a detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross-sections.
 
-The efficiency of a plastic-scintillator-type neutron detector depends on its size and shape as well as the energy resolution and the detection threshold.  The Monte-Carlo code of Cecil \cite{Cecil_neutEfficiency} can calculate the efficiency of a plastic scintillator detector.  These calculations match measured efficiency values well over a wide range of neutron energies.  The inputs required by the code are the density of the detector, its H/C ratio, the threshold used in the experiment, and the interval over which the detector averages the neutron energy, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}??, and the threshold and resolution of the detector must be determined with data from the experiment.  
+The efficiency of a plastic-scintillator-type neutron detector depends on its size and shape as well as the energy resolution and the detection threshold.  The Monte-Carlo code of Cecil \cite{Cecil_neutEfficiency} calculates the efficiency of a plastic scintillator detector for a wide range of neutron energies and detector thresholds.  The inputs required by the code are the density of the detector, its H/C ratio, the threshold used in the experiment, and the interval over which the detector averages the neutron energy, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}??, and the threshold and resolution of the detector must be determined with data from the experiment.  
 
-Efficiency calculations were performed with several data sets to ensure that the Cecil code accurately predicted the efficiency of the neutron detector.  Ideal test reactions are those with well-known cross-sections and neutrons with energies near 26~MeV.  The reaction d(d,n) has been well-measured at beam energies of 9~MeV, giving neutrons with ??~MeV.  The estimated efficiency gives a cross-section that matches well with the published value, as shown in {\fig}~\ref{fig:DeuteriumMatch}.  The \MgReaction has not been measured at a beam energy of 16~MeV but has been measured at lower and higher energies as shown in  {\tab}~\ref{tab:efficiencyCalib}.  The efficiency measured for the neutrons from this reaction provides a measurement very near the energies produced in \reaction and can be checked against previous measurements.  {\fig} shows the light output used to determine the resolution and threshold needed by the code, and {\fig} shows the consistency of the measured cross-section using that predicted efficiency.  Because the efficiency of the detector changes very slowly at these neutron energies, this efficiency was used for all bars for the \MgReaction and \reaction data sets.
+Efficiency calculations were performed with several data sets to ensure that the Cecil code accurately predicted the efficiency of the neutron detector.  Ideal test reactions are those with well-known cross-sections and neutrons with energies near 26~MeV.  The reaction d(d,n) has been well-measured at beam energies of 9~MeV, which produces ??~MeV ground-state neutrons.  The estimated efficiency gives a cross-section that matches well with the published value, as shown in {\fig}~\ref{fig:DeuteriumMatch}.  The \MgReaction has not been measured at a beam energy of 16~MeV but has been measured at lower and higher energies as shown in  {\tab}~\ref{tab:efficiencyCalib}.  The efficiency measured for the neutrons from this reaction provides a measurement very near the energies produced in \reaction and the resulting cross-section can be checked against previous measurements for consistency.  {\fig}~\ref{fig:} shows the light output used to determine the resolution and threshold needed by the code, and {\fig}~\ref{fig:} shows the consistency of the measured cross-section using that predicted efficiency.  Because the efficiency of the detector changes very slowly at these neutron energies, this efficiency was used for all bars for the \MgReaction and \reaction data sets.
 
 
 \section{Experimental Parameters Related to the Cross Section}
@@ -50,17 +50,16 @@ current, tgt thickness (RBS), solid angle, dead time
 go ahead and discuss errors while you discuss these quantities
 \end{comment}
 
-The absolute cross section is the number of times a reaction occurred normalized by the total number of particles incident on the target and the number density of nuclei in the target:
+The differential cross-section is the number of times a reaction occurred ($N_{reaction}$) normalized by the total number of particles incident on the target ($N_{beam}$), the number density of nuclei in the target ($n_{target}$), the solid angle subtended by the detector ($d\Omega$), and the efficiency of the detector ($\epsilon$):
 \begin{align}
-\text{cross section} &= \frac{\text{times reaction occurred}}{\text{particles incident on target} \times \text{number density of target nuclei}} \\
-                     &= \frac{\text{times reaction occurred}}{\text{particle current} \times \text{time} \times \text{target thickness}}
+\frac{d\sigma}{d\Omega} &= \frac{N_{reaction}}{N_{beam} \times n_{target} \times \epsilon \times d\Omega}.
 \label{eq:cross_section}
 \end{align}
-The interest in this experiment is the differential cross-section, the cross-section as a function of angle.  Extracting the number of times the reaction occurred at each angle will be discussed in future sections.  The quantities in the cross-section that relate to the experimental setup are the number of particles incident on the target and the number density of nuclei in the target.
+The efficiency of the detector has already been discussed.  Extracting the number of times the reaction occurred at each angle will be explored in future sections.  The quantities in the cross-section that relate to the experimental setup are the number of particles incident on the target and the number density of nuclei in the target.
 
-Three targets were used in the experiments.  \GeTargets and \Mg{26} targets were provided by ??.  Their isotopic abundance and thickness is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured when they were made and again at Hope College using Rutherford back-scattering (RBS).  The reported thickness were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, RBS analysis software.  To understand variations in target thickness, measurements were taken at several different positions on each target.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.
+Three targets were used in the experiments.  \GeTargets and \Mg{26} targets were provided by John Greene at Argonne National Lab.  The isotopic abundance and thickness of each target is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured with an alpha-gauge when they were made and again at Hope College using Rutherford back-scattering (RBS).  The reported thickness were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, RBS analysis software.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.  To understand variations in target thickness, measurements were taken at several different positions on each target.
 
-To determine the absolute cross-section, it is also necessary to know the total number of \He{3} incident on the target for each dataset.  One monitor of the beam current is the charge collected by the Faraday cup.  A BaF$_2$ crystal outside the target chamber and a silicon detector inside the target chamber detect $\gamma$ radiation from beam incident on the target and scattered \He{3} beam, respectively.  Both these detectors monitor the product of the target thickness and the beam current.  Data from the silicon detector show that the ratio of the \GeTargets to gold does not change throughout the run and that the live charge collected by the Faraday cup scales with the back-scattered peak in the silicon spectrum.  This means that the live charge can be used to scale beam current between runs, allowing us to express \reaction cross-sections in terms of the known \MgReaction.
+To determine the absolute cross-section, it is also necessary to know the total number of \He{3} incident on the target for each dataset.  One monitor of the beam current is the charge collected by the Faraday cup.  A BaF$_2$ crystal outside the target chamber and a silicon detector inside the target chamber detect $\gamma$ radiation from beam incident on the target and scattered \He{3} beam, respectively.  Both these detectors monitor the product of the target thickness and the beam current.  Data from the silicon detector show that the ratio of the \GeTargets to gold does not change throughout the run and that the live charge collected by the Faraday cup scales with the back-scattered peak in the silicon spectrum.  The live charge can therefore be used to scale beam current between runs, making it possible to express \reaction cross-sections in terms of the known \MgReaction.
 
 \section{Data Sets}
 Two sets of \reaction data are available.  The first was taken in September of 2011.  A subset of this data was taken with no pulse selection due to hardware failure.  A second run in December of 2011 provided additional data, all taken with pulse selection.  During the December run, data was taken with the \GeTargets as well as the \Mg{26} target to provide an accurate normalization for the detector.  The data sets are summarized in {\tab}~\ref{tab:dataSets}.
@@ -68,21 +67,19 @@ Two sets of \reaction data are available.  The first was taken in September of 2
 \section{Cuts}
 Three sets of cuts are applied to the data to generate a final data set.  The first cut verifies that the recorded event represents a real event.  The next cut checks that the event is not a muon event.  The last cut is an energy cut that discards low-energy signals, reducing the background due to $\gamma$ radiation.
 
-A true event should have energy above the noise level recorded in both top and bottom PMT's and the time signals from the top and bottom PMT's should be correlated.  A typical energy spectrum with no cuts applied and a typical scatter plot of top and bottom timing are shown in {\fig}~\ref{fig:realEvent}.  These cuts are applied during initial data processing and the results are stored with the event as an array of correlations.  All bars having an event that appears valid will have a ``true'' entry in the correlation array.  Requiring a bar to have a correlation is a cut that is applied to all final data sets.
+A true event should have energy above the noise level recorded in both top and bottom PMT's.  Additionally, the time signals from the top and bottom PMT's should be correlated.  A typical energy spectrum with no cuts applied and a typical scatter plot of timing from the top and bottom PMT are shown in {\fig}~\ref{fig:realEvent}.  These cuts are applied during initial data processing and the result for each bar is stored with the event as an array of correlations, with any valid event recording a ``true'' entry in the correlation array.  Requiring an event to be valid is a cut that is applied to all final data sets.
 
-A first approximation to determining whether or not an event is the result of a muon interaction is to require all but one bar in the neutron detector, as well as the entire veto, to be silent.  However, this would veto events that are spatially disconnected and could not possibly be due to a single muon.  To eliminate these unnecessary vetoes, we look at events that register signals in material with close spatial proximity.  One way to determine the appropriateness of increasing the size of a veto group is by looking at the energy spectrum of the additional vetoed events.  Adding material to a veto group that primarily vetoes muons results in an energy spectrum that has roughly even numbers of high and low energy events, as shown in {\fig}~\ref{fig:muonVetoSpectrum}.  Material that is too far away and does not veto primarily muon events will veto events whose energy spectrum appears much more like the room background spectrum, heavily weighted towards lower energy events, as in {\fig}~\ref{fig:notMuonVetoSpectrum}.  Examining these figures for each bar indicates that an appropriate group of material to use in the veto is the material immediately surrounding the detector bar.  Several samples of veto groups are shown in {\fig}~\ref{fig:vetoGroups}.
+A first approximation to determining whether or not an event is the result of a muon interaction is to require all but one bar in the neutron detector, as well as the entire veto, to be silent.  However, this would veto events that are spatially disconnected and could not possibly be due to a single muon.  To eliminate these unnecessary vetoes, we look at events that register signals in material with close spatial proximity, a ``veto group''.  One way to determine the appropriateness of increasing the size of a veto group is by looking at the energy spectrum of vetoed events.  Adding material to a veto group that primarily eliminates muons results in an energy spectrum that has roughly even numbers of high and low energy events, as shown in {\fig}~\ref{fig:muonVetoSpectrum}.  Material that does not veto primarily muon events will yield an energy spectrum that appears much more like the room background spectrum, heavily weighted towards lower energy events, as in {\fig}~\ref{fig:notMuonVetoSpectrum}.  Examining these figures for each bar indicates that an appropriate group of material to use in the veto is the material immediately surrounding the detector bar.  Several samples of veto groups are shown in {\fig}~\ref{fig:vetoGroups}.  A separate cut to reject muon events is discarding events that deposit energy above the maximum neutron energy deposition.    
 
-An additional restriction that eliminates muon events is to discard events that deposit energy above the maximum neutron energy deposition.    
-
-The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Such a cut discards neutrons, which are also likely to deposit a small amount of energy, and it is necessary to calculate where the energy cut maximizes the signal to noise ratio.  An important feature of the energy cut is that it is strongly position dependent.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is obtained from the product of the signals seen by the top and bottom PMT:
+The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Such a cut discards neutrons, which are also likely to deposit a small amount of energy, and it is necessary to calculate which energy cut maximizes the signal to noise ratio.  An important feature of the energy cut is that it is strongly position dependent.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the product of the top and bottom PMT signals:
 \begin{equation}
-A\exp{-\alpha x}\times A\exp{-\alpha (L-x)} = A^2\exp{-\alpha L},
+Ae^{-\alpha x}\times Ae^{-\alpha (L-x)} = A^2e^{-\alpha L},
 \end{equation}
-where $\alpha$ is a factor that determines the attenuation in the bar and $L$ is its length.  Modeling the position dependence of the signals in the bar as an exponential, then, implies that the product of the signals should be position-independent, when in fact it is not, as seen in {\fig}~\ref{fig:product_positionDependence}.  The position dependence is not uniform from bar to bar, making a cut requiring the product to be greater than some constant introduce significant systematic error into the final cross-section.
+where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is its length.  Modeling the position dependence of the signals in the bar as an exponential implies that the product of the signals should be position-independent, when in fact this is not the case, as seen in {\fig}~\ref{fig:product_positionDependence}.  Furthermore, the position dependence is not uniform from bar to bar, making it necessary to use a position-dependent cut to avoid introducing significant systematic error into the final cross-section.
 
-A different way to approach the energy cut is to place a position-dependent cut on each PMT separately using the energy vs. position spectrum of the vetoed events.  These events are likely to be muons, and because muons have an angular distribution of ??, there is a most-likely angle that muons take through the neutron detector bars.  This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}.  The peak of this energy spectrum as a function of position, then, serves as a calibration at every position and is a suitable candidate for an energy cut.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
+The energy cuts are determined for each PMT separately using the energy vs. position spectrum of the vetoed events.  These events are likely to be muons, and because muons have an angular distribution of $\cos{\theta}^{1.3}$ [CITE], there is a most-likely angle that muons take through the neutron detector bars.  This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}.  At every position, the peak of this energy spectrum represents the same energy and is a suitable candidate for an energy cut.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
 
-Using the energy peak as a function of position itself as a lower energy cut, however, results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  There is no reason to assume that all energy cuts will scale in the same way, and the appropriate ratios are determined by comparing background reduction to the initial cut as in {\fig}~\ref{fig:scalingFactor}.  An additional concern is that simply scaling the energy cut may not provide an accurate position dependence.  No distinct feature exists at lower energies, making this difficult to directly check.  However, the position distribution of rejected events with these scaled energy cuts is flat as in {\fig}~\ref{fig:flatPositionSpectrum}, suggesting that the position dependence is still a reasonable approximation for lower-energy events.
+Using the energy peak as a function of position itself as a lower energy cut results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  There is no reason to assume that all energy cuts will scale in the same way, and the appropriate ratios are determined by comparing background reduction to the initial cut as in {\fig}~\ref{fig:scalingFactor}.  An additional concern is that simply scaling the energy cut may not provide an accurate position dependence.  No distinct feature exists at lower energies, making this difficult to check directly.  However, the position distribution of rejected events with these scaled energy cuts is flat as seen in {\fig}~\ref{fig:flatPositionSpectrum}, suggesting that the position dependence at the most-likely deposited energy for muons is a reasonable approximation for lower-energy events.
 
 \section{Ground State Cross-Section}
 \begin{comment}
@@ -101,43 +98,43 @@ extracting counts
 - no pulse selection
 \end{comment}
 
-In general, extracting the counts due to the ground-state neutrons is simple:
+To extract the counts due to the ground-state neutrons one can sum the counts in the region of the peak and subtract the estimated background:
 
 \begin{equation}
-\text{Sum(peak region) - Background(peak region)}
+\text{S = P - B},
 \label{eq:counts}
 \end{equation}
-With an associated error
+where S is the extracted number of signal counts, P is the number of counts in the signal region, and B is the number of estimated background counts.  The error associated with $S$ is
 \begin{equation}
-\sqrt{\sigma_{Sum}^2 + \sigma_{background}^2}
+\sqrt{\sigma_{P}^2 + \sigma_{B}^2}
 \label{eq:errDef}
 \end{equation}
-where the sum of counts in a fixed region can be understood as a random variable; as such, its error is $\sqrt{N_{\text{peakregion}}}$.
+where both $P$ and $B$ can be understood as a random variable with error $\sqrt{P}$ and $\sqrt{B}$, respectively.
 
-The primary challenge is finding an accurate way to estimate the background that reduces the error of the extracted counts.  As can be seen in {\fig}~\ref{fig:PSvsNPS}, the background of the PS is much simpler than that of the NPS data.  Analysis of the datasets taken with pulse selection is straightforward and will be discussed first.  Without pulse selection, the neutron peak sits on top of background from previous neutron bunches.  Extracting neutron counts from these data will be discussed second.
+The primary challenge is finding an accurate way to estimate the background that reduces the error of the extracted counts.  As can be seen in {\fig}~\ref{fig:PSvsNPS}, the background of the pulse-selected data is much simpler than that of the non-pulse-selected data.  Analysis of the datasets taken with pulse selection is straightforward and will be discussed first.  Without pulse selection, the neutron peak sits on top of background from previous neutron bunches.  Extracting neutron counts from these data will be discussed second.
 
 \subsection{Pulse-Selected Data}
-In the case of the pulse-selected data, the background in the region of the neutron peak consists of flat, random background and the tail of the neutron evaporation spectrum.  The gamma peaks are far away from the neutron peak and have no effect.  The random background can be well-estimated from the background in the region between the ground-state neutron peak and gamma peak.  The neutron evaporation peak is the least-well understood contributor to the background of the ground state neutron peak and will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to randoms.
+In the case of the pulse-selected data, the background in the region of the neutron peak consists of flat, random background and the tail of the neutron evaporation spectrum.  The gamma peaks are far away from the neutron peak and have no effect.  The random background can be well-estimated from the background in the region between the ground-state neutron peak and gamma peak.  The neutron evaporation peak is the least-well understood contributor to the background of the ground state neutron peak and will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to random radiation.
 
-One method for extracting counts due to a signal is sideband subtraction.  Sideband subtraction's accuracy depends on a background that does not change rapidly near the signal region.  If two background regions have a number of counts $N_1$ and $N_2$, the extracted counts will be
+One method for extracting counts due to a signal is sideband subtraction.  The accuracy of sideband subtraction depends on a background that does not change rapidly near the signal region.  If two background regions have a number of counts $B_1$ and $B_2$, the extracted counts will be
 \begin{equation}
-N_{\text{peak}} - (N_1 + N_2),
+S = P - (B_1 + B_2),
 \end{equation}
-where $N_{\text{peak}}$ is the number of counts in the peak region.  With these data sets, the number of signal counts is very small compared to the background, and to estimate the error it is reasonable to approximate $N_{\text{peak}} \approx 2 N_1 \approx 2 N_2 \equiv N$.  The statistical error associated with the number of neutron counts is then
+where as before $S$ is the calculated number of signal counts and $P$ is the number of counts in the peak region.  With these data sets, the number of signal counts is very small compared to the background, and to estimate the error it is reasonable to approximate $P \approx 2 B_1 \approx 2 B_2$.  The statistical error associated with the number of neutron counts is then
 \begin{equation}
-\sqrt{N_{\text{peak}} + N_1 + N_2} \approx \sqrt{2 N}.
+\sqrt{P + B_1 + B_2} \approx \sqrt{2 B}.
 \end{equation}
-Using sideband subtraction should increase the width of the distribution of extracted counts because it introduces two additional random variables, each with substantial statistical error.  
+It should be expected that sideband subtraction will increase the width of the distribution of extracted counts because it introduces two additional random variables, each with substantial statistical error.  
 
 In the case of the pulse-selected data, it is possible to avoid introducing this additional statistical error by fitting the flat background rather than estimating as with sideband subtraction.  Fitting the flat background region to obtain $n$, the number of counts per bin, the extracted counts become
 \begin{equation}
-N_{\text{peak}} - n\times\text{Bins in Peak Region}.
+P - n\times N_b,
 \end{equation}
-The error on the extracted counts is then
+where $N_b$ is the number of bins in the peak region.  The error on the extracted counts is then
 \begin{equation}
-\sqrt{N_{\text{peak}} + _n^2\times\text{Bins in Peak Region}}.
+\sqrt{N_{\text{peak}} + {\sigma}_n^2\times N_b}.
 \end{equation}
-The error on the background no longer behaves like that of a random variable because it has been replaced with a background estimate whose error is the error of the average number of counts per bin, $\sqrt{\frac{n}{B_{\text{bkgd}}}}$.  See \fig~\ref{fig:statDist} for a Monte-Carlo demonstration of the error associated with the average counts per bin.  In these data sets, the error contribution $\sigma_n^2\times\text{Bins in Peak Region}$ is typically of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background, then results in an error of approximately $\sqrt{N_{\text{peak}}}$, an improvement over sidebband subtraction by a factor of $\sqrt{2}$.
+The error on the background no longer behaves like that of a random variable because it has been replaced with a background estimate whose error is the error of the average number of counts per bin, $\sqrt{\frac{n}{N_b}}$.  See \fig~\ref{fig:statDist} for a Monte-Carlo demonstration of the error associated with the average counts per bin.  In these data sets, the error contribution ${\sigma}_n^2\times N_b$ is typically of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background, then results in an error of approximately $\sqrt{P}$, an improvement over sidebband subtraction by a factor of $\sqrt{2}$.
 \begin{figure}[ht]
 \centering
   \subfloat[Distribution of Background Counts][Distribution of Background Counts]{
@@ -156,46 +153,25 @@ The error on the background no longer behaves like that of a random variable bec
   \label{fig:statDist}
 \end{figure}
 
-The error introduced to the extracted counts depends on how the background is determined.  In the case of the pulse-selected data, it is clearly better to fit the background.  The constant component of the background is well-determined and contributes a tiny ??\% to the total error.  Next we estimate the uncertainty introduced by the evaporation spectrum.
+The error introduced to the extracted counts depends on how the background is determined.  In the case of the pulse-selected data, estimating the background by fitting improves the statistical error of the extracted cross-section by a factor of $\sqrt{2}$.  Next we estimate the uncertainty introduced by the evaporation spectrum.
 
-A neutron continuum is clearly visible in all targets, and while in \Mg{26} the continuum is separated by ?? MeV, it is difficult to determine where the continuum for the \Se{76} and \Se{78} stops.  What is safe to assume is that neutrons populating the continuum cannot have an energy greater than the \zp neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution.  Appropriate functional models, then, are those that are identically zero on an infinite or semi-infinite range.  Two functions that satisfy this criterion are the Beta Distribution and the Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
+A neutron continuum is clearly visible in all targets, and while in \Mg{26} the continuum is well-separated from the ground-state neutron peak, the continuum for \Se{76} and \Se{78} appears to overlap the ground-state neutron peak.  It is safe to assume is that neutrons populating the continuum cannot have an energy greater than the \zp neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution.  Appropriate functional models, then, are those that are identically zero on an infinite or semi-infinite range.  Two functions that satisfy this criterion are the Beta Distribution and the Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
 
-For the same bar, the pulse-selected spectrum should have the same shape as the non-pulse-selected data.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit.  The model for the pulse-selected data is
+For the same bar, the pulse-selected spectrum should have the same shape as the non-pulse-selected data.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit because each bar of the neutron detector should measure the same beam-related spectrum for different runs, making it possible to model the non-pulse-selected spectrum as a shifted, scaled copy of the pulse-selected data.  The model used for the pulse-selected data is
 % equation for pulse-selected spectrum
 \begin{equation}
-Beta(A,B,\alpha,\beta) + Gaus() + Gaus() + Gaus() + DoubleGaus() + Const
+f_{PS} = Beta(A,B,\alpha,\beta) + Gaus() + Gaus() + Gaus() + DoubleGaus() + Const_{PS}
 \end{equation}
-and for the non-pulse-selected data is
+where the $DoubleGaus()$ term models the $\gamma$-peaks and the other $Gaus()$ terms are added to ensure a good overall fit.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
 % equation for non-pulse-selected spectrum
 \begin{equation}
-Beta(A,B,\alpha,\beta) + Gaus() + Gaus() + Gaus() + DoubleGaus() + Const,
+R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
 \end{equation}
-where certainly the parameters of the Beta Distribution must be the same for each fit.  But these two histograms constrain each other in more ways than just the shape of the neutron evaporation spectrum.  A detector sitting at the same angle should see the same ratio between neutrons from the evaporation peak, neutrons from the Carbon peak, and neutrons from the \zp peak.  The full neutron spectra - peaks and evaporation region - from each of these histograms should have the same shape.  So now the model for the non-pulse-selected spectrum can be a neutron spectrum that's a scaled copy of the pulse-selected spectrum's neutron spectrum.  If we write the pulse-selected fitting function as 
-% equation for pulse-selected spectrum
-\begin{equation}
-Neut_{PS} + DoubleGaus() + Const,
-\end{equation}
-then the form for the non-pulse selected data must be
-% equation for non-pulse-selected spectrum
-\begin{equation}
-R*Neut_{PS} + DoubleGaus() + Const.
-\end{equation}
-
-Restricting the fixed scaling to the neutrons alone, however, is incorrect.  Bars of the neutron detector sit at a fixed angle and see the same mix of neutrons as well as the same mix of neutrons and gammas.  There are really two spectra the detector sees - a beam-related spectrum and the non-beam-related background spectra.  Two different runs will provide these in different ratios; for example, a short run with high beam current would proved more beam-related spectrum and little background spectrum, while a long run with low beam current would provide provide moderate beam-related spectrum and much background spectrum.  The appropriate model for fitting the two datasets simultaneously, then, is
-% equation for pulse-selected spectrum
-\begin{equation}
-Neut_{PS} + Gamma_{PS} + Const_{PS}
-\end{equation}
-for the pulse-selected data and 
-% equation for non-pulse-selected spectrum
-\begin{equation}
-R(Neut_{PS} + Gamma_{PS}) + Const_{NPS}
-\end{equation}
-for the non-pulse selected data.  That the gamma peaks scale by the same ratio as the neutron peaks is a significant constraint on this fit because they are such pronounced features.  Such a fit does indeed converge well for a large majority of the detectors and shows that the neutron evaporation spectrum contributes at most ??\% to the extracted counts in the ground-state neutron peak.  
+where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron evaporation spectrum contributes at most ??\% to the extracted counts in the ground-state neutron peak.  
 
 The method used to extract the counts in the ground-state neutron peak is a direct summing of the counts from the peak region followed by subtraction of the estimated flat background from a linear fit.  The estimated error is the statistical error of the sum of the peak region and the systematic error of including counts from the continuum.  The results are plotted in {\fig}~\ref{fig:PS_angularDistribution}.
 
-A dedicated fitter may begin to wonder if there are as-yet-unused constraints that could provide an even more robust fit that would ensure a convergent fit for all angles.  One additional constraint concerns the ratio between the two datasets.  This ratio scales the amount of beam seen by one bar during the two data runs.  But each bar should see the same ratio!  Fitting all the bars simultaneously will provide a much-improved ratio.
+%A dedicated fitter may begin to wonder if there are as-yet-unused constraints that could provide an even more robust fit that would ensure a convergent fit for all angles.  One additional constraint concerns the ratio between the two datasets.  This ratio scales the amount of beam seen by one bar during the two data runs.  But each bar should see the same ratio!  Fitting all the bars simultaneously will provide a much-improved ratio.
 
 \subsection{Data with No Pulse Selection}
 With pulse selection, the region behind the neutron peak has only random signal and can be fit with a constant to within ??\%.  With no pulse selection, the neutron peak sits on top of background from the previous bunch.  Fitting this spectrum by itself introduces significant uncertainty in the height of the evaporation spectrum because the flat background is not well-constrained by any portion of the spectrum.  The fit described above is a poor estimate of the background in the non-pulse-selected data because a wide range of shapes describing the evaporation continuum and random background produce good fits but very different estimated background in the ground-state neutron peak region.  Additionally, it becomes difficult to introduce enough peaks to accurately reproduce the shape of the background without making the fit unable to converge because there are too many independent variables. 
@@ -211,7 +187,7 @@ R\times (Beam1_{PS}+Beam2_{PS}+Beam3_{PS}) + Const_{NPS},
 \end{equation}
 where $Const_{PS}$, $R$, and $Const_{NPS}$ are free parameters and $Beam1_{PS}+Beam2_{PS}+Beam3_{PS}$ are shifted copies of the beam spectrum $Beam_{PS}$.  The beam-related component of the pulse-selected spectrum is a Kernel Density Estimate [CITE] based on the data in the histogram.  
 
-Extraction of the ground-state neutron counts is done not by subtracting an estimated background from the total counts in the peak region, but rather by applying the ratio of signal to background to the total counts.  The results of the fits can be seen in {\fig}~\ref{fig:NPS_fits} and the final angular distribution in {\fig}~\ref{fig:NPS_angularDistribution}.
+Extraction of the ground-state neutron counts is done not by subtracting an estimated background from the total counts in the peak region, but rather by applying the ratio of signal to background, $R/Const_{NPS}$, to the total counts.  The results of the fits can be seen in {\fig}~\ref{fig:NPS_fits} and the final angular distribution in {\fig}~\ref{fig:NPS_angularDistribution}.
 
 
 \section{Placing a Limit on Excited \zp States}
@@ -223,18 +199,19 @@ A primary aim of this experiment is to investigate the distribution of \zp stren
 
 No obvious \zp states were observed in the evaporation continuum for \Ge{74} or \Ge{76}.  A limit on the cross-section of \zp states as a function of energy can be determined by solving for the number of counts necessary to be consistent with zero at some certainty:
 \begin{equation}
-peak counts = i\sigma,
+P = i\sigma,
 \end{equation}
 or
 \begin{align}
-\sigma(S) = i\sqrt{P+B}
-               &\approx i\sqrt{S+B+B}
-               &= i\sqrt{S+2B},
+\sigma(S) = i\sqrt{P+B} \\
+               &\approxi\sqrt{S+B+B} \\
+               &=i\sqrt{S+2B},
 \end{align}
 where $S$ is the number of counts in the potential signal region and $B$ is the estimated number of counts.  In this case, sideband subtraction is the most appropriate method of determining $B$ because the shape of the continuum is not well-known and attempting to fit it functionally could introduce unknown systematic error.  The number of signal counts $S$ can be written as a function of the background counts $B$ and the desired level of certainty, $i$:
 \begin{equation}
 S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
 \end{equation}
+Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include a peak to its 2$\sigma$ limits.
 
 The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen because we do not believe we had sensitivity to the $1\sigma$ limit, while a peak at the $3\sigma$ limit would have stood out clearly from the data.  A simulation of peaks at these limits is shown in {\fig}~\ref{fig:differentLimits}.
 
@@ -244,10 +221,11 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not usually reproduce the absolute cross-section.  The cluster model is also sensitive to parameters used to describe the potentials of the interacting nuclei.  The code FRESCO [CITE] was used to fit the cross-section of the ground and first excited states well with a cluster model.  The fit was robust and it was found that the sensitivity of the relative cross-sections on the parameters was limited.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
+As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not usually reproduce the absolute cross-section.  In the case of \GeTargets, however, the ratio between the cluster-model DWBA predictions and the experimentally obtained cross-section is on the order unity, as for the $^{58,60,62,64}$Ni isotopes, which are also f-p-g shell nuclei.  See {\tab}~\ref{tab:zpRatio} for the exact values.  That the cluster-model accurately predicts the \reaction cross-sections suggests two-step processes play a limited role in these reactions.
 
-An implementation of the Bayman-Kallio method in FRESCO was used to check our measured cross-section of \MgReaction.  The results are shown in {\fig}~\ref{fig:MgBaymanCallio}.
+The cluster model can be sensitive to the parameters used to describe the potentials of the interacting nuclei.  The dependence of the cross-section for various \He{3} optical potential models was explored and were found to result in little difference in the elastic cross-sections.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
 
+The cross-sections measured for \reaction are consistent with DWBA predictions and data suggest no significant excited \zp states.
 % % uncomment the following lines,
 % if using chapter-wise bibliography
 %
