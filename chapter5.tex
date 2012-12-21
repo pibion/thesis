@@ -135,9 +135,9 @@ N_{\text{peak}} - n\times\text{Bins in Peak Region}.
 \end{equation}
 The error on the extracted counts is then
 \begin{equation}
-\sqrt{N_{\text{peak}} + \sigma_n^2\times\text{Bins in Peak Region}}.
+\sqrt{N_{\text{peak}} + _n^2\times\text{Bins in Peak Region}}.
 \end{equation}
-The error on the background no longer behaves like that of a random variable because it has been replaced with a background estimate whose error is the error of the average number of counts per bin, $\sqrt{\frac{n}{B_{\text{bkgd}}}}$.  See \fig~\ref{fig:statDist} for a Monte-Carlo demonstration of the error associated with the average counts per bin.  In these data sets, the error contribution \sigma_n^2\times\text{Bins in Peak Region} is typically of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background, then results in an error of approximately $\sqrt{N_{\text{peak}}}$, an improvement over sidebband subtraction by a factor of $\sqrt{2}$.
+The error on the background no longer behaves like that of a random variable because it has been replaced with a background estimate whose error is the error of the average number of counts per bin, $\sqrt{\frac{n}{B_{\text{bkgd}}}}$.  See \fig~\ref{fig:statDist} for a Monte-Carlo demonstration of the error associated with the average counts per bin.  In these data sets, the error contribution $\sigma_n^2\times\text{Bins in Peak Region}$ is typically of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background, then results in an error of approximately $\sqrt{N_{\text{peak}}}$, an improvement over sidebband subtraction by a factor of $\sqrt{2}$.
 \begin{figure}[ht]
 \centering
   \subfloat[Distribution of Background Counts][Distribution of Background Counts]{
@@ -226,11 +226,11 @@ No obvious \zp states were observed in the evaporation continuum for \Ge{74} or 
 peak counts = i\sigma,
 \end{equation}
 or
-\begin{equation}
+\begin{align}
 \sigma(S) = i\sqrt{P+B}
-               &\approxi\sqrt{S+B+B}
-               &=i\sqrt{S+2B},
-\end{equation}
+               &\approx i\sqrt{S+B+B}
+               &= i\sqrt{S+2B},
+\end{align}
 where $S$ is the number of counts in the potential signal region and $B$ is the estimated number of counts.  In this case, sideband subtraction is the most appropriate method of determining $B$ because the shape of the continuum is not well-known and attempting to fit it functionally could introduce unknown systematic error.  The number of signal counts $S$ can be written as a function of the background counts $B$ and the desired level of certainty, $i$:
 \begin{equation}
 S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
