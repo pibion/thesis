@@ -244,10 +244,11 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not usually reproduce the absolute cross-section.  The cluster model is also sensitive to parameters used to describe the potentials of the interacting nuclei.  The code FRESCO [CITE] was used to fit the cross-section of the ground and first excited states well with a cluster model.  The fit was robust and it was found that the sensitivity of the relative cross-sections on the parameters was limited.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
+As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not usually reproduce the absolute cross-section.  In the case of \GeTargets, however, the ratio between the cluster-model DWBA predictions and the experimentally obtained cross-section is on the order unity, as for the $^{58,60,62,64}$Ni isotopes, which are also f-p-g shell nuclei.  See {\tab}~\ref{tab:zpRatio} for the exact values.  That the cluster-model accurately predicts the \reaction cross-sections suggests two-step processes play a limited role in these reactions.
 
-An implementation of the Bayman-Kallio method in FRESCO was used to check our measured cross-section of \MgReaction.  The results are shown in {\fig}~\ref{fig:MgBaymanCallio}.
+The cluster model can be sensitive to the parameters used to describe the potentials of the interacting nuclei.  The dependence of the cross-section for various \He{3} optical potential models was explored and were found to result in little difference in the elastic cross-sections.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
 
+The cross-sections measured for \reaction are consistent with DWBA predictions and data suggest no significant excited \zp states.
 % % uncomment the following lines,
 % if using chapter-wise bibliography
 %
