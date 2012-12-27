@@ -42,9 +42,8 @@ Look at background - will need to improve
 Data on \MgReaction were taken with the neutron detector setup as described in {\chap}~\ref{chap:2pExpt}, with a beam energy of 16~MeV and a 1.94~mg/cm$^2$ thick \Mg{26} target.  The typical beam current was 20~nA. The TOF spectrum at the forwardmost angle, 6$^{\circ}$, is shown in {\fig}~\ref{fig:MgTOF}.  The neutron peak has a width of 1.2~ns and is clearly visible over the background. 
 % figure: Bar A TOF spectrum
 \begin{figure}[!htbp]
-%\centering
-%\includegraphics[width=1.0\textwidth]{figures/MgTOF.eps}
-\vspace{3in}
+\centering
+\includegraphics[width=0.5\textwidth]{figures/26Mg_veryOld.eps}
 \caption{The 6$^{\circ}$ TOF spectrum for \MgReaction.}
 \label{fig:MgTOF}
 \end{figure}
@@ -60,11 +59,27 @@ Describe light collection with WLS
 Explain why we loop the WLS and collect light from both ends
 Discuss the light limitations of light guides (Liouville) and ways to increase light collection with WLS (more!)
 Describe fragility of WLS, how some efforts make custom plastic clamps to make it robust, how this doesn't work for you so you made a break and attached a cable.  Discuss signal loss.
+BCF-91A Multi-Clad Waveshifting Fiber 1mm diameter
+Clear-PSMJ multi-clad 1.2 mm diameter
 \end{comment}
 The scintillator bars of the neutron detector are outfitted with two PMT's, each coupled to one end via a non-scintillating light guide.  Having two PMT's is essential both for good timing information and also to lessen the position sensitivity of the signal.  Instrumenting the veto scintillators in this way was not feasible.  Fitting a top and bottom PMT to each veto bar would require 32 PMT's and lightguides, along with independent power supplies for each.  Instead, wavelength-shifting (WLS) fiber was chosen to collect the light.  The properties of the WLS fiber used in the veto paddles are shown in {\tab}~\ref{tab:WLS_Kuraray}.
-%\begin{tabular}
-%\label{tab:WLS_Kuraray}
-%\end{tabular}
+\begin{table}[htp]
+\centering
+\begin{tabular}{ll}
+Properties & BCF-91A Multi-Clad WLS \\
+\hline
+Diameter, mm & 1.0 \\
+Emission Color & green \\
+Decay Time, ns & 12 \\
+1/$e$ length, m & $>3.5$ \\
+Core Material & Polystyrene \\
+Cladding Material & Acrylic \\
+Second Cladding Material & Flour-Acrylic \\
+Operating Temperature & $-20^{\circ}$ to $50^{\circ}$ \\
+\end{tabular}
+\caption{Properties of Bicron BCF-91A WLS used in construction of the veto paddles.  Values are taken from \cite{BCF-91A}.}
+\label{tab:WLS_Kuraray}
+\end{table}
 
 WLS fiber collects light by absorbing the blue and ultra-violet radiation produced by the scintillator and re-emitting that light in the green.  The fiber us coated with material having an index of refraction to maximize the spread of angles that experience total internal reflection, and so the light is contained in the fiber until it reaches a detector.  WLS fiber largely eliminates position sensitivity when it is arranged on the detector so that no section of scintillator is more than 5~cm distant from the collecting fiber [cite??].  Because the fiber is fairly flexible, its pattern on the detector can be designed so that the fiber exits the plastic in a single bundle, allowing instrumentation with only one PMT.  In the final veto paddle design, the area of the PMT face used by fibers from one veto paddle is small enough that two veto paddles are instrumented with one PMT.
 
@@ -108,7 +123,7 @@ The cable consists of two groups of four-clusters of optical fiber, one group fo
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/cable.eps}
-\caption{Dowels help the transmission fiber align with the WLS on the endcap.}
+\caption{Dowels help the transmission fiber align with the WLS on the endcap.  The protective tubing covers both groups of transmission fibers but is shown here on only one group of transmission fibers.}
 \label{fig:paddleCable}
 \end{figure}
 
