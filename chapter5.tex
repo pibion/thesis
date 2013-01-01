@@ -195,25 +195,23 @@ Extraction of the ground-state neutron counts is done not by subtracting an esti
 introduce 0+ peak and see when it becomes statistically significant
 there will be different limits for different energies!  because of the evaporation background
 \end{comment}
-A primary aim of this experiment is to investigate the distribution of \zp strength, making it important to either measure or place a limit on the cross-sections of excited \zp states.  Because the non-pulse-selected data has significant, complicated background, only the pulse-selected data sets were used for this analysis.  
+A primary aim of this experiment is to investigate the distribution of \zp strength, making it important to either measure or place a limit on the cross-sections of excited \zp states.  Because the non-pulse-selected data has significant, complicated background, only the pulse-selected data sets were used for this analysis.  Because the \zp cross section is largest at forward angles, spectra from the three forwardmost detectors was summed to make the TOF spectrum used in this analysis.  These three detectors span lab angles 6.12$^{\circ}$ to 7.66$^{\circ}$.  The fourth detector, at 8.43$^{\circ}$, was not included because the \zp cross-sections noticeably decline at this angle.  Including this detector or any detectors beyond it would have introduced background without contributing significant signal, worsening the sensitivity.    
 
-No obvious \zp states were observed above the neutron continuum for \Ge{74} or \Ge{76} targets.  A limit on the cross-section of \zp states as a function of energy can be determined by solving for the number of counts necessary to be consistent with zero at some certainty:
+No obvious \zp states were observed above the neutron continuum for \Ge{74} or \Ge{76} targets.  A limit on the cross-section of \zp states as a function of energy can be determined by solving for the number of counts $S$ necessary to be consistent with zero with certainty $i\sigma_S$:
 \begin{equation}
-P = i\sigma,
+S = P - B = i\sigma_S,
 \end{equation}
-or
-\begin{align}
-\sigma(S) &= i\sqrt{P+B} \\
-               &\approx i\sqrt{S+B+B} \\
-               &=i\sqrt{S+2B},
-\end{align}
-where $S$ is the number of counts in the potential signal region and $B$ is the estimated number of counts.  In this case, sideband subtraction is the most appropriate method of determining $B$ because the shape of the continuum is not well-known and attempting to fit it functionally could introduce unknown systematic error.  The number of signal counts $S$ can be written as a function of the background counts $B$ and the desired level of certainty, $i$:
+where $P$ is the number of counts in the potential signal region and $B$ is an estimate of the counts in that same region.  In this case, sideband subtraction is the most appropriate method of determining $B$ because the shape of the continuum is not well-known and attempting to fit it functionally could introduce unknown systematic error.  The error associated with the signal-induced counts $S$ is then
+\begin{equation}
+\sigma_S = i\sqrt{P+B} \approx i\sqrt{S+B+B} = i\sqrt{S+2B}.
+\end{equation}
+The number of signal counts $S$ can now be written as a function of the background counts $B$ and the desired level of certainty, $i$:
 \begin{equation}
 S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
 \end{equation}
-Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include a peak to its 2$\sigma$ limits.
+Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include 95\% of the peak assuming its resolution is the same as that of the ground-state peak.
 
-The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen because we do not believe we had sensitivity to the $1\sigma$ limit, while a peak at the $3\sigma$ limit would have stood out clearly from the data.  A simulation of peaks at these limits is shown in {\fig}~\ref{fig:differentLimits}.
+The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 1$\sigma_S$, 2$\sigma_S$, and 3$\sigma_S$ limits is shown in {\fig}~\ref{fig:differentLimits}.
 
 \section{Fitting 0+ ground state}
 \begin{comment}
