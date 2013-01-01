@@ -117,18 +117,18 @@ where S is the extracted number of signal counts, P is the number of counts in t
 \end{equation}
 where both $P$ and $B$ can be understood as a random variable with error $\sqrt{P}$ and $\sqrt{B}$, respectively.
 
-The primary challenge is finding an accurate way to estimate the background that reduces the error of the extracted counts.  As can be seen in {\fig}~\ref{fig:PSvsNPS}, the background of the pulse-selected data is much simpler than that of the non-pulse-selected data.  Analysis of the datasets taken with pulse selection is straightforward and will be discussed first.  Without pulse selection, the neutron peak sits on top of background from previous neutron bunches.  Extracting neutron counts from these data will be discussed second.
+The primary challenge is finding an accurate way to estimate the background that reduces the error of the extracted counts.  As can be seen in {\fig}~\ref{fig:PSvsNPS}, the background of the pulse-selected data is much simpler than that of the non-pulse-selected data.  Analysis of the datasets taken with pulse selection is straightforward and will be discussed first.  Without pulse selection, the neutron peak is superimposed on background from previous neutron bunches.  Extraction of neutron counts from these data will be discussed second.
 
 \subsection{Pulse-Selected Data}
-In the case of the pulse-selected data, the background in the region of the neutron peak consists of flat, random background and the tail of the neutron evaporation spectrum.  The gamma peaks are far away from the neutron peak and have no effect.  The random background can be well-estimated from the background in the region between the ground-state neutron peak and gamma peak.  The neutron evaporation peak is the least-well understood contributor to the background of the ground state neutron peak and will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to random radiation.
+In the case of the pulse-selected data, the background in the region of the neutron peak consists of flat, random background and the tail of the neutron evaporation spectrum.  The $\gamma$-ray peaks are far away from the neutron peak and have no effect.  The random background can be well-estimated from the background in the region between the ground-state neutron peak and gamma peak.  The neutron continuum is due to multiple direct reactions and can only contribute to the background of the ground state neutron peak due to detector resolution.  Limits on the contribution of the continuum will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to random radiation.
 
-One method for extracting counts due to a signal is sideband subtraction.  The accuracy of sideband subtraction depends on a background that does not change rapidly near the signal region.  If two background regions have a number of counts $B_1$ and $B_2$, the extracted counts will be
+One method for extracting counts due to a signal is sideband subtraction.  The accuracy of sideband subtraction depends on a background that does not change rapidly near the signal region.  If two background regions, chosen on each side of the peak and with half its number of channels, have counts $B_1$ and $B_2$, the extracted counts will be
 \begin{equation}
 S = P - (B_1 + B_2),
 \end{equation}
 where as before $S$ is the calculated number of signal counts and $P$ is the number of counts in the peak region.  With these data sets, the number of signal counts is very small compared to the background, and to estimate the error it is reasonable to approximate $P \approx 2 B_1 \approx 2 B_2$.  The statistical error associated with the number of neutron counts is then
 \begin{equation}
-\sqrt{P + B_1 + B_2} \approx \sqrt{2 B}.
+\sqrt{P + B_1 + B_2} \approx \sqrt{2 P}.
 \end{equation}
 It should be expected that sideband subtraction will increase the width of the distribution of extracted counts because it introduces two additional random variables, each with substantial statistical error.  
 
@@ -140,7 +140,7 @@ where $N_b$ is the number of bins in the peak region.  The error on the extracte
 \begin{equation}
 \sqrt{N_{\text{peak}} + {\sigma}_n^2\times N_b}.
 \end{equation}
-The error on the background no longer behaves like that of a random variable because it has been replaced with a background estimate whose error is the error of the average number of counts per bin, $\sqrt{\frac{n}{N_b}}$.  See \fig~\ref{fig:statDist} for a Monte-Carlo demonstration of the error associated with the average counts per bin.  In these data sets, the error contribution ${\sigma}_n^2\times N_b$ is typically of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background, then results in an error of approximately $\sqrt{P}$, an improvement over sidebband subtraction by a factor of $\sqrt{2}$.
+The error on the background no longer behaves like that of a random variable because $\sigma_n\sim\sqrt{\frac{n}{N_b}}$.  \fig~\ref{fig:statDist} shows Monte-Carlo calculations that confirm this dependence on the number of bins $N_b$ included in the averaging set.  In the \reaction data sets, the error contribution ${\sigma}_n^2\times N_b$ is of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background based on as many bins as possible, then, results in an error of approximately $\sqrt{P}$, an improvement over sideband subtraction by a factor of $\sqrt{2}$.
 \begin{figure}[ht]
 \centering
   \subfloat[Distribution of Background Counts][Distribution of Background Counts]{
@@ -159,21 +159,19 @@ The error on the background no longer behaves like that of a random variable bec
   \label{fig:statDist}
 \end{figure}
 
-The error introduced to the extracted counts depends on how the background is determined.  In the case of the pulse-selected data, estimating the background by fitting improves the statistical error of the extracted cross-section by a factor of $\sqrt{2}$.  Next we estimate the uncertainty introduced by the evaporation spectrum.
-
-A neutron continuum is clearly visible in all targets, and while in \Mg{26} the continuum is well-separated from the ground-state neutron peak, the continuum for \Se{76} and \Se{78} appears to overlap the ground-state neutron peak.  It is safe to assume is that neutrons populating the continuum cannot have an energy greater than the \zp neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution.  Appropriate functional models, then, are those that are identically zero on an infinite or semi-infinite range.  Two functions that satisfy this criterion are the Beta Distribution and the Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
+Thus far, the primary source of uncertainty is the statistical uncertainty associated with the number of counts in the peak region.  The uncertainty introduced by the continuum must also be estimated.  A neutron continuum is clearly visible for all reactions.  In the \Si{28} case, the continuum is well-separated from the ground-state neutron peak, but for \Se{76} and \Se{78}, it is unclear if the continuum contributes to counts in the peak region.  The \reaction data have the potential to be influenced by counts from the continuum because the continuum is much closer to the ground-state neutron peak than for \MgReaction and also because the integration window must be wide enough to include both the ground and first excited states.  To estimate the contribution of the continuum to the peak region, it is fit with a Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the Gamma Distribution is non-zero only on a semi-infinite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
 
 For the same bar, the pulse-selected spectrum should have the same shape as the non-pulse-selected data.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit because each bar of the neutron detector should measure the same beam-related spectrum for different runs, making it possible to model the non-pulse-selected spectrum as a shifted, scaled copy of the pulse-selected data.  The model used for the pulse-selected data is
 % equation for pulse-selected spectrum
 \begin{equation}
-f_{PS} = Beta(A,B,\alpha,\beta) + Gaus() + Gaus() + Gaus() + DoubleGaus() + Const_{PS}
+f_{PS} = g(x;\alpha,\beta) + Gaus_1 + Gaus_2 + Gaus_3 + DoubleGaus + Const_{PS}
 \end{equation}
-where the $DoubleGaus()$ term models the $\gamma$-peaks and the other $Gaus()$ terms are added to ensure a good overall fit.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
+where $g(x;\alpha,\beta)$ is the Gamma Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian Distributions describing prominent peaks in the continuum; and $DoubleGaus$ models the $\gamma$-peak.  These terms are needed to ensure a good overall fit and their parameters are described in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
 % equation for non-pulse-selected spectrum
 \begin{equation}
 R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
 \end{equation}
-where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron evaporation spectrum contributes at most ??\% to the extracted counts in the ground-state neutron peak.  
+where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron continuum contributes at most ??\% to the extracted counts in the ground-state neutron peak.  
 
 The method used to extract the counts in the ground-state neutron peak is a direct summing of the counts from the peak region followed by subtraction of the estimated flat background from a linear fit.  The estimated error is the statistical error of the sum of the peak region and the systematic error of including counts from the continuum.  The results are plotted in {\fig}~\ref{fig:PS_angularDistribution}.
 
