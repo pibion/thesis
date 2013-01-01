@@ -170,6 +170,7 @@ where $g(x;\alpha,\beta)$ is the Gamma Distribution; $Gaus_1, Gaus_2, Gaus_3$ ar
 % equation for non-pulse-selected spectrum
 \begin{equation}
 R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
+\label{eq:NPS_model}
 \end{equation}
 where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron continuum contributes at most ??\% to the extracted counts in the ground-state neutron peak.  
 
@@ -178,18 +179,13 @@ The method used to extract the counts in the ground-state neutron peak is a dire
 %A dedicated fitter may begin to wonder if there are as-yet-unused constraints that could provide an even more robust fit that would ensure a convergent fit for all angles.  One additional constraint concerns the ratio between the two datasets.  This ratio scales the amount of beam seen by one bar during the two data runs.  But each bar should see the same ratio!  Fitting all the bars simultaneously will provide a much-improved ratio.
 
 \subsection{Data with No Pulse Selection}
-With pulse selection, the region behind the neutron peak has only random signal and can be fit with a constant to within ??\%.  With no pulse selection, the neutron peak sits on top of background from the previous bunch.  Fitting this spectrum by itself introduces significant uncertainty in the height of the evaporation spectrum because the flat background is not well-constrained by any portion of the spectrum.  The fit described above is a poor estimate of the background in the non-pulse-selected data because a wide range of shapes describing the evaporation continuum and random background produce good fits but very different estimated background in the ground-state neutron peak region.  Additionally, it becomes difficult to introduce enough peaks to accurately reproduce the shape of the background without making the fit unable to converge because there are too many independent variables. 
+With pulse selection, the region between the ground-state neutron peak and $\gamma$-ray peak is solely due to random background signal and can be fit with a constant to within ??\%.  With no pulse selection, the neutron peak is superimposed on background from the previous bunch.  Fitting this spectrum by itself introduces significant uncertainty in the height of the continuum because the flat background is not well-constrained by any portion of the spectrum.  The fit described above is a poor estimate of the background in the non-pulse-selected data because a wide range of shapes describing the evaporation continuum and random background produce good fits but very different estimated background in the ground-state neutron peak region.  Additionally, it becomes difficult to introduce enough peaks to accurately reproduce the shape of the background without making the fit unable to converge because there are too many independent variables. 
 
 Instead of attempting to fit the non-pulse-selected background with a function, using the pulse-selected data itself as a template for the non-pulse-selected data is more accurate.  If the pulse-selected spectra are modeled as
 \begin{equation}
 Beam_{PS} + Const_{PS},
 \end{equation}
-then the non-pulse selected spectra can be understood as
-% equation for non-pulse-selected spectrum
-\begin{equation}
-R\times (Beam1_{PS}+Beam2_{PS}+Beam3_{PS}) + Const_{NPS},
-\end{equation}
-where $Const_{PS}$, $R$, and $Const_{NPS}$ are free parameters and $Beam1_{PS}+Beam2_{PS}+Beam3_{PS}$ are shifted copies of the beam spectrum $Beam_{PS}$.  The beam-related component of the pulse-selected spectrum is a Kernel Density Estimate [CITE] based on the data in the histogram.  
+then the non-pulse selected spectra can be generated as in {\eqn}~\ref{eq:NPS_model} by replacing the function estimates of the pulse-selected data with a Kernel Density Estimate [CITE] based on the data in the histogram.  
 
 Extraction of the ground-state neutron counts is done not by subtracting an estimated background from the total counts in the peak region, but rather by applying the ratio of signal to background, $R/Const_{NPS}$, to the total counts.  The results of the fits can be seen in {\fig}~\ref{fig:NPS_fits} and the final angular distribution in {\fig}~\ref{fig:NPS_angularDistribution}.
 
@@ -199,9 +195,9 @@ Extraction of the ground-state neutron counts is done not by subtracting an esti
 introduce 0+ peak and see when it becomes statistically significant
 there will be different limits for different energies!  because of the evaporation background
 \end{comment}
-A primary aim of this experiment is to investigate the distribution of \zp strength, making it important to either measure or place a limit on the cross-sections of excited \zp states.  Because the non-pulse-selected data has significant, complicated background, only the pulse-selected data sets were used for this analysis.
+A primary aim of this experiment is to investigate the distribution of \zp strength, making it important to either measure or place a limit on the cross-sections of excited \zp states.  Because the non-pulse-selected data has significant, complicated background, only the pulse-selected data sets were used for this analysis.  
 
-No obvious \zp states were observed in the evaporation continuum for \Ge{74} or \Ge{76}.  A limit on the cross-section of \zp states as a function of energy can be determined by solving for the number of counts necessary to be consistent with zero at some certainty:
+No obvious \zp states were observed above the neutron continuum for \Ge{74} or \Ge{76} targets.  A limit on the cross-section of \zp states as a function of energy can be determined by solving for the number of counts necessary to be consistent with zero at some certainty:
 \begin{equation}
 P = i\sigma,
 \end{equation}
