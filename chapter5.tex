@@ -45,13 +45,18 @@ The efficiency of a plastic-scintillator-type neutron detector depends not only 
 The reaction d(d,n) has been well-measured at beam energies up to 9~MeV [cite], which produces $\sim$12~MeV ground-state neutrons.  This is a particularly useful reaction because the neutron energy changes drastically as a function of angle.  Coupled-Channel Born Approximation calculations as described in [cite] were used to estimate the dependence of the cross section on energy, providing a check on the energy dependence of the Cecil calculation.  The agreement is excellent, as can be seen in {\fig}~\ref{fig:DeuteriumMatch}, which shows the prediction without correcting for neutron energy and with.  This accuracy gives us a high degree of confidence that the Cecil code accurately adjusts the detector efficiency for neutron energy.  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/deuteriumMatch.pdf}
+\includegraphics[width=0.8\textwidth]{figures/deuteriumMatch.eps}
 \caption{}
 \label{fig:DeuteriumMatch}
 \end{figure}
 
 Another useful reaction for testing the Cecil code is the \MgReaction.  While this reaction has not been measured at a beam energy of 16~MeV, it has been measured at lower and higher energies as shown in {\fig}~\ref{fig:efficiencyCalib}.  The efficiency measured for the neutrons from this reaction provides a measurement very near the energies produced in \reaction and the resulting cross-section can be checked against previous measurements for consistency.  Determination of the resolution and threshold needed by the code is discussed in {\sect}~\ref{sec:cuts}.  {\fig}~\ref{fig:} shows the consistency of the measured cross-section using that predicted efficiency.  This efficiency is corrected for the neutron energies in the \reaction data with good confidence because of the excellent match to the d(d,n) data.
-
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/magnesiumMatch.eps}
+\caption{}
+\label{fig:efficiencyCalib}
+\end{figure}
 
 \section{Experimental Parameters Related to the Cross Section}
 \begin{comment}
@@ -67,6 +72,13 @@ The differential cross-section is the number of times a reaction occurred ($N_{r
 The efficiency $\epsilon$ of the detector includes the solid angle $d\Omega$.  Extracting the number of times the reaction occurred at each angle will be explored in future sections.  The quantities in the cross-section that relate to the experimental setup are the number of particles incident on the target and the number density of nuclei in the target.
 
 The three targets (\GeTargets and \Mg{26}) used in the experiments were provided by John Greene of Argonne National Laboratory (ANL).  The \GeTargets are $\sim$??~mg/cm$^2$ and were evaporated onto a gold backing, while the \Mg{26} target is $\sim$??~mg/cm$^2$ and is self-supporting.  The isotopic abundance and thickness of each target is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured with an alpha-thickness-gauge when they were made, and again at Hope College using Rutherford back-scattering (RBS).  RBS measurements are useful because they give information about the target composition, which must be assumed when calculating target thickness from alpha-thickness-gauge measurements.  The reported thicknesses were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, an RBS analysis software.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.  To estimate variations in target thickness, measurements were taken at several different positions on each target.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/magnesiumMatch.eps}
+\caption{}
+\label{fig:efficiencyCalib}
+\end{figure}
+
 
 To determine the absolute cross-section, it is also necessary to know the total number of \He{3} incident on the target for each dataset.  One monitor of the beam current is the charge collected by the Faraday cup.  A BaF$_2$ crystal outside the target chamber and a silicon detector inside the target chamber detect $\gamma$ radiation from beam incident on the target and scattered \He{3} beam, respectively.  Both these detectors monitor the product of the target thickness and the beam current.  Data from the silicon detector showed that the ratio of the \GeTargets to gold does not change throughout the run and that the live charge collected by the Faraday cup scales with the back-scattered peak in the silicon spectrum.  The live charge can therefore be used to scale beam current between runs, making it possible to express \reaction cross sections in terms of the known \MgReaction.
 
