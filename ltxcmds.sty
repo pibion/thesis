@@ -8,15 +8,12 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright (C) 2009, 2010 by
-%%    Heiko Oberdiek <heiko.oberdiek at googlemail.com>
+%% Copyright (C) 2009 by Heiko Oberdiek <oberdiek@uni-freiburg.de>
 %% 
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either
-%% version 1.3c of this license or (at your option) any later
-%% version. This version of this license is in
-%%    http://www.latex-project.org/lppl/lppl-1-3c.txt
-%% and the latest version of this license is in
+%% version 1.3 of this license or (at your option) any later
+%% version. The latest version of this license is in
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.3 or later is part of all distributions of
 %% LaTeX version 2005/12/01 or later.
@@ -24,9 +21,6 @@
 %% This work has the LPPL maintenance status "maintained".
 %% 
 %% This Current Maintainer of this work is Heiko Oberdiek.
-%% 
-%% The Base Interpreter refers to any `TeX-Format',
-%% because some files are installed in TDS:tex/generic//.
 %% 
 %% This work consists of the main source file ltxcmds.dtx
 %% and the derived files
@@ -93,12 +87,12 @@
   \fi
 \expandafter\x\csname ver@ltxcmds.sty\endcsname
 \ProvidesPackage{ltxcmds}%
-  [2010/03/09 v1.4 LaTeX kernel commands for general use (HO)]
+  [2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO)]
 \begingroup
   \catcode123 1 % {
   \catcode125 2 % }
   \def\x{\endgroup
-    \expandafter\edef\csname LTXcmds@AtEnd\endcsname{%
+    \expandafter\edef\csname ltx@AtEnd\endcsname{%
       \catcode35 \the\catcode35\relax
       \catcode64 \the\catcode64\relax
       \catcode123 \the\catcode123\relax
@@ -111,29 +105,14 @@
 \catcode123 1 % {
 \catcode125 2 % }
 \def\TMP@EnsureCode#1#2{%
-  \edef\LTXcmds@AtEnd{%
-    \LTXcmds@AtEnd
+  \edef\ltx@AtEnd{%
+    \ltx@AtEnd
     \catcode#1 \the\catcode#1\relax
   }%
   \catcode#1 #2\relax
 }
-\TMP@EnsureCode{40}{12}% (
-\TMP@EnsureCode{41}{12}% )
-\TMP@EnsureCode{45}{12}% -
-\TMP@EnsureCode{46}{12}% .
-\TMP@EnsureCode{47}{12}% /
-\TMP@EnsureCode{60}{12}% <
 \TMP@EnsureCode{61}{12}% =
-\TMP@EnsureCode{62}{12}% >
-\TMP@EnsureCode{91}{12}% [
 \TMP@EnsureCode{96}{12}% `
-\TMP@EnsureCode{93}{12}% ]
-\TMP@EnsureCode{94}{12}% ^ (superscript) (!)
-\TMP@EnsureCode{124}{12}% |
-\chardef\ltx@zero=0 %
-\chardef\ltx@one=1 %
-\chardef\ltx@two=2 %
-\chardef\ltx@cclv=255 %
 \long\def\ltx@gobble#1{}
 \long\def\ltx@gobbletwo#1#2{}
 \long\def\ltx@gobblethree#1#2#3{}
@@ -157,45 +136,9 @@
 \lowercase{\endgroup
   \def\ltx@backslashchar{0}%
 }
-\def\ltx@newif#1{%
-  \begingroup
-    \escapechar=-1 %
-  \expandafter\endgroup
-  \expandafter\LTXcmds@newif\string#1\@nil
-}
-\begingroup
-  \escapechar=-1 %
-\expandafter\endgroup
-\expandafter\def\expandafter\LTXcmds@newif\string\if#1\@nil{%
-  \expandafter\edef\csname#1true\endcsname{%
-    \let
-    \expandafter\noexpand\csname if#1\endcsname
-    \noexpand\iftrue
-  }%
-  \expandafter\edef\csname#1false\endcsname{%
-    \let
-    \expandafter\noexpand\csname if#1\endcsname
-    \noexpand\iffalse
-  }%
-  \csname#1false\endcsname
-}
-\def\ltx@LocalExpandAfter{%
-  \begingroup
-    \expandafter\expandafter\expandafter
-  \endgroup
-  \expandafter
-}
-\ltx@LocalExpandAfter
-\ifx\csname ifcsname\endcsname\relax
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname ifcsname\endcsname\relax
   \def\ltx@ifundefined#1{%
-    \expandafter\ifx\csname #1\endcsname\relax
-      \expandafter\ltx@firstoftwo
-    \else
-      \expandafter\ltx@secondoftwo
-    \fi
-  }%
-  \def\ltx@IfUndefined#1{%
-    \begingroup\expandafter\expandafter\expandafter\endgroup
     \expandafter\ifx\csname #1\endcsname\relax
       \expandafter\ltx@firstoftwo
     \else
@@ -209,153 +152,19 @@
 {%
   \def\ltx@ifundefined#1{%
     \ifcsname #1\endcsname
-      \expandafter\ifx\csname #1\endcsname\relax
-        \expandafter\expandafter\expandafter\ltx@firstoftwo
-      \else
-        \expandafter\expandafter\expandafter\ltx@secondoftwo
-      \fi
+      \expandafter\ltx@secondoftwo
     \else
       \expandafter\ltx@firstoftwo
     \fi
   }%
-  \let\ltx@IfUndefined\ltx@ifundefined
 }
-\def\ltx@RemovePrefix#1>{}
-\def\ltx@StripPrefix{%
-  \expandafter\ltx@RemovePrefix
-}
-\def\ltx@clsextension{cls}
-\def\ltx@pkgextension{sty}
-\def\ltx@iffileloaded#1{%
-  \ltx@ifundefined{ver@#1}\ltx@secondoftwo\ltx@firstoftwo
-}
-\def\ltx@ifclassloaded#1{%
-  \ltx@iffileloaded{#1.\ltx@clsextension}%
-}
-\def\ltx@ifpackageloaded#1{%
-  \ltx@iffileloaded{#1.\ltx@pkgextension}%
-}
-\def\ltx@iffilelater#1#2{%
-  \ltx@iffileloaded{#1}{%
-    \expandafter\LTXcmds@IfLater\expandafter{%
-      \number
-      \expandafter\expandafter\expandafter\LTXcmds@ParseVersion
-      \expandafter\expandafter\expandafter{%
-        \csname ver@#1\endcsname
-      }%
-    \expandafter}\expandafter{%
-      \number
-      \expandafter\LTXcmds@ParseVersion\expandafter{#2}%
-    }%
-  }\ltx@secondoftwo
-}
-\def\LTXcmds@IfLater#1#2{%
-  \ifcase 0%
-      \ifnum#1<19940101 %
-      \else
-        \ifnum#2<19940101 %
-        \else
-          \ifnum#2>#1 %
-          \else
-            1%
-          \fi
-        \fi
-      \fi
-      \ltx@space
-    \expandafter\ltx@secondoftwo
-  \else
-    \expandafter\ltx@firstoftwo
-  \fi
-}
-\def\ltx@ifclasslater#1{%
-  \ltx@ifclasslater{#1.\ltx@clsextension}%
-}
-\def\ltx@ifpackagelater#1{%
-  \ltx@iffilelater{#1.\ltx@pkgextension}%
-}
-\ltx@IfUndefined{pdfmatch}{%
-  \def\LTXcmds@ParseVersion#1{%
-    \LTXcmds@@ParseVersion#10000/00/00\@nil
-  }%
-  \def\LTXcmds@@ParseVersion#1#2#3#4/#5#6/#7#8#9\@nil{%
-    #1#2#3#4#5#6#7#8%
-  }%
-}{%
-  \def\LTXcmds@ParseVersion#1{%
-    \ifnum\pdfmatch{%
-      ^%
-      (199[4-9]|[2-9][0-9][0-9][0-9])/%
-      (0[1-9]|1[0-2])/%
-      (0[1-9]|[1-2][0-9]|3[0-1])%
-    }{#1}=1 %
-      \ltx@StripPrefix\pdflastmatch1 %
-      \ltx@StripPrefix\pdflastmatch2 %
-      \ltx@StripPrefix\pdflastmatch3 %
-    \else
-      0%
-    \fi
-  }%
-}
-\def\ltx@GlobalAppendToMacro#1#2{%
-  \ifx\ltx@undefined#1%
-    \let#1\ltx@empty
-  \else
-    \ifx\relax#1%
-      \let#1\ltx@empty
-    \fi
-  \fi
+\def\ltx@LocalExpandAfter{%
   \begingroup
-    \toks0\expandafter{#1#2}%
-    \xdef#1{\the\toks0}%
+    \expandafter\expandafter\expandafter
   \endgroup
+  \expandafter
 }
-\def\ltx@LocalAppendToMacro#1#2{%
-  \global\let\LTXcmds@gtemp#1%
-  \ifx\ltx@undefined\LTXcmds@gtemp
-    \global\let\LTXcmds@gtemp\ltx@empty
-  \else
-    \ifx\relax\LTXcmds@gtemp
-      \global\letLTXcmds@gtemp\ltx@empty
-    \fi
-  \fi
-  \begingroup
-    \toks0\expandafter{\LTXcmds@gtemp#2}%
-    \xdef\LTXcmds@gtemp{\the\toks0}%
-  \endgroup
-  \let#1\LTXcmds@gtemp
-}
-\long\def\ltx@ifnextchar#1#2#3{%
-  \begingroup
-  \let\LTXcmds@CharToken= #1\relax
-  \toks\ltx@zero{#2}%
-  \toks\ltx@two{#3}%
-  \futurelet\LTXcmds@LetToken\LTXcmds@ifnextchar
-}
-\def\LTXcmds@ifnextchar{%
-  \ifx\LTXcmds@LetToken\LTXcmds@CharToken
-    \expandafter\endgroup\the\toks\expandafter\ltx@zero
-  \else
-    \ifx\LTXcmds@LetToken\LTXcmds@SpaceToken
-      \expandafter\expandafter\expandafter\LTXcmds@@ifnextchar
-    \else
-      \expandafter\endgroup\the\toks
-      \expandafter\expandafter\expandafter\ltx@two
-    \fi
-  \fi
-}
-\begingroup
-  \def\x#1{\endgroup
-    \def\LTXcmds@@ifnextchar#1{%
-      \futurelet\LTXcmds@LetToken\LTXcmds@ifnextchar
-    }%
-  }%
-\x{ }
-\begingroup
-  \def\x#1{\endgroup
-    \let\LTXcmds@SpaceToken= #1%
-  }%
-\x{ }
-\LTXcmds@AtEnd
+\ltx@AtEnd
 \endinput
 %%
 %% End of file `ltxcmds.sty'.
