@@ -141,6 +141,26 @@ A true event should have energy above the noise level recorded in both top and b
 
 
 A first approximation to determining whether or not an event is the result of a muon interaction is to require all but one bar in the neutron detector, as well as the entire veto, to be silent.  However, this would veto events that are spatially disconnected and could not possibly be due to a single muon.  To eliminate these unnecessary vetoes, we look at events that register signals in detectors with close spatial proximity, a ``veto group''.  One way to determine the appropriateness of increasing the size of a veto group is by looking at the energy spectrum of vetoed events.  Adding material to a veto group that primarily eliminates muons results in an energy spectrum that has roughly equal numbers of high and low energy events, as shown in {\fig}~\ref{fig:muonVetoSpectrum}.  Material that does not veto primarily muon events will yield an energy spectrum that appears much more like the room background spectrum, heavily weighted towards lower energy events, as in {\fig}~\ref{fig:notMuonVetoSpectrum}.  These figures indicate that an appropriate group of material to use in the veto of a detector bar is the immediate, surrounding material.  Several samples of veto groups are shown in {\fig}~\ref{fig:vetoGroups}.  A separate cut to reject muons discards events that deposit energy above the maximum neutron energy deposition.    
+\begin{figure}[!htbp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/atLeastOneCorrelatedBar.eps}
+   \caption{}
+   \label{fig:muonVetoSpectrum}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/singleBar_noVeto.eps}
+   \caption{}
+   \label{fig:notMuonVetoSpectrum}
+}
+\subfloat[][]{
+   \includegraphics[width=1.0\textwidth]{figures/vetoGroups.eps}
+   \caption{}
+   \label{fig:vetoGroups}
+}
+\caption{}
+\label{fig:determineVetoGroups}
+\end{figure}
 
 The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Such a cut discards neutrons, which are also likely to deposit a small amount of energy, and it is necessary to calculate which energy cut maximizes the signal to noise ratio.  An important feature of the energy cut is that it is strongly position dependent.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the geometric mean of the top and bottom PMT signals:
 \begin{equation}
