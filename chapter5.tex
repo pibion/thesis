@@ -262,6 +262,19 @@ where S is the extracted number of signal counts, P is the number of counts in t
 where both $P$ and $B$ can be understood as a random variable with error $\sqrt{P}$ and $\sqrt{B}$, respectively.
 
 The primary challenge is finding an accurate way to estimate the background that reduces the error of the extracted counts.  As can be seen in {\fig}~\ref{fig:PSvsNPS}, the background of the pulse-selected data is much simpler than that of the non-pulse-selected data.  Analysis of the datasets taken with pulse selection is straightforward and will be discussed first.  Without pulse selection, the neutron peak is superimposed on background from previous neutron bunches.  Extraction of neutron counts from these data will be discussed second.
+\begin{figure}[!htbp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_PS_barA.eps}
+   \caption{}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_NPS_barA.eps}
+   \caption{}
+}
+\caption{}
+\label{fig:PSvsNPS}
+\end{figure}
 
 \subsection{Pulse-Selected Data}
 In the case of the pulse-selected data, the background in the region of the neutron peak consists of flat, random background and the tail of the neutron evaporation spectrum.  The $\gamma$-ray peaks are far away from the neutron peak and have no effect.  The random background can be well-estimated from the background in the region between the ground-state neutron peak and gamma peak.  The neutron continuum is due to multiple direct reactions and can only contribute to the background of the ground state neutron peak due to detector resolution.  Limits on the contribution of the continuum will be discussed later.  For now, we focus on the simplest contribution to the background, the flat distribution due to random radiation.
@@ -303,7 +316,14 @@ The error on the background no longer behaves like that of a random variable bec
   \label{fig:statDist}
 \end{figure}
 
-Thus far, the primary source of uncertainty is the statistical uncertainty associated with the number of counts in the peak region.  The uncertainty introduced by the continuum must also be estimated.  A neutron continuum is clearly visible for all reactions.  In the \Si{28} case, the continuum is well-separated from the ground-state neutron peak, but for \Se{76} and \Se{78}, it is unclear if the continuum contributes to counts in the peak region.  The \reaction data have the potential to be influenced by counts from the continuum because the continuum is much closer to the ground-state neutron peak than for \MgReaction and also because the integration window must be wide enough to include both the ground and first excited states.  To estimate the contribution of the continuum to the peak region, it is fit with a Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the Gamma Distribution is non-zero only on a semi-infinite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
+Thus far, the primary source of uncertainty is the statistical uncertainty associated with the number of counts in the peak region.  The uncertainty introduced by the continuum must also be estimated.  A neutron continuum is clearly visible for all reactions.  In the \Si{28} case, the continuum is well-separated from the ground-state neutron peak, but for \Se{76} and \Se{78}, it is unclear if the continuum contributes to counts in the peak region.  The \reaction data have the potential to be influenced by counts from the continuum because the continuum is much closer to the ground-state neutron peak than for \MgReaction and also because the integration window must be wide enough to include both the ground and first excited states.  To estimate the contribution of the continuum to the peak region, it is fit with a Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/Gamma_distribution_pdf.eps}
+\caption{}
+\label{fig:BetaGamma}
+\end{figure}
+This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the Gamma Distribution is non-zero only on a semi-infinite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
 
 For the same bar, the pulse-selected spectrum should have the same shape as the non-pulse-selected data.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit because each bar of the neutron detector should measure the same beam-related spectrum for different runs, making it possible to model the non-pulse-selected spectrum as a shifted, scaled copy of the pulse-selected data.  The model used for the pulse-selected data is
 % equation for pulse-selected spectrum
@@ -319,6 +339,19 @@ R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
 where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron continuum contributes at most ??\% to the extracted counts in the ground-state neutron peak.  
 
 The method used to extract the counts in the ground-state neutron peak is a direct summing of the counts from the peak region followed by subtraction of the estimated flat background from a linear fit.  The estimated error is the statistical error of the sum of the peak region and the systematic error of including counts from the continuum.  The results are plotted in {\fig}~\ref{fig:PS_angularDistribution}.
+\begin{figure}[!htbp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_PS_barA.eps}
+   \caption{}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_NPS_barA.eps}
+   \caption{}
+}
+\caption{}
+\label{fig:PS_angularDistribution}
+\end{figure}
 
 %A dedicated fitter may begin to wonder if there are as-yet-unused constraints that could provide an even more robust fit that would ensure a convergent fit for all angles.  One additional constraint concerns the ratio between the two datasets.  This ratio scales the amount of beam seen by one bar during the two data runs.  But each bar should see the same ratio!  Fitting all the bars simultaneously will provide a much-improved ratio.
 
