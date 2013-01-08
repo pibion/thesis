@@ -394,7 +394,28 @@ S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
 \end{equation}
 Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include 95\% of the peak assuming its resolution is the same as that of the ground-state peak.
 
-The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 1$\sigma_S$, 2$\sigma_S$, and 3$\sigma_S$ limits is shown in {\fig}~\ref{fig:differentLimits}.
+The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.
+\begin{figure}[!htbp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/74Ge_limits.eps}
+   \caption{}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/74Ge_2sigma_limit.eps}
+   \caption{}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/76Ge_limits.eps}
+   \caption{}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/76Ge_2sigma_limit.eps}
+   \caption{}
+}
+\caption{}
+\label{fig:}
+\end{figure}
 
 \section{Fitting the \zp ground state}
 \begin{comment}
@@ -402,7 +423,14 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-The cross-section of ?? is nearly twice that of ??.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the cross-section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not typically reproduce the absolute cross-section.  In the case of the $^{58,60,62,64}$Ni and $^{68}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross-sections have been normalized to $^{58}$Ni.  The Cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster models of the ?? and ?? reactions show that the lowered cross section of the ?? reaction is expected by DWBA and not likely due to ground-state loss of \zp strength.   
+The cross-section of ?? is nearly twice that of ??.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the cross-section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not typically reproduce the absolute cross-section.  In the case of the $^{58,60,62,64}$Ni and $^{68}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross-sections have been normalized to $^{58}$Ni.  
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/nickelTrend.eps}
+\caption{}
+\label{fig:nickelTrend}
+\end{figure}
+The Cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster models of the ?? and ?? reactions show that the lowered cross section of the ?? reaction is expected by DWBA and not likely due to ground-state loss of \zp strength.   
 
 The cluster model can be sensitive to the parameters used to describe the potentials of the interacting nuclei.  The dependence of the cross-section for various \He{3} optical potential models was explored and were found to result in little difference in the elastic cross-sections.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
 
