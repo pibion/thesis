@@ -42,11 +42,11 @@ The number of counts due to neutrons measured by the neutron detector scales lin
 
 The efficiency of a plastic-scintillator-type neutron detector depends not only on the energy of the neutron, but also on the detector's size, shape, energy resolution, and detection threshold.  Ideally, the efficiency would be experimentally determined by measuring a well-known cross section of a reaction producing a 26~MeV neutron.  Such data, however, does not exist.  Instead, Monte-Carlo code calculates the efficiency and is verified against reactions with well-known cross-sections and neutrons with energies of 10-25~MeV.  Comparing the calculated efficiency to measured efficiency over a range inclusive of the neutron energies produced in \reaction gives confidence and also an estimate of the uncertainty in the efficiency.  The Monte-Carlo code used is that of Cecil \cite{Cecil_neutEfficiency}, which accurately calculates the efficiency of plastic scintillator detectors for a wide range of neutron energies and detector thresholds.  The inputs required by the code are the density of the detector, its hydrogen to carbon ratio, the threshold used in the experiment, and the interval over which the detector averages the light output, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}~\ref{tab:WLS_Kuraray}, and the threshold and resolution of the detector must be determined with data from the experiment.  
 
-The reaction d(d,n) has been well-measured at beam energies up to 9~MeV [cite], which produces $\sim$12~MeV ground-state neutrons.  This is a particularly useful reaction because the neutron energy changes drastically as a function of angle.  Coupled-Channel Born Approximation calculations as described in [cite] were used to estimate the dependence of the cross section on energy, providing a check on the energy dependence of the Cecil calculation.  The agreement is excellent, as can be seen in {\fig}~\ref{fig:DeuteriumMatch}, which shows the prediction without correcting for neutron energy and with.  This accuracy gives us a high degree of confidence that the Cecil code accurately adjusts the detector efficiency for neutron energy.  
+The reaction d(d,n) has been well-measured at beam energies up to 9~MeV [cite], which produces $\sim$12~MeV ground-state neutrons.  This is a particularly useful reaction because the neutron energy changes drastically as a function of angle.  Coupled-Channel Born Approximation calculations as described in [cite] were used to estimate the dependence of the cross section on energy, providing a check on the energy dependence of the Cecil calculation.  The agreement is excellent, as can be seen in {\fig}~\ref{fig:DeuteriumMatch}, which shows the prediction without correcting for neutron energy and with.  This accuracy suggests that the Cecil code accurately adjusts the detector efficiency for neutron energy.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/deuteriumMatch.eps}
-\caption{}
+\caption{The prediction for d(d,n) (solid line) matches the data well when the efficiency is corrected for the neutron energy (red points).}
 \label{fig:DeuteriumMatch}
 \end{figure}
 
@@ -54,7 +54,7 @@ Another useful reaction for testing the Cecil code is the \MgReaction.  While th
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/magnesiumMatch.eps}
-\caption{}
+\caption{Checking consistency of efficiency calculation with \MgReaction.  This work (green) is consistent with measurements at surrounding energies (black).}
 \label{fig:efficiencyCalib}
 \end{figure}
 
@@ -80,7 +80,7 @@ The three targets (\GeTargets and \Mg{26}) used in the experiments were provided
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/76ge-4-adjusted.eps}
 }
-\caption{}
+\caption{RBS data for the \Ge{76} target near the beamspot.  The plateau at low energies is due to small holes in the target; these allow the incident $\alpha$ particles to travel through to the aluminum chamber.  The plateau at high energies is due to small sections of the target with no \Ge{76} deposited on the gold surface.  The fit to these ``holes'' in the target is shown in (a).  The adjusted RBS spectrum and its fit are shown in (b).  Fitting the RBS spectrum with and without adjusting for holes does not result in any significant differences to the predicted target composition or thickness.}
 \label{fig:fig:RBS_sample}
 \end{figure}
 \begin{table}[htp]
@@ -101,7 +101,7 @@ $^{26}$Mg & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
           &           &      & N$_{\text{nat}}$ & 43 \\
           &           &      & O$_{\text{nat}}$ & 52 \\
 \end{tabular}
-\caption{}
+\caption{Target composition and thickness.  The $\alpha$-gauge measurements were performed at ANL and the RBS measurements at Hope College.}
 \label{tab:targets}
 \end{table}
 
@@ -123,7 +123,7 @@ September   & PS 76Ge & 12616566 & 2872649 \\
 	    & NPS 76Ge & 27369635 & 15316275 \\
 	    & NPS 74Ge & 11323947 & 10008757 \\
 \end{tabular}
-\caption{}
+\caption{Data sets used in the analysis were obtained in two separate runs.  Data from the September run is both pulse-selected (PS) and non-pulse-selected (NPS).}
 \label{tab:dataSets}
 \end{table}
 
@@ -135,7 +135,7 @@ A true event should have energy above the noise level recorded in both top and b
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/realTiming.eps}
-\caption{}
+\caption{Events with timing that is considered correlated are shown in color.  Black dots indicate events whose timing is not considered correlated.}
 \label{fig:realEvent}
 \end{figure}
 
@@ -145,17 +145,17 @@ A first approximation to determining whether or not an event is the result of a 
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/atLeastOneCorrelatedBar.eps}
-   \caption{}
+   \caption{Energy spectrum of a neutron detector bar.  Entries in this histogram are from events having at least one correlated signal in the neutron detector and are likely to be muons.  Notice the high-energy-deposition cosmic peak at $\sim$ channel~3000 and its considerable height relative to the low-energy $\gamma$ background.  This low-energy background is dominant in non-muon events as in {\fig}~\ref{fig:notMuonVetoSpectrum}.}
    \label{fig:muonVetoSpectrum}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/singleBar_noVeto.eps}
-   \caption{}
+   \caption{Neutron detector bar energy spectrum.  These events have no correlation to other signals in the neutron detector and are unlikely to be due to muons.  While some high-energy depositions are visible, the spectrum is clearly dominated by the low-energy peak due to $\gamma$-radiation.}
    \label{fig:notMuonVetoSpectrum}
 }
 \subfloat[][]{
    \includegraphics[width=1.0\textwidth]{figures/vetoGroups.eps}
-   \caption{}
+   \caption{Groups of detectors chosen to veto bars in the neutron detector.  If the events in a neutron detector bar vetoed by a detector have an energy spectrum dominated by the low-energy $\gamma$-radiation, that detector is not used as part of the veto for that particular bar.}
    \label{fig:vetoGroups}
 }
 \caption{}
@@ -170,16 +170,16 @@ where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is i
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/positionVSenergy.eps}
-\caption{}
+\caption{Position dependence of the geometric mean of the light signal of rejected events.  The band of events with light signals between $\sim$1000-1500~channels in particular demonstrates that the signal increases as it approaches the extremes of the neutron detector bar.}
 \label{fig:productPositionDependence}
 \end{figure}
 
 
-The energy cuts are determined for each PMT separately using the energy vs. position spectrum of the vetoed events, which are likely to be muons.  The distribution of directions in which muons travel is not isotropic; it depends on the angle $\theta$ from the surface normal as $\cos^{1.3}{\theta}$ [CITE], and so there is a most-likely angle that muons take through the neutron detector bars.  This most-likely angle implies a most-likely path length, which manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}. 
+The energy cuts are determined for each PMT separately using the energy vs. position spectrum of the vetoed events, which are likely to be muons.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations confirm that this is the case when the distribution of directions in which muons travel is isotropic.  When an accurate angular distribution, $\cos^{1.3}{\theta}$ [CITE] where $\theta$ is the normal from the surface vertical, this peak is only slightly smeared. This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}. 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/flatVSaccurate_cosmicDist.eps}
-\caption{}
+\caption{A simulation of path length due to muons interacting in a detector with dimensions identical to those of the neutron detector bars.  Using a realistic angular distribution for the incident muons does not eliminate the feature.}
 \label{fig:muonSpectrum}
 \end{figure}
 At every position, the peak of this energy spectrum represents the same energy and is a suitable candidate for an energy cut.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
@@ -187,12 +187,15 @@ At every position, the peak of this energy spectrum represents the same energy a
 \centering
 \subfloat[][]{
    \includegraphics[width=0.8\textwidth]{figures/PMT_positionResponse.eps}
+   \caption{The position dependence of the light signal from a single PMT.}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/position_sliceGraphs.eps}
+   \caption{The two-dimensional histogram shown in (a) is projected into a series of one-dimensional histograms.  The peaks of these histograms are determined by fitting with a Landau function.}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/EnergyCutExample.eps}
+   \caption{A plot describing the curve which, when scaled, is used as the low-energy cut.  The points are determined from the histograms shown in (b).  Points at the extremes that do not follow the trend are used to determine the position cut.}
 }
 \caption{}
 \label{fig:fits_pkVSpos}
@@ -203,12 +206,12 @@ Using the energy peak as a function of position itself as a lower energy cut res
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/scalingFactor.eps}
-   \caption{}
+   \caption{Applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos} is measured relative to the background obtained with the unscaled cut.  The effect of the highlighted scaling factors is shown in {\fig}~ref{fig:highEnergyCut}.}
    \label{fig:scalingFactor}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/needLowerCut.eps}
-   \caption{}
+   \caption{Without applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos}, the neutron signals are nearly lost.  Scaling the cut by $\sim$0.5 results in a reasonable signal to noise ratio.}
    \label{fig:highEnergyCut}
 }
 \caption{}
@@ -222,11 +225,11 @@ An additional concern is that simply scaling the energy cut may not provide an a
 \label{fig:flatPositionSpectrum}
 \end{figure}
 
-These energy cuts are needed as inputs to the efficiency estimation code discussed in {\sect}~\ref{sec:efficiency}.  The cut on the light output in units of MeVee can be determined from a histogram of the geometric mean of the light signal gated on the ground-state neutrons.  This plot is shown in {\fig}~\ref{fig:lowEnergyCut} and shows the falloff that corresponds to the maximum energy deposited by a ??~MeV neutron and the falloff at low energies that is a result of the threshold.  
+These energy cuts are needed as inputs to the efficiency estimation code discussed in {\sect}~\ref{sec:efficiency}.  The cut on the light output in units of MeVee can be determined from a histogram of the geometric mean of the light signal gated on the ground-state neutrons.  This plot is shown in {\fig}~\ref{fig:lowEnergyCut} and shows the falloff that corresponds to the maximum energy deposited by a 28~MeV neutron and the falloff at low energies that is a result of the threshold.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/Lite_28MeV.eps}
-\caption{}
+\caption{The light curve of the 28~MeV neutron is obtained by restricting the events to those in the ground-state peak window.  These (experimentally obtained) data points are shown in red.}
 \label{fig:lowEnergyCut}
 \end{figure}
 The width of the high-energy falloff gives the resolution of the detector, and the threshold can be determined by assuming the scale has a zero offset.  That this is a reasonable assumption is confirmed by the accuracy of the calculation.  
@@ -266,13 +269,11 @@ The primary challenge is finding an accurate way to estimate the background that
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_PS_barA.eps}
-   \caption{}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_NPS_barA.eps}
-   \caption{}
 }
-\caption{}
+\caption{The TOF spectrum of the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam (a) and non-pulse-selected beam (b).}
 \label{fig:PSvsNPS}
 \end{figure}
 
@@ -320,7 +321,7 @@ Thus far, the primary source of uncertainty is the statistical uncertainty assoc
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/Gamma_distribution_pdf.eps}
-\caption{}
+\caption{The Gamma Distribution for various shape parameters \cite{wiki_Gamma}.  The distribution falls to zero at the origin; it is this property that makes this distribution a candidate model for the neutron continuum.}
 \label{fig:BetaGamma}
 \end{figure}
 This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the Gamma Distribution is non-zero only on a semi-infinite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
@@ -343,13 +344,11 @@ The method used to extract the counts in the ground-state neutron peak is a dire
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_angularDist.eps}
-   \caption{}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/76Ge_angularDistribution.eps}
-   \caption{}
 }
-\caption{}
+\caption{The angular distributions of $^{74}$Ge($^3$He,n)$^{76}$Se (a) and $^{76}$Ge($^3$He,n)$^{78}$Se (b).  In each graph, the two back-angle measurements are four-bar averages.  Because the timing resolution did not allow clear separation of the ground and first excited states, the integration window included both.  The data is well-described by the sum of the two states.}
 \label{fig:PS_angularDistribution}
 \end{figure}
 
@@ -368,7 +367,7 @@ Extraction of the ground-state neutron counts is done not by subtracting An esti
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/PDE_1.eps}
-\caption{}
+\caption{Extracting non-pulse-selected counts (below) using the pulse-selected data (above) to generate a fit.  Estimated background is shown in green.}
 \label{fig:NPS_fits}
 \end{figure}
 
@@ -413,8 +412,8 @@ The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \
    \includegraphics[width=0.5\textwidth]{figures/76Ge_2sigma_limit.eps}
    \caption{}
 }
-\caption{}
-\label{fig:}
+\caption{Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge (above) and $^{76}$Ge (below).  The thickness of the line indicates the error of the estimate.  The limit is poor for neutrons arriving at times less than 120~ns relative to the $\gamma$ peak because of the broad neutron peak due to oxygen contamination in the targets.  The effect of a signal with 2$\sigma$ significance is simulated for $^{74}$Ge (b) and $^{76}$Ge (d).}
+\label{fig:differentLimits}
 \end{figure}
 
 \section{Fitting the \zp ground state}
@@ -423,14 +422,14 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-The cross-section of ?? is nearly twice that of ??.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the cross-section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not typically reproduce the absolute cross-section.  In the case of the $^{58,60,62,64}$Ni and $^{68}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross-sections have been normalized to $^{58}$Ni.  
+The cross-section of $^{74}$Ge($^3$He,n)$^{76}$Se is nearly twice that of $^{76}$Ge($^3$He,n)$^{78}$Se.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the cross-section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not typically reproduce the absolute cross-section.  In the case of the $^{58,60,62,64}$Ni and $^{68}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross-sections have been normalized to $^{58}$Ni.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/nickelTrend.eps}
-\caption{}
+\caption{The cluster model describes the trend for nickel isotopes occupying the f-p-g shells.  The cross-sections are normalized to $^{58}$Ni.}
 \label{fig:nickelTrend}
 \end{figure}
-The Cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster models of the ?? and ?? reactions show that the lowered cross section of the ?? reaction is expected by DWBA and not likely due to ground-state loss of \zp strength.   
+The Cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster models of the $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se reactions show that the lowered cross section of the $^{76}$Ge($^3$He,n)$^{78}$Se reaction is expected by DWBA and not likely due to ground-state loss of \zp strength.   
 
 The cluster model can be sensitive to the parameters used to describe the potentials of the interacting nuclei.  The dependence of the cross-section for various \He{3} optical potential models was explored and were found to result in little difference in the elastic cross-sections.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
 \begin{table}[htp]
@@ -441,14 +440,14 @@ Becchetti & & & 1.25 & 1.137 \\
 GDP08 & 118.3 & 1.30? & 1.24 & 0.82? & 34.2? & 1.31? &0.84? & 106.4? & 0.904 \\
 Urone & 175.4 & 1.14 & 1.4 & 0.71 & 19.9 & 1.53 & 0.85 & 9.13(N-Z)/A & 0.910 \\
 \end{tabular}
-\caption{}
+\caption{Optical parameters used for three different models of the \He{3} potential.}
 \label{tab:parameterSensitivity}
 \end{table}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/CrossSectionVsN_ElasticSurvey.eps}
-\caption{}
+\caption{The GDP08 potential differs from the Becchetti and Urone potentials for nickel and strontium isotopes, but all potentials reproduce the measured Q-value dependence of \GeTargets.}
 \label{fig:parameterSensitivity}
 \end{figure}
 
