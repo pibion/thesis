@@ -81,7 +81,7 @@ The three targets (\GeTargets and \Mg{26}) used in the experiments were provided
    \includegraphics[width=0.5\textwidth]{figures/76ge-4-adjusted.eps}
 }
 \caption{RBS data for the \Ge{76} target near the beamspot.  The plateau at low energies is due to small holes in the target; these allow the incident $\alpha$ particles to travel through to the aluminum chamber.  The plateau at high energies is due to small sections of the target with no \Ge{76} deposited on the gold surface.  The fit to these ``holes'' in the target is shown in (a).  The adjusted RBS spectrum and its fit are shown in (b).  Fitting the RBS spectrum with and without adjusting for holes does not result in any significant differences to the predicted target composition or thickness.}
-\label{fig:fig:RBS_sample}
+\label{fig:RBS_sample}
 \end{figure}
 \begin{table}[htp]
 \centering
@@ -143,19 +143,17 @@ A true event should have energy above the noise level recorded in both top and b
 A first approximation to determining whether or not an event is the result of a muon interaction is to require all but one bar in the neutron detector, as well as the entire veto, to be silent.  However, this would veto events that are spatially disconnected and could not possibly be due to a single muon.  To eliminate these unnecessary vetoes, we look at events that register signals in detectors with close spatial proximity, a ``veto group''.  One way to determine the appropriateness of increasing the size of a veto group is by looking at the energy spectrum of vetoed events.  Adding material to a veto group that primarily eliminates muons results in an energy spectrum that has roughly equal numbers of high and low energy events, as shown in {\fig}~\ref{fig:muonVetoSpectrum}.  Material that does not veto primarily muon events will yield an energy spectrum that appears much more like the room background spectrum, heavily weighted towards lower energy events, as in {\fig}~\ref{fig:notMuonVetoSpectrum}.  These figures indicate that an appropriate group of material to use in the veto of a detector bar is the immediate, surrounding material.  Several samples of veto groups are shown in {\fig}~\ref{fig:vetoGroups}.  A separate cut to reject muons discards events that deposit energy above the maximum neutron energy deposition.    
 \begin{figure}[!htbp]
 \centering
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/atLeastOneCorrelatedBar.eps}
-   \caption{Energy spectrum of a neutron detector bar.  Entries in this histogram are from events having at least one correlated signal in the neutron detector and are likely to be muons.  Notice the high-energy-deposition cosmic peak at $\sim$ channel~3000 and its considerable height relative to the low-energy $\gamma$ background.  This low-energy background is dominant in non-muon events as in {\fig}~\ref{fig:notMuonVetoSpectrum}.}
+\subfloat[][Energy spectrum of a neutron detector bar.  Entries in this histogram are from events having at least one correlated signal in the neutron detector and are likely to be muons.  Notice the high-energy-deposition cosmic peak at $\sim$ channel~3000 and its considerable height relative to the low-energy $\gamma$ background.  This low-energy background is dominant in non-muon events as in {\fig}~\subref{fig:notMuonVetoSpectrum}.]{
+   \includegraphics[width=0.45\textwidth]{figures/atLeastOneCorrelatedBar.eps}
    \label{fig:muonVetoSpectrum}
 }
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/singleBar_noVeto.eps}
-   \caption{Neutron detector bar energy spectrum.  These events have no correlation to other signals in the neutron detector and are unlikely to be due to muons.  While some high-energy depositions are visible, the spectrum is clearly dominated by the low-energy peak due to $\gamma$-radiation.}
+\hspace{8pt}
+\subfloat[][Neutron detector bar energy spectrum.  These events have no correlation to other signals in the neutron detector and are unlikely to be due to muons.  While some high-energy depositions are visible, the spectrum is clearly dominated by the low-energy peak due to $\gamma$-radiation.]{
+   \includegraphics[width=0.45\textwidth]{figures/singleBar_noVeto.eps}
    \label{fig:notMuonVetoSpectrum}
-}
-\subfloat[][]{
+} \\
+\subfloat[][Groups of detectors chosen to veto bars in the neutron detector.  If the events in a neutron detector bar vetoed by a detector have an energy spectrum dominated by the low-energy $\gamma$-radiation, that detector is not used as part of the veto for that particular bar.]{
    \includegraphics[width=1.0\textwidth]{figures/vetoGroups.eps}
-   \caption{Groups of detectors chosen to veto bars in the neutron detector.  If the events in a neutron detector bar vetoed by a detector have an energy spectrum dominated by the low-energy $\gamma$-radiation, that detector is not used as part of the veto for that particular bar.}
    \label{fig:vetoGroups}
 }
 \caption{}
@@ -171,7 +169,7 @@ where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is i
 \centering
 \includegraphics[width=0.8\textwidth]{figures/positionVSenergy.eps}
 \caption{Position dependence of the geometric mean of the light signal of rejected events.  The band of events with light signals between $\sim$1000-1500~channels in particular demonstrates that the signal increases as it approaches the extremes of the neutron detector bar.}
-\label{fig:productPositionDependence}
+\label{fig:product_positionDependence}
 \end{figure}
 
 
@@ -185,17 +183,15 @@ The energy cuts are determined for each PMT separately using the energy vs. posi
 At every position, the peak of this energy spectrum represents the same energy and is a suitable candidate for an energy cut.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
 \begin{figure}[!htbp]
 \centering
-\subfloat[][]{
+\subfloat[][The position dependence of the light signal from a single PMT.]{
    \includegraphics[width=0.8\textwidth]{figures/PMT_positionResponse.eps}
-   \caption{The position dependence of the light signal from a single PMT.}
+} \\
+\subfloat[][The two-dimensional histogram shown in (a) is projected into a series of one-dimensional histograms.  The peaks of these histograms are determined by fitting with a Landau function.]{
+   \includegraphics[width=0.45\textwidth]{figures/position_sliceGraphs.eps}
 }
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/position_sliceGraphs.eps}
-   \caption{The two-dimensional histogram shown in (a) is projected into a series of one-dimensional histograms.  The peaks of these histograms are determined by fitting with a Landau function.}
-}
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/EnergyCutExample.eps}
-   \caption{A plot describing the curve which, when scaled, is used as the low-energy cut.  The points are determined from the histograms shown in (b).  Points at the extremes that do not follow the trend are used to determine the position cut.}
+\hspace{8pt}
+\subfloat[][A plot describing the curve which, when scaled, is used as the low-energy cut.  The points are determined from the histograms shown in (b).  Points at the extremes that do not follow the trend are used to determine the position cut.]{
+   \includegraphics[width=0.45\textwidth]{figures/EnergyCutExample.eps}
 }
 \caption{}
 \label{fig:fits_pkVSpos}
@@ -204,14 +200,13 @@ At every position, the peak of this energy spectrum represents the same energy a
 Using the energy peak as a function of position itself as a lower energy cut results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  There is no reason to assume that all energy cuts will scale in the same way, and the appropriate ratios are determined by comparing background reduction to the initial cut as in {\fig}~\ref{fig:scalingFactor}.  
 \begin{figure}[!htbp]
 \centering
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/scalingFactor.eps}
-   \caption{Applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos} is measured relative to the background obtained with the unscaled cut.  The effect of the highlighted scaling factors is shown in {\fig}~ref{fig:highEnergyCut}.}
+\subfloat[][Applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos} is measured relative to the background obtained with the unscaled cut.  The effect of the highlighted scaling factors is shown in {\fig}~\subref{fig:highEnergyCut}.]{
+   \includegraphics[width=0.45\textwidth]{figures/scalingFactor.eps}
    \label{fig:scalingFactor}
 }
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/needLowerCut.eps}
-   \caption{Without applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos}, the neutron signals are nearly lost.  Scaling the cut by $\sim$0.5 results in a reasonable signal to noise ratio.}
+\hspace{8pt}
+\subfloat[][Without applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos}, the neutron signals are nearly lost.  Scaling the cut by $\sim$0.5 results in a reasonable signal to noise ratio.]{
+   \includegraphics[width=0.45\textwidth]{figures/needLowerCut.eps}
    \label{fig:highEnergyCut}
 }
 \caption{}
@@ -397,20 +392,18 @@ The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/74Ge_limits.eps}
-   \caption{}
+   \includegraphics[width=0.45\textwidth]{figures/74Ge_limits.eps}
 }
+\hspace{8pt}
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/74Ge_2sigma_limit.eps}
-   \caption{}
+   \includegraphics[width=0.45\textwidth]{figures/74Ge_2sigma_limit.eps}
+} \\
+\subfloat[][]{
+   \includegraphics[width=0.45\textwidth]{figures/76Ge_limits.eps}
 }
+\hspace{8pt}
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/76Ge_limits.eps}
-   \caption{}
-}
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/76Ge_2sigma_limit.eps}
-   \caption{}
+   \includegraphics[width=0.45\textwidth]{figures/76Ge_2sigma_limit.eps}
 }
 \caption{Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge (above) and $^{76}$Ge (below).  The thickness of the line indicates the error of the estimate.  The limit is poor for neutrons arriving at times less than 120~ns relative to the $\gamma$ peak because of the broad neutron peak due to oxygen contamination in the targets.  The effect of a signal with 2$\sigma$ significance is simulated for $^{74}$Ge (b) and $^{76}$Ge (d).}
 \label{fig:differentLimits}
@@ -425,7 +418,7 @@ f$^2$, p$^2$ state strength ("form factor")
 The cross-section of $^{74}$Ge($^3$He,n)$^{76}$Se is nearly twice that of $^{76}$Ge($^3$He,n)$^{78}$Se.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the cross-section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but the Cluster model does not typically reproduce the absolute cross-section.  In the case of the $^{58,60,62,64}$Ni and $^{68}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross-sections have been normalized to $^{58}$Ni.  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/nickelTrend.eps}
+\includegraphics[width=0.8\textwidth]{figures/nickel_trend.eps}
 \caption{The cluster model describes the trend for nickel isotopes occupying the f-p-g shells.  The cross-sections are normalized to $^{58}$Ni.}
 \label{fig:nickelTrend}
 \end{figure}
@@ -434,11 +427,18 @@ The Cluster model, then, accurately describes the trend when adding protons to f
 The cluster model can be sensitive to the parameters used to describe the potentials of the interacting nuclei.  The dependence of the cross-section for various \He{3} optical potential models was explored and were found to result in little difference in the elastic cross-sections.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
 \begin{table}[htp]
 \centering
-\begin{tabular}{llllllllll}
-& $V_0$ (MeV) & $r_R$ (fm) & $r_C$ (fm) & $a_R$ (fm) & W (MeV) & $r_l$ (fm) & $a_l$ (fm) & $W_D$ (MeV) & Norm. Factor\\
-Becchetti & & & 1.25 & 1.137 \\
-GDP08 & 118.3 & 1.30? & 1.24 & 0.82? & 34.2? & 1.31? &0.84? & 106.4? & 0.904 \\
-Urone & 175.4 & 1.14 & 1.4 & 0.71 & 19.9 & 1.53 & 0.85 & 9.13(N-Z)/A & 0.910 \\
+\begin{tabular}{llll}
+ & Becchetti & DGP08 & Urone \\
+\hline
+$V_0$ (MeV) & & 118.3 & 175.4 \\
+$r_R$ (fm) & & 1.30? & 1.14 \\
+$r_C$ (fm) & & 1.24 & 1.4 \\
+$a_R$ (fm) & & 0.82? & 0.71 \\
+W (MeV) & & 34.2? & 19.9 \\
+$r_l$ (fm) & & 1.31? & 1.53 \\
+$a_l$ (fm) & & 0.84? & 0.85 \\
+$W_D$ (MeV) & 1.25 & 106.4? & 9.13(N-Z)A \\
+Norm. Factor & 1.137 & 0.904 & 0.910 \\
 \end{tabular}
 \caption{Optical parameters used for three different models of the \He{3} potential.}
 \label{tab:parameterSensitivity}
