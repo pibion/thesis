@@ -283,7 +283,14 @@ where $\text{R}_{\text{noise}}$ is the noise rate and $\tau_{\text{bit reg.}}$ i
 What data should I show?  Old Mg vs. New Mg?  Or New Mg with no veto vs.  New Mg with veto?
 show the vetoed spectrum - put a limit on how much real signal is rejected?
 \end{comment}
-The final veto system reduces the background by approximately a factor of 10 as can be seen in {\fig}~\ref{fig:veto_26Mg}.  The rejection is strongly dependent on energy cuts placed on data, as shown in {\fig}~\ref{fig:vetoRejection_vs_energyCut}.  The veto is less effective at lower energy cuts because $\gamma$ radiation becomes a significant contributor to the random background.  Placing energy cuts above the thorium edge, the Compton edge resulting from the maximally scattered 2.6~MeV $\gamma$-ray \cite{PDG} from a natural thorium source, rejects much of the room $\gamma$ background.  Although such a high cut on the energy discards neutron events as well as unwanted $\gamma$ radiation, it maximizes the signal/background ratio.  The reduced background significantly improves the data we were able to obtain on \MgReaction.  Errors on the ground state transition were reduced from 7\% to 3\%.
+The final veto system reduces the background by approximately a factor of 10 as can be seen in {\fig}~\ref{fig:veto_26Mg}.  The rejection is strongly dependent on energy cuts placed on data, as shown in {\fig}~\ref{fig:vetoRejection_vs_energyCut}.  
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/vetoEfficiency_functionOfCut.eps}
+\caption{The fraction of background rejected by the veto as a function of the lower energy cut.  The energy cut is shown as a ratio between the background due to the cut and the background due to a reference cut; increasing numbers on this scale implies a lower energy cut.  The lower energy cut is discussed in detail in {\chap}~\ref{chap:dataAnalysis}, {\sect}~\ref{sec:cuts}.}
+\label{fig:vetoRejection_vs_energyCut}
+\end{figure}
+The veto is less effective at lower energy cuts because $\gamma$ radiation becomes a significant contributor to the random background.  Placing energy cuts above the thorium edge, the Compton edge resulting from the maximally scattered 2.6~MeV $\gamma$-ray \cite{PDG} from a natural thorium source, rejects much of the room $\gamma$ background.  Although such a high cut on the energy discards neutron events as well as unwanted $\gamma$ radiation, it maximizes the signal/background ratio.  The reduced background significantly improves the data we were able to obtain on \MgReaction.  Errors on the ground state transition were reduced from 7\% to 3\%.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/26Mg_vetoEffect.eps}
