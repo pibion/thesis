@@ -66,7 +66,7 @@ The scintillator bars of the neutron detector are outfitted with two PMT's, each
 \begin{table}[htp]
 \centering
 \begin{tabular}{lll}
-Properties & BCF-91A Multi-Clad WLS & Kuraray Clear-PSMJ Multi-Clad Optical\\
+Properties & BCF-91A Multi-Clad WLS & Clear-PSMJ Multi-Clad Optical\\
 \hline
 Diameter, mm & 1.0 & 1.2\\
 Emission Color & green & n/a\\
@@ -115,10 +115,10 @@ An endcap fitted to the scintillator helps protect the WLS and also fixes its lo
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/veto_assembly.eps}
+   \includegraphics[width=0.5\textwidth]{figures/veto_assembly.eps}
 }
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/clovers_paddle.eps}
+   \includegraphics[width=0.5\textwidth]{figures/clovers_paddle.eps}
 }
 \caption{(a) The endcap is epoxied to the scintillator after it is slid into place to secure the WLS fibers.  (b) The WLS fibers at the surface of the endcap form a ``clover'' pattern that aligns with the clear fibers in the optical cable.}
 \label{fig:paddleAssembly}
@@ -129,12 +129,12 @@ The optical cable consists of two groups of four-clusters of clear fiber, one gr
 \centering
 \subfloat[][]{
    \includegraphics[width=1.0\textwidth]{figures/cable.eps}
-}
+} \\
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/clovers_cable.eps}
 }
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/clovers_cable.eps}
+   \includegraphics[width=0.5\textwidth]{figures/cable_nearPMT.eps}
 }
 \caption{(a) Dowels help the clear fiber align with the WLS fiber on the endcap.  The protective tubing covers both groups of clear fibers but is shown here on only one group. (b) The clear fibers align with the WLS fibers exiting the veto paddle.  (c) The clear fibers are held in place on the PMT surface.}
 \label{fig:paddleCable}
@@ -162,7 +162,7 @@ The intrinsic efficiency of the paddles can be tested by requiring a coincidence
 In practice, arranging the available scintillators to confine muon paths through the test volume was difficult because the available scintillator was instrumented with bulky lightguides and could not be laid directly on the test volume.  A simple cosmic-ray simulation program helped determine an arrangement that guaranteed a geometrical efficiency of at least 99\%.  This arrangement is shown in {\fig}~\ref{fig:efficiencyTest}.  Note that the coincidence paddles are slightly wider than the veto paddle, which requires the coincidence paddles to be aligned to each edge of the veto paddle.  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[height=0.7\textheight]{figures/veto_test.eps}
+\includegraphics[height=0.8\textheight]{figures/veto_test.eps}
 \caption{This arrangement of coincidence material ensures that muons triggering all coincidence detectors must also travel through the veto paddle.  The coincidence material is drawn in red while the veto paddle is in blue.}
 \label{fig:efficiencyTest}
 \end{figure}
@@ -204,19 +204,7 @@ Initial efficiency - would be nice to show this data
 Describe different cosmics that hit the neutron bar but miss the veto - argh!
 Discuss changes made to mounting to improve coverage - show new data (cosmics)
 \end{comment}
-Sixteen veto paddles were initially mounted $\sim$2~cm in front of the neutron detector bars to avoid removing them and potentially causing damage.  See {\fig}~\ref{fig:initialMount} for a detailed view. 
-% figure: the initial mounting of the veto paddles
-\begin{figure}[!htbp]
-\centering
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/neutDetector_groupOfFour_veto2_full.eps}	
-}
-\subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/neutDetector_groupOfFour_veto1.eps}
-}
-\caption{(a) The veto paddles are mounted in front of the neutron detector bars.  (b) The veto paddles are secured with an aluminum bar; it is not necessary to remove the neutron bars.  Stiff rubber (in orange) on either sides of the veto paddle protects the scintillator from any point pressures that could result from its uneven surface.}
-\label{fig:initialMount}
-\end{figure}
+Sixteen veto paddles were initially mounted $\sim$2~cm in front of the neutron detector bars to avoid removing them and potentially causing damage.  See {\fig}~\ref{fig:finalMount} for a detailed view. 
 The veto rejection is strongly dependent on the energy of the lower energy cut applied to the dataset, as shown in {\fig}~\ref{fig:vetoRejection_vs_energyCut}.  
 \begin{figure}[!htbp]
 \centering
@@ -224,7 +212,7 @@ The veto rejection is strongly dependent on the energy of the lower energy cut a
 \caption{The fraction of background rejected by the veto as a function of the lower energy cut.  The energy cut is shown as a ratio between the background due to the cut and the background due to a reference cut; increasing numbers on this scale implies a lower energy cut.  The lower energy cut is discussed in detail in {\chap}~\ref{chap:dataAnalysis}, {\sect}~\ref{sec:cuts}.}
 \label{fig:vetoRejection_vs_energyCut}
 \end{figure}
-All efficiencies cited are based on datasets where the lower energy cut applied to the data was that used in the final data analysis, 7.2~MeV.  A test with \MgReaction showed the background was reduced to $\sim$12\% the original background in the two innermost bars of each four-bar unit but only to $\sim$18\% in the outer two bars.  The outer bars act as additional veto material for the inner bars, have have no such additional information themselves to aid in muon identification.  It should be noted that adjacent veto paddles were instrumented by a single PMT, making it impossible to distinguish veto signals from distinct veto paddles.  
+All efficiencies cited are based on datasets where the lower energy cut applied to the data was that used in the final data analysis, 7.2~MeVee.  A test with \MgReaction showed the background was reduced to $\sim$12\% the original background in the two innermost bars of each four-bar unit but only to $\sim$18\% in the outer two bars.  The outer bars act as additional veto material for the inner bars, have have no such additional information themselves to aid in muon identification.  It should be noted that adjacent veto paddles were instrumented by a single PMT, making it impossible to distinguish veto signals from distinct veto paddles.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/bkgdRejection_old_legend.eps}
@@ -237,27 +225,33 @@ A simulation of the muon background indicated that the geometrical efficiency wa
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/neutDetector_groupOfFour_veto2_full.eps}	
+   \includegraphics[width=0.5\textwidth]{figures/neutDetector_groupOfFour_veto1.eps}	
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/neutDetector_groupOfFour_veto2_close.eps}
 }
-\caption{(a) The neutron detector bars are moved to be as close as possible.  (b) A veto paddle and a neutron bar are secured together with a single aluminum bar.  Stiff rubber (in orange) on either sides of the veto paddle again protects the scintillator from any point pressures that could result from its uneven surface.}
+\caption{(a) The veto paddles are secured to the neutron detector bars with an additional retaining bar.  (b) A veto paddle and a neutron bar are secured together with a single aluminum bar to minimize their separation.  Stiff rubber (in orange) on either sides of the veto paddle again protects the scintillator from any point pressures that could result from its uneven surface.}
 \label{fig:finalMount}
 \end{figure}
 
 Material was also added to the sides of the outermost neutron detectors.  The final setup is shown in {\fig}~\ref{fig:vetoSetup}.  These changes improved both the average and uniformity of the background rejection, as can be seen in {\fig}~\ref{fig:finalBackground}.
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/neutwall_Oct18.eps}
-\caption{The final arrangement of the veto paddles on the neutron detector.  The distance between the veto paddles and the bars of the neutron detector have been minimized.  Note also the addition of veto material on the sides of the neutron detector sub-units.}
+\subfloat[][]{
+   \includegraphics[height=0.8\textheight]{figures/neutDetector_groupOfFour_veto2_full.eps}
+}
+\hspace{1cm}
+\subfloat[][]{
+   \includegraphics[width=0.8\textheight, angle=90]{figures/vetoEagleEye.eps}
+}
+\caption{(a) The final arrangement of the veto paddles on a segment of the neutron detector.  The distance between the veto paddles and the bars of the neutron detector have been minimized.  (b) A bird's eye view of the neutron detector and veto paddles.  Note the addition of veto material on the sides of the neutron detector sub-units.}
 \label{fig:vetoSetup}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/bkgdRejection_new_legend.eps}
-\caption{Ratio of room background with and without veto rejection in final setup.  Note that the rejection ratio for a typical paddle is about a factor of 10.  Bars at the ends of the group of four (red) enjoy similar background rejection to internal bars (blue) on average.  The errors are accurately represented by the size of the points.  The veto rejection is dependent on the lower energy cut applied to the data; the energy cut for the rejection reported here is that used for the final data analysis, 7.2~(?)~MeV. }
+\caption{Ratio of room background with and without veto rejection in final setup.  Note that the rejection ratio for a typical paddle is about a factor of 10.  Bars at the ends of the group of four (red) enjoy similar background rejection to internal bars (blue) on average.  The errors are accurately represented by the size of the points.  The veto rejection is dependent on the lower energy cut applied to the data; the energy cut for the rejection reported here is that used for the final data analysis, 7.2~(?)~MeVee. }
 \label{fig:finalBackground}
 \end{figure}
 
@@ -274,7 +268,7 @@ Recording the integer generated by the bit register instead of the time of the s
 
 Several sources contribute to non-beam-related background radiation, resulting in a beam-off rate in a neutron detector bar of $\sim$1000~Hz.  While some of these events are due to muons, they have a flux of $\sim$5~Hz/m$^2$ \cite{PDG} and are therefore a small part of the beam-off noise rate.  The beam-off rate, then, serves as a suitable rate with which to calculate an upper bound for the rejection of beam-related events.  The probability that one or more noise events will occur within the window allowed by the bit register and veto a beam-related event is
 \begin{equation}
-\text{R}_{\text{noise}}\times(1 - e^{\tau_{\text{bit reg.}}}) \simeq \text{R}_{\text{noise}}\times\tau_{\text{bit reg.}},
+1 - e^{\tau_{\text{bit reg.}\text{R}_{\text{noise}}}} \simeq \text{R}_{\text{noise}}\times\tau_{\text{bit reg.}},
 \end{equation}
 where $\text{R}_{\text{noise}}$ is the noise rate and $\tau_{\text{bit reg.}}$ is the time window of the bit register.  The neutron detector bars that experience the highest veto noise rate are those that are vetoed by four detectors.  Two of these are the veto paddles mounted directly in front of it and the adjacent neutron detector bar, and the other two are the bars on its sides.  The two front veto paddles have a combined noise rate of 1000~Hz, while the two side veto paddles could each have a rate of 1000~Hz, giving a maximum noise rate of 3000~Hz.   The bit register window was set at 200~ns, so that the maximum probability of vetoing a real, beam-induced event is $6\times10^{-4}$, or approximately one false veto per 1500 events.  This fraction of vetoed events is less than 1\% and will not have any statistical significance, even with the timing resolution lost by moving to a bit register.  A schematic of the veto electronics is shown in {\fig}~\ref{fig:vetoElectronics}.  Note that no changes to the DAQ other than the addition of the bit register are required.
 \begin{figure}[!htbp]
