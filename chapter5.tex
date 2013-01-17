@@ -38,15 +38,15 @@ The aim of the analysis of the \reaction data sets is to extract the absolute cr
 deuterium, Mg, cuts
 \end{comment}
 \label{sec:efficiency}
-The number of counts due to neutrons measured by the neutron detector scales linearly with the absolute cross-section of \reaction corrected for the fact that not all the neutrons leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of the detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross-sections.
+The number of counts due to neutrons measured by the neutron detector scales linearly with the absolute cross-section of \reaction, corrected for the fact that not all the neutrons leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of the detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross-sections.
 
-The efficiency of a plastic-scintillator-type neutron detector depends not only on the energy of the neutron, but also on the detector's size, shape, energy resolution, and detection threshold.  Ideally, the efficiency would be experimentally determined by measuring a well-known cross section of a reaction producing a 26~MeV neutron.  Instead, a Monte-Carlo code was used to calculate the efficiency and was verified against reactions with well-known cross-sections and neutrons with energies of 10-28~MeV.  Comparing the calculated efficiency to measured efficiency over a range inclusive of the neutron energies produced in \reaction gives confidence and also an estimate of the uncertainty in the efficiency.  The Monte-Carlo code used is that of Cecil \cite{Cecil_neutEfficiency}, which accurately calculates the efficiency of plastic scintillator detectors for a wide range of neutron energies and detector thresholds.  The inputs required by the code are the density of the detector, its hydrogen to carbon ratio, the threshold used in the experiment, and the interval over which the detector averages the light output, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}~\ref{tab:WLS_Kuraray}, and the threshold and resolution of the detector must be determined with data from the experiment.  
+The efficiency of a plastic-scintillator-type neutron detector depends not only on the energy of the neutron, but also on the detector's size, shape, energy resolution, and detection threshold.  Ideally, the efficiency would be experimentally determined by measuring a well-known cross section of a reaction producing a 26-MeV neutron.  Instead, a Monte-Carlo code was used to calculate the efficiency and was verified against reactions with well-known cross-sections and neutrons with energies of 10-28~MeV.  Comparing the calculated efficiency to measured efficiency over a range inclusive of the neutron energies produced in \reaction gives confidence and also an estimate of the uncertainty in the efficiency.  The Monte-Carlo code used is that of Cecil \cite{Cecil_neutEfficiency}, which accurately calculates the efficiency of plastic scintillator detectors for a wide range of neutron energies and detector thresholds.  The inputs required by the code are the density of the detector, its hydrogen to carbon ratio, the energy threshold applied to the data, and the interval over which the detector averages the light output, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}~\ref{tab:WLS_Kuraray}, and the threshold and resolution of the detector must be determined with data from the experiment.  
 
-The reaction d(d,n) has been well-measured at beam energies up to 9~MeV [cite], which produces $\sim$12~MeV ground-state neutrons.  This is a particularly useful reaction because the neutron energy changes drastically as a function of angle.  Empirical fits as described in [cite] were used to estimate the dependence of the cross section on energy, providing a check on the energy dependence of the Cecil calculation.  The agreement is excellent, as can be seen in {\fig}~\ref{fig:DeuteriumMatch}, which shows the prediction with and without correcting for neutron energy.  This result suggests that the Cecil code accurately adjusts the detector efficiency for neutron energy.  
+The reaction d(d,n) has been well-measured at beam energies up to 9~MeV [cite], which produces $\sim$12~MeV ground-state neutrons.  This is a particularly useful reaction because the neutron energy changes drastically as a function of angle, making it a useful check on the energy depndence of the Cecil prediction.  Empirical fits as described in [cite] were used to estimate the dependence of the cross section on energy, providing a check on the energy dependence of the Cecil calculation.  The agreement is excellent, as can be seen in {\fig}~\ref{fig:DeuteriumMatch}, which shows the prediction with and without correcting for neutron energy.  This result suggests that the Cecil code accurately adjusts the detector efficiency for neutron energy.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/deuteriumMatch.eps}
-\caption{The prediction for d(d,n) (solid line) matches the data well when the efficiency is corrected for the neutron energy (red points).}
+\caption{The prediction for d(d,n) (solid line) matches the data well when the efficiency is corrected for the neutron energy (red points).  The blue points represent the differential cross section where the efficiency is assumed to be the same at every angle despite a changing neutron energy.}
 \label{fig:DeuteriumMatch}
 \end{figure}
 
@@ -54,7 +54,7 @@ Another useful reaction for testing the Cecil code is \MgReaction.  While this r
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/magnesiumMatch.eps}
-\caption{Checking consistency of efficiency calculation with \MgReaction.  This work (green) is consistent with measurements at surrounding energies (black).}
+\caption{Checking consistency of efficiency calculation with \MgReaction.  This work (green) is consistent with measurements at surrounding energies (black).  The lines indicate spread due to statistical error.}
 \label{fig:efficiencyCalib}
 \end{figure}
 
@@ -129,9 +129,9 @@ September   & PS 76Ge & 12616566 & 2872649 \\
 
 \section{Cuts}
 \label{sec:cuts}
-Four sets of cuts were applied to the data to generate a final data set.  The first cut verifies that the recorded event represents a real event.  The next cut checks that the event is not a muon event.  The last cut is an energy threshold that discards low-energy signals, reducing the background due to $\gamma$ radiation.
+Four sets of cuts were applied to the data to generate a final data set.  The first cut verifies that the recorded event represents a real event rather than noise.  The next cut discards envents with too-low light signals, reducing the background due to $\gamma$ radiation.  Two final cuts reduce the muon background; one cut uses the veto, and the other eliminates events with light signals too large to be due to neutrons.
 
-A true event should have energy above the noise level recorded in both top and bottom PMT's.  Additionally, the time signals from the top and bottom PMT's should be correlated.  A typical energy spectrum with no cuts applied and a typical scatter plot of timing from the top and bottom PMT are shown in {\fig}~\ref{fig:realEvent}.  These cuts are applied during initial data processing and the result for each bar is stored with the event as an array of correlations, with any valid event recording a ``true'' entry in the correlation array.  Requiring an event to be valid is a cut that is applied to all final data sets.
+A true event should have energy above the noise level recorded in both top and bottom PMT's.  Additionally, the time signals from the top and bottom PMT's should be correlated.  A typical energy spectrum with no cuts applied and a typical scatter plot of timing from the top and bottom PMT are shown in {\fig}~\ref{fig:realEvent}.  Requiring correlated top and bottom timing signals is a cut that is applied to all bars in all final data sets.  The other requirement for a valid event is that the light signal be above the noise threshold.  An example of a light spectrum for a single bar and the noise threshold is shown in {\fig}~\ref{fig:realEvent}.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/realTiming.eps}
@@ -139,6 +139,8 @@ A true event should have energy above the noise level recorded in both top and b
 \label{fig:realEvent}
 \end{figure}
 
+% discussion of muon rejection begins here
+Both the veto paddles and the bars of the neutron detector serve as a veto.  Veto paddle information is recorded as either ``true'' or ``false'' - true if a veto paddle fired during the event, false if it did not.  The bars of the neutron detector, in contrast, have more detailed information - time and light output.  While accidental coincidences are rare, the additional information provided by the bars of the neutron detector is used when these scintillators are used to veto.  For one bar of the neutron detector to veto another, both must have a valid signal and their average time must be similar.
 
 A first approximation to determining whether or not an event is the result of a muon interaction is to require all but one bar in the neutron detector, as well as the entire veto, to be silent.  However, this would veto events that are spatially disconnected and could not possibly be due to a single muon.  To eliminate these unnecessary vetoes, we look at events that register signals in detectors with close spatial proximity, a ``veto group''.  One way to determine the appropriateness of increasing the size of a veto group is by looking at the energy spectrum of vetoed events.  Adding scintillator to a veto group that primarily eliminates muons results in an energy spectrum that has roughly equal numbers of high and low energy events, as shown in {\fig}~\ref{fig:muonVetoSpectrum}.  Material that does not veto primarily muon events will yield an energy spectrum that appears much more like the room background spectrum, heavily weighted towards lower energy events, as in {\fig}~\ref{fig:notMuonVetoSpectrum}.  These figures indicate that an appropriate group of material to use in the veto of a detector bar is the immediate, surrounding material.  Several samples of veto groups are shown in {\fig}~\ref{fig:vetoGroups}.  A separate cut to reject muons discards events that deposit energy above the maximum neutron energy deposition.    
 \begin{figure}[!htbp]
@@ -160,6 +162,7 @@ A first approximation to determining whether or not an event is the result of a 
 \label{fig:determineVetoGroups}
 \end{figure}
 
+% discussion of the low energy cut begins here
 The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Such a cut discards neutrons, which are also likely to deposit a small amount of energy, and it is necessary to calculate which energy cut maximizes the signal to noise ratio.  An important feature of the energy cut is that it is strongly position dependent.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the geometric mean of the top and bottom PMT signals:
 \begin{equation}
 \sqrt{Ae^{-\alpha x}\times Ae^{-\alpha (L-x)}} = \sqrt{A^2e^{-\alpha L}} = Ae^{-\alpha L/2},
@@ -168,16 +171,15 @@ where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is i
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/positionVSenergy.eps}
-\caption{Position dependence of the geometric mean of the light signal of rejected events.  The band of events with light signals between $\sim$1000-1500~channels in particular demonstrates that the signal increases as it approaches the extremes of the neutron detector bar.}
+\caption{Position dependence of the geometric mean of the light signal of rejected events.  The band of events with light signals between $\sim$1000-1500~channels in particular demonstrates that the signal increases as it approaches the extremes of the neutron detector bar.  The events shown here are those that triggered the veto and are likely muons.}
 \label{fig:product_positionDependence}
 \end{figure}
-
 
 The energy cuts are determined for each PMT separately using the energy vs. position spectrum of the vetoed events, which are likely to be muons.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{1.3}{\theta}$ [CITE] (where $\theta$ is the normal from the surface vertical) confirm a well-defined peak in the muon path length. This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}. 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/flatVSaccurate_cosmicDist.eps}
-\caption{A simulation of path length due to muons interacting in a detector with dimensions identical to those of the neutron detector bars.  Using a realistic angular distribution for the incident muons does not eliminate the feature.}
+\caption{A simulation of path length of muons interacting in a detector with dimensions identical to those of the neutron detector bars.  Note the distinct peak.}
 \label{fig:muonSpectrum}
 \end{figure}
 At every position, the peak of this energy spectrum represents the same energy and is a suitable candidate for an energy cut.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
