@@ -43,7 +43,7 @@ The aim of the analysis of the \reaction data sets is to extract the absolute cr
 \caption{(a) A (time of flight) (TOF) spectrum from the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam.  The reaction is $^{74}$Ge($^3$He,n)$^{76}$Se.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$-peak with a hollow arrow.  Note that the $\gamma$-peak is doubly-peaked, from beam hitting the target and then the beamstop.  (b) The neutron spectrum.  The ground-state neutron peak is indicated with a ``1'', the neutron continuum with a ``2''.  The other prominent peak, labeled ``3'', is due to oxygen contamination in the target.}
 \label{fig:time}
 \end{figure}
-Another measurement important for analysis is the integrated light output at the top and bottom of a bar.  A geometric average of these, $\sqrt{E_tE_b}$, where $E_t$ and $E_b$ are the integrated light signal of the top and bottom PMT, respectively, is considered a measure of the neutron energy.  This is discussed further in {\sect}~\ref{sec:cuts}.  In this chapter, ``energy'' refers to the geometric average of the integrated light signals in a bar.  These signals, taken seperately, are not necessarily a measure of the energy of the event and will be referred to as ``light signals'' when used without averaging. 
+Another measurement important for analysis is the integrated light output at the top and bottom of a bar.  A geometric average of these, $\sqrt{E_tE_b}$, where $E_t$ and $E_b$ are the integrated light signal of the top and bottom PMT, respectively, is considered a measure of the neutron energy.  This is discussed further in {\sect}~\ref{sec:cuts}.  In this chapter, ``energy'' refers to the geometric average of the integrated light signals in a bar.  These signals, taken separately, are not necessarily a measure of the energy of the event and will be referred to as ``light signals'' when used without averaging. 
 % geometric average used twice, rewrite 
 
 % a basic discussion of the data:
@@ -116,15 +116,15 @@ The three targets (\GeTargets and \Mg{26}) used in the experiments were provided
 \begin{tabular}{lllll}
  & \multicolumn{2}{c}{$\alpha$-gauge ($\mu$g/cm$^2$)} & \multicolumn{2}{c}{RBS ($\mu$g/cm$^2$)} \\
 \cline{2-3}\cline{4-5}
-$^{74}$Ge & Au$_{\text{nat}}$ & 1011 & Au$_{\text{nat}}$ & 1001 \\
+$^{74}$Ge (98.9\%) & Au$_{\text{nat}}$ & 1011 & Au$_{\text{nat}}$ & 1001 \\
           & $^{74}$Ge & 1057 & $^{74}$Ge & 1016 \\
           &           &      & O$_{\text{nat}}$ & 9 \\[0.35cm]
 
-$^{76}$Ge & Au$_{\text{nat}}$ & 1069 & Au$_{\text{nat}}$ & 1014 \\
+$^{76}$Ge (92.82\%) & Au$_{\text{nat}}$ & 1069 & Au$_{\text{nat}}$ & 1014 \\
           & $^{76}$Ge & 838 & $^{74}$Ge & 775 \\
           &           &      & O$_{\text{nat}}$ & 4 \\[0.35cm]
 
-$^{26}$Mg & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
+$^{26}$Mg ($>$99.55\%) & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
           &           &      & C$_{\text{nat}}$ & 10 \\
           &           &      & N$_{\text{nat}}$ & 43 \\
           &           &      & O$_{\text{nat}}$ & 52 \\
@@ -140,28 +140,24 @@ Two sets of \reaction data are available.  The first was taken in September of 2
 \begin{table}[htp]
 \centering
 \begin{tabular}{llll}
-            & & time.Live & Q.live \\
+            & & Live Time (s) & Live Charge ($\mu$C)\\
 \hline
-January     & PS 26Mg & 4645809 & 1043718 \\
-	    & PS 76Ge & 7814211 & 2919101 \\
-	    & PS 74Ge & 16379018 & 5312776 \\ \\
+January     & PS \Mg{26} & 46460 & 1044 \\
+	    & PS \Ge{76} & 78140 & 2919 \\
+	    & PS \Ge{74} & 163800 & 5313 \\ \\
 
-September   & PS 76Ge & 12616566 & 2872649 \\
-	    & PS 74Ge & 11666670 & 2619116 \\
-	    & NPS 76Ge & 27369635 & 15316275 \\
-	    & NPS 74Ge & 11323947 & 10008757 \\
+September   & PS \Ge{76} & 126200 & 2873 \\
+	    & PS \Ge{74} & 116700 & 2619 \\
+	    & NPS \Ge{76} & 273700 & 15320 \\
+	    & NPS \Ge{74} & 113200 & 10010 \\
 \end{tabular}
-\caption{Data sets used in the analysis were obtained in two separate runs.  Data from the September run are both pulse-selected (PS) and non-pulse-selected (NPS).}
-% too many digits - only need three or four
-% need real units
-% make labeling consistent
-% 26Mg -> \Mg{26}
+\caption{Data sets used in the analysis were obtained in two separate runs.  Data from the September run are both pulse-selected (PS) and non-pulse-selected (NPS).  The live time and live charge are the time and charge scalers, respectively, vetoed by the DAQ busy signal.  Details of the electronics are discussed in detail in {\chap}~\ref{chap:2pExpt}.}
 \label{tab:dataSets}
 \end{table}
 
 \section{Cuts}
 \label{sec:cuts}
-Four sets of cuts were applied to the data to generate a final data set.  The first cut verifies that the recorded event represents a real event rather than noise.  The next cut discards envents with too-low light signals, reducing the background due to $\gamma$ radiation.  Two final cuts reduce the muon background; one cut uses the veto, and the other eliminates events with light signals too large to be due to neutrons.
+Four sets of cuts were applied to the data to generate a final data set.  The first cut verifies that the recorded event represents a real event rather than noise.  The next cut discards events with too-low light signals, reducing the background due to $\gamma$ radiation.  Two final cuts reduce the muon background; one cut uses the veto, and the other eliminates events with light signals too large to be due to neutrons.
 
 A true event should have energy above the noise level recorded in both top and bottom PMT's.  Additionally, the time signals from the top and bottom PMT's should be correlated.  A typical energy spectrum with no cuts applied and a typical scatter plot of timing from the top and bottom PMT are shown in {\fig}~\ref{fig:realEvent}.  Requiring correlated top and bottom timing signals is a cut that is applied to all bars in all final data sets.  The other requirement for a valid event is that the light signal be above the noise threshold.  An example of a light spectrum for a single bar and the noise threshold is shown in {\fig}~\ref{fig:realEvent}.
 \begin{figure}[!htbp]
@@ -197,7 +193,7 @@ A first approximation to determining whether or not an event is the result of a 
 \end{figure}
 
 % discussion of the low energy cut begins here
-The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Placing a low-energy cut on the data is difficult becuase finding an estimator for the energy is not straight-forward.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the geometric mean of the top and bottom PMT signals:
+The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Placing a low-energy cut on the data is difficult because finding an estimator for the energy is not straight-forward.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the geometric mean of the top and bottom PMT signals:
 \begin{equation}
 \sqrt{Ae^{-\alpha x}\times Ae^{-\alpha (L-x)}} = \sqrt{A^2e^{-\alpha L}} = Ae^{-\alpha L/2},
 \end{equation}
@@ -209,7 +205,7 @@ where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is i
 \label{fig:product_positionDependence}
 \end{figure}
 
-Defining a position-dependent light signal cut on each PMT separately would be an ideal solution to these problems if the position dependence for a given energy were known.  While such a characterization of the PMT's for an arbitrary energy is not known, the muon events recorded by the detector do give the light signal as a function of position for one energy.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{1.3}{\theta}$ [CITE] (where $\theta$ is the normal from the surface vertical) confirm a well-defined peak in the muon path length. This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall {need to state this is becuase they are MIP}.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}. 
+Defining a position-dependent light signal cut on each PMT separately would be an ideal solution to these problems if the position dependence for a given energy were known.  While such a characterization of the PMT's for an arbitrary energy is not known, the muon events recorded by the detector do give the light signal as a function of position for one energy.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{1.3}{\theta}$ [CITE] (where $\theta$ is the normal from the surface vertical) confirm a well-defined peak in the muon path length. This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons, both of which are the same for every bar in the neutron wall {need to state this is because they are MIP}.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}. 
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -237,11 +233,11 @@ The peak of the light spectrum is assumed to represent the same energy and there
 \caption{}
 \label{fig:fits_pkVSpos}
 \end{figure}
-Using the energy peak as a function of position itself as a lower energy cut results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut} {this is awkward, reword}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  While high cuts discard more background, they also discard more neutrons, which are also likely to deposit a small amount of energy.  The minimum fractional error is acheived with a scaling factor that results in a reduction of the background by a factor of $\sim$1.4 (with all other cuts applied).  This is the case for every bar in the neutron detector; the fractional error as a function of the energy cut for the forwardmost bar is shwon in {\fig}~\ref{fig:signalToNoise}.  
+Using the energy peak as a function of position itself as a lower energy cut results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut} {this is awkward, reword}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  While high cuts discard more background, they also discard more neutrons, which are also likely to deposit a small amount of energy.  The minimum fractional error is achieved with a scaling factor that results in a reduction of the background by a factor of $\sim$1.4 (with all other cuts applied).  This is the case for every bar in the neutron detector; the fractional error as a function of the energy cut for the forwardmost bar is shown in {\fig}~\ref{fig:signalToNoise}.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/signalToNoiseCurveA.eps}
-\caption{The ratio of the signal to its statistical error as a function of the energy cut.  The energy cut is parameterized as the background reduction to allow uniform scaling between bars.}
+\caption{The ratio of the signal to its statistical error as a function of the energy cut.  The energy cut is parametrized as the background reduction to allow uniform scaling between bars.}
 \label{fig:signalToNoise}
 \end{figure}
 Scaling ratios are determined by comparing the background to that of the initial cut as in {\fig}~\ref{fig:scalingFactor} to obtain uniform scaling from bar to bar.  
@@ -467,7 +463,7 @@ Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - &
 \label{fig:PS_angularDistribution}
 \end{figure}
  
-The cluster model is sensitive to the parameters used to describe the potentials of the interacting nuclei.  The sensitivity of the extracted zero-degree cross section on the bound-state radius parameter, the neutron optical-model potential, and the principal quantum number were all investigated.  While changing the bound-state radius strongly affects the normalization, it does not appreciably affect the shape of the angular distribution between 0$^{\circ}$ and 20$^{\circ}$ and therefore does not impact the ratio of ground-state to first-excited-state cross section at zero degrees.  Using the Becchetti-Greenlees neutron potential rather than the Koning-Delaroche petential does not strongly affect the angular distribution, nor does changing the principal quantum number.  The effect of varying these parameters is shown in {\fig}~\ref{fig:varyParam}.
+The cluster model is sensitive to the parameters used to describe the potentials of the interacting nuclei.  The sensitivity of the extracted zero-degree cross section on the bound-state radius parameter, the neutron optical-model potential, and the principal quantum number were all investigated.  While changing the bound-state radius strongly affects the normalization, it does not appreciably affect the shape of the angular distribution between 0$^{\circ}$ and 20$^{\circ}$ and therefore does not impact the ratio of ground-state to first-excited-state cross section at zero degrees.  Using the Becchetti-Greenlees neutron potential rather than the Koning-Delaroche potential does not strongly affect the angular distribution, nor does changing the principal quantum number.  The effect of varying these parameters is shown in {\fig}~\ref{fig:varyParam}.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/AngDist.eps}
