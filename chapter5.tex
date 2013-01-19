@@ -31,7 +31,7 @@ We care about two things:
 1. The absolute cross-section of the ground state transition
 2. Setting a limit on excited 0+ state cross-sections
 \end{comment}
-The aim of the analysis of the \reaction data sets is to extract the absolute cross-section of the reactions populating the ground states of \SeProducts and also to set a limit on excited \zp-state cross sections.  Each of these analyses is discussed in its own section, but because the absolute cross-section is of interest, the detector efficiency and several other properties of the experiment must be accurately determined.  The measured quantities used most frequently in this analysis are the timing relative to the beam bunch and the light signal.  ``Time'' in this chapter always refers to the arithmetic average of a bar's top and bottom time values.  A timing spectrum is shown in {\fig}~\ref{fig:time}.
+The aim of the analysis of the \reaction data sets is to extract the absolute cross section of the reactions populating the ground states of \SeProducts and also to set a limit on excited \zp-state cross sections.  Each of these analyses is discussed in its own section, but because the absolute cross section is of interest, the detector efficiency and several other properties of the experiment must be accurately determined.  The measured quantities used most frequently in this analysis are the timing relative to the beam bunch and the light signal.  ``Time'' in this chapter always refers to the arithmetic average of a bar's top and bottom time values.  A timing spectrum is shown in {\fig}~\ref{fig:time}.
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -40,7 +40,7 @@ The aim of the analysis of the \reaction data sets is to extract the absolute cr
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_PS_barA_zoom.eps}
 }
-\caption{(a) A (time of flight) (TOF) spectrum from the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam.  The reaction is $^{74}$Ge($^3$He,n)$^{76}$Se.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$-peak with a hollow arrow.  Note that the $\gamma$-peak is doubly-peaked, from beam hitting the target and then the beamstop.  (b) The neutron spectrum.  The ground-state neutron peak is indicated with a ``1'', the neutron continuum with a ``2''.  The other prominent peak, labeled ``3'', is due to oxygen contamination in the target.}
+\caption{(a) A (time of flight) (TOF) spectrum from the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam.  The reaction is $^{74}$Ge($^3$He,n)$^{76}$Se.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow.  Note that the $\gamma$ peak is doubly peaked, from beam hitting the target and then the beamstop.  (b) The neutron spectrum.  The ground-state neutron peak is indicated with a ``1'', the neutron continuum with a ``2''.  The other prominent peak, labeled ``3'', is due to oxygen contamination in the target.}
 \label{fig:time}
 \end{figure}
 Another measurement important for analysis is the integrated light output at the top and bottom of a bar.  A geometric average of these, $\sqrt{E_tE_b}$, where $E_t$ and $E_b$ are the integrated light signal of the top and bottom PMT, respectively, is considered a measure of the neutron energy.  This is discussed further in {\sect}~\ref{sec:cuts}.  In this chapter, ``energy'' refers to the geometric average of the integrated light signals in a bar.  These signals, taken separately, are not necessarily a measure of the energy of the event and will be referred to as ``light signals'' when used without averaging. 
@@ -55,13 +55,13 @@ Another measurement important for analysis is the integrated light output at the
 deuterium, Mg, cuts
 \end{comment}
 \label{sec:efficiency}
-The number of counts due to neutrons measured by the neutron detector scales linearly with the absolute cross-section of \reaction, corrected for the fact that not all the neutrons leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of the detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross-sections.
+The number of counts due to neutrons measured by the neutron detector scales linearly with the absolute cross section of \reaction, corrected for the fact that not all the neutrons leave a signal in the detector.  The ratio of the detected neutron flux to the total neutron flux is called the efficiency of the detector and must be carefully determined as its error contributes directly to the systematic uncertainty of the extracted absolute cross sections.
 
-The efficiency of a plastic-scintillator-type neutron detector depends not only on the energy of the neutron, but also on the detector's size, shape, energy resolution, and detection threshold.  A Monte-Carlo code developed by Cecil \cite{Cecil_neutEfficiency} accurately calculates the efficiency of plastic scintillator detectors for a wide range of neutron energies and detector thresholds and was used to calculate efficiencies of the neutron detector for neutrons with energies of 10-28~MeV.  The efficiencies predicted by the Cecil code were verified against d(d,n) and \MgReaction measurements, both of which have well-known cross-sections.  Comparing the calculated efficiency to measured efficiency over a range inclusive of the neutron energies produced in \reaction gives confidence and also an estimate of the uncertainty in the efficiency.  The inputs required by the code are the density of the detector, its hydrogen to carbon ratio, the energy threshold applied to the data, and the interval over which the detector averages the light output, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}~\ref{tab:WLS_Kuraray}, and the threshold and resolution of the detector must be determined from the energy spectrum of the selected events from the experiment.  The cuts applied to the data are discussed in {\sect}~\ref{sec:cuts}.  An energy spectrum of the ground-state neutrons of any of the reactions studied can be produced by gating on the ground-state peak in the TOF spectrum.  The energy spectrum for the ground-state neutrons from \MgReaction is shown in {\fig}~\ref{fig:lowEnergyCut}. 
+The efficiency of a plastic-scintillator-type neutron detector depends not only on the energy of the neutron, but also on the detector's size, shape, energy resolution, and detection threshold.  A Monte-Carlo code developed by Cecil \cite{Cecil_neutEfficiency} accurately calculates the efficiency of plastic scintillator detectors for a wide range of neutron energies and detector thresholds and was used to calculate efficiencies of the neutron detector for neutrons with energies of 10-28~MeV.  The efficiencies predicted by the Cecil code were verified against d(d,n) and \MgReaction measurements, both of which have well-known cross sections.  Comparing the calculated efficiency to measured efficiency over a range inclusive of the neutron energies produced in \reaction gives confidence and also an estimate of the uncertainty in the efficiency.  The inputs required by the code are the density of the detector, its hydrogen to carbon ratio, the energy threshold applied to the data, and the interval over which the detector averages the light output, i.e., the resolution of the detector.  The plastic properties have been reported in {\tab}~\ref{tab:WLS_Kuraray}, and the threshold and resolution of the detector must be determined from the energy spectrum of the selected events from the experiment.  The cuts applied to the data are discussed in {\sect}~\ref{sec:cuts}.  An energy spectrum of the ground-state neutrons of any of the reactions studied can be produced by gating on the ground-state peak in the TOF spectrum.  The energy spectrum for the ground-state neutrons from \MgReaction is shown in {\fig}~\ref{fig:lowEnergyCut}. 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/Lite_28MeV.eps}
-\caption{The light curve of the 28~MeV neutron from \MgReaction is obtained by restricting the events to those in the ground-state peak window.  The data points shown in red are from the January dataset.}
+\caption{The light curve of the 28-MeV neutron from \MgReaction is obtained by restricting the events to those in the ground-state peak window.  The data points shown in red are from the January dataset.}
 \label{fig:lowEnergyCut}
 \end{figure}
 The width of the high-energy falloff gives the resolution of the detector, and the threshold can be determined by assuming the scale has a zero offset.  That this is a reasonable assumption is confirmed by the accuracy of the calculation.  
@@ -74,7 +74,7 @@ The efficiencies calculated using the above method must be checked for absolute 
 \label{fig:DeuteriumMatch}
 \end{figure}
 
-That the Cecil code appears to be successful in calculating the efficiency of the neutron detector for 12-MeV neutrons is encouraging, but neutrons from the ground states of \reaction will be $\sim$26~MeV.  A reaction with measurements of cross-sections for neutron energies in this range is \MgReaction.  While this reaction has not been measured at the beam energy of 16~MeV, which would produce a $\sim$28-MeV ground-state neutron, it has been measured at lower and higher energies as shown in {\fig}~\ref{fig:efficiencyCalib}.  The efficiency measured for the neutrons from this reaction provides a measurement very near the $\sim$26~MeV neutrons produced in \reaction and can be used to verify the absolute efficiency predicted by the Cecil code at neutron energies relevant to \reaction.  {\fig}~\ref{fig:efficiencyCalib} shows the consistency of the measured cross-section using that predicted efficiency.
+That the Cecil code appears to be successful in calculating the efficiency of the neutron detector for 12-MeV neutrons is encouraging, but neutrons from the ground states of \reaction will be $\sim$26~MeV.  A reaction with measurements of cross sections for neutron energies in this range is \MgReaction.  While this reaction has not been measured at the beam energy of 16~MeV, which would produce a $\sim$28-MeV ground-state neutron, it has been measured at lower and higher energies as shown in {\fig}~\ref{fig:efficiencyCalib}.  The efficiency measured for the neutrons from this reaction provides a measurement very near the $\sim$26-MeV neutrons produced in \reaction and can be used to verify the absolute efficiency predicted by the Cecil code at neutron energies relevant to \reaction.  {\fig}~\ref{fig:efficiencyCalib} shows the consistency of the measured cross section using that predicted efficiency.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/magnesiumMatch.eps}
@@ -133,7 +133,7 @@ $^{26}$Mg ($>$99.55\%) & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
 \label{tab:targets}
 \end{table}
 
-To determine the absolute cross-section, it is also necessary to know the total number of \He{3} ions incident on the target for each dataset.  One monitor of the beam current is the charge collected by the Faraday cup.  A BaF$_2$ crystal outside the target chamber and a silicon detector inside the target chamber detect $\gamma$ radiation from beam incident on the target and scattered \He{3} beam, respectively.  Both these detectors monitor the product of the target thickness and the beam current.  Data from the silicon detector showed that the ratio of \GeTargets to gold does not change throughout the run and that the live charge collected by the Faraday cup scales with the back-scattered peak in the silicon spectrum.  The live charge can therefore be used to scale beam current between runs, making it possible to express \reaction cross sections in terms of the known \MgReaction cross section.
+To determine the absolute cross section, it is also necessary to know the total number of \He{3} ions incident on the target for each dataset.  One monitor of the beam current is the charge collected by the Faraday cup.  A BaF$_2$ crystal outside the target chamber and a silicon detector inside the target chamber detect $\gamma$ radiation from beam incident on the target and scattered \He{3} beam, respectively.  Both these detectors monitor the product of the target thickness and the beam current.  Data from the silicon detector showed that the ratio of \GeTargets to gold does not change throughout the run and that the live charge collected by the Faraday cup scales with the back-scattered peak in the silicon spectrum.  The live charge can therefore be used to scale beam current between runs, making it possible to express \reaction cross sections in terms of the known \MgReaction cross section.
 
 \section{Data Sets}
 Two sets of \reaction data are available.  The first was taken in September of 2011.  A subset of this data was taken with no pulse selection due to hardware failure.  A second run in December of 2011 provided additional data, all taken with pulse selection.  During the December run, data were taken with the \GeTargets as well as \Mg{26} targets to provide an accurate normalization.  The data sets are summarized in {\tab}~\ref{tab:dataSets}.
@@ -163,9 +163,7 @@ A true event should have energy above the noise level recorded in both top and b
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/realTiming.eps}
-\caption{Events with timing that is considered correlated are shown in color.  Black dots indicate events whose timing is not considered correlated.}
-% unclear where the cut is
-% change labels so it's clear the signals are timing signals
+\caption{For a real event, the timing signal from a bar's top and bottom PMT will be similar.  Times differing by more than 100 ns are rejected.  Events with correlated timing are shown in color and are inside the thick grey lines.  The larger, black dots indicate events whose timing is not considered correlated.}
 \label{fig:realEvent}
 \end{figure}
 
@@ -180,11 +178,11 @@ A first approximation to determining whether or not an event is the result of a 
    \label{fig:muonVetoSpectrum}
 }
 \hspace{8pt}
-\subfloat[][Neutron detector bar energy spectrum.  These events have no correlation to other signals in the neutron detector and are unlikely to be due to muons.  While some high-energy depositions are visible, the spectrum is clearly dominated by the low-energy peak due to $\gamma$-radiation.]{
+\subfloat[][Neutron detector bar energy spectrum.  These events have no correlation to other signals in the neutron detector and are unlikely to be due to muons.  While some high-energy depositions are visible, the spectrum is clearly dominated by the low-energy peak due to $\gamma$ radiation.]{
    \includegraphics[width=0.45\textwidth]{figures/singleBar_noVeto.eps}
    \label{fig:notMuonVetoSpectrum}
 } \\
-\subfloat[][Sample groups of detectors chosen to veto bars in the neutron detector.  If the events in a neutron detector bar vetoed by a detector have an energy spectrum dominated by the low-energy $\gamma$-radiation, that detector is not used as part of the veto for that particular bar.]{
+\subfloat[][Sample groups of detectors chosen to veto bars in the neutron detector.  If the events in a neutron detector bar vetoed by a detector have an energy spectrum dominated by the low-energy $\gamma$ radiation, that detector is not used as part of the veto for that particular bar.]{
    \includegraphics[width=1.0\textwidth]{figures/vetoGroups.eps}
    \label{fig:vetoGroups}
 }
@@ -193,11 +191,11 @@ A first approximation to determining whether or not an event is the result of a 
 \end{figure}
 
 % discussion of the low energy cut begins here
-The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Placing a low-energy cut on the data is difficult because finding an estimator for the energy is not straight-forward.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the geometric mean of the top and bottom PMT signals:
+The final cut on the data sets is a lower energy cut to reduce the random background due to $\gamma$ radiation.  Placing a low-energy cut on the data is difficult because finding an estimator for the energy is not straightforward.  It is appealing to argue that light loss due to attenuation must be exponential, and that an accurate estimator of the total deposited energy is the geometric mean of the top and bottom PMT signals:
 \begin{equation}
 \sqrt{Ae^{-\alpha x}\times Ae^{-\alpha (L-x)}} = \sqrt{A^2e^{-\alpha L}} = Ae^{-\alpha L/2},
 \end{equation}
-where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is its length.  If this model of the signal attenuation is correct, the geometric mean should be position-independent.  This is not the case, as can be seen in {\fig}~\ref{fig:product_positionDependence}.  Furthermore, the position dependence is not often uniform even between the top and bottom PMT on a single bar, making it difficult to construct an average value.  Nonetheless, it is necessary to define a low-signal cut that is uniform for all the bars of the detector to avoid introducing significant systematic error into the final cross-section.
+where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is its length.  If this model of the signal attenuation is correct, the geometric mean should be position-independent.  This is not the case, as can be seen in {\fig}~\ref{fig:product_positionDependence}.  Furthermore, the position dependence is not often uniform even between the top and bottom PMT on a single bar, making it difficult to construct an average value.  Nonetheless, it is necessary to define a low-signal cut that is uniform for all the bars of the detector to avoid introducing significant systematic error into the final cross section.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/positionVSenergy.eps}
@@ -233,20 +231,12 @@ The peak of the light spectrum is assumed to represent the same energy and there
 \caption{}
 \label{fig:fits_pkVSpos}
 \end{figure}
-Using the energy peak as a function of position itself as a lower energy cut results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut} {this is awkward, reword}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  While high cuts discard more background, they also discard more neutrons, which are also likely to deposit a small amount of energy.  The minimum fractional error is achieved with a scaling factor that results in a reduction of the background by a factor of $\sim$1.4 (with all other cuts applied).  This is the case for every bar in the neutron detector; the fractional error as a function of the energy cut for the forwardmost bar is shown in {\fig}~\ref{fig:signalToNoise}.  
+Using the energy peak as a function of position itself as a lower energy cut results in an energy cut that is too high as can be seen in {\fig}~\ref{fig:highEnergyCut} {this is awkward, reword}.  Instead, these cuts are scaled to maximize the signal to noise ratio.  While high cuts discard more background, they also discard more neutrons, which are also likely to deposit a small amount of energy.  The minimum fractional error is achieved with a scaling factor that results in a reduction of the background by a factor of $\sim$1.4 (with all other cuts applied).  This is the case for every bar in the neutron detector; the fractional error as a function of the energy cut for the forwardmost bar is shown in {\fig}~\ref{fig:signalToNoise}.  Scaling ratios are determined by comparing the background to that of the initial cut as in {\fig}~\ref{fig:scalingFactor} to obtain uniform scaling from bar to bar.  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/signalToNoiseCurveA.eps}
-\caption{The ratio of the signal to its statistical error as a function of the energy cut.  The energy cut is parametrized as the background reduction to allow uniform scaling between bars.}
-\label{fig:signalToNoise}
-\end{figure}
-Scaling ratios are determined by comparing the background to that of the initial cut as in {\fig}~\ref{fig:scalingFactor} to obtain uniform scaling from bar to bar.  
-\begin{figure}[!htbp]
-\centering
-\subfloat[][Applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos} is measured relative to the background obtained with the unscaled cut.  The effect of the highlighted scaling factors is shown in {\fig}~\subref{fig:highEnergyCut}.]{
-   \includegraphics[width=0.45\textwidth]{figures/scalingFactor.eps}
-   \label{fig:scalingFactor}
-% get rid of this figure and replace with optimization figure
+\subfloat[][The ratio of the signal to its statistical error as a function of the energy cut.  The energy cut is parametrized as the background reduction to allow uniform scaling between bars.]{
+   \includegraphics[width=0.45\textwidth]{figures/signalToNoiseCurveA.eps}
+   \label{fig:signalToNoise}
 }
 \hspace{8pt}
 \subfloat[][Without applying a scaling factor to the cut determined as in {\fig}~\ref{fig:fits_pkVSpos}, the neutron signals are nearly lost.  Scaling the cut by $\sim$0.5 results in a reasonable signal to noise ratio.]{
@@ -337,7 +327,7 @@ For the same bar, the pulse-selected spectrum should have the same shape as the 
 \begin{equation}
 f_{PS} = g(x;\alpha,\beta) + Gaus_1 + Gaus_2 + Gaus_3 + DoubleGaus + Const_{PS}
 \end{equation}
-where $g(x;\alpha,\beta)$ is the Gamma Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian Distributions describing prominent peaks in the continuum {g.s. not in continuum}; and $DoubleGaus$ models the $\gamma$-peak.  These terms are needed to ensure a good overall fit and their parameters are described in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
+where $g(x;\alpha,\beta)$ is the Gamma Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian Distributions describing prominent peaks in the continuum {g.s. not in continuum}; and $DoubleGaus$ models the $\gamma$ peak.  These terms are needed to ensure a good overall fit and their parameters are described in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
 % equation for non-pulse-selected spectrum
 \begin{equation}
 R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
@@ -390,7 +380,7 @@ there will be different limits for different energies!  because of the evaporati
 A primary aim of this experiment is to investigate the distribution of \zp strength, making it important to either measure or place a limit on the cross sections of excited \zp states.  Because the non-pulse-selected data has significant, complicated background, only the pulse-selected data sets were used for this analysis.  Because the \zp cross section is largest at forward angles, spectra from the three forwardmost detectors was summed to make the TOF spectrum used in this analysis.  These three detectors span lab angles 6.1$^{\circ}$ to 7.7$^{\circ}$.  The fourth detector, at 8.4$^{\circ}$, was not included because the \zp cross sections noticeably decline at this angle.  Including this detector or any detectors beyond it would have introduced background without contributing significant signal, worsening the sensitivity.    
 
 % expand on states that were observed?
-No obvious \zp states were observed above the neutron continuum for \Ge{74} or \Ge{76} targets.  A limit on the cross-section of \zp states as a function of energy can be determined by solving for the number of counts $S$ necessary to be consistent with zero within $i$ standard deviations $\sigma_S$:
+No obvious \zp states were observed above the neutron continuum for \Ge{74} or \Ge{76} targets.  A limit on the cross section of \zp states as a function of energy can be determined by solving for the number of counts $S$ necessary to be consistent with zero within $i$ standard deviations $\sigma_S$:
 \begin{equation}
 S = P - B = i\sigma_S,
 \end{equation}
@@ -404,7 +394,7 @@ S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
 \end{equation}
 Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include 95\% of the peak assuming its resolution is the same as that of the ground-state peak.
 
-The $2\sigma$ limit on the cross-section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.
+The $2\sigma$ limit on the cross section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -433,9 +423,9 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-The ground-state cross section of $^{74}$Ge($^3$He,n)$^{76}$Se is nearly twice {not twice} that of $^{76}$Ge($^3$He,n)$^{78}$Se.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  The measurement is not the zero-degree ground-state cross section, but rather the angular distribution of the ground and first excited state together. DWBA must be used to calculate the zero-degree ground-state cross section {say what you did: used ang dists to extrapolate}. Fresco [cite] was used to perform the DWBA calculations, which requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical models used for the \He{3} and neutron are Becchetti-Greenlees [CITE] and Koning-Delaroche [CITE], respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
-\begin{table*}\footnotesize
-\caption{\label{tab:typicalPotentials} Optical and bound-state potentials used in the DWBA analysis, see the text for details of the calculations. Both optical potentials vary slowly with $N$, $Z$ and $E$; the values given here are typical. $^{\dagger}$ Adjusted to reproduce the experimentally measured binding energy.}
+The ground-state cross section of $^{74}$Ge($^3$He,n)$^{76}$Se is larger than that of $^{76}$Ge($^3$He,n)$^{78}$Se.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  The zero-degree ground-state cross section can be determined by fitting the experimentally-determined angular distribution of the ground and first excited state together with DWBA and extrapolating the result to zero degrees.  The code Fresco [cite] was used to perform the DWBA calculations, which requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical-model potentials used for the \He{3} and neutron are Becchetti-Greenlees [CITE] and Koning-Delaroche [CITE], respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
+\begin{sidewaystable}\footnotesize
+\caption{\label{tab:typicalPotentials} Optical and bound-state potentials used in the DWBA analysis, see the text for details of the calculations. Both optical-model potentials vary slowly with $N$, $Z$ and $E$; the values given here are typical. $^{\dagger}$ Adjusted to reproduce the experimentally measured binding energy.}
 %\begin{ruledtabular}
 \begin{tabular}{ccccccccccccccccc}
 \hline
@@ -446,11 +436,11 @@ n & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 
 $^3$He bound state & 76.6 & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 \hline
+% combine with other table of potential parameters
 \end{tabular}
 %\end{ruledtabular}
-\end{table*}
+\end{sidewaystable}
 % and now the figure
-% put table sideways and combine with other table
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -470,7 +460,7 @@ The cluster model is sensitive to the parameters used to describe the potentials
 \caption{Sensitivity of angular distributions on bound-state radius, neutron potential, and principal quantum number.  All calculations are normalized to 350~$\mu$b/sr at zero degrees.}
 \label{fig:varyParam}
 \end{figure}
- The dependence of the cross-section for various \He{3} optical potential models was also explored and found to result in little difference in the trend in the zero-degree cross sections of \Ge{74} and \Ge{76}.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross-section.
+ The dependence of the cross section for various \He{3} optical-model potentials was also explored and found to result in little difference in the trend in the zero-degree cross sections of \Ge{74} and \Ge{76}.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross section.
 \begin{table}[htp]
 \centering
 \begin{tabular}{lll}
@@ -497,14 +487,14 @@ Norm. Factor & 0.904 & 0.910 \\
 \label{fig:parameterSensitivity}
 \end{figure}
 
-As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross-section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross-sections have been normalized to $^{58}$Ni.  
+As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross sections have been normalized to $^{58}$Ni.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/nickel_trend.eps}
-\caption{The cluster model describes the trend for Ni and Ge isotopes.  The cross-sections are normalized to the best fit.}
+\caption{The cluster model describes the trend for Ni and Ge isotopes.  The cross sections are normalized to the best fit.}
 \label{fig:nickelTrend}
 \end{figure}
-The cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster model calculations of the $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se reactions show that the smaller cross section of the $^{76}$Ge($^3$He,n)$^{78}$Se reaction is likely due to the Q-value dependence reproduced by DWBA and probably not due to ground-state loss of \zp strength.   The cross-sections measured for \reaction are consistent with DWBA predictions and the data suggest no significant excited \zp states.
+The cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster model calculations of the $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se reactions show that the smaller cross section of the $^{76}$Ge($^3$He,n)$^{78}$Se reaction is likely due to the Q-value dependence reproduced by DWBA and probably not due to ground-state loss of \zp strength.   The cross sections measured for \reaction are consistent with DWBA predictions and the data suggest no significant excited \zp states.
 
 % % uncomment the following lines,
 % if using chapter-wise bibliography
