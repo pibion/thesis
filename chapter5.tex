@@ -98,7 +98,7 @@ The differential cross section is the number of times a reaction occurred ($N_{r
 \end{align}
 The efficiency $\epsilon$ of the detector includes the solid angle $d\Omega$.  Other quantities in the cross section that relate to the experimental setup are the number of particles incident on the target and the number density of nuclei in the target.
 
-The three targets (\GeTargets and \Mg{26}) used in the experiments were provided by John Greene of Argonne National Laboratory (ANL).  The \GeTargets targets were evaporated onto a gold backing, while the \Mg{26} target is self-supporting.  The isotopic abundance and thickness of each target is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured with an alpha-thickness gauge when they were made, and again at Hope College using Rutherford back-scattering (RBS).  RBS measurements are useful because they give information about the target composition, which must be assumed when calculating target thickness from alpha-thickness-gauge measurements.  The reported thicknesses were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, an RBS analysis software.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.  To estimate variations in target thickness, measurements were taken at several different positions on each target.  The predominant features of the RBS spectrum are the plateaus due to the germanium layer and the gold foil.  See {\fig}~\ref{fig:RBS} and {\fig}~\ref{fig:rawDataRBS}.  Small pinholes in the target are evident; they introduce a low-energy aluminum spectrum that is highlighted in red in {\fig}~\ref{fig:RBS}.  There are also small areas of the target 
+The three targets (\GeTargets and \Mg{26}) used in the experiments were provided by John Greene of Argonne National Laboratory (ANL).  The \GeTargets targets were evaporated onto a gold backing, while the \Mg{26} target is self-supporting.  The isotopic abundance and thickness of each target is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured with an alpha-thickness gauge when they were made, and again at Hope College using Rutherford back-scattering (RBS).  RBS measurements are useful because they give information about the target composition, which must be assumed when calculating target thickness from alpha-thickness-gauge measurements.  The reported thicknesses were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, an RBS analysis software.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.  To estimate variations in target thickness, measurements were taken at several different positions on each target.  The predominant features of the RBS spectrum are the plateaus due to the germanium layer and the gold foil.  These plateaus overlap, but the features due to beam scattering off the front and back surface of each layer are clearly visible.  {\fig}~\ref{fig:RBS} and {\fig}~\ref{fig:rawDataRBS} identify these features.  This RBS spectrum also shows evidence of small pinholes in the target; they introduce a low-energy aluminum spectrum that is highlighted in red in {\fig}~\ref{fig:RBS}.  There are also small areas of the target that are bare gold foil, evidenced by the very small plateau at high energies that is highlighted in green.  These features do not alter the estimate of the target thickness, which depends only on the edges of the plateau.  A fit to the data adjusted for the pinholes is shown in {\fig}~\ref{fig:RBS_sample}. 
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -112,10 +112,10 @@ The three targets (\GeTargets and \Mg{26}) used in the experiments were provided
 \\
 \subfloat[][]{
    \includegraphics[width=0.8\textwidth]{figures/76ge-4-adjusted.eps}
+   \label{fig:RBS_sample}
 }
-\caption{RBS data for the \Ge{76} target near the beamspot.  The plateau at low energies is due to pinholes in the target.  The plateau at high energies is due to small sections of the target with no \Ge{76} deposited on the gold surface.  The fit including the pinholes in the target is shown in (a).  The RBS spectrum, adjusted by subtracting the background due to pinholes, and its fit are shown in (b).  Fitting the RBS spectrum with and without adjusting for pinholes did not result in any significant differences to the predicted target composition or thickness.}
+\caption{\subref{fig:RBS} Beam scattering off the front and back layer determines the high and low energy plateau edges.  \subref{fig:rawDataRBS} RBS data for the \Ge{76} target near the beamspot.  The features used to determine the thicknesses of the gold and germanium layers are marked.  \subref{fig:RBS_sample} The RBS spectrum, adjusted by subtracting the background due to pinholes, and its fit.  Fitting the RBS spectrum with and without adjusting for pinholes did not result in any significant differences to the predicted target composition or thickness.}
 % move this to text, highlight features in plot
-\label{fig:RBS_sample}
 \end{figure}
 \begin{table}[htp]
 \centering
@@ -169,7 +169,7 @@ A true event should have energy above the noise level recorded in both top and b
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/realTiming.eps}
-\caption{For a real event, the timing signal from a bar's top and bottom PMT will be similar.  Times differing by more than 100 ns are rejected.  Events with correlated timing are shown in color and are inside the thick grey lines.  The larger, black dots indicate events whose timing is not considered correlated.}
+\caption{For a real event, the timing signal from a bar's top and bottom PMT will be similar.  Times differing by more than 100 ns are rejected.  Events with correlated timing are shown in color and are inside the thick gray lines.  The larger, black dots indicate events whose timing is not considered correlated.}
 \label{fig:realEvent}
 \end{figure}
 
@@ -301,7 +301,7 @@ The primary challenge is finding an accurate way to estimate the background that
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_NPS_barA.eps}
 }
-\caption{(a) The TOF spectrum of the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam.  The data is from the September run.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow. (b) The timing spectrum ofthe  non-pulse-selected beam, also from the September run.}
+\caption{(a) The TOF spectrum of the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam.  The data is from the September run.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow. (b) The timing spectrum of the  non-pulse-selected beam, also from the September run.}
 \label{fig:PSvsNPS}
 \end{figure}
 
