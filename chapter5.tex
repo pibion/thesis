@@ -98,14 +98,20 @@ The differential cross section is the number of times a reaction occurred ($N_{r
 \end{align}
 The efficiency $\epsilon$ of the detector includes the solid angle $d\Omega$.  Other quantities in the cross section that relate to the experimental setup are the number of particles incident on the target and the number density of nuclei in the target.
 
-The three targets (\GeTargets and \Mg{26}) used in the experiments were provided by John Greene of Argonne National Laboratory (ANL).  The \GeTargets targets were evaporated onto a gold backing, while the \Mg{26} target is self-supporting.  The isotopic abundance and thickness of each target is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured with an alpha-thickness gauge when they were made, and again at Hope College using Rutherford back-scattering (RBS).  RBS measurements are useful because they give information about the target composition, which must be assumed when calculating target thickness from alpha-thickness-gauge measurements.  The reported thicknesses were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, an RBS analysis software.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.  To estimate variations in target thickness, measurements were taken at several different positions on each target.
+The three targets (\GeTargets and \Mg{26}) used in the experiments were provided by John Greene of Argonne National Laboratory (ANL).  The \GeTargets targets were evaporated onto a gold backing, while the \Mg{26} target is self-supporting.  The isotopic abundance and thickness of each target is shown in {\tab}~\ref{tab:targets}.  The target thicknesses were measured with an alpha-thickness gauge when they were made, and again at Hope College using Rutherford back-scattering (RBS).  RBS measurements are useful because they give information about the target composition, which must be assumed when calculating target thickness from alpha-thickness-gauge measurements.  The reported thicknesses were obtained by analyzing the RBS data with SIMNRA \cite{SIMNRA}, an RBS analysis software.  A sample of the fit for each target is shown in {\fig}~\ref{fig:RBS_sample}.  To estimate variations in target thickness, measurements were taken at several different positions on each target.  The predominant features of the RBS spectrum are the plateaus due to the germanium layer and the gold foil.  See {\fig}~\ref{fig:RBS} and {\fig}~\ref{fig:rawDataRBS}.  Small pinholes in the target are evident; they introduce a low-energy aluminum spectrum that is highlighted in red in {\fig}~\ref{fig:RBS}.  There are also small areas of the target 
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/76ge-4-holes.eps}
+   \includegraphics[width=0.5\textwidth]{figures/RBS_possibilities.eps}a
+   \label{fig:RBS}
 }
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/76ge-4-adjusted.eps}
+   \includegraphics[width=0.5\textwidth]{figures/76ge-4-holes.eps}
+   \label{fig:rawDataRBS}
+}
+\\
+\subfloat[][]{
+   \includegraphics[width=0.8\textwidth]{figures/76ge-4-adjusted.eps}
 }
 \caption{RBS data for the \Ge{76} target near the beamspot.  The plateau at low energies is due to pinholes in the target.  The plateau at high energies is due to small sections of the target with no \Ge{76} deposited on the gold surface.  The fit including the pinholes in the target is shown in (a).  The RBS spectrum, adjusted by subtracting the background due to pinholes, and its fit are shown in (b).  Fitting the RBS spectrum with and without adjusting for pinholes did not result in any significant differences to the predicted target composition or thickness.}
 % move this to text, highlight features in plot
@@ -129,7 +135,7 @@ $^{26}$Mg ($>$99.55\%) & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
           &           &      & N$_{\text{nat}}$ & 43 \\
           &           &      & O$_{\text{nat}}$ & 52 \\
 \end{tabular}
-\caption{Target composition and thickness.  The $\alpha$-gauge measurements were performed at ANL and the RBS measurements at Hope College.}
+\caption{Target composition and thickness.  The isotopic abundance of the target is listed in parenthesis.  The $\alpha$-gauge measurements were performed at ANL and the RBS measurements at Hope College.}
 \label{tab:targets}
 \end{table}
 
