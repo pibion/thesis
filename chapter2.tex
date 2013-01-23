@@ -110,8 +110,28 @@ In general, four potentials are needed to perform a DWBA calculation in the case
 U(r) = V_c - Vf(x_0) + \left( \frac{h}{m_{\pi}c} \right) ^2 V_{SO}(\sigma\cdot l)\frac{1}{r}\frac{d}{dr}f(x_{SO})
 -i[Wf(x_W) - 4W_D\frac{d}{dx_D}f(x_D)],
 \end{equation}
-where $V_c$ is the coulomb potential and $f(x)=(1+e^x)^{-1}$ is the Woods-Saxon potential \cite{PereyPerey}.  Note that the functional form of the spin-orbit term $V_{SO}(\sigma\cdot l)$ is the derivative of the Woods-Saxon potential, making it predominantly a surface effect.  The imaginary component of the potential allows for absorbtion and, like the real part, has a volume term $W$ and a surface term $W_D$.
+where $V_c$ is the coulomb potential and $f(x)=(1+e^x)^{-1}$ is the Woods-Saxon potential \cite{PereyPerey}.  Note that the functional form of the spin-orbit term $V_{SO}(\sigma\cdot l)$ is the derivative of the Woods-Saxon potential, making it predominantly a surface effect.  The imaginary component of the potential allows for absorbtion and, like the real part, has a volume term $W$ and a surface term $W_D$.  When calculating proton-pair transfer cross sections, this method can be complicated considerably when treating each proton in the pair separately.  This approach is that of Bayman and Kallio [CITE] and can sometimes accurately predict the absolute differential cross section.  A simpler method, the cluster model, treats the protons as a single, bound cluster.  While this method does not typically reproduce absolute cross sections well, it reproduces the angular distribution of the more-complicated Bayman-Kallio approach.  It should be noted that when using the cluster model to predict cross sections, their magnitude is quite sensitive to the parameters in the Woods-Saxon potential, $r$ and $a$, which describe the radius of the well and the diffuseness of the surface, respectively.  However, the trend of the cross-section relative to the energy of the incoming \He{3} or changing neutron number of the target is well-reproduced.
 
+One particularly useful application of DWBA calculations is to determine the beam energy that optimizes the expected cross section as in {\fig}~\ref{fig:optimizeCrossSection}.  
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.0\textwidth]{figures/74Ge_0plus_xsection.eps}
+\caption{A plot showing the \reaction cross section as a function of beam energy.  From ??.}
+\label{fig:optimizeCrossSection}
+\end{figure}
+It can be seen from this plot that the ideal beam energy for maximizing the \reaction cross section is slightly more than 18~MeV.  However, detector resolution decreases with increasing beam energy.  Because the product nuclei \SeProducts have low-lying excited states that are predicted to be populated with similar frequency to the ground state, the lower beam energy of 16~MeV was chosen to provide sufficient resolution for resolving these states.  See {\fig}~\ref{fig:levelDiagrams} for level diagrams of the product nuclei.
+\begin{figure}[!htbp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.3\textwidth]{figures/78Ge_levels.eps}
+}
+\subfloat[][]{
+   \includegraphics[width=0.3\textwidth]{figures/76Ge_levels.eps}
+}
+\caption{The level diagrams of the product nuclei, \Ge{78} and \Ge{76}.  Note the low-lying 2$^+$ state.}
+\label{fig:levelDiagrams}
+\end{figure}
+Particulars of the beam and neutron detector are discussed in {\chap}~\ref{chap:2pExpt} and an analysis of the results in {\chap}~\ref{chap:dataAnalysis}.
 % % uncomment the following lines,
 % if using chapter-wise bibliography
 %
