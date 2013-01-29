@@ -400,24 +400,27 @@ S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
 \end{equation}
 Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include 95\% of the peak assuming its resolution is the same as that of the ground-state peak.
 
-The $2\sigma$ limit on the cross section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.
+The $2\sigma$ limit on the cross section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.  It is important to note that the Q-value dependence of the cross section has a significant impact on the limit.  As the excitation energy of the product nucleus increases, the Q-value decreases and the cross section increases.  The relationship for \reaction is shown in {\fig}~\ref{fig:QValDependence}.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/SigmaVsQ.eps}
+\caption{The Q-value dependence of the zero-degree cross section of $^{74}$Ge(\He{3},n) and $^{76}$Ge(\He{3},n).  Solid lines indicate the dependence on the Q-value only, while the dashed lines show the dependence moderated by the detector efficiency.  Symbols indicate known \zp states.}
+\label{fig:QvalDependence}
+\end{figure}
+The Q-value dependence must be factored out of the count limit obtained directly from the TOF histogram.  In general, this is advantageous, as searching for higher excited \zp states implies a lower Q value and therefore greater sensitivity.  However, at very high excitation energies, the decreasing detector efficiency takes over and the limit begins trending upwards.
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.45\textwidth]{figures/74Ge_limits.eps}
-}
-\hspace{8pt}
-\subfloat[][]{
-   \includegraphics[width=0.45\textwidth]{figures/74Ge_2sigma_limit.eps}
+   \includegraphics[width=1.0\textwidth]{figures/DetLimits.eps}
 } \\
 \subfloat[][]{
-   \includegraphics[width=0.45\textwidth]{figures/76Ge_limits.eps}
+   \includegraphics[width=0.45\textwidth]{figures/74Ge_2sigma_limit.eps}
 }
 \hspace{8pt}
 \subfloat[][]{
    \includegraphics[width=0.45\textwidth]{figures/76Ge_2sigma_limit.eps}
 }
-\caption{Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge (above) and $^{76}$Ge (below).  The thickness of the line indicates the error of the estimate.  The limit is poor for neutrons arriving at times less than 120~ns relative to the $\gamma$ peak because of the broad neutron peak due to oxygen contamination in the targets.  The effect of a signal with 2$\sigma$ significance is simulated for $^{74}$Ge (b) and $^{76}$Ge (d).}
+\caption{(a) Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge (lower, in red) and $^{76}$Ge (above, in blue).  The limit is unreliable for neutrons arriving at times less than 120~ns relative to the $\gamma$ peak because of the broad neutron peak due to oxygen contamination in the targets as can be seen in (b).  The detection limit is therefore cut off at that point.  (b) The effect of a signal with 2$\sigma$ significance is simulated for $^{74}$Ge.  (c) The effect of a signal with 2$\sigma$ significance is simulated for  $^{76}$Ge.}
 % excitation energy, not timing
 % don't show past big peak
 \label{fig:differentLimits}
@@ -504,7 +507,7 @@ Norm. Factor & 0.904 & 0.910 \\
 \label{fig:parameterSensitivity}
 \end{figure}
 
-As discussed in {\chap}~\ref{chap:nucl}, both the Cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross sections have been normalized to $^{58}$Ni.  
+As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross sections have been normalized to $^{58}$Ni.  
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/nickel_trend.eps}
