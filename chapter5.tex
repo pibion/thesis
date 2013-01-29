@@ -437,9 +437,15 @@ The ground-state cross section of $^{74}$Ge($^3$He,n)$^{76}$Se is larger than th
 \hline
 Particle & V & r & a & V$_{\text{SO}}$ & r$_{\text{SO}}$ & a$_{\text{SO}}$ & W & r$_{\text{W}}$ & a$_{\text{W}}$ & W$_{\text{D}}$ & r$_{\text{WD}}$ & a$_{\text{WD}}$ & W$_{\text{SO}}$ & r$_{\text{WSO}}$ & a$_{\text{WSO}}$ & r$_{\text{c}}$ \\
 \hline
-$^{3}$He & 157.1 & 1.20 & 0.72 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
+$^{3}$He (BG) & 157.1 & 1.20 & 0.72 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
+$^{3}$He (U) & 175.4 & ?? & 0.71 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
+$^{3}$He (GDP08) & 157.1 & 1.20 & 0.72 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
+
 n & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 & 0.53 & -0.07 & 1.03 & 0.59 & -\\
+n & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 & 0.53 & -0.07 & 1.03 & 0.59 & -\\
+
 $^3$He bound state & 76.6 & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
+
 Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 \hline
 % combine with other table of potential parameters
@@ -462,15 +468,20 @@ Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - &
 The cluster model is sensitive to the parameters used to describe the potentials of the interacting nuclei.  The sensitivity of the extracted zero-degree cross section on the bound-state radius parameter, the neutron optical-model potential, and the principal quantum number were all investigated.  While changing the bound-state radius strongly affects the normalization, it does not appreciably affect the shape of the angular distribution between 0$^{\circ}$ and 20$^{\circ}$ and therefore does not impact the ratio of ground-state to first-excited-state cross section at zero degrees.  Using the Becchetti-Greenlees neutron potential rather than the Koning-Delaroche potential does not strongly affect the angular distribution, nor does changing the principal quantum number.  The effect of varying these parameters is shown in {\fig}~\ref{fig:varyParam}.
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/AngDist.eps}
-\caption{Sensitivity of angular distributions on bound-state radius, neutron potential, and principal quantum number.  All calculations are normalized to 350~$\mu$b/sr at zero degrees.}
+\subfloat[][]{
+   \includegraphics[width=0.8\textwidth]{figures/AngDist.eps}
+}
+\subfloat[][]{
+   \includegraphics[width=0.5\textwidth]{figures/SigmaNormVsN_2.eps}
+}
+\caption{(a) Sensitivity of angular distributions on bound-state radius, neutron potential, and principal quantum number.  All calculations are normalized to 350~$\mu$b/sr at zero degrees. (b) The effect of varying optical model parameters on the zero-degree cross-section normalization.  Sensitivity to the coulomb radius, principle quantum number, and neutron potential were investigated.  The ``standard'' calculation uses Becchetti-Greenlees potentials for the neutron and \He{3}, $r_0=1.25$~fm and $a=0.65$~fm, and principle quantum number $N=4$.  The number in parenthesis after each description is the factor needed to normalize the DWBA calculation to the \Ge{74} cross-section.}
 \label{fig:varyParam}
 \end{figure}
  The dependence of the cross section for various \He{3} optical-model potentials was also explored and found to result in little difference in the trend in the zero-degree cross sections of \Ge{74} and \Ge{76}.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross section.
 \begin{table}[htp]
 \centering
 \begin{tabular}{lll}
- & DGP08 & Urone \\
+ & GDP08 & Urone \\
 \hline
 $V_0$ (MeV) & 118.3 & 175.4 \\
 $r_R$ (fm) & 1.30? & 1.14 \\
