@@ -472,7 +472,7 @@ The cluster model is sensitive to the parameters used to describe the potentials
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.8\textwidth]{figures/AngDist.eps}
+   \includegraphics[width=0.5\textwidth]{figures/AngDist.eps}
 }
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/SigmaNormVsN_2.eps}
@@ -502,16 +502,21 @@ Norm. Factor & 0.904 & 0.910 \\
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/CrossSectionVsN_ElasticSurvey.eps}
-\caption{The GDP08 potential differs from the Becchetti and Urone potentials for nickel and strontium isotopes, but all potentials reproduce the measured Q-value dependence of \GeTargets.  The calculations are normalized to the \Ge{74} data.}
+\subfloat[][]{
+  \includegraphics[width=0.5\textwidth]{figures/CrossSectionVsN_ElasticSurvey_Errors.eps}
+}
+\subfloatp[][]{
+  \includegraphics[width=0.5\textwidth]{figures/CrossSectionVsN_Best.eps}
+}
+\caption{(a) Testing sensitivity to \He{3} potentials.  The GDP08 potential differs from the Becchetti and Urone potentials for nickel and strontium isotopes, but all potentials reproduce the measured Q-value dependence of \GeTargets.  The calculations are normalized to the \Ge{74} data.  The neutron potential used was the Becchetti-Greenless potential with a bound-state radius of 1.30~fm, a diffuseness of 0.65~fm, and the principle quantum number was 4.  (b) The best fit to the data overall.  The potential used for \He{3} was Becchetti-Greenlees.  For the neutron, the KDP potential was used with the parameters as in (a).  In both figures, the systematic and statistical errors are shown for all points except \Ge{74} and \Ge{76}, where only the statistical errors are shown.  Systematic errors were omitted for these nuclei so that the agreement between the trend of the calculation and the data was not obscured.  
 \label{fig:parameterSensitivity}
 \end{figure}
 
 As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the Cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross sections have been normalized to $^{58}$Ni.  
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/nickel_trend.eps}
-\caption{The cluster model describes the trend for Ni and Ge isotopes.  The cross sections are normalized to the best fit.}
+\includegraphics[width=0.8\textwidth]{figures/SigmaNormVsN.eps}
+\caption{The cluster model describes the trend for Ni and Ge isotopes.  The cross sections are normalized to \Ge{74}.  Systematic and statistical errors are shown on all data except for \Ge{74} and \Ge{76}, where only statistical errors are shown.}
 \label{fig:nickelTrend}
 \end{figure}
 The cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster model calculations of the $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se reactions show that the smaller cross section of the $^{76}$Ge($^3$He,n)$^{78}$Se reaction is likely due to the Q-value dependence reproduced by DWBA and probably not due to ground-state loss of \zp strength.   The cross sections measured for \reaction are consistent with DWBA predictions and the data suggest no significant excited \zp states.
