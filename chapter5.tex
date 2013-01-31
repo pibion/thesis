@@ -400,7 +400,7 @@ S = \frac{i^2 \pm \sqrt{i^4 + 8i^2B}}{2}.
 \end{equation}
 Note that the number of background counts $B$ scales with the chosen integration window.  The limits shown were calculated with an integration window of $\sim$7~ns, wide enough to include 95\% of the peak assuming its resolution is the same as that of the ground-state peak.
 
-The $2\sigma$ limit on the cross section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:zp_limit}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.  It is important to note that the Q-value dependence of the cross section has a significant impact on the limit.  As the excitation energy of the product nucleus increases, the Q-value decreases and the cross section increases.  The relationship for \reaction is shown in {\fig}~\ref{fig:QValDependence}.
+The $2\sigma$ limit on the cross section for excited \zp states in \Ge{74} and \Ge{76} is shown in {\fig}~\ref{fig:differentLimits}.  The $2\sigma$ limit was chosen in order to have 95\% confidence in the existence of a peak.  A simulation of peaks at the 2$\sigma_S$ limit is shown in {\fig}~\ref{fig:differentLimits}.  It is important to note that the Q-value dependence of the cross section has a significant impact on the limit.  As the excitation energy of the product nucleus increases, the Q-value decreases and the cross section increases.  The relationship for \reaction is shown in {\fig}~\ref{fig:QvalDependence}.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/SigmaVsQ.eps}
@@ -432,22 +432,22 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-The ground-state cross section of $^{74}$Ge($^3$He,n)$^{76}$Se is larger than that of $^{76}$Ge($^3$He,n)$^{78}$Se.  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  The zero-degree ground-state cross section can be determined by fitting the experimentally-determined angular distribution of the ground and first excited state together with DWBA and extrapolating the result to zero degrees.  The code Fresco \cite{Fresco} was used to perform the DWBA calculations, which requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical-model potentials used for the \He{3} and neutron are Becchetti-Greenlees [CITE] and Koning-Delaroche \cite{Koning_neutronPotential}, respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
+The ground-state cross section of $^{74}$Ge($^3$He,n) is larger than that of $^{76}$Ge($^3$He,n).  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  The zero-degree ground-state cross section can be determined by fitting the experimentally-determined angular distribution of the ground and first excited state together with DWBA and extrapolating the result to zero degrees.  The code Fresco \cite{Fresco} was used to perform the DWBA calculations, which requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical-model potentials used for the \He{3} and neutron are Becchetti-Greenlees [CITE] and Koning-Delaroche \cite{Koning_neutronPotential}, respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
 \begin{sidewaystable}\footnotesize
 \caption{\label{tab:typicalPotentials} Optical and bound-state potentials used in the DWBA analysis, see the text for details of the calculations. Both optical-model potentials vary slowly with $N$, $Z$ and $E$; the values given here are typical. $^{\dagger}$ Adjusted to reproduce the experimentally measured binding energy.}
 %\begin{ruledtabular}
 \begin{tabular}{ccccccccccccccccc}
 \hline
-Particle & V & r & a & V$_{\text{SO}}$ & r$_{\text{SO}}$ & a$_{\text{SO}}$ & W & r$_{\text{W}}$ & a$_{\text{W}}$ & W$_{\text{D}}$ & r$_{\text{WD}}$ & a$_{\text{WD}}$ & W$_{\text{SO}}$ & r$_{\text{WSO}}$ & a$_{\text{WSO}}$ & r$_{\text{c}}$ \\
+Particle & V$_0$ & r$_{\text{R}}$ & a$_{\text{R}}$ & V$_{\text{SO}}$ & r$_{\text{SO}}$ & a$_{\text{SO}}$ & W & r$_{\text{W}}$ & a$_{\text{W}}$ & W$_{\text{D}}$ & r$_{\text{WD}}$ & a$_{\text{WD}}$ & W$_{\text{SO}}$ & r$_{\text{WSO}}$ & a$_{\text{WSO}}$ & r$_{\text{c}}$ \\
 \hline
 $^{3}$He (BG) & 157.1 & 1.20 & 0.72 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
-$^{3}$He (U) & 175.4 & ?? & 0.71 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
-$^{3}$He (GDP08) & 157.1 & 1.20 & 0.72 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
+$^{3}$He (U) & 175.4 & 1.14 & 0.71 & - & - & - & 19.9 & 1.53 & 0.85 & 9.13(N-Z)/A & 1.53 & 1.85 & - & - & - & 1.4\\
+$^{3}$He (GDP08) & 118.92 & 4.98 & 0.82 & 1.38 & 3.87 & 0.13 & 1.71 & 5.37 & 0.84 & 23.09 & 5.37 & 0.84 & - & - & - & 5.33\\
 
-n & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 & 0.53 & -0.07 & 1.03 & 0.59 & -\\
-n & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 & 0.53 & -0.07 & 1.03 & 0.59 & -\\
+n (BG) & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 & 0.53 & -0.07 & 1.03 & 0.59 & -\\
+n (KD) & 45.47 & 1.21 & 0.67 & 5.55 & 1.03 & 0.59 & 1.24 & 1.21 & 0.67 & 6.6 & 1.28 & 0.53 & -0.076 & 1.03 & 0.59 & -\\
 
-$^3$He bound state & 76.6 & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
+$^3$He bound state & 76.6$^{\dagger}$ & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 
 Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 \hline
@@ -480,25 +480,7 @@ The cluster model is sensitive to the parameters used to describe the potentials
 \caption{(a) Sensitivity of angular distributions on bound-state radius, neutron potential, and principal quantum number.  All calculations are normalized to 350~$\mu$b/sr at zero degrees. (b) The effect of varying optical model parameters on the zero-degree cross-section normalization.  Sensitivity to the coulomb radius, principle quantum number, and neutron potential were investigated.  The ``standard'' calculation uses Becchetti-Greenlees potentials for the neutron and \He{3}, $r_0=1.25$~fm and $a=0.65$~fm, and principle quantum number $N=4$.  The number in parenthesis after each description is the factor needed to normalize the DWBA calculation to the \Ge{74} cross-section.}
 \label{fig:varyParam}
 \end{figure}
- The dependence of the cross section for various \He{3} optical-model potentials was also explored and found to result in little difference in the trend in the zero-degree cross sections of \Ge{74} and \Ge{76}.  See {\tab}~\ref{tab:parameterSensitivity} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross section.
-\begin{table}[htp]
-\centering
-\begin{tabular}{lll}
- & GDP08 & Urone \\
-\hline
-$V_0$ (MeV) & 118.3 & 175.4 \\
-$r_R$ (fm) & 1.30? & 1.14 \\
-$r_C$ (fm) & 1.24 & 1.4 \\
-$a_R$ (fm) & 0.82? & 0.71 \\
-W (MeV) & 34.2? & 19.9 \\
-$r_l$ (fm) & 1.31? & 1.53 \\
-$a_l$ (fm) & 0.84? & 0.85 \\
-$W_D$ (MeV) & 106.4? & 9.13(N-Z)A \\
-Norm. Factor & 0.904 & 0.910 \\
-\end{tabular}
-\caption{Optical parameters used for three different models of the \He{3} potential.}
-\label{tab:parameterSensitivity}
-\end{table}
+ The dependence of the cross section for various \He{3} optical-model potentials was also explored and found to result in little difference in the trend in the zero-degree cross sections of \Ge{74} and \Ge{76}.  See {\tab}~\ref{tab:typicalPotentials} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross section.
 
 \begin{figure}[!htbp]
 \centering
