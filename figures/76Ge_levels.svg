@@ -19,7 +19,7 @@
    id="svg3004"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="76Ge_levels.fig">
+   sodipodi:docname="76Ge_levels.svg">
   <metadata
      id="metadata3082">
     <rdf:RDF>
@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,8 +43,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1423"
-     inkscape:window-height="845"
+     inkscape:window-width="1600"
+     inkscape:window-height="876"
      id="namedview3078"
      showgrid="false"
      inkscape:snap-bbox="true"
@@ -56,10 +56,10 @@
      inkscape:snap-bbox-edge-midpoints="false"
      inkscape:zoom="4.0720151"
      inkscape:cx="71.791781"
-     inkscape:cy="69.41807"
+     inkscape:cy="89.064363"
      inkscape:window-x="0"
      inkscape:window-y="24"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="g3006" />
   <g
      style="stroke-width:.025in; fill:none"
@@ -94,71 +94,17 @@
        style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; fill:#000000; "
        id="rect3016" />
     <!-- Line -->
-    <polyline
-       points="1984,3559 1984,5133 "
-       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
-       id="polyline3018"
-       transform="matrix(1,0,0,1.0203304,0,-104.35578)" />
     <!-- Arrowhead on XXXpoint 1984 3496 - 1984 5212-->
-    <polygon
-       points="1984,5195 2000,5132 1968,5132 1968,5132 "
-       style="fill:#000000;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
-       id="polygon3020"
-       transform="translate(1.8044706,-7)" />
     <!-- Arrowhead on XXXpoint 1984 5196 - 1984 3480-->
-    <polygon
-       points="1953,3487 1954,3490 1954,3492 1955,3495 1958,3497 1959,3499 1961,3501 1962,3503 1964,3504 1966,3506 1968,3507 1970,3508 1972,3509 1975,3510 1977,3510 1980,3511 1983,3511 1985,3511 1988,3511 1990,3510 1992,3510 1995,3509 1997,3508 2000,3507 2002,3506 2004,3504 2006,3503 2007,3501 2009,3499 2010,3497 2012,3495 2013,3492 2013,3490 2014,3487 2015,3485 2015,3482 2015,3480 1952,3480 1952,3482 1952,3485 "
-       style="fill:#000000;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
-       id="polygon3022"
-       transform="translate(0.5,16)" />
     <!-- Line -->
-    <polyline
-       points="1984,4692 1984,5133 "
-       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
-       id="polyline3024" />
     <!-- Arrowhead on XXXpoint 1984 4629 - 1984 5212-->
     <!-- Arrowhead on XXXpoint 1984 5196 - 1984 4614-->
-    <polygon
-       points="1961,4635 1962,4637 1964,4638 1966,4640 1968,4641 1970,4642 1972,4643 1975,4644 1977,4644 1980,4645 1983,4645 1985,4645 1988,4645 1990,4644 1992,4644 1995,4643 1997,4642 2000,4641 2002,4640 2004,4638 2006,4637 2007,4635 2009,4633 2010,4630 2012,4628 2013,4626 2013,4624 2014,4621 2015,4619 2015,4616 2015,4614 1952,4614 1952,4616 1952,4619 1953,4621 1954,4624 1954,4626 1955,4628 1958,4630 1959,4633 "
-       style="fill:#000000;stroke:#000000;stroke-width:8.00323296;stroke-miterlimit:8;stroke-dasharray:none"
-       id="polygon3028"
-       transform="translate(0.5,15)" />
     <!-- Line -->
-    <polyline
-       points="2314,3795 2314,4566 "
-       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
-       id="polyline3030"
-       transform="matrix(1,0,0,1.0654685,0,-299.19127)" />
     <!-- Arrowhead on XXXpoint 2314 3732 - 2314 4645-->
-    <polygon
-       points="2299,4565 2299,4565 2314,4628 2330,4565 "
-       style="fill:#000000;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
-       id="polygon3032"
-       transform="matrix(1.0216691,0,0,0.83555561,-50.1532,750.35287)" />
     <!-- Arrowhead on XXXpoint 2314 4629 - 2314 3716-->
-    <polygon
-       points="2283,3721 2284,3723 2285,3727 2285,3729 2286,3731 2288,3733 2289,3735 2291,3737 2292,3739 2295,3740 2297,3742 2299,3743 2301,3744 2303,3745 2306,3746 2308,3746 2310,3748 2313,3748 2316,3748 2319,3748 2321,3746 2323,3746 2326,3745 2328,3744 2330,3743 2332,3742 2334,3740 2337,3739 2338,3737 2340,3735 2341,3733 2343,3731 2344,3729 2344,3727 2345,3723 2346,3721 2346,3718 2346,3716 2283,3716 2283,3718 "
-       style="fill:#000000;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
-       id="polygon3034"
-       transform="translate(-2.3329878,16)" />
     <!-- Line -->
-    <polyline
-       points="2409,3795 2409,5133 "
-       style="stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
-       id="polyline3036"
-       transform="matrix(1,0,0,1.03789,0,-194.64116)" />
     <!-- Arrowhead on XXXpoint 2409 3732 - 2409 5212-->
-    <polygon
-       points="2409,5195 2425,5132 2393,5132 2393,5132 "
-       style="fill:#000000;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
-       id="polygon3038"
-       transform="matrix(1.0120643,0,0,0.89501678,-29.06285,538.58087)" />
     <!-- Arrowhead on XXXpoint 2409 5196 - 2409 3716-->
-    <polygon
-       points="2380,3727 2380,3729 2381,3731 2383,3733 2384,3735 2386,3737 2387,3739 2389,3740 2391,3742 2393,3743 2395,3744 2397,3745 2401,3746 2403,3746 2405,3748 2408,3748 2410,3748 2413,3748 2415,3746 2417,3746 2420,3745 2423,3744 2425,3743 2427,3742 2429,3740 2431,3739 2432,3737 2434,3735 2435,3733 2437,3731 2438,3729 2438,3727 2439,3723 2440,3721 2440,3718 2440,3716 2377,3716 2377,3718 2377,3721 2379,3723 "
-       style="fill:#000000;stroke:#000000;stroke-width:8;stroke-miterlimit:8"
-       id="polygon3040"
-       transform="translate(-1.2759534,16)" />
     <!-- Text -->
     <text
        xml:space="preserve"
