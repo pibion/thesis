@@ -53,7 +53,7 @@ Neutrinos interact very weakly with matter, and while this makes their detection
 
 While the Davis experiment continued to collect data, other experiments began that explored the neutrino itself.  Originally imagined as a single particle, it was found that there are three distinct flavors of neutrinos, each associated with a lepton partner.  It is important to note that the decay 
 \begin{equation}
-p \rightarrow n + \overbar{l} + v_l,
+p \rightarrow n + \overline{l} + v_l,
 \end{equation}
 where $l$ is an electron, muon, or tau, requires the proton to have enough momentum relative to the target neutron to create the lepton $l$.  Even the highest-energy nuclear reactions in the sun provide only $\sim$11~MeV, so that the sun can produce only electron neutrinos.  Energetic pion beams at Brookhaven National Laboratory (BNL) provided the first direct measurement of muon neutrinos \cite{muonNeutrino}.  Later, accelerated proton beams at Fermilab were used to successfully detect tau neutrinos \cite{tauNeutrino}.
 
@@ -69,16 +69,16 @@ Talk about current constraints on parameters
 Talk about experiments that constrain these parameters?  This seems far afield, maybe.
 \end{comment}
 
-\begin{equation}
-|\psi_e\rangle = U_{e1}|\psi_1\rangle + U_{e2}|\psi_2\rangle \\
-|\psi_{\mu}\rangle = U_{{\mu}1}|\psi_1\rangle + U_{{\mu}2}|\psi_2\rangle \\
-\end{equation}
+\begin{align}
+|\psi_e\rangle &= U_{e1}|\psi_1\rangle + U_{e2}|\psi_2\rangle \\
+|\psi_{\mu}\rangle &= U_{{\mu}1}|\psi_1\rangle + U_{{\mu}2}|\psi_2\rangle 
+\end{align}
 where $\hat{H}|\psi_1\rangle = E_1|\psi_1\rangle$ and $\hat{H}|\psi_2\rangle = E_1|\psi_2\rangle$.  Then for a neutrino with an initial state $|\psi_e\rangle$, the probability of detecting a muon neutrino is
-\begin{equation}
-P(\nu_e\rightarrow\nu_{\mu}) =  |\langle\psi_{\mu}|\hat{T}|\psi_e\rangle|^2 \\
-                             =  |\langle\psi_{\mu}|e^{i\hat{H}t / \hbar}|\psi_e\rangle|^2 \\
-                             =  U_{e1}U_{e1}U_{{\mu}1}U_{{\mu}2} \times \frac{\cos{(E_1 - E_2)t/\hbar)}{2} 
-\end{equation}
+\begin{align}
+P(\nu_e\rightarrow\nu_{\mu}) &=  |\langle\psi_{\mu}|\hat{T}|\psi_e\rangle|^2 \\
+                             &=  |\langle\psi_{\mu}|e^{i\hat{H}t / \hbar}|\psi_e\rangle|^2 \\
+                             &=  U_{e1}U_{e1}U_{{\mu}1}U_{{\mu}2} \times \frac{\cos(E_1 - E_2)t/\hbar)}{2} 
+\end{align}
 While this calculation is not accurate in many ways, it illustrates several important points about neutrino oscillation experiments.  The first is that the oscillation of detection probability is sensitive to the difference of the masses squared.  Neutrino oscillation experiments are therefore sensitive to the differences between neutrino masses but not to the absolute mass scale.  Several limits on the absolute mass scale of the neutrino exist, notably from cosmology [CITE] and from efforts to measure the mass of the electron neutrino by very carefully measuring the endpoint of beta decay [CITE].  These limits constrain the total mass to be less than 2~eV.  
 
 The neutrino mixing matrix $U$ can be written with three angles,
