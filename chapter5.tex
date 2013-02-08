@@ -306,7 +306,7 @@ The primary challenge is finding an accurate way to estimate the background that
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_NPS_barA.eps}
 }
-\caption{(a) The TOF spectrum of the forwardmost neutron detector bar (6.12$^{\circ}$) in the case of pulse-selected beam.  The data is from the September run.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow. (b) The timing spectrum of the  non-pulse-selected beam, also from the September run.}
+\caption{(a) The TOF spectrum of the forwardmost neutron detector bar (6.1$^{\circ}$) in the case of pulse-selected beam.  The data is from the September run.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow. (b) The timing spectrum of the  non-pulse-selected beam, also from the September run.}
 \label{fig:PSvsNPS}
 \end{figure}
 
@@ -333,18 +333,29 @@ Thus far, the primary source of uncertainty is the statistical uncertainty assoc
 \end{figure}
 This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the Gamma Distribution is non-zero only on a semi-infinite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
 
-For the same bar, the non-pulse-selected spectrum should have the same features as the pulse-selected data, but shifted and superimposed.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit because each bar of the neutron detector should measure the same beam-related spectrum for different runs, making it possible to model the non-pulse-selected spectrum as a shifted, scaled copy of the pulse-selected data.  The model used for the pulse-selected data is
+For the same bar, the non-pulse-selected spectrum should have the same features as the pulse-selected spectrum, but shifted and superimposed.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit because each bar of the neutron detector should measure the same beam-related spectrum for different runs, making it possible to model the non-pulse-selected spectrum as a shifted, scaled copy of the pulse-selected data.  The model used for the pulse-selected data is
 % equation for pulse-selected spectrum
 \begin{equation}
-f_{PS} = g(x;\alpha,\beta) + Gaus_1 + Gaus_2 + Gaus_3 + DoubleGaus + Const_{PS}
+f_{PS} = B(x;\alpha,\beta) + Gaus_1 + Gaus_2 + Gaus_3 + DoubleGaus + Const_{PS}
 \end{equation}
-where $g(x;\alpha,\beta)$ is the Gamma Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian distributions describing prominent peaks in the continuum and the ground-state neutron peak; $DoubleGaus$ models the $\gamma$ peak.  These terms are needed to ensure a good overall fit and their parameters are described in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
+where $B(x;\alpha,\beta)$ is the Beta Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian distributions describing prominent peaks in the continuum and the ground-state neutron peak; $DoubleGaus$ models the $\gamma$ peak.  These terms are needed to ensure a good overall fit and their parameters are described in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
 % equation for non-pulse-selected spectrum
 \begin{equation}
 R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
 \label{eq:NPS_model}
 \end{equation}
 where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron continuum contributes less than 1\% to the extracted counts in the ground-state neutron peak.  
+\begin{figure}[!htbp]
+\centering
+\subfloat[][]{
+   \includegraphics[width=0.8\textwidth]{figures/piecesOfFit0.eps}
+}\\
+\subfloat[][]{
+   \includegraphics[width=0.8\textwidth]{figures/74Ge_NPS0.eps}
+}
+\caption{(a) The TOF spectrum of the forwardmost neutron detector bar (6.1$^{\circ}$) in the case of pulse-selected beam.  The data is from the September run.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow. (b) The timing spectrum of the  non-pulse-selected beam, also from the September run.}
+\label{fig:continuumModel}
+\end{figure}
 
 The method used to extract the counts in the ground-state neutron peak is a direct summing of the counts from the peak region followed by subtraction of the estimated flat background from a linear fit.  The estimated error is the statistical error of the sum of the peak region and the systematic error of including counts from the continuum.  The results are plotted in {\fig}~\ref{fig:PS_angularDistribution}.
 \begin{figure}[!htbp]
