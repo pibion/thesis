@@ -338,7 +338,7 @@ For the same bar, the non-pulse-selected spectrum should have the same features 
 \begin{equation}
 f_{PS} = B(x;\alpha,\beta) + Gaus_1 + Gaus_2 + Gaus_3 + DoubleGaus + Const_{PS}
 \end{equation}
-where $B(x;\alpha,\beta)$ is the Beta Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian distributions describing prominent peaks in the continuum and the ground-state neutron peak; $DoubleGaus$ models the $\gamma$ peak.  These terms are needed to ensure a good overall fit and their parameters are described in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
+where $B(x;\alpha,\beta)$ is the Beta Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian distributions describing prominent peaks in the continuum and the ground-state neutron peak; $DoubleGaus$ models the $\gamma$ peak.  These terms are needed to ensure a good overall fit and the contribution of each term is shown in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
 % equation for non-pulse-selected spectrum
 \begin{equation}
 R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
@@ -353,7 +353,7 @@ where $R$ is the ratio of total beam on target between the pulse-selected and no
 \subfloat[][]{
    \includegraphics[width=0.8\textwidth]{figures/74Ge_NPS0.eps}
 }
-\caption{(a) The TOF spectrum of the forwardmost neutron detector bar (6.1$^{\circ}$) in the case of pulse-selected beam.  The data is from the September run.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow. (b) The timing spectrum of the  non-pulse-selected beam, also from the September run.}
+\caption{(a) The fit to the pulse-selected TOF spectrum of the forwardmost neutron detector bar (6.1$^{\circ}$).  The center and width of each gaussian is constrained for all bars simultaneously while the heights are fit for each bar independently.  (b) The timing spectrum of the non-pulse-selected beam is fit together with the pulse-selected spectrum.  The region of interest, the ground-state neutron peak, is highlighted but not used in the final data set because of its extreme sensitivity to the fit.}
 \label{fig:continuumModel}
 \end{figure}
 
