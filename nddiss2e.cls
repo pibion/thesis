@@ -133,9 +133,11 @@
   \RequirePackage[dvips]{graphicx}
 \fi
 \ifnum@refs
-  \RequirePackage[numbers,sort&compress]{natbib}
+  %\RequirePackage[numbers,sort&compress]{natbib}
+  \RequirePackage[numbers,compress]{natbib}
 \else
-  \RequirePackage[authoryear,sort]{natbib}
+  %\RequirePackage[authoryear,sort]{natbib}
+  \RequirePackage[authoryear]{natbib}
 \fi
 \ifpdf
     \RequirePackage{hypernat}
