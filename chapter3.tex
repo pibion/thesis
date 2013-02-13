@@ -78,7 +78,7 @@ Beam exiting the analyzing magnet is narrowly defined by horizontal and vertical
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/NSL_beamline.eps}
-\caption{Beam production at Notre Dame.  The center inset shows the 15$^{\circ}$ beamline that was used in the experiments.}
+\caption[Beam production at Notre Dame.]{Beam production at Notre Dame.  The center inset shows the 15$^{\circ}$ beamline that was used in the experiments.}
 \label{fig:beamline}
 \end{figure}
 
@@ -92,7 +92,7 @@ The beam buncher operates by slowing down particles that would arrive too early 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/beamBunching.eps}
-\caption{Beam bunching using a time-varying electric field.  Each dot represents a beam particle, and the vertical gray bars represent the bunching electrodes.  To bunch one section of beam, particles arriving first must be slowed down, while particles arriving last must be sped up.  A linearly increasing field does exactly this.  If the wave is a perfect sawtooth, there is no time during which beam is not being bunched - that is, all the beam is bunched.  Notice also that beam does not exit the buncher in a tight bunch; as time passes, beam drifts together.  The time until the bunch is at its narrowest depends on the amplitude of the electric field applied by the buncher.}
+\caption[Beam bunching.]{Beam bunching using a time-varying electric field.  Each dot represents a beam particle, and the vertical gray bars represent the bunching electrodes.  To bunch one section of beam, particles arriving first must be slowed down, while particles arriving last must be sped up.  A linearly increasing field does exactly this.  If the wave is a perfect sawtooth, there is no time during which beam is not being bunched - that is, all the beam is bunched.  Notice also that beam does not exit the buncher in a tight bunch; as time passes, beam drifts together.  The time until the bunch is at its narrowest depends on the amplitude of the electric field applied by the buncher.}
 \label{fig:bunching}
 \end{figure}
 
@@ -111,7 +111,7 @@ It is possible to take data without pulse selection.  However, the spread in TOF
 \subfloat[][]{
 	\includegraphics[width=0.45\textwidth]{figures/NPS_BarA.eps}
 }
-\caption{The timing spectrum from a pulse-selected beam is shown in (a).  The timing spectrum in (b) is from beam with no pulse selection.  Both timing spectra are from a \He{3} beam on a \Ge{76} target.  The constant background present in both images is due to random background radiation, not the beam.}
+\caption[Timing spectra due to pulse-selected and non-pulse-selected beam.]{The timing spectrum from a pulse-selected beam is shown in (a).  The timing spectrum in (b) is from beam with no pulse selection.  Both timing spectra are from a \He{3} beam on a \Ge{76} target.  The constant background present in both images is due to random background radiation, not the beam.}
 \label{fig:PSvsNPS_TOF}
 \end{figure}
 
@@ -135,7 +135,7 @@ To measure the absolute scale of the cross-section, it is necessary to know the 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/targetChamber.eps}
-\caption{The target chamber and beam monitors.  The Si detector detects scattered \He{3} ions while the BaF$_2$ crystal primarily detects $\gamma$ radiation from the target.  Note that a paraffin block shields the BaF$_2$ detector from neutron radiation, which also escapes the target chamber.}
+\caption[The target chamber and beam monitors.]{The target chamber and beam monitors.  The Si detector detects scattered \He{3} ions while the BaF$_2$ crystal primarily detects $\gamma$ radiation from the target.  Note that a paraffin block shields the BaF$_2$ detector from neutron radiation, which also escapes the target chamber.}
 \label{fig:targetChamber}
 \end{figure}
 
@@ -186,7 +186,7 @@ The bars of scintillating plastic are positioned on an arc of radius 14.6 m cent
 \sidesubfloat[][]{  
    \includegraphics[width=0.35\textwidth]{figures/neutDetector_groupOfFour_crop.eps}
 }
-\caption{A schematic of the neutron detector is shown in (a).  The figure is not to scale.  The detector is comprised of 16 independent scintillating bars, grouped in fours on separate support structures.  One of the supports is shown in (b).  Each individual bar of scintillator has a PMT fastened to its top and bottom surface.}
+\caption[A schematic of the neutron detector and its supporting structure.]{A schematic of the neutron detector is shown in (a).  The figure is not to scale.  The detector is comprised of 16 independent scintillating bars, grouped in fours on separate support structures.  One of the supports is shown in (b).  Each individual bar of scintillator has a PMT fastened to its top and bottom surface.}
 \label{fig:detectorGeometry}
 \end{figure}
 
@@ -221,7 +221,7 @@ The lone signal provided by the PMT base is not adequate for pulse processing be
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/basic_electronics.eps}
-\caption{A simplified diagram of the neutron detector electronics showing the acquisition of timing and energy information from a single bar of the detector.}
+\caption[Simplified sketch of the detector electronics.]{A simplified diagram of the neutron detector electronics showing the acquisition of timing and energy information from a single bar of the detector.}
 \label{fig:simpleElectronics}
 \end{figure}
 
@@ -233,7 +233,7 @@ One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold un
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/event_trigger.eps}
-\caption{The event trigger for the DAQ requires a coincidence between a top PMT and a bottom PMT from the same group of eight bars.}
+\caption[DAQ event trigger.]{The event trigger for the DAQ requires a coincidence between a top PMT and a bottom PMT from the same group of eight bars.}
 \label{fig:eventTrig}
 \end{figure}
 
@@ -244,7 +244,7 @@ The time information, energy information, and a signal to indicate that this inf
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/electronics.eps}
-\caption{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
+\caption[Full diagram of the detector electronics.]{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
 \label{fig:fullElectronics}
 \end{figure}
 
@@ -254,7 +254,7 @@ The DAQ must also record some quantities that are independent of the event trigg
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/electronics_scalers.eps}
-\caption{A diagram of the neutron detector scalers.  The modules on the right are read by the DAQ independent of the event signal.}
+\caption[Detector scalers.]{A diagram of the neutron detector scalers.  The modules on the right are read by the DAQ independent of the event signal.}
 \label{fig:scalerElectronics}
 \end{figure}
 A test of this electronics setup using a \Mg{26} target verified the expected DAQ operation.  This test is discussed in the next chapter. 

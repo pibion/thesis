@@ -101,14 +101,14 @@ The initial and final nuclear states could inhibit \zvbb if there were significa
 It should be noted that while there is extensive transfer-reaction data, it is not all suitable for determining valence shell occupancies because of uncorrelated systematic errors in the absolute cross-sections of complementary reactions.  Comprehensive single-nucleon transfer experiments that are specifically designed to limit these relative systematic errors have been performed on several of the candidate nuclei; see \citep{schiffer_review} for an overview of current progress.  In particular, the nuclei \GeTargets have been studied with the neutron-adding reactions (d,p) and ($\alpha$,\He{3}) as well as neutron-removing reactions (p,d) and (\He{3},$\alpha$) \citep{valenceNeutrons}.  The valence protons of these same nuclei have been studied with the (d,\He{3}) and (\He{3},d) reaction \citep{valenceProtons}.  These studies were done on the \Ge{74} and \Se{74} nuclei as a consistency check.  It was found that the Fermi surface of both the protons and neutrons in \GeTargets and \SeProducts are quite diffuse, with the relevant neutron and proton orbits being 2$p_{3/2}$, 1$f_{5/2}$, 2$p_{1/2}$, and 1$g_{9/2}$.  The quantities most important to the \NME calculations are the differences in occupancies between the mother and daughter nucleus; these differences are shown in {\fig}~\ref{fig:occupancyDiffs} along with the theoretical predictions.
 \begin{figure}[!htbp]
 \centering
-\subfloat[Occupancies of the neutron and proton valence shells of \Ge{76} and \Se{76}.][]{
+\subfloat[][]{
    \includegraphics[width=0.4\textheight]{figures/occupancies.eps}
 }
 \\
-\subfloat[Occupancy differences between \Ge{76} and \Se{76}.][]{
+\subfloat[][]{
    \includegraphics[width=0.5\textheight]{figures/occupancyDiffs.eps}
 }
-\caption{(a) Occupancies of the neutron and proton valence shells of \Ge{76} and \Se{76} determined by single-nucleon transfer reactions.  From \citep{schiffer_review}.  (b)  The differences between occupancies in the final and initial states are determined from (a) and are more immediately relevant to \NME calculations.  The theoretical predictions, before and after adjusting level energies to better match the data, are shown next to the experimental values.  Modified from {\refref}~\citep{schiffer_review}.}
+\caption[Occupancies of the neutron and proton valence shells of \Ge{76} and \Se{76}.]{(a) Occupancies of the neutron and proton valence shells of \Ge{76} and \Se{76} determined by single-nucleon transfer reactions.  From \citep{schiffer_review}.  (b)  The differences between occupancies in the final and initial states are determined from (a) and are more immediately relevant to \NME calculations.  The theoretical predictions, before and after adjusting level energies to better match the data, are shown next to the experimental values.  Modified from {\refref}~\citep{schiffer_review}.}
 \label{fig:occupancyDiffs}
 \end{figure}
 The single-particle energy levels were adjusted in the QRPA calculation \citep{SuhonenEnergyAdjust} to provide better agreement with the data.  These changes reduced the QRPA calculation of \NME by approximately a factor of two, bringing it into agreement with the shell-model calculation of \NME.  This reduction in the spread of calculated \NME is particularly valuable to reducing the uncertainty of mass limits or estimates from \zvbb searches. 
@@ -164,7 +164,7 @@ One can use DWBA calculations to understand the kinematic dependence of the expe
 \begin{figure}[htp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/74Ge_0plus_xsection.eps}
-\caption{A plot showing the $^{74}$Ge($^3$He,n) \zp cross section at zero degrees as a function of beam energy.  From \citep{schiffer_privateCommunication}.}
+\caption[The $^{74}$Ge($^3$He,n) \zp cross section at zero degrees as a function of beam energy.]{A plot showing the $^{74}$Ge($^3$He,n) \zp cross section at zero degrees as a function of beam energy.  From \citep{schiffer_privateCommunication}.}
 \label{fig:optimizeCrossSection}
 \end{figure}
 It can be seen from this plot that the ideal beam energy for maximizing the \reaction cross section is slightly more than 18~MeV.  However, detector resolution decreases with increasing beam energy as discussed in {\sect}~\ref{sec:detector}.  Because the product nuclei \SeProducts have low-lying excited \tp states that could be populated with similar cross section to the ground state, the lower beam energy of 16~MeV was chosen to provide sufficient resolution for resolving these states.  See {\fig}~\ref{fig:levelDiagrams} for level diagrams of the product nuclei.
@@ -178,7 +178,7 @@ It can be seen from this plot that the ideal beam energy for maximizing the \rea
 \subfloat[][]{
    \includegraphics[width=0.3\textwidth]{figures/76Ge_levels.eps}
 }
-\caption{The level diagrams of the product nuclei, \Se{78} and \Se{76}.  Note the low-lying 2$^+$ state.  Notice also that both nuclei have known \zp levels.  These levels have been measured through $\gamma$-ray experiments.  Such experiments are not sensitive to the pairing in ground-state nuclei, which is why two-nucleon transfer reactions on \zvbb candidate nuclei are of such interest.}
+\caption[Level diagram of \Se{78} and \Se{76}.]{The level diagrams of the product nuclei, \Se{78} and \Se{76}.  Note the low-lying 2$^+$ state.  Notice also that both nuclei have known \zp levels.  These levels have been measured through $\gamma$-ray experiments.  Such experiments are not sensitive to the pairing in ground-state nuclei, which is why two-nucleon transfer reactions on \zvbb candidate nuclei are of such interest.}
 \label{fig:levelDiagrams}
 \end{figure}
 As can be seen in {\fig}~\ref{fig:levelDiagrams}, there are known \zp states in \SeProducts.  However, these states were discovered through beta decay and excitation due to single-nucleon scattering \citep{NNDC}, neither of which gives information on the distribution of the paired \zp strength between these excited states and the ground state of \GeTargets.  That the leading method of calculating \NME relies on the assumption that the \zp strength is concentrated entirely in the ground state provides strong motivation to experimentally determine this distribution using two-proton transfer.  Particulars of the beam and neutron detector are discussed in {\chap}~\ref{chap:2pExpt} and an analysis of the results in {\chap}~\ref{chap:dataAnalysis}.
