@@ -51,14 +51,14 @@ Trends in systematic nuclear data such as nuclear mass, proton and neutron separ
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/alphaSepEnergy.eps}
-\caption{Alpha separation energy as a function of neutron number.  The behavior around $N=84$ is indicative of shell structure.  From {\refref}~\cite{massEval_1993}.}
+\caption[Alpha separation energy as an illustration of shell structure.]{Alpha separation energy as a function of neutron number.  The behavior around $N=84$ is indicative of shell structure.  From {\refref}~\cite{massEval_1993}.}
 \label{fig:alphaSep}
 \end{figure}
 Such a structure is suggestive of that seen in atomic electrons, which experience a central potential primarily due to the Coulomb interaction.  Such a potential is not an appropriate model for nucleus, where the potential is known to be short range \citep{Casten}.  One model that has promising beginnings is the harmonic oscillator potential.  To determine the magic numbers predicted by this potential, consider the quantum numbers that describe an eigenstate of this potential.  The principal quantum number, $n$, indicates the number of nodes of the state.  In this work, the node at infinity is included rather than the node at zero, so that $n$ ranges from 1 to $\inf$.  The orbital angular momentum is denoted $l$, with $l = 0, 1, 2, 3, ...$ typically called the $s, p, d, f, ...$ orbitals as in atomic electron structure.  The eigenvalue associated with the projection of the orbital angular momentum operator along the $z$-axis is $m$, which varies between $-l$ and $l$ and is called the magnetic quantum number.  The eigenvalues of any eigenstate of a spherically symmetric potential cannot depend on the magnetic quantum number, so that for the harmonic oscillator potential, any state associated with $l$ has a multiplicity of $2(2l+1)$, where the additional factor of two is due to nucleons being spin-1/2 fermions.  The eigenvalues of the three-dimensional harmonic oscillator are $E_{nl} = (2n+l-\frac{1}{2})\hbar\omega$, so that the energies proceed in uniform steps as $2n+l$ increases by one unit.  {\fig}~\ref{fig:shellModelMagic} shows the level spacing for this potential; note that the energy levels are multiplets.  For example, the states $nl = 2s$ and $1d$ both have energy $\frac{3}{2}\hbar\omega$.  
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/nuclearLevels.eps}
-\caption{Level diagrams for different models of the nuclear potential and their predicted magic numbers.  From left to right are the simple harmonic oscillator, a more flat-bottomed potential resulting from adding an $l^2$ term, and finally the addition of the spin-orbit coupling.  From {\refref}~\citep{Casten}.}
+\caption[Level diagrams for different models of the nuclear Hamiltonian.]{Level diagrams for different models of the nuclear potential and their predicted magic numbers.  From left to right are the simple harmonic oscillator, a more flat-bottomed potential resulting from adding an $l^2$ term, and finally the addition of the spin-orbit coupling.  From {\refref}~\citep{Casten}.}
 \label{fig:shellModelMagic}
 \end{figure}
 The harmonic oscillator potential predicts magic numbers at 2, 8, 20, 40, 70, and 112.  This matches the observed pattern for low numbers but begins to deviate for heavier nuclei.  A reasonable correction to make to the potential is to make it more uniform to more accurately reflect the fact that the density of nuclei is quite uniform \citep{Casten}.  Introducing a potential term proportional to $l^2$ does this by reducing the potential near the center of the well (where the orbital angular momentum is smaller) and increasing the potential further from the center, where the orbital angular momentum is larger.  Adjusting the potential in this way splits the $l$-degeneracy of the states but does not fundamentally change the predicted magic numbers.  It was not until Maria Goeppert-Mayer added a spin-orbit term to the potential \citep{MGM} that these magic numbers were correctly reproduced.  
@@ -67,7 +67,7 @@ Although the harmonic oscillator potential is useful in understanding many aspec
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/woodsSaxonVSharmonicOsc.eps}
-\caption{A Woods-Saxon potential (solid line) compared to a pure harmonic-oscillator potential (dashed line).  Three parameters describe the Woods-Saxon potential: the well depth $V$, the radius $r_0$, and the surface diffusivity $a$.  Note that the Woods-Saxon potential drops to zero while the harmonic-oscillator potential increases without bound.  From {\refref}~\citep{pseudospinSymmetry}.}
+\caption[The Woods-Saxon nuclear potential.]{A Woods-Saxon potential (solid line) compared to a pure harmonic-oscillator potential (dashed line).  Three parameters describe the Woods-Saxon potential: the well depth $V$, the radius $r_0$, and the surface diffusivity $a$.  Note that the Woods-Saxon potential drops to zero while the harmonic-oscillator potential increases without bound.  From {\refref}~\citep{pseudospinSymmetry}.}
 \label{fig:woodsSaxon}
 \end{figure}
 The functional form of the Woods-Saxon potential is 
@@ -101,11 +101,11 @@ The initial and final nuclear states could inhibit \zvbb if there were significa
 It should be noted that while there is extensive transfer-reaction data, it is not all suitable for determining valence shell occupancies because of uncorrelated systematic errors in the absolute cross-sections of complementary reactions.  Comprehensive single-nucleon transfer experiments that are specifically designed to limit these relative systematic errors have been performed on several of the candidate nuclei; see \citep{schiffer_review} for an overview of current progress.  In particular, the nuclei \GeTargets have been studied with the neutron-adding reactions (d,p) and ($\alpha$,\He{3}) as well as neutron-removing reactions (p,d) and (\He{3},$\alpha$) \citep{valenceNeutrons}.  The valence protons of these same nuclei have been studied with the (d,\He{3}) and (\He{3},d) reaction \citep{valenceProtons}.  These studies were done on the \Ge{74} and \Se{74} nuclei as a consistency check.  It was found that the Fermi surface of both the protons and neutrons in \GeTargets and \SeProducts are quite diffuse, with the relevant neutron and proton orbits being 2$p_{3/2}$, 1$f_{5/2}$, 2$p_{1/2}$, and 1$g_{9/2}$.  The quantities most important to the \NME calculations are the differences in occupancies between the mother and daughter nucleus; these differences are shown in {\fig}~\ref{fig:occupancyDiffs} along with the theoretical predictions.
 \begin{figure}[!htbp]
 \centering
-\subfloat[][]{
+\subfloat[Occupancies of the neutron and proton valence shells of \Ge{76} and \Se{76}.][]{
    \includegraphics[width=0.4\textheight]{figures/occupancies.eps}
 }
 \\
-\subfloat[][]{
+\subfloat[Occupancy differences between \Ge{76} and \Se{76}.][]{
    \includegraphics[width=0.5\textheight]{figures/occupancyDiffs.eps}
 }
 \caption{(a) Occupancies of the neutron and proton valence shells of \Ge{76} and \Se{76} determined by single-nucleon transfer reactions.  From \citep{schiffer_review}.  (b)  The differences between occupancies in the final and initial states are determined from (a) and are more immediately relevant to \NME calculations.  The theoretical predictions, before and after adjusting level energies to better match the data, are shown next to the experimental values.  Modified from {\refref}~\citep{schiffer_review}.}
