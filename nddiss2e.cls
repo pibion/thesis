@@ -321,7 +321,8 @@
         \vskip\skip1%
     {\normalsize
       \begin{tabular}[t]{c@{}l}%
-        \@author, &\ \@degprior
+        %\@author, &\ \@degprior
+        \@author
       \end{tabular}\par }%
      \ifadvisors@two
         \vskip\skip2\else
