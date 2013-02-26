@@ -118,12 +118,13 @@ The three targets (\GeTargets and \Mg{26}) used in the experiments were provided
 % move this to text, highlight features in plot
 \end{figure}
 \begin{table}[htp]
+\ra{1.1}
 \centering
-\caption[\uppercase{target composition and thickness}]{\uppercase{target composition and thickness}}
+\caption[\uppercase{target composition and thickness}]{\\\uppercase{target composition and thickness}}
 \label{tab:targets}
-\begin{tabular}{lllll}
+\begin{tabular}{lllll}\toprule
  & \multicolumn{2}{c}{$\alpha$-gauge ($\mu$g/cm$^2$)} & \multicolumn{2}{c}{RBS ($\mu$g/cm$^2$)} \\
-\cline{2-3}\cline{4-5}
+\cmidrule(r){2-5}
 $^{74}$Ge (98.9\%) & Au$_{\text{nat}}$ & 1011 & Au$_{\text{nat}}$ & 1001 \\
           & $^{74}$Ge & 1057 & $^{74}$Ge & 1016 \\
           &           &      & O$_{\text{nat}}$ & 9 \\[0.35cm]
@@ -136,6 +137,7 @@ $^{26}$Mg ($>$99.55\%) & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
           &           &      & C$_{\text{nat}}$ & 10 \\
           &           &      & N$_{\text{nat}}$ & 43 \\
           &           &      & O$_{\text{nat}}$ & 52 \\
+\bottomrule
 \end{tabular}
 \begin{flushleft}
 \small NOTE:
@@ -148,12 +150,13 @@ To determine the absolute cross section, it is also necessary to know the total 
 \section{Data Sets}
 Two sets of \reaction data are available.  The first was taken in September 2011.  A subset of this data was taken with no pulse selection due to hardware failure.  A second run in January 2012 provided additional data, all taken with pulse selection.  During the January run, data were taken with the \GeTargets as well as \Mg{26} targets to provide an accurate normalization.  The data sets are summarized in {\tab}~\ref{tab:dataSets}.  While the non-pulse-selected data was useful in constraining parts of the pulse-selected background (see {\sect}~\ref{}), it was not possible to estimate the background well enough to obtain useful cross-section data from these runs.  Thus, the non-pulse-selected data appear in this chapter only as a constraint on a fit to the pulse-selected data.
 \begin{table}[htp]
+\ra{1.1}
 \centering
-\caption[\uppercase{data sets}]{\uppercase{data sets}}
+\caption[\uppercase{data sets}]{\\\uppercase{data sets}}
 \label{tab:dataSets}
-\begin{tabular}{llll}
+\begin{tabular}{llll}\toprule
             & & Live Time (s) & Live Charge ($\mu$C)\\
-\hline
+\cmidrule(r){3-4}
 January     & PS \Mg{26} & 46460 & 1044 \\
 	    & PS \Ge{76} & 78140 & 2919 \\
 	    & PS \Ge{74} & 163800 & 5313 \\ \\
@@ -162,6 +165,7 @@ September   & PS \Ge{76} & 126200 & 2873 \\
 	    & PS \Ge{74} & 116700 & 2619 \\
 	    & NPS \Ge{76} & 273700 & 15320 \\
 	    & NPS \Ge{74} & 113200 & 10010 \\
+\bottomrule
 \end{tabular}
 \begin{flushleft}
 \small NOTE:
@@ -446,12 +450,12 @@ f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
 The ground-state cross section of $^{74}$Ge($^3$He,n) is larger than that of $^{76}$Ge($^3$He,n).  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  The zero-degree ground-state cross section can be determined by fitting the experimentally-determined angular distribution of the ground and first excited state together with DWBA and extrapolating the result to zero degrees.  The code Fresco \citep{Fresco}, used to perform the DWBA calculations, requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical-model potentials used for the \He{3} and neutron are Becchetti-Greenlees \citep{Becchetti_3HePotential} and Koning-Delaroche \citep{Koning_neutronPotential}, respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
 \begin{sidewaystable}\footnotesize
-\caption[\uppercase{potential parameters for DWBA analysis}]{\label{tab:typicalPotentials} \uppercase{potential parameters for DWBA analysis}}
+\ra{1.1}
+\caption[\uppercase{potential parameters for DWBA analysis}]{\\\label{tab:typicalPotentials} \uppercase{potential parameters for DWBA analysis}}
 %\begin{ruledtabular}
-\begin{tabular}{ccccccccccccccccc}
-\hline
+\begin{tabular}{ccccccccccccccccc}\toprule
 Particle & V$_0$ & r$_{\text{R}}$ & a$_{\text{R}}$ & V$_{\text{SO}}$ & r$_{\text{SO}}$ & a$_{\text{SO}}$ & W & r$_{\text{W}}$ & a$_{\text{W}}$ & W$_{\text{D}}$ & r$_{\text{WD}}$ & a$_{\text{WD}}$ & W$_{\text{SO}}$ & r$_{\text{WSO}}$ & a$_{\text{WSO}}$ & r$_{\text{c}}$ \\
-\hline
+\midrule
 $^{3}$He (BG) & 157.1 & 1.20 & 0.72 & 2.50 & 1.20 & 0.72 & 43.4 & 1.40 & 0.88 & - & - & - & - & - & - & 1.30\\
 $^{3}$He (U) & 175.4 & 1.14 & 0.71 & - & - & - & 19.9 & 1.53 & 0.85 & 9.13(N-Z)/A & 1.53 & 1.85 & - & - & - & 1.4\\
 $^{3}$He (GDP08) & 118.92 & 4.98 & 0.82 & 1.38 & 3.87 & 0.13 & 1.71 & 5.37 & 0.84 & 23.09 & 5.37 & 0.84 & - & - & - & 5.33\\
@@ -462,7 +466,7 @@ n (KD) & 45.47 & 1.21 & 0.67 & 5.55 & 1.03 & 0.59 & 1.24 & 1.21 & 0.67 & 6.6 & 1
 $^3$He bound state & 76.6$^{\dagger}$ & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 
 Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
-\hline
+\bottomrule
 % combine with other table of potential parameters
 \end{tabular}
 %\end{ruledtabular}

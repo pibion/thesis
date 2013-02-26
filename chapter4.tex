@@ -64,12 +64,13 @@ Clear-PSMJ multi-clad 1.2 mm diameter, att length > 10 m
 \end{comment}
 The scintillator bars of the neutron detector are outfitted with two PMT's, each coupled to one end via a non-scintillating light guide.  Having two PMT's is essential both for good timing information and also to lessen the position sensitivity of the signal.  Instrumenting the veto scintillators in this way was not feasible.  Fitting a top and bottom PMT to each veto bar would require 32 PMT's and lightguides, along with independent power supplies for each.  Instead, wavelength-shifting (WLS) fiber was chosen to collect the light.  The properties of the WLS fiber used in the veto paddles are shown in {\tab}~\ref{tab:WLS_Kuraray}.
 \begin{table}[htp]
+\ra{1.1}
 \centering
-\caption[\uppercase{fiber properties}]{\uppercase{fiber properties}}
+\caption[\uppercase{fiber properties}]{\\\uppercase{fiber properties}}
 \label{tab:WLS_Kuraray}
-\begin{tabular}{lll}
-Properties & BCF-91A Multi-Clad WLS & Clear-PSMJ Multi-Clad\\
-\hline
+\begin{tabular}{lll}\toprule
+\pbox{20cm}{\hspace{1cm}\\Properties} & \pbox{20cm}{Bicron BCF-91A \\Multi-Clad WLS} & \pbox{20cm}{Kuraray Clear-PSMJ \\Multi-Clad Optical}\\
+\midrule
 Diameter, mm & 1.0 & 1.2\\
 Emission Color & green & n/a\\
 Decay Time, ns & 12 & n/a\\
@@ -78,6 +79,7 @@ Core Material & Polystyrene & \\
 Cladding Material & Acrylic & \\
 Second Cladding Material & Flour-Acrylic \\
 Operating Temperature & $-20^{\circ}$ to $50^{\circ}$ & \\
+\bottomrule
 \end{tabular}
 \begin{flushleft}
 \small NOTE:
