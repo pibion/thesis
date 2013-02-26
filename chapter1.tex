@@ -95,7 +95,8 @@ s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{
 \end{multline}
 where $c_{ij} = \cos{\theta_{ij}}$ and $s_{ij} = \sin{\theta_{ij}}$, $\delta$ is the Dirac CP-violating phase, and the Majorana CP-violating phases $\alpha_{ij}$ are only relevant if the neutrino is a Majorana fermion as discussed in {\sect}~\ref{sec:mass}.  Several generations of long-baseline neutrino experiments using solar, atmospheric, and reactor neutrinos have impressively constrained the mixing parameters and mass differences.  A summary of the parameters is given in {\tab}~\ref{tab:neutrinoParameters}.
 \begin{table}
-\centering
+%\centering
+\begin{center}
 \caption[\uppercase{Neutrino oscillation parameters}]{\uppercase{Neutrino oscillation parameters} \label{tab:neutrinoParameters}}
 \begin{tabular}{lll}\toprule
 Parameter & Best Fit ($\pm$ 1$\sigma$) & 3$\sigma$ \\
@@ -108,9 +109,10 @@ $\sin^2{\theta_{13}}$ & $0.025^{+0.007}_{-0.008}$ & 0.005 - 0.050 \\
 \bottomrule  
 \end{tabular}
 \begin{flushleft}
-\small $\quad\,$NOTE: 
+\small NOTE: 
 Three-neutrino oscillation parameters, determined by a global fit to relevant neutrino data.   The mixing angles $\sin^2{\theta_{12}}$ and $\sin^2{\theta_{13}}$ were determined using reactor $\overline{\nu}_e$ spectra calculated in {\refref}~\citep{reactorNeutrinoSpectrum}.  Note that while it is known that $m_1 < m_2$, the sign of ${\Delta}m^2_{31}$ is not known.  The table is from {\refref}~\citep{PDG}.
 \end{flushleft}
+\end{center}
 \end{table}
 It is significant that the absolute values of the mass differences are measured; the ordering of the mass eigenstates is unknown.  Three different ``mass heierarchies'' are possible: the normal heierarchy (NH) where $m_1 < m_2 < m_3$, the inverted heierarchy (IH) where $m_3 < m_1 < m_2$, and the quasi-degenerate heierarchy (QD) where the mass scale is close to the current limit so that $m_1 \approx m_2 \approx m_3$.  A diagram of the three mass heierarchies is shown in {\fig}~\ref{fig:massScale}.
 \begin{figure}[htp]
@@ -181,9 +183,13 @@ The hadronic dependence of the lifetime, \NME, is sensitive to the initial and f
 \end{figure}  
 This uncertainty in \NME directly affects the limits that can be placed on the neutrino mass scale if \zvbb is observed.  Transfer reactions, discussed in {\chap}~\ref{chap:nucl}, offer valuable experimental data that can be used to understand which models are most appropriate for these nuclei and improve the accuracy of the calculations.  The topic of this thesis is the two-proton transfer reaction, which is also discussed in {\chap}~\ref{chap:nucl}.
 
-Nuclei that are suitable for \zvbb experiments are those that are stable against single beta decay but energetically allowed to double-beta decay.  This is the same group of nuclei in which \tvbb has been observed, and in fact the \tvbb process is a significant background to \zvbb.  The nuclei $^{48}$Ca, \Ge{76}, \Se{82}, $^{100}$Mo, $^{130}$Te, $^{136}$Xe, and $^{150}$Nd have been used to search for the process in past and present experiments.  See {\tab}~\ref{tab:experiments} for a list of past and present experiments.  Because of the uncertainties on \NME for these nuclei, it is not clear which, if any, would enjoy a shorter $T^{0\nu}_{1/2}$.  So many different experiments have arisen because each candidate nucleus offers different advantages in experimental design.  \Ge{76} is an appealing candidate because the active volume also serves as the detector, and Ge crystals are well understood.  Experiments using \Ge{76} are also important because the Heidelberg-Moscow experiment, which claimed an observed \zvbb signal \citep{KlapdorKleingrothaus}, used \Ge{76} crystals.  Other nuclei are appealing because they have high abundance or are easy to obtain.  This is the case for $^{136}$Xe, which is currently being used by the EXO-200 collaboration \citep{EXO200}.  Experiments using $^{136}$Xe are typically time projection chambers (TPC), which are able to strongly reduce background by reconstructing the momenta of particles in a decay.  Using $^{136}$Xe is particularly appealing because large quantities are readily available, reducing the cost of increasing the mass scale of the experiment.  Another candidate nucleus, $^{130}$Te, is frequently used in experiments using bolometry to detect \zvbb.  A summary of \zvbb searches is shown in {\tab}~\ref{tab:experiments}.
+Nuclei that are suitable for \zvbb experiments are those that are stable against single beta decay but energetically allowed to double-beta decay.  This is the same group of nuclei in which \tvbb has been observed, and in fact the \tvbb process is a significant background to \zvbb.  The nuclei $^{48}$Ca, \Ge{76}, \Se{82}, $^{100}$Mo, $^{130}$Te, $^{136}$Xe, and $^{150}$Nd have been used to search for the process in past and present experiments.  See {\tab}~\ref{tab:experiments} for a list of past and present experiments.  Because of the uncertainties on \NME for these nuclei (see {\fig}~\ref{fig:differentNME}, it is not clear which, if any, would enjoy a shorter $T^{0\nu}_{1/2}$.  So many different experiments have arisen because each candidate nucleus offers different advantages in experimental design.  \Ge{76} is an appealing candidate because the active volume also serves as the detector, and Ge crystals are well understood.  Experiments using \Ge{76} are also important because the Heidelberg-Moscow experiment, which claimed an observed \zvbb signal \citep{KlapdorKleingrothaus}, used \Ge{76} crystals.  Other nuclei are appealing because they have high abundance or are easy to obtain.  This is the case for $^{136}$Xe, which is currently being used by the EXO-200 collaboration \citep{EXO200}.  Experiments using $^{136}$Xe are typically time projection chambers (TPC), which are able to strongly reduce background by reconstructing the momenta of particles in a decay.  Using $^{136}$Xe is particularly appealing because large quantities are readily available, reducing the cost of increasing the mass scale of the experiment.  Another candidate nucleus, $^{130}$Te, is frequently used in experiments using bolometry to detect \zvbb.  A summary of \zvbb searches is shown in {\tab}~\ref{tab:experiments}.
 \begin{sidewaystable}
 \ra{1.1}\small
+\centering
+\caption[\zvbb \uppercase{experiments}]{\zvbb \uppercase{experiments}}
+\label{tab:experiments}
+
 \begin{tabular}{@{}rlllllll@{}}\toprule
 \multicolumn{1}{l}{Experiment} & Isotope & Mass [kg] & Method & $T^{2\nu}_{1/2}$ [yr] & $T^{0\nu}_{1/2}$ [yr] & Start - End & {\refref} \\
 \midrule
@@ -209,8 +215,10 @@ SuperNEMO Demo & \Se{82} & 7 & track + calorim. & & & 2014 - & \citep{SuperNEMO}
 SNO+ & $^{150}$Nd & 44 & liquid scint. & & & 2013 - & \citep{SNO} \\
 \bottomrule
 \end{tabular}
-\caption[Summary of \zvbb experiments.]{Past, present, and future \zvbb experiments.  Detecting a signal in several different isotopes would greatly improve the likelihood of a Majorana process.  From \citep{zvbbReviewSchwingenheuer}.}
-\label{tab:experiments}
+\begin{flushleft}
+\small NOTE:
+Past, present, and future \zvbb experiments.  Detecting a signal in several different isotopes would greatly improve the likelihood of a Majorana process.  From \citep{zvbbReviewSchwingenheuer}.
+\end{flushleft}
 \end{sidewaystable}
 
 Searches for \zvbb offer access to unique areas of neutrino physics.  Confirmation of the process would demonstrate that neutrinos are Majorana in nature and would also provide a measurement of the absolute mass scale of the electron neutrino.  The dependence of the lifetime on \NME poses a difficulty because the current uncertainty in calculations limits the sensitivity to the neutrino mass scale and also increases the difficulty of planning experiments that search for the process.  Nuclear transfer experiments provide information that can help reduce the uncertainty of \NME calculations, and this thesis focuses on two-proton transfers in the Ge nuclei.  The impact of such a transfer experiment is discussed in {\chap}~\ref{chap:nucl}.

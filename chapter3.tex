@@ -72,7 +72,7 @@ A large 90$^{\circ}$ bend dipole magnet at the exit of the tandem can work in a 
 
 \subsection{Beam Focusing and Selection}
 
-Beam exiting the analyzing magnet is narrowly defined by horizontal and vertical slits.  Additionally, both pole faces of the analyzing magnet are shaped to provide a focusing field in both the horizontal and vertical planes.  Although the beam has a limited angular divergence at the analyzing magnet, the flight path to the target is $\sim60$~m and and many focusing and steering elements along the way are necessary to obtain a reasonable transmission rate and ensure that the beam is well-focused at the target.  Two Einzel lenses \citep{BeamOptics} focus the beam before it enters the accelerator, and a set of electrostatic steerers before and after the accelerator are enough to position the beam before it enters the analyzing magnet.  Quadrupole doublet magnets focus the beam as it travels through the target rooms, and another set of steerers allows correction of the beam position and angle.  The final focusing elements before the target are two large-bore, variable-strength solenoid magnets \citep{TwinSol} that focus the beam to a spot approximately 2~mm in diameter.
+Beam exiting the analyzing magnet is narrowly defined by horizontal and vertical slits.  Additionally, both pole faces of the analyzing magnet are shaped to provide a focusing field in both the horizontal and vertical planes.  Although the beam has a limited angular divergence at the analyzing magnet, the flight path to the target is $\sim60$~m and and many focusing and steering elements along the way are necessary to obtain a reasonable transmission rate and ensure that the beam is well-focused at the target.  See {\fig}~\ref{fig:beamline} for a schematic diagram of the focusing and steering elements along the beamline.  Two Einzel lenses \citep{BeamOptics} focus the beam before it enters the accelerator, and a set of electrostatic steerers before and after the accelerator are enough to position the beam before it enters the analyzing magnet.  Quadrupole doublet magnets focus the beam as it travels through the target rooms, and another set of steerers allows correction of the beam position and angle.  The final focusing elements before the target are two large-bore, variable-strength solenoid magnets \citep{TwinSol} that focus the beam to a spot approximately 2~mm in diameter.
 
 % figure: beamline
 \begin{figure}[htp]
@@ -156,6 +156,8 @@ The neutron detector \citep{KolataNeutwall} consists of 16 large (1.5 m $\times$
 % table: BC408 properties
 \begin{table}[htp]
 \centering
+\caption[\uppercase{plastic scintillator properties}]{\uppercase{plastic scintillator properties}}
+\label{tab:BC408}
 \begin{tabular}{ll}
 Properties & BC408 \\
 \hline
@@ -170,11 +172,13 @@ No. of C Atoms per cm$^3$ & 4.74$\times10^{22}$ \\
 Ratio H:C Atoms & 1.104 \\
 No. of Electrons per cm$^3$ & 3.37$\times10^{22}$ \\
 \end{tabular}
-\caption[Properties of the plastic scintillator used as the neutron detector.]{Properties of the plastic scintillator used as the neutron detector. Values are taken from \citep{BC408}.}
-\label{tab:BC408}
+\begin{flushleft}
+\small NOTE:
+Properties of the plastic scintillator used as the neutron detector. Values are taken from \citep{BC408}.
+\end{flushleft}
 \end{table}
 
-The bars of scintillating plastic are positioned on an arc of radius 14.6 m centered around the target.   At this distance, the solid angle subtended by each bar is only 0.15 m/15 m $\times$ 1.5 m/15 m = 1 msr.  The forwardmost angle relative to the beam is 6$^{\circ}$ and the largest angle is $22^{\circ}$.  As discussed in the previous chapter, the angular distribution of the \zp states peaks at 0$^{\circ}$ and drops to its first minimum at 20$^{\circ}$, so that ideally the detector would extend to 0$^{\circ}$.  A concrete support beam makes 6$^{\circ}$ the forwardmost instrumentable angle.
+The bars of scintillating plastic are positioned on an arc of radius 14.6 m centered around the target as shown in {\fig}~\ref{fig:detectorGeometry}.   At this distance, the solid angle subtended by each bar is only 0.15 m/15 m $\times$ 1.5 m/15 m = 1 msr.  The forwardmost angle relative to the beam is 6$^{\circ}$ and the largest angle is $22^{\circ}$.  As discussed in the previous chapter, the angular distribution of the \zp states peaks at 0$^{\circ}$ and drops to its first minimum at 20$^{\circ}$, so that ideally the detector would extend to 0$^{\circ}$.  A concrete support beam makes 6$^{\circ}$ the forwardmost instrumentable angle.
 % figure - diagram of detector
 \floatsetup[figure]{style=plain,subcapbesideposition=top}
 \begin{figure}[htp]
@@ -227,7 +231,7 @@ The lone signal provided by the PMT base is not adequate for pulse processing be
 
 The fundamental components of the DAQ are the TDC, the QDC, and the event trigger that causes the DAQ to read each module.  Triggering any time either a bar's top or bottom PMT fired would waste the DAQ with recording many noise events.  A real event should create signals in both the top and bottom PMT's, and requiring a coincidence between the two results is a reasonable trigger.  One way to define an event trigger for the entire neutron wall would be to trigger any time a coincidence between associated top and bottom PMT's occurs.  But constructing this trigger with NIM logic units requires many separate logic gates and is unnecessarily complicated.  
 
-One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold unit that provides an OR output.  Instead of requiring a top and bottom signal in the same bar, each CFD unit processes a section of only top or only bottom bar signals and the condition is loosened to requiring a signal in a top PMT and a bottom PMT in the same eight-bar group as shown in \ref{fig:eventTrig}.  The presence of some top signal AND some bottom signal triggers the event signal.  Such an event only requires that both a top and a bottom signal coincided but does not require that these signals belonged to the same bar.  This simplified event trigger includes all events of interest, where the top and bottom signal belong to one bar, but also includes spurious events where no bar has a signal in both its top and bottom PMT.  With a dead time of less than 30\%, this event condition does not hinder data collection.  Simple software cuts eliminate any spurious events where no bar has a signal in both its top and bottom PMT.
+One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold unit that provides an OR output.  Instead of requiring a top and bottom signal in the same bar, each CFD unit processes a section of only top or only bottom bar signals and the condition is loosened to requiring a signal in a top PMT and a bottom PMT in the same eight-bar group as shown in {\fig}~\ref{fig:eventTrig}.  The presence of some top signal AND some bottom signal triggers the event signal.  Such an event only requires that both a top and a bottom signal coincided but does not require that these signals belonged to the same bar.  This simplified event trigger includes all events of interest, where the top and bottom signal belong to one bar, but also includes spurious events where no bar has a signal in both its top and bottom PMT.  With a dead time of less than 30\%, this event condition does not hinder data collection.  Simple software cuts eliminate any spurious events where no bar has a signal in both its top and bottom PMT.
 
 % figure: event trigger
 \begin{figure}[htp]
@@ -239,11 +243,11 @@ One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold un
 
 % discuss energy, time info from near-target detectors
 % and then scalers?
-The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the neutron detector DAQ.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify scattered \He{3} and should be recorded.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of 100 and 50, respectively, before adding it to the event trigger limits the dead time of the total system to less than 20\%.
+The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the neutron detector DAQ.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify scattered \He{3} and should be recorded.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of 100 and 50, respectively, before adding it to the event trigger limits the dead time of the total system to less than 20\%.  See {\fig}~\ref{fig:fullElectronics} for a schematic of the complete electronics setup.
 % figure: full electronics
 \begin{figure}[htp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/electronics.eps}
+\includegraphics[height=0.8\textheight]{figures/electronics.eps}
 \caption[Full diagram of the detector electronics.]{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
 \label{fig:fullElectronics}
 \end{figure}
@@ -253,7 +257,7 @@ The DAQ must also record some quantities that are independent of the event trigg
 % figure: full electronics
 \begin{figure}[htp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/electronics_scalers.eps}
+\includegraphics[height=0.8\textheight]{figures/electronics_scalers.eps}
 \caption[Detector scalers.]{A diagram of the neutron detector scalers.  The modules on the right are read by the DAQ independent of the event signal.}
 \label{fig:scalerElectronics}
 \end{figure}
