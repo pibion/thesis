@@ -200,13 +200,13 @@ The bars of scintillating plastic are positioned on an arc of radius 14.6 m cent
 
 The 14.6~m flight path was not arbitrarily chosen; the distance between the target and detector must be as long as possible to ensure reasonable resolution.  The longest available path in the room was $\sim$15~m.  Together with the neutron energy, this distance determines the resolution of the detector.  Conservation of energy and momentum determines the relativistic energy $E = \gamma m c^2$ of the outgoing neutron, where $\gamma=(1-v^2/c^2)^{-1/2}$ and $m$ and $v$ are the rest mass and velocity of the neutron, respectively.  The time $t$ it takes for this neutron to travel the distance $d$ between the target and the detector is fixed for a given $d$ and $v$.  Deriving this time as a function of the relativistic energy is simple using the relation $E=\gamma mc^2$, where $c$ is the speed of light:
 \begin{equation}
-t(E) = \frac{d}{v} =  dc\times\sqrt{\frac{(E/mc^2)^2}{(E/mc^2)^2-1}} 
+t(E) = \frac{d}{v} =  \frac{d}{c}\times\sqrt{\frac{(E/mc^2)^2}{(E/mc^2)^2-1}} 
 \label{eq:TOF}
 \end{equation}
 Neutrons from $^{76}$Ge($^3$He,n)$^{78}$Se have a relativistic energy of $\sim$966~MeV if the product nucleus, $^{78}$Se, is populated in its ground state.  Using {\eqn}~\ref{eq:TOF}, this gives a TOF of
 \begin{eqnarray}
-t(966 \text{ MeV}) &=& (14.6 \text{ m})(0.3 \text{ m/ns})\times\sqrt{\frac{(966/940)^2-1}{(966/940)^2}} \nonumber \\
-           &=& (14.6 \text{ m})(0.3 \text{ m/ns})\times\frac{1}{0.23} = 212 \text{ ns} \nonumber.
+t(966 \text{ MeV}) &=& \frac{14.6 \text{ m}}{0.3 \text{ m/ns}}\times\sqrt{\frac{(966/940)^2}{(966/940)^2-1}} \nonumber \\
+           &=& \frac{14.6 \text{ m}}{0.3 \text{ m/ns}}\times\frac{1}{0.23} = 212 \text{ ns} \nonumber.
 \end{eqnarray}
 Neutrons from a reaction that populates the first excited state of \Se{78}, which is only 0.6~MeV above the ground state, trail the ground-state neutrons by 1.9~ns.  Since the beam bunch itself has a width of 1~ns, this flight path provides not quite enough resolution to separate the ground and first excited state of \GeTargets. However, the differing angular distributions of the two states allowed for a determination of their respective intensities.  This is discussed in {\chap}~\ref{chap:dataAnalysis}.
 % figure: \Ge{76}, 74Ge level scheme?
@@ -218,7 +218,7 @@ Neutrons from a reaction that populates the first excited state of \Se{78}, whic
 Electronics diagram!  Discuss two most important aspects: TDC and ADC from phototubes
 \end{comment}
 
-In principle, the timing information is all the data acquisition (DAQ) needs to record if there were no background radiation.  However, concrete in the room emits low-energy $\gamma$ radiation that leaves signals in the detector at a high rate.  Measuring the energy deposition is necessary because it allows us to eliminate this low-energy background radiation as well as high-energy cosmic rays.
+In principle, the timing information is all the data acquisition (DAQ) would need to record if there were no background radiation.  However, concrete in the room emits low-energy $\gamma$ radiation that leaves signals in the detector at a high rate.  Measuring the energy deposition is necessary because it allows us to eliminate this low-energy background radiation as well as high-energy cosmic rays.
 
 When a particle deposits energy in some bar of the neutron detector, the DAQ must record both the total energy and timing of the signals from the top and bottom PMT's.  A charge to digital converter (QDC) can integrate the PMT signal and a time to digital converter (TDC) can measure the time between a logic pulse created by the PMT signal and the logic pulse from the beam buncher.  Because time resolution is the only way to distinguish groups of neutrons with different energies, constant fraction discriminators (CFD's) and not leading edge discriminators create the logic pulse sent to the TDC.  The 5-ns PMT signal risetime, together with CFD's, give timing information with jitter that is about 1~ns.  There are no stringent requirements on energy resolution as the detector itself has energy resolution on the order of 1~MeV near the thorium edge.
 % figure: CFD operation
