@@ -40,7 +40,7 @@ The aim of the analysis of the \reaction data sets is to extract the absolute cr
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/74Ge_sep_PS_barA_zoom.eps}
 }
-\caption[Timing spectrum due to $^{74}$Ge($^3$He,n)$^{76}$Se.]{(a) A (time of flight) (TOF) spectrum from the forwardmost neutron detector bar (6.1$^{\circ}$) in the case of pulse-selected beam.  The reaction is $^{74}$Ge($^3$He,n)$^{76}$Se.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow.  Note that the $\gamma$ peak is doubly peaked, from beam hitting the target and then the beamstop.  (b) The neutron spectrum.  The ground-state neutron peak is indicated with a ``1'', the neutron continuum with a ``2''.  The other prominent peak, labeled ``3'', is due to oxygen contamination in the target.}
+\caption[Timing spectrum due to $^{74}$Ge($^3$He,n)$^{76}$Se.]{(a) A (time of flight) (TOF) spectrum from the forwardmost neutron detector bar (6.1$^{\circ}$) in the case of pulse-selected beam.  The reaction is $^{74}$Ge($^3$He,n)$^{76}$Se.  The ground-state neutron peak is indicated with a solid arrow and the $\gamma$ peak with a hollow arrow.  Note that the $\gamma$ peak is doubly peaked, from beam hitting the target and then the beamstop.  (b) The neutron TOF spectrum in the region of interest.  The ground-state neutron peak is indicated with a ``1'', the neutron continuum with a ``2''.  The other prominent peak, labeled ``3'', is due to oxygen contamination in the target.}
 \label{fig:time}
 \end{figure}
 Another measurement important for analysis is the integrated light output at the top and bottom of a bar.  A geometric average of these, $\sqrt{E_tE_b}$, where $E_t$ and $E_b$ are the integrated light signal of the top and bottom PMT, respectively, is considered a measure of the neutron energy and is referred to as ``energy'' in this chapter.  This quantity is discussed further in {\sect}~\ref{sec:cuts}.   The top and bottom PMT signals, taken separately, are not necessarily a measure of the energy of the event and will be referred to as ``light signals'' when used without averaging. 
@@ -61,7 +61,7 @@ The efficiency of a plastic-scintillator-type neutron detector depends not only 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/Lite_28MeV.eps}
-\caption[Total light deposited 28-MeV neutrons.]{The light curve for 28-MeV neutrons from \MgReaction is obtained by restricting the events to those in the ground-state peak window.  The data points shown in red are from the January dataset.}
+\caption[Total light deposited 28-MeV neutrons.]{The light curve for 28-MeV neutrons from \MgReaction is obtained by restricting the events to those in the ground-state peak window.  The data points (red, shaded circles) are from the January dataset.}
 \label{fig:lowEnergyCut}
 \end{figure}
 The width of the high-energy falloff gives the resolution of the detector, and the threshold can be determined by assuming the scale has a zero offset.  That this is a reasonable assumption is confirmed by the accuracy of the calculation.  
@@ -70,7 +70,7 @@ The efficiencies calculated using the above method must be checked for absolute 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/deuteriumMatch.eps}
-\caption[Matching the detector efficiency with d(d,n).]{The prediction for d(d,n) (solid line) matches the data well when the efficiency is corrected for the neutron energy (red points).  The blue points represent the differential cross section where the efficiency is assumed to remain constant despite a changing neutron energy.}
+\caption[Matching the detector efficiency with d(d,n).]{The prediction for d(d,n) (solid line) matches the data well when the efficiency is corrected for the neutron energy (red, shaded circles).  The green, square points represent the differential cross section where the efficiency is assumed to remain constant despite a changing neutron energy.}
 \label{fig:DeuteriumMatch}
 \end{figure}
 
@@ -78,7 +78,7 @@ That the Cecil code appears to be successful in calculating the efficiency of th
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/magnesiumMatch.eps}
-\caption[Checking consistency of efficiency calculation with \MgReaction by comparing to nearby measured cross sections.]{Checking consistency of efficiency calculation with \MgReaction.  Black squares shown previous experimentally-measured values of the cross section.  This work (green triangle) is consistent with calculations.  The calculations (red circles) are coupled-channel DWBA calculations following the prescription of \citep{MgCrossSection1}.  The blue lines indicate the estimated systematic error of the calculation.}
+\caption[Checking consistency of efficiency calculation with \MgReaction by comparing to nearby measured cross sections.]{Checking consistency of efficiency calculation with \MgReaction.  Black squares show previous experimentally-measured values of the cross section.  This work (green triangles) is consistent with calculations.  The calculations (red circles) are coupled-channel DWBA calculations following the prescription of \citep{MgCrossSection1}.  The blue lines indicate the estimated systematic error of the calculation.  The systematic error of the data produced in this work is not shown, while the systematic error of the other data points is shown.  The experimental systematic error of the zero-degree cross section of \MgReaction is approximately 10\%, due primarily to the detection efficiency.}
 % circles - CCBA
 % blue lines estimate of systematic error due to CCBA parameters
 % squares are existing data
@@ -91,9 +91,9 @@ current, tgt thickness (RBS), solid angle, dead time
 go ahead and discuss errors while you discuss these quantities
 \end{comment}
 
-The differential cross section is the number of times a reaction occurred ($N_{reaction}$) normalized by the total number of particles incident on the target ($N_{beam}$), the number density of nuclei in the target ($n_{target}$), and the {efficiency of the detector}~($\epsilon$):
+The differential cross section is the number of times a reaction occurred ($N_{\text{reaction}}$) normalized by the total number of particles incident on the target ($N_{\text{beam}}$), the number density of nuclei in the target ($n_{\text{target}}$), and the {efficiency of the detector}~($\epsilon$):
 \begin{align}
-\frac{d\sigma}{d\Omega} &= \frac{N_{reaction}}{N_{beam} \times n_{target} \times \epsilon}.
+\frac{d\sigma}{d\Omega} &= \frac{N_{\text{reaction}}}{N_{\text{beam}} \times n_{\text{target}} \times \epsilon}.
 \label{eq:cross_section}
 \end{align}
 The efficiency $\epsilon$ of the detector includes the solid angle $d\Omega$.  Other quantities in the cross section that relate to the experimental setup are the number of particles incident on the target and the number density of nuclei in the target.
@@ -130,7 +130,7 @@ $^{74}$Ge (98.9\%) & Au$_{\text{nat}}$ & 1011 & Au$_{\text{nat}}$ & 1001 \\
           &           &      & O$_{\text{nat}}$ & 9 \\[0.35cm]
 
 $^{76}$Ge (92.82\%) & Au$_{\text{nat}}$ & 1069 & Au$_{\text{nat}}$ & 1014 \\
-          & $^{76}$Ge & 838 & $^{74}$Ge & 775 \\
+          & $^{76}$Ge & 838 & $^{76}$Ge & 775 \\
           &           &      & O$_{\text{nat}}$ & 4 \\[0.35cm]
 
 $^{26}$Mg ($>$99.55\%) & $^{26}$Mg & 791 & $^{26}$Mg & 685 \\
@@ -226,7 +226,7 @@ where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is i
 \label{fig:product_positionDependence}
 \end{figure}
 
-Defining a position-dependent light signal cut on each PMT separately would be an ideal solution to these problems if the position dependence for a given energy were known.  While such a characterization of the PMT's for an arbitrary energy is not known, the muon events recorded by the detector do give the light signal as a function of position for one energy.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{2.4}{\theta}$ \citep{cosmicsZenithDependence} (where $\theta$ is the zenith angle) confirm a well-defined peak in the muon path length. This most-likely path length manifests as a peak in the energy spectrum that depends only on the thickness of the bars and on the most likely angle of incident muons because they are MIP's.  Note that both the bar thickness and the most likely angle of a muon path are the same for every bar in the neutron wall.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}. 
+Defining a position-dependent light signal cut on each PMT separately would be an ideal solution to these problems if the position dependence for a given energy were known.  While such a characterization of the PMT's for an arbitrary energy is not known, the muon events recorded by the detector do give the light signal as a function of position for one energy.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{2.4}{\theta}$ \citep{cosmicsZenithDependence} (where $\theta$ is the zenith angle) confirm a well-defined peak in the muon path length. This most-likely path length of the incident muons manifests as a peak in the energy spectrum that depends only on the thickness of the bar and on the most likely angle of the trajectory because the muons are MIP's.  Note that both the bar thickness and the most likely angle of a muon path are the same for every bar in the neutron wall.  In addition, the thickness of the neutron detector bars places this peak well above the thorium edge, at approximately 15~MeVee.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}.  The peak of the light spectrum is assumed to represent the same energy and therefore to function as a calibration of the position dependence of the light signal due to the most likely muon energy deposition.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -235,10 +235,10 @@ Defining a position-dependent light signal cut on each PMT separately would be a
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/BarA_cosmics_centerSlice.eps}
 }
-\caption[Characteristic peak in energy spectrum due to muons.]{(a) A simulation of path length of muons interacting in a detector with dimensions identical to those of the neutron detector bars.  Note the distinct peak. (b) Light signal of muon events near the center of the bar.  The peak in this distribution is believed to be the peak seen in the simulated spectrum.}
+\caption[Characteristic peak in energy spectrum due to muons.]{(a) A simulation of path length of muons interacting in a detector with dimensions identical to those of the neutron detector bars.  All muons are assumed to be MIP's, which implies that distance traveled in the scintillator linearly transforms into energy deposited in the scintillator.  Note the distinct peak. (b) Light signal of muon events near the center of the bar.  The peak in this distribution is believed to be the peak seen in the simulated spectrum.}
 \label{fig:muonSpectrum}
 \end{figure}
-The peak of the light spectrum is assumed to represent the same energy and therefore to function as a calibration of the position dependence of the light signal due to the most likely muon energy deposition.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
+% new figure
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -254,7 +254,7 @@ The peak of the light spectrum is assumed to represent the same energy and there
 \caption[Determining the position-dependent lower-energy cut using the energy spectrum due to muons.]{(a) The position dependence of the light signal from a single PMT.  (b) The two-dimensional histogram shown in (a) is projected into a series of one-dimensional histograms.  The peaks of these histograms are determined by fitting with a Landau function.  (c) A plot describing the curve which, when scaled, is used as the low-energy cut.  The points are determined from the histograms shown in (b).  Points at the extremes that do not follow the trend are used to determine the position cut.}
 \label{fig:fits_pkVSpos}
 \end{figure}
-Using this ``constant-energy curve'' directly as a lower-energy cut is too high an energy cut as can be seen in {\fig}~\ref{fig:highEnergyCut}.  Instead, a scaling factor is applied to these curves that maximizes the signal to noise ratio; the scaled curves serve as appropriate energy cuts.  While high cuts discard more background, they also discard more neutrons of interest, which can deposit a small amount of energy in the detector.  The minimum fractional error is achieved with a scaling factor that results in a reduction of the background by a factor of $\sim$1.4 (with all other cuts applied).  This is the case for every bar in the neutron detector; the fractional error as a function of the energy cut for the forwardmost bar is shown in {\fig}~\ref{fig:signalToNoise}.  Scaling ratios are determined by comparing the background to that of the initial cut to obtain uniform scaling from bar to bar.  
+Using this ``constant-energy curve'' directly as a lower-energy cut is too high an energy cut as can be seen in {\fig}~\ref{fig:highEnergyCut}.  Instead, a scaling factor is applied to these curves that maximizes the signal to noise ratio; the scaled curves serve as appropriate energy cuts.  While high cuts discard more background, they also discard more neutrons of interest, which can deposit a small amount of energy in the detector.  The minimum fractional error of the extracted ground-state counts is achieved with a scaling factor that results in a reduction of the background by a factor of $\sim$1.4 (with all other cuts applied).  This is the case for every bar in the neutron detector; the fractional error as a function of the energy cut for the forwardmost bar is shown in {\fig}~\ref{fig:signalToNoise}.  Scaling ratios are determined by comparing the background to that of the initial cut to obtain uniform scaling from bar to bar.  
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
