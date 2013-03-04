@@ -31,7 +31,7 @@
 Give an overview of the requirements for two-proton transfer and say that ND has a buncher and a Tandem accelerator that goes up to 10 MV so we can get beam energies up to 30 MeV for \He{3} and we have a beamline with a long flight path SO we can do this experiment.
 \end{comment}
 
-The previous chapter demonstrated the interest in studying \reaction reactions.  The detected reaction product is a neutron and its time of flight (TOF) must be measured.  The beam must therefore be bunched and the neutron detector must be optimized to provide sub-nanosecond timing information.  The bunching of the beam and the timing properties of the neutron detector will be discussed in detail in this chapter.   
+The previous chapter demonstrated the interest in studying \reaction reactions.  The detected reaction product is a neutron and its time of flight (TOF) must be measured.  The beam must therefore be bunched and the neutron detector must be optimized to provide sub-nanosecond timing information.  The neutron detector consists of 16 large bars of plastic scintillator arranged around the target at a distance of 14.6~m and is discussed in detail in {\sect}~\ref{sec:detector}.  Each bar in the detector gives the event timing relative to the target and also the event energy.  The timing information is needed to distinguish different-energy neutrons, and the energy information is used for background-reducing cuts.  Separate from the neutron detector, beam monitors are needed to allow normalization between data runs.  The two detectors used for this purpose are a silicon detector, whose energy signal can be use to identify scattered \He{3}, and a BaF$_2$ crystal, whose timing signal relative to the beam is predominantly due to gamma radiation from the beam on target.  These beam monitors are discussed separately from the neutron detector, in {\sect}~\ref{sec:beamMonitors}. 
 
 % detecting neutrons
 % this means we need timing information
@@ -42,7 +42,8 @@ The previous chapter demonstrated the interest in studying \reaction reactions. 
 % interested in 0+ distribution
 % and there's an ideal beam energy for that
 % and that constrains the distance between the target and neutron detector
-Not only must the beam be bunched, its energy must also be carefully chosen.  As discussed in the previous chapter, the purpose of this experiment is to measure the distribution of \zp strength.  According to DWBA calculations, achieving the maximum \zp cross-section for \reaction requires a beam energy near 18 MeV, but the resolution of the neutron detector decreases with increasing neutron energy.  The energy chosen for the \He{3} is 16 MeV in the present work, and the effect of this energy on the resolution of the neutron detector is discussed in {\sect}~\ref{sec:detector}.
+The beam must be bunched for the neutron detector to be effective, and its energy must be chosen to maximize the low cross sections expected of the \reaction reactions.  According to DWBA calculations, achieving the maximum \zp cross-section for \reaction requires a beam energy near 18 MeV, but the resolution of the neutron detector at a fixed distance decreases with increasing neutron energy.  The energy chosen for the \He{3} is 16 MeV in the present work, and the effect of this energy on the resolution of the neutron detector is discussed in {\sect}~\ref{sec:detector}.  The production of bunched, 18~MeV \He{3} beam and the details of the subsequent neutron detection are the subject of this chapter.
+
 
 
 \section{Beam Production at Notre Dame}
@@ -121,6 +122,7 @@ To give all the neutrons resulting from one beam bunch time to reach the detecto
 Beam bunching and pulse selection reduce available beam current - the swept beam current is only 40\% $\times$ $\frac{1}{4} = 10$\% of the non-bunched current.  However, without bunched beam it would not be possible to distinguish the neutrons of interest in the (\He{3},n) transfer reaction.  Increased beam current would improve statistics on \reaction, but the HIS was already operating at its full output for these experiments.
 
 \section{The Target Chamber}
+\label{sec:beamMonitors}
 \begin{comment}
 target
 thin stainless steel wall
@@ -152,7 +154,7 @@ Unlike charged particles, neutrons rarely deposit their full energy in a detecto
 % figure of charged-particle energy spectrum
 % figure of neutron energy spectrum
 
-The neutron detector \citep{KolataNeutwall} consists of 16 large (1.5 m $\times$ 0.15 m $\times$ 0.05 m) bars of commercially available scintillator with excellent timing response \citep{BC408}.  Each plastic scintillator bar is equipped with two fast-risetime photomultiplier tubes (PMT's) at opposite ends.  The PMT's used are Amperex XP2020 and XP2262B, wihch each have an intrinsic risetime of just under 1 ns \citep{PMT_XP2020,KolataNeutwall}.   When coupled to the bars of the neutron detector, the signal risetime is approximately 5~ns.  Processing this signal with constant fraction discriminators (CFD's) gives sub-nanosecond timing resolution.  Additionally, PMT's on opposite ends of the bars allows construction of an average time signal, removing the timing spread due to the interaction location.  Neutron detector signal processing is discussed further in {\sect}~\ref{sec:electronics}.
+The neutron detector \citep{KolataNeutwall} consists of 16 large (1.5 m $\times$ 0.15 m $\times$ 0.05 m) bars of commercially available scintillator with excellent timing response \citep{BC408}.  Each plastic scintillator bar is equipped with two fast-risetime photomultiplier tubes (PMT's) at opposite ends.  The PMT's used are Amperex XP2020 and XP2262B, which each have an intrinsic risetime of just under 1 ns \citep{PMT_XP2020,KolataNeutwall}.   When coupled to the bars of the neutron detector, the signal risetime is approximately 5~ns.  Processing this signal with constant fraction discriminators (CFD's) gives sub-nanosecond timing resolution.  Additionally, PMT's on opposite ends of the bars allows construction of an average time signal, removing the timing spread due to the interaction location.  Neutron detector signal processing is discussed further in {\sect}~\ref{sec:electronics}.
 % figure: one bar with its PMT's
 
 % table: BC408 properties
@@ -247,12 +249,12 @@ One solution is to use the built-in OR of the CFD.  Each CFD is an eight-fold un
 
 % discuss energy, time info from near-target detectors
 % and then scalers?
-The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the neutron detector DAQ.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy is a useful way to identify scattered \He{3} and should be recorded.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not be allowed to prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of 100 and 50, respectively, before adding it to the event trigger limits the dead time of the total system to less than 20\%.  See {\fig}~\ref{fig:fullElectronics} for a schematic of the complete electronics setup.
+The time information, energy information, and a signal to indicate that this information should be read from the modules and recorded, form the core of the neutron detector DAQ.  However, the DAQ must also record information from the detectors near the target.  The particles of interest for the Si detector are scattered \He{3} beam, and because they are charged and deposit all their energy in the Si detector, the energy signal identifies scattered \He{3} and is recorded in the data stream.  The BaF$_2$ detector sits outside the target chamber and monitors primarily beam-induced $\gamma$ radiation.  The timing of this detector's signal relative to the beam buncher, rather than the energy, is recorded by the DAQ.  Finally, because these detectors have high detection efficiency and are placed close to the target, their event rate is much higher than that of the neutron detectors.  While these detectors are essential to determining the relative particle flux through the target, the dead time they cause the DAQ should not be allowed to prohibit events from the neutron detector itself from being recorded.  Pre-scaling the signals from the Si and BaF$_2$ by factors of 100 and 50, respectively, before adding it to the event trigger limits the dead time of the total system to less than 20\%.  See {\fig}~\ref{fig:fullElectronics} for a schematic of the complete electronics setup.
 % figure: full electronics
 \begin{figure}[htp]
 \centering
 \includegraphics[height=0.8\textheight]{figures/electronics.eps}
-\caption[Full diagram of the detector electronics.]{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ.}
+\caption[Full diagram of the detector electronics.]{A diagram of the neutron detector electronics.  The modules on the right are read by the DAQ when triggered by an event signal.}
 \label{fig:fullElectronics}
 \end{figure}
 
