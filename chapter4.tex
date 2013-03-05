@@ -43,7 +43,7 @@ Data on \MgReaction were taken with the neutron detector setup as described in {
 % figure: Bar A TOF spectrum
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/26Mg_veryOld.eps}
+\includegraphics[width=1.0\textwidth]{figures/26Mg_veryOld.eps}
 \caption[Timing spectrum for \MgReaction.]{The 6$^{\circ}$ TOF spectrum for \MgReaction.  The light output threshold is set at 7.2 MeVee, where MeVee is the electron equivalent energy.  A solid arrow indicates the ground state neutron peak and a hollow arrow the $\gamma$ peak due to beam hitting the target.}
 \label{fig:MgTOF}
 \end{figure}
@@ -63,7 +63,7 @@ BCF-91A Multi-Clad Waveshifting Fiber 1mm diameter
 Clear-PSMJ multi-clad 1.2 mm diameter, att length > 10 m
 \end{comment}
 The scintillator bars of the neutron detector are outfitted with two PMT's, each coupled to one end via a non-scintillating light guide.  Having two PMT's is essential both for good timing information and an accurate estimate of the deposited energy.  Instrumenting the veto scintillators in this way was not feasible.  Fitting a top and bottom PMT to each veto bar would require 32 PMT's and lightguides, along with independent power supplies for each.  Instead, wavelength-shifting (WLS) fiber was chosen to collect the light.  Because WLS fiber is flexible, it can be arranged on the scintillator so that it efficiently collects light from all areas.  The light collected by the WLS fiber can be transmitted to a PMT via low-loss optical fiber.  Because the optical fiber is compact, it uses only a small portion of the active PMT surface.  This allows multiple veto paddles to be instrumented with a single PMT as can be seen in {\fig}~\ref{fig:paddleCable}.  The properties of the WLS fiber used in the veto paddles and the optical fiber used in the transmission cables are shown in {\tab}~\ref{tab:WLS_Kuraray}.
-\begin{table}[htp]
+\begin{table}[hp]
 \ra{1.1}
 \centering
 \caption[\uppercase{fiber properties}]{\\\uppercase{fiber properties}}
@@ -82,8 +82,8 @@ Operating Temperature & $-20^{\circ}$ to $50^{\circ}$ & \\
 \bottomrule
 \end{tabular}
 \begin{flushleft}
-\small NOTE:
-Properties of Bicron BCF-91A WLS used in construction of the veto paddles.  Values are taken from \citep{BCF-91A} and \citep{kuraray}.
+{\footnotesize NOTE:
+Properties of Bicron BCF-91A WLS used in construction of the veto paddles.  Values are taken from \citep{BCF-91A} and \citep{kuraray}.}
 \end{flushleft}
 \end{table}
 
@@ -226,7 +226,8 @@ Sixteen veto paddles were initially mounted $\sim$2~cm in front of the neutron d
 \label{fig:initialBackground}
 \end{figure}
 
-A simulation of the muon background indicated that the geometrical efficiency was very sensitive to the distance between the veto paddle and neutron detector bar as well as the distance between the bars of the neutron detector.   The bars in the neutron detector were moved as close as the mounting screws would allow, within 1~cm.  Instead of attaching the veto paddles on top of the retaining bars on the neutron detector, they were taped to the bars and both bar and veto paddle were supported together by the same retaining bar.  The separation between the bars of the neutron detector and their veto paddle is $\sim$0.5~cm due to stiff foam placed between the two to protect the WLS channels in the veto paddles.  The arrangement is shown in detail in {\fig}~\ref{fig:finalMount}.
+A simulation of the muon background indicated that the geometrical efficiency was very sensitive to the distance between the veto paddle and neutron detector bar as well as the distance between the bars of the neutron detector.   The bars in the neutron detector were moved as close as the mounting screws would allow, within 1~cm.  Instead of attaching the veto paddles on top of the retaining bars on the neutron detector, they were taped to the bars and both bar and veto paddle were supported together by the same retaining bar.  The separation between the bars of the neutron detector and their veto paddle is $\sim$0.5~cm due to stiff foam placed between the two to protect the WLS channels in the veto paddles.  The arrangement is shown in detail in {\fig}~\ref{fig:finalMount}.  Material was also added to the sides of the outermost neutron detectors.  The final setup is shown in {\fig}~\ref{fig:vetoSetup}.  These changes improved both the average and uniformity of the background rejection, as can be seen in {\fig}~\ref{fig:finalBackground}.
+
 % figure: the initial mounting of the veto paddles
 \begin{figure}[!htbp]
 \centering
@@ -240,7 +241,6 @@ A simulation of the muon background indicated that the geometrical efficiency wa
 \label{fig:finalMount}
 \end{figure}
 
-Material was also added to the sides of the outermost neutron detectors.  The final setup is shown in {\fig}~\ref{fig:vetoSetup}.  These changes improved both the average and uniformity of the background rejection, as can be seen in {\fig}~\ref{fig:finalBackground}.
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
