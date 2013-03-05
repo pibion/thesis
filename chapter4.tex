@@ -41,7 +41,7 @@ Look at background - will need to improve
 
 Data on \MgReaction were taken with the neutron detector setup as described in {\chap}~\ref{chap:2pExpt}, with a beam energy of 16~MeV and a 1.94~mg/cm$^2$ thick \Mg{26} target.  The typical beam current was 20~nA. The TOF spectrum at the forwardmost angle, 6$^{\circ}$, is shown in {\fig}~\ref{fig:MgTOF}.  The neutron peak has a width of 1.2~ns and is clearly visible over the background. 
 % figure: Bar A TOF spectrum
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/26Mg_veryOld.eps}
 \caption[Timing spectrum for \MgReaction.]{The 6$^{\circ}$ TOF spectrum for \MgReaction.  The light output threshold is set at 7.2 MeVee, where MeVee is the electron equivalent energy.  A solid arrow indicates the ground state neutron peak and a hollow arrow the $\gamma$ peak due to beam hitting the target.}
@@ -51,7 +51,7 @@ Data on \MgReaction were taken with the neutron detector setup as described in {
 The concerning thing about these data is that the high background rate severely limits sensitivity (see {\sect}~\ref{sec:zpLimit} for a discussion on setting limits with this data).  This has serious implications for the \GeTargets experiment, where DWBA calculations predict the cross sections to be about a factor of three lower than those for the \Mg{26} target.  Further lowering the event rate, the \GeTargets target must be thinner than the \Mg{26} target to maintain the same energy resolution.  Achieving sufficient precision on the ground-state cross section requires either reducing the background or increasing the beam current.  The latter was not feasible because of ion source limitations (see {\sect}~\ref{sec:beamProduction} for details).  The background comes primarily from low-energy $\gamma$ radiation from the room and from muons produced by cosmic rays.  Neither vetoing nor shielding against $\gamma$-radiation would be effective since materials with high $\gamma$ interaction rates would not only scatter incoming neutrons but also be difficult to mount on the detector.  Instead, software cuts on the energy are used to decrease this background and will be discussed in {\chap}~\ref{chap:dataAnalysis}.  The muons, however, are charged and can be readily identified with additional plastic scintillator.  We therefore seek to reduce the muon component of the random background using a veto shield that registers the likely presence of a muon.  The events identified as muon events can then be discarded.  
 
 Identifying muons using additional scintillator material is possible because of the way that they deposit energy.  The majority of muons traveling through the detector are Minimum Ionizing Particles (MIP's), which means that their energy loss is proportional to their path length in that material.  An effective design for a muon veto, then, is to cover the neutron detector with independent plastic scintillator detectors.  Signals in the neutron detector that are in coincidence with a signal in the ``shielding'' detector are likely to be muon events.  While the charged muon will trigger both detectors every time its path through the scintillator is long enough to deposit energy above the detector threshold, the neutron is highly unlikely to interact in both detectors.  The bars of the neutron detector are 5 cm thick; the chance of detecting a 20 MeV neutron with a typical threshold is 10\%, making the chance of a neutron interacting in two such bars only 1\%.  The veto material available, donated from an inactive experiment by the University of Michigan, is only 1~cm thick, dropping the probability of a detectable neutron interaction in both to $\sim$0.2\%.  Requiring a coincidence between the veto paddle and the neutron detector bar allows identification of the triggering particle as a muon with an accuracy of at least 99\%.  Note that such a veto is not effective at identifying $\gamma$ radiation because the efficiency of $\gamma$ detection in scintillating plastic is similar to that of neutrons. 
-
+\FloatBarrier
 
 \section{Light Collection with Wavelength-Shifting Fiber}
 \begin{comment}
@@ -63,6 +63,11 @@ BCF-91A Multi-Clad Waveshifting Fiber 1mm diameter
 Clear-PSMJ multi-clad 1.2 mm diameter, att length > 10 m
 \end{comment}
 The scintillator bars of the neutron detector are outfitted with two PMT's, each coupled to one end via a non-scintillating light guide.  Having two PMT's is essential both for good timing information and an accurate estimate of the deposited energy.  Instrumenting the veto scintillators in this way was not feasible.  Fitting a top and bottom PMT to each veto bar would require 32 PMT's and lightguides, along with independent power supplies for each.  Instead, wavelength-shifting (WLS) fiber was chosen to collect the light.  Because WLS fiber is flexible, it can be arranged on the scintillator so that it efficiently collects light from all areas.  The light collected by the WLS fiber can be transmitted to a PMT via low-loss optical fiber.  Because the optical fiber is compact, it uses only a small portion of the active PMT surface.  This allows multiple veto paddles to be instrumented with a single PMT as can be seen in {\fig}~\ref{fig:paddleCable}.  The properties of the WLS fiber used in the veto paddles and the optical fiber used in the transmission cables are shown in {\tab}~\ref{tab:WLS_Kuraray}.
+
+WLS fiber collects light by absorbing the blue and ultra-violet radiation produced by the scintillator and re-emitting that light in the green \citep{Knoll}.  The fiber is coated with material having an index of refraction to maximize the spread of angles that experience total internal reflection, and so the light is contained in the fiber until it reaches a detector.  WLS fiber minimizes position sensitivity when it is arranged on the detector so that no section of scintillator is more than 5~cm distant from the collecting fiber \citep{Aguillion_scintTiles}.  Because the fiber is fairly flexible, its pattern on the detector can be designed so that the fiber exits the plastic in a single bundle, allowing instrumentation with only one PMT.  In the final veto paddle design, the area of the PMT face used by fibers from one veto paddle is small enough that two veto paddles are instrumented with one PMT.
+
+Possible disadvantages to WLS fiber are signal intensity and fragility of the fiber.  Collecting sufficient light to boost the signal above the noise is a serious concern, and can be overcome by using many strands of WLS to collect light \citep{deBarbaro}.  The fragility of the WLS fiber is more difficult to remedy.  To maximize light collection, the fiber on the detector should be taken directly to the PMT, which should be as close to the plastic as possible to minimize signal attenuation.  In some designs, this is achieved by enclosing the fiber run to the PMT in a stiff cast \citep{GLAST}.  The design for the neutron wall needed flexibility in PMT placement, making a fixed support between the detector and PMT impractical.  Several attempts were made to run the WLS collection fiber directly from the scintillator to the PMT, but the fiber quickly degraded and eventually snapped even with careful handling.  Such degradation would have left no way to access the veto signals and was unacceptable.  The decision was made to sever the WLS at the end of the plastic and make a robust optical cable to attach to the WLS fiber and carry the signal to the PMT.  While severing the WLS fiber causes light loss \citep{ayotte_surfacePrep}, it ensures durability.  The details of this design are discussed in the next section.  
+
 \begin{table}[hp]
 \ra{1.1}
 \centering
@@ -87,9 +92,7 @@ Properties of Bicron BCF-91A WLS used in construction of the veto paddles.  Valu
 \end{flushleft}
 \end{table}
 
-WLS fiber collects light by absorbing the blue and ultra-violet radiation produced by the scintillator and re-emitting that light in the green \citep{Knoll}.  The fiber is coated with material having an index of refraction to maximize the spread of angles that experience total internal reflection, and so the light is contained in the fiber until it reaches a detector.  WLS fiber minimizes position sensitivity when it is arranged on the detector so that no section of scintillator is more than 5~cm distant from the collecting fiber \citep{Aguillion_scintTiles}.  Because the fiber is fairly flexible, its pattern on the detector can be designed so that the fiber exits the plastic in a single bundle, allowing instrumentation with only one PMT.  In the final veto paddle design, the area of the PMT face used by fibers from one veto paddle is small enough that two veto paddles are instrumented with one PMT.
-
-Possible disadvantages to WLS fiber are signal intensity and fragility of the fiber.  Collecting sufficient light to boost the signal above the noise is a serious concern, and can be overcome by using many strands of WLS to collect light \citep{deBarbaro}.  The fragility of the WLS fiber is more difficult to remedy.  To maximize light collection, the fiber on the detector should be taken directly to the PMT, which should be as close to the plastic as possible to minimize signal attenuation.  In some designs, this is achieved by enclosing the fiber run to the PMT in a stiff cast \citep{GLAST}.  The design for the neutron wall needed flexibility in PMT placement, making a fixed support between the detector and PMT impractical.  Several attempts were made to run the WLS collection fiber directly from the scintillator to the PMT, but the fiber quickly degraded and eventually snapped even with careful handling.  Such degradation would have left no way to access the veto signals and was unacceptable.  The decision was made to sever the WLS at the end of the plastic and make a robust optical cable to attach to the WLS fiber and carry the signal to the PMT.  While severing the WLS fiber causes light loss \citep{ayotte_surfacePrep}, it ensures durability.  The details of this design are discussed in the next section.  
+\FloatBarrier
 
 \section{Paddle Design}
 \begin{comment}
@@ -104,8 +107,9 @@ The main components of a veto paddle are the scintillator, which generates light
 
 As noted earlier, the scintillator material has a thickness of 1~cm, five times thinner than the bars of the neutron detector.  Material of this thickness is desirable in order to minimize interaction of the neutrons with the veto paddles, but is thick enough to efficiently detect muons.  The material is 17~cm wide and was cut to a length of 160~cm, making the veto paddle slightly wider and taller than a neutron detector bar.  The scintillator had been stored in a warehouse with no temperature control for several years and was under mechanical strain during its storage.  While some of the material readily responded to ultraviolet light and had a smooth, uncrazed surface, other material was badly damaged.  Surface damage such as crazing was common, but some pieces had developed internal cracks, creating mirror-like surfaces within the scintillator.  It was expected that the damaged bars would have poor efficiency, but instead they were found to function as well as paddles made of pristine material.  The tests on efficiency are discussed later, in {\sect}~\ref{sec:singleVeto}.
 
-The design goal for the veto paddles was to maximize light collection while ensuring durability.  One way to increase light collection is to use a fiber path that allows both ends of the fiber to terminate at the PMT.  Light absorbed by the fiber propagates in both directions along the fiber axis; if one end of the fiber terminates, the light must reflect from that surface and travel back to the PMT.  In this case, light loss occurs due to reflection at the terminating surface as well as attenuation along the path.  Light loss at the terminating surface can be lessened somewhat with the application of reflective paint and more so by silvering the surface \citep{WLS_mirrorFinish}, but a simpler method of recovering the light is to loop the fiber on the scintillator as shown in {\fig}~\ref{fig:paddle}, which allows collection of light regardless of its travel direction.  To further increase light collection, four fibers follow the fiber path, two on each side of the paddle.  The arrangement is shown in {\fig}~\ref{fig:paddle}.  To ensure the durability of the veto paddle, the fibers are epoxied into channels machined into the scintillator to protect it from strain during handling.  Coupling the fibers to the scintillator with epoxy also increases light collection \citep{Aguillion_scintTiles}.  Additionally, the bend radius chosen was 10~cm, which seemed to have no adverse effect on the WLS fiber.  After construction, the veto paddle was wrapped in Tyvek, a diffuse reflector that is inexpensive and readily commercially available.  Tyvek performs well at scattering light that has escaped the scintillator back into the active volume \citep{YongWeiTyvek}.  The paddle was also wrapped with two layers of thick, black plastic to shield the scintillator from light.  This seemed effective, as room light did not affect the background rate in the assembled veto paddle.  
-\begin{figure}[!htbp]
+The design goal for the veto paddles was to maximize light collection while ensuring durability.  One way to increase light collection is to use a fiber path that allows both ends of the fiber to terminate at the PMT.  Light absorbed by the fiber propagates in both directions along the fiber axis; if one end of the fiber terminates, the light must reflect from that surface and travel back to the PMT.  In this case, light loss occurs due to reflection at the terminating surface as well as attenuation along the path.  Light loss at the terminating surface can be lessened somewhat with the application of reflective paint and more so by silvering the surface \citep{WLS_mirrorFinish}, but a simpler method of recovering the light is to loop the fiber on the scintillator as shown in {\fig}~\ref{fig:paddle}, which allows collection of light regardless of its travel direction.  To further increase light collection, four fibers follow the fiber path, two on each side of the paddle.  The arrangement is shown in {\fig}~\ref{fig:paddle}.  To ensure the durability of the veto paddle, the fibers are epoxied into channels machined into the scintillator to protect it from strain during handling.  Coupling the fibers to the scintillator with epoxy also increases light collection \citep{Aguillion_scintTiles}.  Additionally, the bend radius chosen was 10~cm, which seemed to have no adverse effect on the WLS fiber.  After construction, the veto paddle was wrapped in Tyvek, a diffuse reflector that is inexpensive and readily commercially available.  Tyvek performs well at scattering light that has escaped the scintillator back into the active volume \citep{YongWeiTyvek}.  The paddle was also wrapped with two layers of thick, black plastic to shield the scintillator from light.  This seemed effective, as room light did not affect the background rate in the assembled veto paddle. 
+
+\begin{figure}[hp]
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/veto_end.eps}
@@ -118,7 +122,8 @@ The design goal for the veto paddles was to maximize light collection while ensu
 \end{figure}
 
 An endcap fitted to the scintillator helps protect the WLS and also fixes its location, allowing good alignment to the clear fibers in the optical cable.  The endcap also minimizes possible flexing of the WLS fiber by connecting to machined indents in the scintillator with a press fit.  Because the endcap extends into the scintillator, bending of the WLS fiber perpendicular to its axis is essentially eliminated.  Scintillator material is also machined away from the WLS fiber entrance to the endcap to avoid point pressure.  This ``ramping'' can be seen in {\fig}~\ref{fig:paddleAssembly}.  The wide acceptance funnels into small holes, one for each WLS fiber end, resulting in each fiber having a well-defined position on the surface of the endcap.  This ``clover'' pattern on the surface of the endcap can be seen in {\fig}~\ref{fig:paddleAssembly}.  It is important to note that the holes at the surface of the connector must have some clearance so that threading the WLS fiber through the endcap does not strip the cladding from the WLS fiber or otherwise damage it.  These fibers, slightly loose in their housing, are secured into place with optical epoxy to allow effective polishing of the surface.  To optimize light transmission from the WLS fibers to the optical cable's clear fiber, the surface is polished with a bull-nose, single-crystal diamond.  
-\begin{figure}[!htbp]
+
+\begin{figure}[hp]
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/veto_assembly.eps}
@@ -131,7 +136,8 @@ An endcap fitted to the scintillator helps protect the WLS and also fixes its lo
 \end{figure}
 
 The optical cable consists of two groups of four-clusters of clear fiber, one group for each of the four-clusters of WLS fiber exiting the scintillator.  Clear fiber, whose properties are shown in {\tab}~\ref{tab:WLS_Kuraray}, is preferable to WLS fiber because it is optimized for transmission and is also more durable.  The optical cable housing must ensure that each clear fiber completely overlaps its WLS fiber and also that the clear fiber is protected from damage en route to the PMT.  To accomplish this, the optical cable consists of two types of connectors, one that mates with the endcap attached to the scintillator and another that connects to the PMT, each connected by slightly stiff tubing (durometer = Shore A80) that encases the 2~m long clear fibers.  This tubing helps protect the clear fiber by limiting its bend radius and also acts as a light shield.  At each interface between tubing and connector, the primary concern is that the stresses on the clear fiber be small enough to avoid damage.  A hose barb attached to each connector allows the clear fiber through and also allows the tubing to firmly connect without straining the fiber.  An optical cable is shown in {\fig}~\ref{fig:paddleCable}.  Each optical cable has two groups of clear fiber that connect separately to a cap on the PMT.  Each PMT cap can accept four independent cable connections, allowing two veto paddles to be instrumented by one PMT.  The PMT cap, PMT connector, and endcap connector are machined from black delrin, an opaque plastic that contributes to the light-tightness of the optical cable and is stiff enough to be easily machined.  
-\begin{figure}[!htbp]
+
+\begin{figure}[hp]
 \centering
 \subfloat[][]{
    \includegraphics[width=1.0\textwidth]{figures/cable.eps}
@@ -150,7 +156,7 @@ The primary design constraint for the portion of the optical cable that attaches
 
 The connector that terminates at the PMT is cylindrical to make machining of the PMT cap simple.  In contrast to the endcap connector, the PMT connector has minimal constraints on the position of the clear fibers because the entire 5~cm-diameter PMT face is sensitive to light.  The end of the PMT connector, like the endcap and the endcap connector, is diamond-polished to maximize optical coupling, and so the fiber is epoxied into place to protect it from damage during polishing.  As with the endcap connector, strain relief is provided to the optical cable by attaching the protective tubing to the connector with hose barb, eliminating extreme bending of the optical cable.    
 The cap fitted to the face of the PMT has four holes drilled with a diameter that provides a press-fit with the PMT connectors from the optical cable.  The cap fits snugly onto the PMT so that the optical cables in the PMT connectors are held securely to the surface of the PMT.  The diamond polishing results in a very uniform surface.  It was found that applying optical grease to the connection did not result in noticeable improvement, and the coupling to the PMT was therefore left as an air coupling.  One way to improve light collection by the PMT was to place the clear fibers closer to the center of the PMT face.  This was done by machining PMT caps with the holes for the connectors drilled as closely as allowed by the plastic, $\sim$2~mm.
-
+\FloatBarrier
 
 \section{Paddle Performance}
 \label{sec:singleVeto}
@@ -165,8 +171,9 @@ except you weren't able to do further tests so you'll just have to say the limit
 
 The intrinsic efficiency of the veto paddles can be tested by requiring a coincidence with several detectors.  The several-detector coincidence identifies signals as muons.  If the coincidence detectors are arranged so that the path of any muon intersecting all the detectors must also intersect the veto paddle, the intrinsic efficiency of the veto paddle can be measured separate from its geometric coverage.
 
-In practice, arranging the available scintillators to confine muon paths through the test volume was difficult because the available scintillator was instrumented with bulky lightguides and could not be laid directly on the test volume.  A simple cosmic-ray simulation program helped determine an arrangement that guaranteed a geometrical efficiency of at least 99\%.  This arrangement is shown in {\fig}~\ref{fig:efficiencyTest}.  Note that the coincidence paddles are slightly wider than the veto paddle, which requires the coincidence paddles to be aligned to each edge of the veto paddle.  
-\begin{figure}[!htbp]
+In practice, arranging the available scintillators to confine muon paths through the test volume was difficult because the available scintillator was instrumented with bulky lightguides and could not be laid directly on the test volume.  A simple cosmic-ray simulation program helped determine an arrangement that guaranteed a geometrical efficiency of at least 99\%.  This arrangement is shown in {\fig}~\ref{fig:efficiencyTest}.  Note that the coincidence paddles are slightly wider than the veto paddle, which requires the coincidence paddles to be aligned to each edge of the veto paddle. 
+
+\begin{figure}[hp]
 \centering
 \includegraphics[height=0.8\textheight]{figures/veto_test.eps}
 \caption[Schematic of the testing arrangement for the veto paddles.]{This arrangement of coincidence material ensures that muons triggering all coincidence detectors must also travel through the veto paddle.  The coincidence material is drawn in red (shaded)  while the veto paddle is in blue (unshaded).}
@@ -174,8 +181,9 @@ In practice, arranging the available scintillators to confine muon paths through
 \end{figure}
 
 The efficiency was measured by counting how often the veto paddle had a detectable signal when all the coincidence paddles registered a coincidence.  Assuming that the muon is thereby constrained to travel through the veto paddle volume, the ratio gives the intrinsic efficiency.  The DAQ event signal was a logic pulse resulting from the coincidence of the coincidence paddles.  This logic pulse also acted as a start for a time-to-amplitude converter (TAC).  The TAC stop signal was a delayed, discriminated veto paddle signal.  The outgoing TAC signal was then sent to an analog to digital converter (ADC).  Signals from the veto paddle coincident with the other scintillators appear in the timing spectrum as a peak at the time of the delay as in {\fig}~\ref{fig:vetoTestElectronics}.  The integral of this timing peak divided by the number of event triggers gives the efficiency.
+
 % figure: the considerably complicated spectrum
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/electronics_vetoTest.eps}	
@@ -188,7 +196,8 @@ The efficiency was measured by counting how often the veto paddle had a detectab
 \end{figure}
 
 Testing the efficiency of the veto paddle with this setup was not ideal because the geometrical efficiency was very sensitive to the placement of the coincidence detectors.  The measured efficiency of the same bar could change from 98\% to 75\% when the middle coincidence detector was shifted away from the edge of the veto paddle by as little as a few centimeters so that careful adjustment of this geometry was required.  However, this setup was useful in testing the effect of the optical cable polishing, cable out-of-true-ness, and the condition of the plastic scintillator.  In general, all efficiency measurements fell between 94\% and 98\%.  Even the veto paddles made of plastic with deep internal cracks were as efficient as those made from the plastic in excellent condition.  No statistically significant differences were seen between optical cables made with badly bowed connectors and nearly true connectors.  Polishing the surface of the optical cables with the bull-nose single-crystal diamond rather than a commonly-available multi-crystal diamond bit increases detection efficiency by $\sim2$\%, although it should be noted that the change may have been due to reduction of correlated noise in the system rather than to improved light transmission.  The discriminator threshold, set to its lowest value at -15~mV, gave an efficiency of 98\% compared to 94\% when set to its highest value at -1.023~V.  A typical pulse from the veto paddle is shown in {\fig}~\ref{fig:vetoSignal}
-\begin{figure}[!htbp]
+
+\begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/PulseChan_1_4.eps}
 \caption[Typical muon signals in the veto paddles.]{Pulses from muons in the veto paddles.}
@@ -196,13 +205,14 @@ Testing the efficiency of the veto paddle with this setup was not ideal because 
 \end{figure}
 
 Testing the position dependence of the efficiency using the setup described above was not practical due to its sensitivity on alignment.  Instead, the response of the veto paddles to a loosely collimated $\gamma$-ray source was tested.  A $^{60}$Co source was inserted into a lead ring and raised 2~cm within the ring by a small piece of plastic.  The lead ring had a wall thickness of 3~cm and a hole diameter of 2.5~cm.  This collimated source was then placed at three positions along the veto paddle: near the endcap, at the middle of the paddle, and near the end of the paddle.  Several measurements were taken at different positions along the short axis of the veto paddle, all at the center of the paddle's long axis. The detected rate of $\gamma$ radiation showed a deviation of less than 10\% over the veto paddle.  While this is not a measurement of the position dependence of the muon efficiency, it does limit the efficiency change over the paddle since muons typically deposit at least twice the energy of the $\gamma$ radiation from the $^{60}$Co source.  See {\fig}~\ref{fig:positionDependence} for the variation of the efficiencies.
-\begin{figure}[!htbp]
+
+\begin{figure}[hp]
 \centering
-\includegraphics[width=1.0\textwidth]{figures/efficiency_positionDependence.eps}
+\includegraphics[width=0.8\textwidth]{figures/efficiency_positionDependence.eps}
 \caption[Position sensitivity of the veto paddles.]{The dependence of the number of detected events on the position of a loosely-collimated $^{60}$Co source.  The image below the graph shows the positions of each measurement relative to the veto paddle.  Data was taken in the center across the bar to test for horizontal position dependence.  The position B1 is at the horizontal center and B4 is at the edge of the veto paddle.  Two measurements were taken at B2 and B3, the points nearest the WLS fiber channel to verify the reproducibility of the measurement.  The spread is approximately 10\%.}
 \label{fig:positionDependence}
 \end{figure}
-
+\FloatBarrier
 
 \subsection{On-Detector Efficiency}
 \begin{comment}
@@ -210,26 +220,29 @@ Initial efficiency - would be nice to show this data
 Describe different cosmics that hit the neutron bar but miss the veto - argh!
 Discuss changes made to mounting to improve coverage - show new data (cosmics)
 \end{comment}
-Sixteen veto paddles were initially mounted $\sim$2~cm in front of the neutron detector bars to avoid removing them and potentially causing damage.  See {\fig}~\ref{fig:finalMount} for a detailed view.  The veto rejection is strongly dependent on the energy of the lower energy cut applied to the dataset, as shown in {\fig}~\ref{fig:vetoRejection_vs_energyCut}.  All efficiencies cited are based on datasets where the lower energy cut applied to the data was that used in the final data analysis, 7.2~MeVee.  A test with \MgReaction showed the background was reduced to $\sim$12\% the original background in the two innermost bars of each four-bar unit but only to $\sim$18\% in the outer two bars (see {\fig}~\ref{fig:initialBackground}).  The greater background rejection of the inner bars was due to the outer bars, which act as additional veto material.  The outer bars themselves had no such additional information to aid in muon identification.  It should be noted that two veto paddles were instrumented by a single PMT, making it impossible to distinguish veto signals from distinct veto paddles within an adjacent set.  
+Sixteen veto paddles were initially mounted $\sim$2~cm in front of the neutron detector bars to avoid removing them and potentially causing damage.  See {\fig}~\ref{fig:finalMount} for a detailed view.  The veto rejection is strongly dependent on the energy of the lower energy cut applied to the dataset, as shown in {\fig}~\ref{fig:vetoRejection_vs_energyCut}.  All efficiencies cited are based on datasets where the lower energy cut applied to the data was that used in the final data analysis, 7.2~MeVee.  A test with \MgReaction showed the background was reduced to $\sim$12\% the original background in the two innermost bars of each four-bar unit but only to $\sim$18\% in the outer two bars (see {\fig}~\ref{fig:initialBackground}).  The greater background rejection of the inner bars was due to the outer bars, which act as additional veto material.  The outer bars themselves had no such additional information to aid in muon identification.  It should be noted that two veto paddles were instrumented by a single PMT, making it impossible to distinguish veto signals from distinct veto paddles within an adjacent set. 
+
 % veto rejection as function of energy cut
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/vetoEfficiency_functionOfCut.eps}
 \caption[Dependence of the veto efficiency on the lower-energy cut.]{The fraction of background rejected by the veto as a function of the lower-energy cut.  The energy cut is shown as a ratio between the background due to the cut and the background due to a reference cut; increasing numbers on this scale implies a lower-energy cut.  This cut is discussed in detail in {\chap}~\ref{chap:dataAnalysis}, {\sect}~\ref{sec:cuts}.}
 \label{fig:vetoRejection_vs_energyCut}
 \end{figure}
+
 % background rejection at chosen energy cut
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/bkgdRejection_old_legend.eps}
 \caption[Improvement in background rejection due to initial veto setup.]{Ratio of room background with and without veto rejection with the initial placement of the veto paddles.  Note that the rejection is worse for bars on the ends of each group of four (red, unshaded) and better for internal bars (blue, shaded).  The rejection depends on the lower energy cut placed on the data; the energy cut here is that used in the final data analysis, at 7.2~MeVee.}
 \label{fig:initialBackground}
 \end{figure}
+\FloatBarrier
 
 A simulation of the muon background indicated that the geometrical efficiency was very sensitive to the distance between the veto paddle and neutron detector bar as well as the distance between the bars of the neutron detector.   The bars in the neutron detector were moved as close as the mounting screws would allow, within 1~cm.  Instead of attaching the veto paddles on top of the retaining bars on the neutron detector, they were taped to the bars and both bar and veto paddle were supported together by the same retaining bar.  The separation between the bars of the neutron detector and their veto paddle is $\sim$0.5~cm due to stiff foam placed between the two to protect the WLS channels in the veto paddles.  The arrangement is shown in detail in {\fig}~\ref{fig:finalMount}.  Material was also added to the sides of the outermost neutron detectors.  The final setup is shown in {\fig}~\ref{fig:vetoSetup}.  These changes improved both the average and uniformity of the background rejection, as can be seen in {\fig}~\ref{fig:finalBackground}.
 
 % figure: the initial mounting of the veto paddles
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \subfloat[][]{
    \includegraphics[width=0.5\textwidth]{figures/neutDetector_groupOfFour_veto1.eps}	
@@ -241,7 +254,7 @@ A simulation of the muon background indicated that the geometrical efficiency wa
 \label{fig:finalMount}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \subfloat[][]{
    \includegraphics[height=0.8\textheight]{figures/neutDetector_groupOfFour_veto2_full.eps}
@@ -254,12 +267,13 @@ A simulation of the muon background indicated that the geometrical efficiency wa
 \label{fig:vetoSetup}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/bkgdRejection_new_legend.eps}
 \caption[Improvement in background rejection due to final veto setup.]{Ratio of room background with and without veto rejection in final setup.  Note that the rejection ratio for a typical paddle is about a factor of 10.  Bars at the ends of the group of four (red, unshaded) enjoy similar background rejection to internal bars (blue, shaded) on average.  The errors are accurately represented by the size of the points.  The veto rejection is dependent on the lower energy cut applied to the data; the energy cut for the rejection reported here is that used for the final data analysis, 7.2~MeVee. }
 \label{fig:finalBackground}
 \end{figure}
+\FloatBarrier
 
 \section{Electronics}
 \begin{comment}
@@ -277,13 +291,14 @@ It is possible to calculate the expected rate of real-event vetoes.  Several sou
 1 - e^{\tau_{\text{bit reg.}\text{R}_{\text{noise}}}} \simeq \text{R}_{\text{noise}}\times\tau_{\text{bit reg.}},
 \end{equation}
 where $\text{R}_{\text{noise}}$ is the noise rate and $\tau_{\text{bit reg.}}$ is the time window of the bit register.  The neutron detector bars that experience the highest veto noise rate are those that are vetoed by four detectors.  Two of these are the veto paddles mounted directly in front of it and the adjacent neutron detector bar, and the other two are the bars on its sides.  The two front veto paddles have a combined noise rate of 1000~Hz, while the two side veto paddles could each have a rate of 1000~Hz, giving a maximum noise rate of 3000~Hz.   The bit register window was set at 200~ns, so that the maximum probability of vetoing a real, beam-induced event is $6\times10^{-4}$, or approximately one false veto per 1500 events.  This fraction of vetoed events is less than 1\% and will not have any statistical significance, even with the timing resolution lost by moving to a bit register.  A schematic of the veto electronics is shown in {\fig}~\ref{fig:vetoElectronics}.  Note that no changes to the DAQ other than the addition of the bit register are required.
-\begin{figure}[!htbp]
+
+\begin{figure}[hp]
 \centering
 \includegraphics[width=1.0\textwidth]{figures/electronics_veto.eps}
 \caption[Diagram of the detector electronics with the veto signals included.]{The integration of the veto electronics with the existing DAQ.  The bit register is used in the data analysis.  Scalers are also added for run-time monitoring.}
 \label{fig:vetoElectronics}
 \end{figure}
- 
+\FloatBarrier
 
 \section{Beam Tests}
 \begin{comment}
@@ -291,13 +306,13 @@ What data should I show?  Old Mg vs. New Mg?  Or New Mg with no veto vs.  New Mg
 show the vetoed spectrum - put a limit on how much real signal is rejected?
 \end{comment}
 The final veto system reduces the background by approximately a factor of 10 as can be seen in {\fig}~\ref{fig:veto_26Mg}.  The rejection is strongly dependent on energy cuts placed on data, as shown in {\fig}~\ref{fig:vetoRejection_vs_energyCut}.  The veto is less effective at lower energy cuts because $\gamma$ radiation becomes a significant contributor to the random background.  Placing energy cuts above the thorium edge, the Compton edge resulting from the maximally scattered 2.6~MeV $\gamma$-ray \citep{PDG} from a natural thorium source, rejects much of the room $\gamma$ background.  Placing such a high cut on the energy also discards neutron events, so that minimizing the background is in conflict with maximizing the signal.  Optimizing the energy cut is discussed in {\chap}~\ref{chap:dataAnalysis}, {\sect}~\ref{sec:cuts} and confirms that requiring the signal to be above the thorium edge maximizes the signal/background ratio.  Applying the veto to a data set with this low-energy cut reduces the background on \MgReaction by approximately a factor of 10.  The statistical errors on the reaction populating the ground state were reduced from 7\% to 3\%.  See {\sect}~\ref{sec:PS_data} for a discussion on the calculation of statistical error.
-\begin{figure}[!htbp]
+\begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/26Mg_vetoEffect.eps}
 \caption[Effect of the veto on the timing spectrum due to \MgReaction.]{\label{fig:vetoData}The effect of the veto on the $^{26}$Mg($^3$He,n) data.  The light output threshold is set at 7.2 MeVee.}
 \label{fig:veto_26Mg}
 \end{figure}
-  
+\FloatBarrier
 
 \subsection{Rejected Signal}
 \begin{comment}
@@ -309,7 +324,8 @@ Two causes for rejected signal
 can place a limit on randoms, reals, and therefore good rejected signal
 \end{comment}
 While the achieved background rejection is excellent, it is important to consider how often the veto rejects real neutron events.  Such a rejection could occur when a neutron interacts in both the veto and the neutron detector, when the neutron detector sees a real signal and the veto triggers from an uncorrelated event such as a background $\gamma$-ray, or when a neutron interacting in the detector ejects a proton that triggers the veto.  This last case is the primary reason we chose to mount the veto on the front of the detector.    In these cases, the vetoing of real events will result in timing peaks on top of the flat, random background of the rejected events, and placing a limit on the neutron peak in the rejection spectrum will give a maximum rate for all these processes together.  Cases where the neutron scatters away from the detector in the veto material will not contribute to a timing peak, but because the low rate of scattering from the veto paddle material is also severely limited by solid-angle this is not considered here.  {\fig}~\ref{fig:rejectionTOF} shows the rejected events for all current \Mg{26} data; no neutron peak is visible.  Given the background, this places a limit on the total rejection of real neutron events of less than 8\% at a 95\% confidence level.  
-\begin{figure}[!htbp]
+
+\begin{figure}[hp]
 \centering
 \includegraphics[width=5in]{figures/26Mg_rejection_newEnergyCut.eps}
 \caption[Placing a limit on real events rejected by the veto.]{\label{fig:rejection}A plot of the accepted and rejected events.  Peaks in the rejected spectrum are from real, vetoed events.  No neutron peak is visible.  The light output threshold is set at 7.2 MeVee.}
