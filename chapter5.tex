@@ -31,7 +31,7 @@ We care about two things:
 1. The absolute cross-section of the ground state transition
 2. Setting a limit on excited 0+ state cross-sections
 \end{comment}
-The aim of the analysis of the \reaction data sets is to extract the absolute cross section of the reactions populating the ground states of \SeProducts and also to set a limit on excited \zp-state cross sections.  Each of these analyses is discussed in its own section, but because the absolute cross section is of interest, the detector efficiency and several other properties of the experiment must be accurately determined.  The measured quantities used most frequently in this analysis are the timing relative to the beam bunch and the light signal.  ``Time'' in this chapter always refers to the arithmetic average of a bar's top and bottom time values.  A timing spectrum is shown in {\fig}~\ref{fig:time}.  Another measurement important for analysis is the integrated light output at the top and bottom of a bar.  A geometric average of these, $\sqrt{E_tE_b}$, where $E_t$ and $E_b$ are the integrated light signal of the top and bottom PMT, respectively, is considered a measure of the neutron energy and is referred to as ``energy'' in this chapter.  This quantity is discussed further in {\sect}~\ref{sec:cuts}.   The top and bottom PMT signals, taken separately, are not necessarily a measure of the energy of the event and will be referred to as ``light signals'' when used without averaging. 
+The aim of the analysis of the \reaction data sets is to extract the absolute cross section of the reactions populating the ground states of \SeProducts and also to set as strict a limit on excited \zp-state cross sections as possible.  Each of these analyses is discussed in its own section, but because the absolute cross section is of interest, the detector efficiency and several other properties of the experiment must be accurately determined.  The measured quantities used most frequently in this analysis are the timing relative to the beam bunch and the light signal.  ``Time'' in this chapter always refers to the arithmetic average of a bar's top and bottom time values.  A timing spectrum is shown in {\fig}~\ref{fig:time}.  Another measurement important for analysis is the integrated light output at the top and bottom of a bar.  A geometric average of these, $\sqrt{E_tE_b}$, where $E_t$ and $E_b$ are the integrated light signal of the top and bottom PMT, respectively, is considered a measure of the neutron energy and is referred to as ``energy'' in this chapter.  This quantity is discussed further in {\sect}~\ref{sec:cuts}.   The top and bottom PMT signals, taken separately, are not necessarily a measure of the energy of the event and will be referred to as ``light signals'' when used without averaging. 
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
@@ -350,23 +350,23 @@ In the case of the pulse-selected data, the background in the region of the grou
 
 In the case of the pulse-selected data, estimating the background is done by fitting the flat background.  In general, the signal $S$ is calculated by subtracting the estimated background $B$ from the number of counts $P$ in the peak region.  If the flat background region is fit to obtain $n$, the number of counts per bin, the extracted counts become
 \begin{equation}
-S = P - B = P - n\times N_b,
+S = P - B = P - n N_b,
 \end{equation}
 where $N_b$ is the number of bins in the peak region.  The error on the extracted counts is then
 \begin{equation}
-\sqrt{N_{\text{peak}} + {\sigma}_n^2\times N_b}.
+\sqrt{N_{\text{peak}} + {\sigma}_n^2 N_b}.
 \end{equation}
-The error on the background no longer behaves like that of a random variable because $\sigma_n\sim\sqrt{\frac{n}{N_b}}$.  In the \reaction data sets, the error contribution ${\sigma}_n^2\times N_b$ is of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background based on as many bins as possible, then, results in an error of approximately $\sqrt{P}$.
+The error on the background no longer behaves like that of a random variable because $\sigma_n\sim\sqrt{\frac{n}{N_b}}$.  In the \reaction data sets, the error contribution ${\sigma}_n^2 N_b$ is of order unity and is therefore negligible compared to the statistical error associated with the number of counts in the peak region.  Using an estimate of the background based on as many bins as possible, then, results in an error of approximately $\sqrt{P}$.
 
-Thus far, the sources of uncertainty in the signal counts that have been investigated are the statistical uncertainty, the error associated with the low-energy cut, and the fit uncertainty.  The uncertainty introduced by the continuum must also be estimated.  A neutron continuum is clearly visible for all reactions.  In the \Si{28} case, the continuum is well-separated from the ground-state neutron peak.  The \reaction data have the potential to be influenced by counts from the continuum because the continuum is much closer to the ground-state neutron peak than for \MgReaction and also because the integration window must be wide enough to include both the ground and first excited states.  To estimate the contribution of the continuum to the peak region, it is fit with a Gamma Distribution, shown in {\fig}~\ref{fig:BetaGamma}.  
+Thus far, the sources of uncertainty in the signal counts that have been investigated are the statistical uncertainty, the error associated with the low-energy cut, and the fit uncertainty.  The uncertainty introduced by the continuum must also be estimated.  A neutron continuum is clearly visible for all reactions.  In the \Si{28} case, the continuum is well-separated from the ground-state neutron peak.  The \reaction data have the potential to be influenced by counts from the continuum because the continuum is much closer to the ground-state neutron peak than for \MgReaction and also because the integration window must be wide enough to include both the ground and first excited states.  To estimate the contribution of the continuum to the peak region, it is fit with a beta distribution, shown in {\fig}~\ref{fig:BetaGamma}.  
 \begin{figure}[hp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/Gamma_distribution_pdf.eps}
-\caption[The Gamma distribution.]{The Gamma distribution for various shape parameters \citep{wiki_Gamma}.  The distribution falls to zero at the origin; it is this property that makes this distribution a candidate model for the neutron continuum.}
+\includegraphics[width=0.8\textwidth]{figures/Beta_distribution_pdf.eps}
+\caption[The beta distribution.]{The beta distribution for various shape parameters \citep{wiki_Beta}.  The distribution is non-zero on a finite range; it is this property that makes this distribution a candidate model for the neutron continuum.}
 \label{fig:BetaGamma}
 \end{figure}
 
-This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the Gamma Distribution is non-zero only on a semi-infinite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
+This is an appropriate functional model because neutrons populating the continuum cannot have an energy greater than the ground-state neutron, and so its endpoint cannot extend past the center of the ground state neutron distribution; the beta distribution is non-zero only on a finite range.  The pulse-selected data set, however, does not constrain the tails of these functions well because the timing spectrum is not complete.  The non-pulse-selected data can help better constrain the fits in this region.
 
 For the same bar, the non-pulse-selected spectrum should have the same features as the pulse-selected spectrum, but shifted and superimposed.  Fitting to the pulse-selected and non-pulse-selected histogram simultaneously greatly improves the fit because each bar of the neutron detector should measure the same beam-related spectrum for different runs, making it possible to model the non-pulse-selected spectrum as a shifted, scaled copy of the pulse-selected data.  The model used for the pulse-selected data is
 % equation for pulse-selected spectrum
@@ -376,7 +376,7 @@ f_{PS} = B(x;\alpha,\beta) + Gaus_1 + Gaus_2 + Gaus_3 + DoubleGaus + Const_{PS}
 where $B(x;\alpha,\beta)$ is the Beta Distribution; $Gaus_1, Gaus_2, Gaus_3$ are Gaussian distributions describing prominent peaks in the continuum and the ground-state neutron peak; $DoubleGaus$ models the $\gamma$ peak.  These terms are needed to ensure a good overall fit and the contribution of each term is shown in {\fig}~\ref{fig:continuumModel}.  The non-pulse-selected data can be modeled by shifting the pulse-selected model by the interval between bunches $\tau$:
 % equation for non-pulse-selected spectrum
 \begin{equation}
-R\times(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
+R(f_{PS}(t) + f_{PS}(t+\tau) + f_{PS}(t+2\tau)) + Const_{NPS},
 \label{eq:NPS_model}
 \end{equation}
 where $R$ is the ratio of total beam on target between the pulse-selected and non-pulse-selected runs.  Such a fit converges well and shows that the neutron continuum contributes less than 1\% to the extracted counts in the ground-state neutron peak.  
@@ -441,23 +441,23 @@ The Q-value dependence must be factored out of the count limit obtained directly
 \begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/SigmaVsQ.eps}
-\caption[The Q-value dependence of the zero-degree cross section of $^{74}$Ge(\He{3},n) and $^{76}$Ge(\He{3},n).]{The Q-value dependence of the zero-degree cross section of $^{74}$Ge(\He{3},n) and $^{76}$Ge(\He{3},n).  Solid lines indicate the dependence on the Q-value only, while the dashed lines show the dependence moderated by the detector efficiency.  Symbols indicate known \zp states.}
+\caption[The Q-value dependence of the zero-degree cross section of $^{74}$Ge(\He{3},n) and $^{76}$Ge(\He{3},n).]{The Q-value dependence of the zero-degree cross section of $^{74}$Ge(\He{3},n) and $^{76}$Ge(\He{3},n).  The \He{3} is incident at 16~MeV.  Solid lines indicate the dependence on the Q-value only, while the dashed lines show the dependence moderated by the detector efficiency.  Symbols indicate known \zp states.}
 \label{fig:QvalDependence}
 \end{figure}
 
 \begin{figure}[hp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/DetLimits.eps}
+   \includegraphics[height=0.4\textheight]{figures/DetLimits.eps}
 } \\
 \subfloat[][]{
-   \includegraphics[width=0.45\textwidth]{figures/74Ge_2sigma_limit.eps}
+   \includegraphics[height=0.2\textheight]{figures/74Ge_2sigma_limit.eps}
 }
 \hspace{8pt}
 \subfloat[][]{
-   \includegraphics[width=0.45\textwidth]{figures/76Ge_2sigma_limit.eps}
+   \includegraphics[height=0.2\textheight]{figures/76Ge_2sigma_limit.eps}
 }
-\caption[Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge and $^{76}$Ge.]{(a) Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge (lower, in red) and $^{76}$Ge (above, in blue).  The limit is unreliable for neutrons arriving at times less than 120~ns relative to the $\gamma$ peak because of the broad neutron peak due to oxygen contamination in the targets as can be seen in (b).  The detection limit is therefore cut off at that point.  (b) The effect of a signal with 2$\sigma$ significance is simulated for $^{74}$Ge.  (c) The effect of a signal with 2$\sigma$ significance is simulated for  $^{76}$Ge.}
+\caption[Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge and $^{76}$Ge.]{(a) Limit on excited \zp states as a percentage of the ground-state cross section for $^{74}$Ge (lower, in red) and $^{76}$Ge (above, in blue).  It is assumed that the width of any states in this region will be the same as the width of the ground-state peak.  The limit is unreliable for neutrons arriving at times less than 120~ns relative to the $\gamma$ peak because of the broad neutron peak due to oxygen contamination in the targets as can be seen in (b).  The detection limit is therefore cut off at that point.  (b) The effect of a signal with 2$\sigma$ significance is simulated for $^{74}$Ge.  (c) The effect of a signal with 2$\sigma$ significance is simulated for  $^{76}$Ge.}
 \label{fig:differentLimits}
 \end{figure}
 % excitation energy, not timing
@@ -471,7 +471,7 @@ DWBA calculation
 shell model
 f$^2$, p$^2$ state strength ("form factor")
 \end{comment}
-The ground-state cross section of $^{74}$Ge($^3$He,n) is larger than that of $^{76}$Ge($^3$He,n).  One may wonder if this is due to missing \zp strength.  One way to check whether this could be the case is by calculating the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and comparing this to the measured values.  The zero-degree ground-state cross section can be determined by fitting the experimentally-determined angular distribution of the ground and first excited state together with DWBA and extrapolating the result to zero degrees.  The code Fresco \citep{Fresco}, used to perform the DWBA calculations, requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical-model potentials used for the \He{3} and neutron are Becchetti-Greenlees \citep{Becchetti_3HePotential} and Koning-Delaroche \citep{Koning_neutronPotential}, respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
+The ground-state cross section of $^{74}$Ge($^3$He,n) is larger than that of $^{76}$Ge($^3$He,n).  One may wonder if the lower $^{76}$Ge($^3$He,n) cross section is due to missing \zp strength or is instead an expected result of, for example, the different kinematics of the reaction.  One way to check is to calculate the zero-degree cross section with a model that assumes the \zp strength to be in the ground state and compare this to the measured values.  The zero-degree ground-state cross section can be determined by fitting the experimentally-determined angular distribution of the ground and first excited state together with DWBA and extrapolating the result to zero degrees.  The code Fresco \citep{Fresco}, used to perform the DWBA calculations, requires the binding potential for the di-proton in the \He{3} and \Ge{74} nuclei as well as the optical-model potentials experienced by the incoming \He{3} nucleus and the outgoing neutron.  Typical values for the parameters of these potentials are given in {\tab}~\ref{tab:typicalPotentials}, where the optical-model potentials used for the \He{3} and neutron are Becchetti-Greenlees \citep{Becchetti_3HePotential} and Koning-Delaroche \citep{Koning_neutronPotential}, respectively.  The results of the fit to the measured angular distributions are shown in {\fig}~\ref{fig:PS_angularDistribution}.
 \begin{sidewaystable}\footnotesize
 \ra{1.1}
 \caption[\uppercase{potential parameters for DWBA analysis}]{\\\label{tab:typicalPotentials} \uppercase{potential parameters for DWBA analysis}}
@@ -486,26 +486,26 @@ $^{3}$He (GDP08) & 118.92 & 4.98 & 0.82 & 1.38 & 3.87 & 0.13 & 1.71 & 5.37 & 0.8
 n (BG) & 45.27 & 1.21 & 0.54 & 5.57 & 1.03 & 0.59 & 1.18 & 1.21 & 0.54 & 6.76 & 1.34 & 0.53 & -0.07 & 1.03 & 0.59 & -\\
 n (KD) & 45.47 & 1.21 & 0.67 & 5.55 & 1.03 & 0.59 & 1.24 & 1.21 & 0.67 & 6.6 & 1.28 & 0.53 & -0.076 & 1.03 & 0.59 & -\\
 
-$^3$He bound state & 76.6$^{\dagger}$ & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
+$^3$He bound state & 76.6$^{\mathbf{\dagger}}$ & 1.175 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 
-Se bound state & 100$^{\dagger}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
+Se bound state & 100$^{\mathbf{\dagger}}$ & 1.30 & 0.65 & - & - & - & - & - & - & - & - & - & - & - & - & 1.30\\
 \bottomrule
 % combine with other table of potential parameters
 \end{tabular}
 %\end{ruledtabular}
 \begin{flushleft}
 {\footnotesize NOTE:
-Optical and bound-state potentials used in the DWBA analysis, see the text for details of the calculations. Both optical-model potentials vary slowly with $N$, $Z$ and $E$; the values given here are typical. $^{\dagger}$ Adjusted to reproduce the experimentally measured binding energy.}
+Optical and bound-state potentials used in the DWBA analysis, see the text for details of the calculations. Both optical-model potentials vary slowly with $N$, $Z$ and $E$; the values given here are typical. $^{\mathbf{\dagger}}$Starting value; adjusted to reproduce the experimentally measured binding energy.}
 \end{flushleft}
 \end{sidewaystable}
 % and now the figure
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/74Ge_angularDist.eps}
-}
+   \includegraphics[width=1.0\textwidth]{figures/74Ge_angularDist.eps}
+}\\
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/76Ge_angularDistribution.eps}
+   \includegraphics[width=1.0\textwidth]{figures/76Ge_angularDistribution.eps}
 }
 \caption[The angular distributions of $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se.]{(a) The angular distributions of $^{74}$Ge($^3$He,n)$^{76}$Se and (b) $^{76}$Ge($^3$He,n)$^{78}$Se.  In each graph, the two back-angle measurements are four-bar averages.  Because the timing resolution did not allow clear separation of the ground and first excited states, the integration window included both.  The sum of the DWBA calculations for the ground and first-excited states has a $\chi^2$ of 0.7 for the \Ge{74} data and 1.3 for the \Ge{76} data.}
 \label{fig:PS_angularDistribution}
@@ -513,28 +513,28 @@ Optical and bound-state potentials used in the DWBA analysis, see the text for d
  
 The cluster model is sensitive to the parameters used to describe the potentials of the interacting nuclei.  The sensitivity of the extracted zero-degree cross section on the bound-state radius parameter, the neutron optical-model potential, and the principal quantum number were all investigated.  While changing the bound-state radius strongly affects the normalization, it does not appreciably affect the shape of the angular distribution between 0$^{\circ}$ and 20$^{\circ}$ and therefore does not impact the ratio of ground-state to first-excited-state cross section at zero degrees.  Using the Becchetti-Greenlees neutron potential rather than the Koning-Delaroche potential does not strongly affect the angular distribution, nor does changing the principal quantum number.  The effect of varying these parameters is shown in {\fig}~\ref{fig:varyParam}.  The dependence of the cross section for various \He{3} optical-model potentials was also explored and found to result in little difference in the trend in the zero-degree cross sections of \Ge{74} and \Ge{76}.  See {\tab}~\ref{tab:typicalPotentials} for the tested parameter ranges and {\fig}~\ref{fig:parameterSensitivity} for their impact on the relative cross section.
 
-As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross sections have been normalized to $^{74}$Ge.  The cluster model, then, accurately describes the trend when adding protons to f-p-g shell nuclei in this mass region.  Cluster model calculations of the $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se reactions show that the smaller cross section of the $^{76}$Ge($^3$He,n)$^{78}$Se reaction is due to the Q-value dependence reproduced by DWBA and not to ground-state loss of \zp strength.   The cross sections measured for \reaction are consistent with DWBA predictions and the data suggest no significant excited \zp states stronger than $\sim$4\% of the ground-state yield for the critical \Se{76} nucleus.
+As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio models typically describe the same shape for the $L=0$ angular distribution, but neither model typically reproduces the absolute cross section.  In the case of the $^{58,60,62,64}$Ni and $^{88}$Sr isotopes, however, the cluster model reproduces the trend as a function of the neutron number rather well.  This agreement is shown in {\fig}~\ref{fig:nickelTrend}, where all cross sections have been normalized to $^{74}$Ge.  The cluster model, then, accurately describes the trend when adding protons to \fpg shell nuclei in this mass region.  Cluster model calculations of the $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se reactions show that the smaller cross section of the $^{76}$Ge($^3$He,n)$^{78}$Se reaction is due to the Q-value dependence reproduced by DWBA and not to ground-state loss of \zp strength.   The cross sections measured for \reaction are consistent with DWBA predictions and the data suggest that the $l=0$ pair-transfer strength to excited \zp states is less than $\sim$4\% of the ground-state strength for the critical \Se{76} nucleus.
 \FloatBarrier
 
 \begin{figure}[hp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/AngDist.eps}
-}
+   \includegraphics[width=1.0\textwidth]{figures/AngDist.eps}
+}\\
 \subfloat[][]{
-   \includegraphics[width=0.5\textwidth]{figures/SigmaNormVsN_2.eps}
+   \includegraphics[width=1.0\textwidth]{figures/SigmaNormVsN_2.eps}
 }
-\caption[Sensitivity of angular distributions and zero-degree cross sections to bound-state and neutron optical model parameters.]{(a) Sensitivity of angular distributions on bound-state radius, neutron potential, and principal quantum number.  All calculations are normalized to 350~$\mu$b/sr at zero degrees. (b) The effect of varying optical model parameters on the zero-degree cross-section normalization.  Sensitivity to the bound-state radius, principle quantum number, and neutron potential were investigated.  The ``standard'' calculation uses Becchetti-Greenlees potentials for the neutron and \He{3}, $r_0=1.25$~fm and $a=0.65$~fm, and principle quantum number $N=4$.  The number in parenthesis after each description is the factor needed to normalize the DWBA calculation to the \Ge{74} cross-section.}
+\caption[Sensitivity of angular distributions and zero-degree cross sections to bound-state and neutron optical model parameters.]{(a) Sensitivity of angular distributions on bound-state radius (denoted by $r$), neutron potential, and principal quantum number (denoted by $N$).  The neutron potentials used are Becchetti-Greenlees (BG) \citep{Becchetti_neutronPotential} and Koning-Delaroche (KD) \citep{Koning_neutronPotential}.  The principle quantum number used is $N=4$ unless otherwise indicated.  All calculations are normalized to 350~$\mu$b/sr at zero degrees. (b) The effect of varying optical model parameters on the zero-degree cross-section normalization.  Sensitivity to the bound-state radius, principle quantum number, and neutron potential were investigated.  The ``standard'' calculation uses Becchetti-Greenlees potentials for the neutron and \He{3}, $r_0=1.25$~fm and $a=0.65$~fm, and principle quantum number $N=4$.  The number in parenthesis after each description is the factor needed to normalize the DWBA calculation to the \Ge{74} cross-section.}
 \label{fig:varyParam}
 \end{figure}
  
 \begin{figure}[hp]
 \centering
 \subfloat[][]{
-  \includegraphics[width=0.5\textwidth]{figures/CrossSectionVsN_ElasticSurvey_Errors.eps}
-}
+  \includegraphics[width=1.0\textwidth]{figures/CrossSectionVsN_ElasticSurvey_Errors.eps}
+}\\
 \subfloat[][]{
-  \includegraphics[width=0.5\textwidth]{figures/CrossSectionVsN_Best.eps}
+  \includegraphics[width=1.0\textwidth]{figures/CrossSectionVsN_Best.eps}
 }
 \caption[Sensitivity of trends in zero-degree cross sections to \He{3} optical model parameters.]{(a) Testing sensitivity to \He{3} potentials.  The GDP08 potential differs from the Becchetti and Urone potentials for nickel and strontium isotopes, but all potentials reproduce the measured Q-value dependence of \GeTargets.  The calculations are normalized to the \Ge{74} data.  The neutron potential used was the Becchetti-Greenless potential with a bound-state radius of 1.30~fm, a diffuseness of 0.65~fm, and the principle quantum number was 4.  (b) The best fit to the data overall.  The potential used for \He{3} was Becchetti-Greenlees.  For the neutron, the KDP potential was used with the parameters as in (a).  In both figures, the systematic and statistical errors are shown for all points except \Ge{74} and \Ge{76}, where only the statistical errors are shown.  Systematic errors were omitted for these nuclei so that the agreement between the trend of the calculation and the data was not obscured.}
 \label{fig:parameterSensitivity}
@@ -543,7 +543,7 @@ As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio mode
 \begin{figure}[hp]
 \centering
 \includegraphics[width=0.8\textwidth]{figures/SigmaNormVsN.eps}
-\caption[Deviation from the best DWBA fit for other $f-p-g$ isotopes.]{The cluster model describes the trend for Ni and Ge isotopes.  The cross sections are normalized to \Ge{74}.  Systematic and statistical errors are shown on all data except for \Ge{74} and \Ge{76}, where only statistical errors are shown.}
+\caption[Deviation from the best DWBA fit for other \fpg isotopes.]{The cluster model describes the trend for Ni and Ge isotopes.  The cross sections are normalized to \Ge{74}.  Systematic and statistical errors are shown on all data except for \Ge{74} and \Ge{76}, where only statistical errors are shown.}
 \label{fig:nickelTrend}
 \end{figure}
 
