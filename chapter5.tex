@@ -115,7 +115,7 @@ To determine the absolute cross section, it is also necessary to know the total 
 }
 \\
 \subfloat[][]{
-   \includegraphics[width=0.8\textwidth]{figures/76ge-4-adjusted.eps}
+   \includegraphics[width=0.7\textwidth]{figures/76ge-4-adjusted.eps}
    \label{fig:RBS_sample}
 }
 \caption[Interpreting RBS data and constraining the target thickness.]{\subref{fig:RBS} Beam scattering from the front and back layer determines the high and low energy plateau edges.  The scattering angle is shown as forward to compress the figure but was backward at 168$^\circ$ in the experiment.  \subref{fig:rawDataRBS} RBS data for the \Ge{76} target near the beamspot.  The features used to determine the thicknesses of the gold and germanium layers are marked.  \subref{fig:RBS_sample} The RBS spectrum, adjusted by subtracting the background due to pinholes, and its fit.  Fitting the RBS spectrum with and without adjusting for pinholes did not result in any significant differences to the predicted target composition or thickness.}
@@ -235,7 +235,7 @@ where $\alpha$ is a factor determined by the attenuation in the bar and $L$ is i
 \label{fig:product_positionDependence}
 \end{figure}
 
-Defining a position-dependent light signal cut on each PMT separately would be an ideal solution to these problems if the position dependence for a given energy deposition were known.  While such a characterization of the detectors for an arbitrary energy is not known, the muon veto provides a single calibration point by allowing the extraction of a data set that is predominently muon events.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{2.4}{\theta}$ \citep{cosmicsZenithDependence} (where $\theta$ is the zenith angle) confirm a well-defined peak in the muon path length. This most-likely path length of the incident muons manifests as a peak in the energy spectrum that depends only on the thickness of the bar and on the most likely angle of the trajectory because the muons are MIP's.  Note that both the bar thickness and the most likely angle of a muon path are the same for every bar in the neutron wall.  In addition, the thickness of the neutron detector bars places this peak well above the thorium edge, at approximately 15~MeVee.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}.  The peak of the light spectrum is assumed to represent the same energy and therefore to function as a calibration of the position dependence of the light signal due to the most likely muon energy deposition.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
+Defining a position-dependent light signal cut on each PMT separately would be an ideal solution to these problems if the position dependence for a given energy deposition were known.  While such a characterization of the detectors for an arbitrary energy is not known, the muon veto provides a single calibration point by allowing the extraction of a data set that is predominantly muon events.  Due to the detector geometry, it is expected that the average path of the muons will be peaked at slightly more than 5~cm.  Simulations using the detector bar geometry and an angular distribution of $\cos^{2.4}{\theta}$ \citep{cosmicsZenithDependence} (where $\theta$ is the zenith angle) confirm a well-defined peak in the muon path length. This most-likely path length of the incident muons manifests as a peak in the energy spectrum that depends only on the thickness of the bar and on the most likely angle of the trajectory because the muons are MIP's.  Note that both the bar thickness and the most likely angle of a muon path are the same for every bar in the neutron wall.  In addition, the thickness of the neutron detector bars places this peak well above the thorium edge, at approximately 15~MeVee.  A simulated energy spectrum is shown next to a real energy spectrum in {\fig}~\ref{fig:muonSpectrum}.  The peak of the light spectrum is assumed to represent the same energy and therefore to function as a calibration of the position dependence of the light signal due to the most likely muon energy deposition.  Fits to the location of the energy peak as a function of position are shown in {\fig}~\ref{fig:fits_pkVSpos}.
 
 \begin{figure}[hp]
 \centering
@@ -389,11 +389,11 @@ where $R$ is the ratio of total beam on target between the pulse-selected and no
 \subfloat[][]{
    \includegraphics[width=0.6\textwidth]{figures/74Ge_NPS0.eps}
 }
-\caption[Functional fit to the pulse-selected timing spectrum.]{(a) The fit to the pulse-selected TOF spectrum of the forwardmost neutron detector bar (6.1$^{\circ}$).  The center and width of each gaussian is constrained for all bars simultaneously while the heights are fit for each bar independently.  (b) The timing spectrum of the non-pulse-selected beam is fit together with the pulse-selected spectrum.  The region of interest, the ground-state neutron peak, is highlighted but not used in the final data set because of its extreme sensitivity to the fit.}
+\caption[Functional fit to the pulse-selected timing spectrum.]{(a) The fit to the pulse-selected TOF spectrum of the forwardmost neutron detector bar (6.1$^{\circ}$).  The center and width of each Gaussian is constrained for all bars simultaneously while the heights are fit for each bar independently.  (b) The timing spectrum of the non-pulse-selected beam is fit together with the pulse-selected spectrum.  The region of interest, the ground-state neutron peak, is highlighted but not used in the final data set because of its extreme sensitivity to the fit.}
 \label{fig:continuumModel}
 \end{figure}
 
-The method used to extract the counts in the ground-state neutron peak is a direct summing of the counts from the peak region followed by subtraction of the estimated flat background from a linear fit.  The significant contributions to the estimated error is the statistical error of the sum of the peak region and the errorr associated with the low-energy cut.  Neither the fit to the flat background nor counts from the continuum contributed significant error to the extracted signal.  The systematic error contributions consist of the 10\% uncertainty in the efficiency and the 2\% uncertainty in target thickness.  The results are plotted in {\fig}~\ref{fig:PS_angularDistribution}.  See {\app}~\ref{app:crossSection} for a table of the values.
+The method used to extract the counts in the ground-state neutron peak is a direct summing of the counts from the peak region followed by subtraction of the estimated flat background from a linear fit.  The significant contributions to the estimated error is the statistical error of the sum of the peak region and the error associated with the low-energy cut.  Neither the fit to the flat background nor counts from the continuum contributed significant error to the extracted signal.  The systematic error contributions consist of the 10\% uncertainty in the efficiency and the 2\% uncertainty in target thickness.  The results are plotted in {\fig}~\ref{fig:PS_angularDistribution}.  See {\app}~\ref{app:crossSection} for a table of the values.
 
 \begin{figure}[hp]
 \centering
@@ -502,10 +502,10 @@ Optical and bound-state potentials used in the DWBA analysis, see the text for d
 \begin{figure}[!htbp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/74Ge_angularDist.eps}
+   \includegraphics[width=0.6\textwidth]{figures/74Ge_angularDist.eps}
 }\\
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/76Ge_angularDistribution.eps}
+   \includegraphics[width=0.6\textwidth]{figures/76Ge_angularDistribution.eps}
 }
 \caption[The angular distributions of $^{74}$Ge($^3$He,n)$^{76}$Se and $^{76}$Ge($^3$He,n)$^{78}$Se.]{(a) The angular distributions of $^{74}$Ge($^3$He,n)$^{76}$Se and (b) $^{76}$Ge($^3$He,n)$^{78}$Se.  In each graph, the two back-angle measurements are four-bar averages.  Because the timing resolution did not allow clear separation of the ground and first excited states, the integration window included both.  The sum of the DWBA calculations for the ground and first-excited states has a $\chi^2$ of 0.7 for the \Ge{74} data and 1.3 for the \Ge{76} data.}
 \label{fig:PS_angularDistribution}
@@ -519,10 +519,10 @@ As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio mode
 \begin{figure}[hp]
 \centering
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/AngDist.eps}
-}\\
+   \includegraphics[width=0.5\textwidth]{figures/AngDist.eps}
+}
 \subfloat[][]{
-   \includegraphics[width=1.0\textwidth]{figures/SigmaNormVsN_2.eps}
+   \includegraphics[width=0.5\textwidth]{figures/SigmaNormVsN_2.eps}
 }
 \caption[Sensitivity of angular distributions and zero-degree cross sections to bound-state and neutron optical model parameters.]{(a) Sensitivity of angular distributions on bound-state radius (denoted by $r$), neutron potential, and principal quantum number (denoted by $N$).  The neutron potentials used are Becchetti-Greenlees (BG) \citep{Becchetti_neutronPotential} and Koning-Delaroche (KD) \citep{Koning_neutronPotential}.  The principle quantum number used is $N=4$ unless otherwise indicated.  All calculations are normalized to 350~$\mu$b/sr at zero degrees. (b) The effect of varying optical model parameters on the zero-degree cross-section normalization.  Sensitivity to the bound-state radius, principle quantum number, and neutron potential were investigated.  The ``standard'' calculation uses Becchetti-Greenlees potentials for the neutron and \He{3}, $r_0=1.25$~fm and $a=0.65$~fm, and principle quantum number $N=4$.  The number in parenthesis after each description is the factor needed to normalize the DWBA calculation to the \Ge{74} cross-section.}
 \label{fig:varyParam}
@@ -531,10 +531,10 @@ As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio mode
 \begin{figure}[hp]
 \centering
 \subfloat[][]{
-  \includegraphics[width=1.0\textwidth]{figures/CrossSectionVsN_ElasticSurvey_Errors.eps}
-}\\
+  \includegraphics[width=0.5\textwidth]{figures/CrossSectionVsN_ElasticSurvey_Errors.eps}
+}
 \subfloat[][]{
-  \includegraphics[width=1.0\textwidth]{figures/CrossSectionVsN_Best.eps}
+  \includegraphics[width=0.5\textwidth]{figures/CrossSectionVsN_Best.eps}
 }
 \caption[Sensitivity of trends in zero-degree cross sections to \He{3} optical model parameters.]{(a) Testing sensitivity to \He{3} potentials.  The GDP08 potential differs from the Becchetti and Urone potentials for nickel and strontium isotopes, but all potentials reproduce the measured Q-value dependence of \GeTargets.  The calculations are normalized to the \Ge{74} data.  The neutron potential used was the Becchetti-Greenless potential with a bound-state radius of 1.30~fm, a diffuseness of 0.65~fm, and the principle quantum number was 4.  (b) The best fit to the data overall.  The potential used for \He{3} was Becchetti-Greenlees.  For the neutron, the KDP potential was used with the parameters as in (a).  In both figures, the systematic and statistical errors are shown for all points except \Ge{74} and \Ge{76}, where only the statistical errors are shown.  Systematic errors were omitted for these nuclei so that the agreement between the trend of the calculation and the data was not obscured.}
 \label{fig:parameterSensitivity}
@@ -542,7 +542,7 @@ As discussed in {\chap}~\ref{chap:nucl}, both the cluster and Bayman-Kallio mode
 
 \begin{figure}[hp]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/SigmaNormVsN.eps}
+\includegraphics[width=1.0\textwidth]{figures/SigmaNormVsN.eps}
 \caption[Deviation from the best DWBA fit for other \fpg isotopes.]{The cluster model describes the trend for Ni and Ge isotopes.  The cross sections are normalized to \Ge{74}.  Systematic and statistical errors are shown on all data except for \Ge{74} and \Ge{76}, where only statistical errors are shown.}
 \label{fig:nickelTrend}
 \end{figure}
